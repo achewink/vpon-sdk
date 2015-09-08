@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -53,6 +53,9 @@
 </script>
 
 
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
+</head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
   <!-- Docs master nav -->
@@ -77,40 +80,40 @@
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">English</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/">Home</a></li>
-                     <li><a href="/android/">Android</a></li>
-                     <li><a href="/ios/">iOS</a></li>
-                     <li><a href="/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/">Home</a></li>
+                     <li><a href="/vpon-sdk/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">繁體中文</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/zh-tw/">Home</a></li>
-                     <li><a href="/zh-tw/android/">Android</a></li>
-                     <li><a href="/zh-tw/ios/">iOS</a></li>
-                     <li><a href="/zh-tw/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">简体中文</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/zh-cn">Home</a></li>
-                     <li><a href="/zh-cn/android/">Android</a></li>
-                     <li><a href="/zh-cn/ios/">iOS</a></li>
-                     <li><a href="/zh-cn/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/zh-cn">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">日本語</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/jp">Home</a></li>
-                     <li><a href="/jp/android/">Android</a></li>
-                     <li><a href="/jp/ios/">iOS</a></li>
-                     <li><a href="/jp/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/jp">Home</a></li>
+                     <li><a href="/vpon-sdk/jp/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/jp/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/jp/web/">Web</a></li>
                   </ul>
                 </li>
                 
@@ -129,7 +132,98 @@
   <div class="container bs-docs-container">
 
     <div class="row">
-      <div class="col-md-9" role="main">
+      <div class="col-sm-3 col-md-2" role="complementary" >
+      <div class="bs-sidebar-left bs-sidenav">
+        
+  <ul class="nav nav-sidebar">
+    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+    <li><a id="getting-started"></a></li>
+    <li><a id="banner-ad">Banner Ad</a></li>
+    <li><a id="banner-ad-plus">Banner Ad+</a></li>
+    <li><a id="crazy-ad">Crazy Ad</a></li>
+    <li><a id="interstitial-ad">Interstitial Ad</a></li>
+    <li><a id="mediation">Mediation</a></li>
+    <li><a id="change-log">Change Log</a></li>
+    <li><a id="reference">Reference</a></li>
+    <li><a id="support">Support</a></li>
+  </ul>
+
+  <script type="text/javascript">
+    // var usrlang = navigator.language || navigator.userLanguage;
+    var lang = $('html').attr("lang");
+    var userLang = lang.toLowerCase();
+    var urlGettingStarted = '/' + userLang + '/android/getting-started/';
+    var urlBannerAd = '/' + userLang + '/android/banner/';
+    var urlBannerAdPlus = '/' + userLang + '/android/advanced/';
+    var urlCrazyAd = '/'+ userLang + '/android/advanced/crazy-ad/';
+    var urlInterstitialAd = '/' + userLang + '/android/interstitial/';
+    var urlMediation = '/' + userLang + '/android/mediation/';
+    var urlChangeLog = '/' + userLang + '/android/change-log/';
+    var urlReference = '/' + userLang + '/android/reference/';
+    var urlSupport = '/' + userLang + '/android/support/';
+    // var  = "'/'+ userLang + '/android/'";
+
+  $(document).ready(function(){
+    //show the text in right lang
+    if (userLang == "zh-tw") {
+      $('#getting-started').text("開始使用");
+      $('#banner-ad').text("橫幅廣告");
+      $('#banner-ad-plus').text("橫幅廣告+");
+      $('#crazy-ad').text("Crazy Ad");
+      $('#interstitial-ad').text('插頁廣告');
+      $('#mediation').text("中介器");
+      $('#change-log').text("版本更迭");
+      $('#reference').text("參考資料");
+      $('#support').text("其他協助");
+    } else if (userLang == "zh-cn") {
+      $('#getting-started').text("开始使用");
+      $('#banner-ad').text("横幅广告");
+      $('#banner-ad-plus').text("横幅广告+");
+      $('#crazy-ad').text("Crazy Ad");
+      $('#interstitial-ad').text('插页广告');
+      $('#mediation').text("中介器");
+      $('#change-log').text("版本更迭");
+      $('#reference').text("参考资料");
+      $('#support').text("其他协助");
+    } else if (userLang == "jp"){
+      $('#getting-started').text("基本編");
+      $('#banner-ad').text("バナー広告");
+      $('#banner-ad-plus').text("バナー広告+");
+      $('#crazy-ad').text("Crazy Ad");
+      $('#interstitial-ad').text('インタースティシャル広告');
+      $('#mediation').text("Mediation");
+      $('#change-log').text("Change Log");
+      $('#reference').text("参照");
+      $('#support').text("サポート");
+    } else {
+     $('#getting-started').text("Getting Started")
+     $('#banner-ad').text("Banner Ad");
+     $('#banner-ad-plus').text("Banner Ad+");
+     $('#crazy-ad').text("Crazy ad");
+     $('#interstitial-ad').text('Interstitial Ad');
+     $('#mediation').text("Mediation");
+     $('#change-log').text("Change Log");
+     $('#reference').text("Reference");
+     $('#support').text("Support"); }
+   //add right linking url to right title
+    $('#getting-started').attr({href:urlGettingStarted});
+    $('#banner-ad').attr({href:urlBannerAd});
+    $('#banner-ad-plus').attr({href:urlBannerAdPlus});
+    $('#crazy-ad').attr({href:urlCrazyAd});
+    $('#interstitial-ad').attr({href:urlInterstitialAd});
+    $('#mediation').attr({href:urlMediation});
+    $('#change-log').attr({href:urlChangeLog});
+    $('#reference').attr({href:urlReference});
+    $('#support').attr({href:urlSupport});
+    // $('#').attr({href:url});
+
+
+  });
+  </script>
+
+      </div>
+      </div>
+      <div class="col-md-7" role="main">
         <h1 id="admob">AdMob</h1>
 
 <p>test</p>
