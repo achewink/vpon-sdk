@@ -4,7 +4,7 @@ title:          "升級至 SDK 4.2.x "
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       /zh-tw/update-to-SDK4_2_x/
+permalink:       zh-tw/latest-news/update-to-SDK4_2_x/
 lang:           "zh-tw"
 
 ---
@@ -48,6 +48,7 @@ lang:           "zh-tw"
            </activity>
 ```
 改為：
+
 ```xml
         <activity
             android:name="com.vpadn.widget.VpadnActivity"

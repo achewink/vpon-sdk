@@ -8,6 +8,6 @@ permalink:       android/
 lang:           "en"
 ---
 # Eclipse
-[here](fundamental/)
+[here]({baseurl}/fundamental/)
 # Android Studio
-[here](fundamental/android-studio/)
+[here]({baseurl}/fundamental/android-studio/)

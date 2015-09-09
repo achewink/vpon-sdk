@@ -12,10 +12,9 @@
 <meta name="keywords" content="Keywords for this page, in the meta data">
 
 <meta name="author" content="Finn">
-
 <title>
   
-  Android SDK 進階使用 &middot; Vpon-SDK
+  插頁廣告 &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -53,8 +52,6 @@
 </script>
 
 
-  <!-- Google Developer CSS -->
-  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
 </head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
@@ -69,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/zh-tw" class="navbar-brand">Vpon SDK</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -80,40 +77,40 @@
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">English</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/">Home</a></li>
-                     <li><a href="/android/">Android</a></li>
-                     <li><a href="/ios/">iOS</a></li>
-                     <li><a href="/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/">Home</a></li>
+                     <li><a href="/vpon-sdk/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">繁體中文</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/zh-tw/">Home</a></li>
-                     <li><a href="/zh-tw/android/">Android</a></li>
-                     <li><a href="/zh-tw/ios/">iOS</a></li>
-                     <li><a href="/zh-tw/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">简体中文</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/zh-cn">Home</a></li>
-                     <li><a href="/zh-cn/android/">Android</a></li>
-                     <li><a href="/zh-cn/ios/">iOS</a></li>
-                     <li><a href="/zh-cn/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/zh-cn">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/web/">Web</a></li>
                   </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown">日本語</a>
                   <ul class="dropdown-menu">
-                     <li><a href="/jp">Home</a></li>
-                     <li><a href="/jp/android/">Android</a></li>
-                     <li><a href="/jp/ios/">iOS</a></li>
-                     <li><a href="/jp/web/">Web</a></li>
+                     <li><a href="/vpon-sdk/jp">Home</a></li>
+                     <li><a href="/vpon-sdk/jp/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/jp/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/jp/web/">Web</a></li>
                   </ul>
                 </li>
                 
@@ -125,106 +122,185 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Android SDK 進階使用</h1>
-      <p>Interstitia ad 插頁廣告</p>
+      <h1>插頁廣告</h1>
+      <p>Interstitia ad</p>
     </div>
   </div>
   <div class="container bs-docs-container">
-
     <div class="row">
       <div class="col-sm-3 col-md-2" role="complementary" >
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
     <li><a id="getting-started"></a></li>
-    <li><a id="banner-ad">Banner Ad</a></li>
-    <li><a id="banner-ad-plus">Banner Ad+</a></li>
-    <li><a id="crazy-ad">Crazy Ad</a></li>
-    <li><a id="interstitial-ad">Interstitial Ad</a></li>
-    <li><a id="mediation">Mediation</a></li>
-    <li><a id="change-log">Change Log</a></li>
-    <li><a id="reference">Reference</a></li>
-    <li><a id="support">Support</a></li>
+    <li><a id="integration-guide"></a></li>
+    <li><a id="banner-id"></a></li>
+    <li><a id="interstitial-id"></a></li>
+    <li><a id="mediation"></a></li>
+    <li><a id="advanced"></a></li>
+    <li><a id="latest-news"></a></li>
+    <li><a id="download"></a></li>
+    <li><a id="support"></a></li>
   </ul>
 
   <script type="text/javascript">
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/' + userLang + '/android/getting-started/';
-    var urlBannerAd = '/' + userLang + '/android/banner/';
-    var urlBannerAdPlus = '/' + userLang + '/android/advanced/';
-    var urlCrazyAd = '/'+ userLang + '/android/advanced/crazy-ad/';
-    var urlInterstitialAd = '/' + userLang + '/android/interstitial/';
-    var urlMediation = '/' + userLang + '/android/mediation/';
-    var urlChangeLog = '/' + userLang + '/android/change-log/';
-    var urlReference = '/' + userLang + '/android/reference/';
-    var urlSupport = '/' + userLang + '/android/support/';
-    // var  = "'/'+ userLang + '/android/'";
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
+    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
+    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
+    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
+    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
+    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
+    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
+    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
       $('#getting-started').text("開始使用");
-      $('#banner-ad').text("橫幅廣告");
-      $('#banner-ad-plus').text("橫幅廣告+");
-      $('#crazy-ad').text("Crazy Ad");
-      $('#interstitial-ad').text('插頁廣告');
-      $('#mediation').text("中介器");
-      $('#change-log').text("版本更迭");
-      $('#reference').text("參考資料");
+      $('#integration-guide').text("串接說明");
+      $('#banner-id').text("橫幅廣告");
+      $('#interstitial-id').text('插頁廣告');
+      $('#mediation').text("中介服務");
+      $('#advanced').text("進階設定");
+      $('#latest-news').text("最新消息");
+      $('#download').text("下載SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
       $('#getting-started').text("开始使用");
-      $('#banner-ad').text("横幅广告");
-      $('#banner-ad-plus').text("横幅广告+");
-      $('#crazy-ad').text("Crazy Ad");
-      $('#interstitial-ad').text('插页广告');
-      $('#mediation').text("中介器");
-      $('#change-log').text("版本更迭");
-      $('#reference').text("参考资料");
+      $('#integration-guide').text("Getting Started");
+      $('#banner-id').text("横幅广告");
+      $('#interstitial-id').text('插页广告');
+      $('#mediation').text("中介服务");
+      $('#advanced').text("进阶设定");
+      $('#latest-news').text("最新消息");
+      $('#download').text("下载SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
-      $('#getting-started').text("基本編");
-      $('#banner-ad').text("バナー広告");
-      $('#banner-ad-plus').text("バナー広告+");
-      $('#crazy-ad').text("Crazy Ad");
-      $('#interstitial-ad').text('インタースティシャル広告');
-      $('#mediation').text("Mediation");
-      $('#change-log').text("Change Log");
-      $('#reference').text("参照");
+      $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
+      $('#banner-id').text("バナー広告");
+      $('#interstitial-id').text('インタースティシャル広告');
+      $('#mediation').text("メディエーション");
+      $('#latest-news').text("最新ニュース");
+      $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
      $('#getting-started').text("Getting Started")
-     $('#banner-ad').text("Banner Ad");
-     $('#banner-ad-plus').text("Banner Ad+");
-     $('#crazy-ad').text("Crazy ad");
-     $('#interstitial-ad').text('Interstitial Ad');
+     $('#integration-guide').text("Getting Started");
+     $('#banner-id').text("Banner Ad");
+     $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
-     $('#change-log').text("Change Log");
-     $('#reference').text("Reference");
+     $('#advanced').text("Advanced Setting");
+     $('#latest-news').text("Latest News");
+     $('#download').text("Download");
      $('#support').text("Support"); }
    //add right linking url to right title
     $('#getting-started').attr({href:urlGettingStarted});
-    $('#banner-ad').attr({href:urlBannerAd});
-    $('#banner-ad-plus').attr({href:urlBannerAdPlus});
-    $('#crazy-ad').attr({href:urlCrazyAd});
-    $('#interstitial-ad').attr({href:urlInterstitialAd});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
+    $('#banner-id').attr({href:urlBanner});
+    $('#interstitial-id').attr({href:urlInterstitial});
     $('#mediation').attr({href:urlMediation});
-    $('#change-log').attr({href:urlChangeLog});
-    $('#reference').attr({href:urlReference});
+    $('#advanced').attr({href:urlAdvanced});
+    $('#latest-news').attr({href:urlLatestNews});
+    $('#download').attr({href:urlDownload});
     $('#support').attr({href:urlSupport});
     // $('#').attr({href:url});
-
-
   });
   </script>
 
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <p>ddd</p>
+        <h1 id="總覽">總覽</h1>
+
+<hr>
+
+<p>插頁式廣告是互動式多媒體 HTML5 或「網路應用程式」，在應用程式的正常轉換點顯示 (例如啟動、影片播放前或遊戲關卡載入時)。網路應用程式使用上就像在應用程式內瀏覽一樣，只有簡單的關閉按鈕，而沒有任何導覽列，因為導覽配置就包含在內容本身。這類廣告由於內容更豐富、更吸引人，因此製作起來更昂貴，而曝光機會卻有限。</p>
+
+<p><img src="/vpon-sdk/assets/img/Interstitial.png" alt=""></p>
+
+<h1 id="vpon-interstitial-ad">Vpon Interstitial Ad</h1>
+
+<hr>
+
+<p>Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實例化、載入和顯示步驟的 Object，而不是 View。</p>
+
+<p>不過，它的用法與 Banner 非常類似：
+1. 匯入 com.vpadn.ads.*
+2. 宣告例項
+- 建立例項，並指定 VPON 發佈商編號(bannerId)</p>
+
+<p>(不能與橫幅廣告所用發佈商編號重複)</p>
+
+<p>再次提醒您，最好在應用程式的 Activity 內執行上述步驟。</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="kd">implements</span> <span class="n">VpadnAdListener</span> <span class="o">{</span>
+        <span class="c1">//TODO: 您像VPON 申請的interstitial banner Id (提醒您 跟一般的橫幅廣告banner ID是不同的)</span>
+      <span class="kd">private</span> <span class="n">String</span> <span class="n">interstitialBannerId</span> <span class="o">=</span> <span class="s">&quot;xxxxxxxxxxxxxxxx&quot;</span><span class="o">;</span>
+      <span class="kd">private</span> <span class="n">VpadnInterstitialAd</span> <span class="n">interstitialAd</span><span class="o">;</span>
+
+          <span class="nd">@Override</span>
+      <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+          <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+          <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+                  <span class="c1">// Create interstitial instance</span>
+                  <span class="n">interstitialAd</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnInterstitialAd</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">interstitialBannerId</span><span class="o">,</span> <span class="s">&quot;TW&quot;</span><span class="o">);</span>
+          <span class="c1">//加入listener</span>
+                  <span class="n">interstitialAd</span><span class="o">.</span><span class="na">setAdListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+          <span class="c1">// 建立廣告請求</span>
+                  <span class="n">VpadnAdRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
+                  <span class="c1">//開始抓interstitial ad</span>
+          <span class="n">interstitialAd</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+          <span class="o">}</span>
+
+          <span class="nd">@Override</span>
+      <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
+          <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+          <span class="c1">// 千萬記得離開時需要呼叫 destroy</span>
+          <span class="k">if</span> <span class="o">(</span><span class="n">interstitialAd</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+              <span class="n">interstitialAd</span><span class="o">.</span><span class="na">destroy</span><span class="o">();</span>
+                          <span class="n">interstitialAd</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+          <span class="o">}</span>
+      <span class="o">}</span>
+</code></pre></div>
+<p>不過，目前沒有任何項目可加入檢視階層，而且您必須等到這個請求成功後才能嘗試顯示廣告，這點請格外注意。最簡單的做法是執行 AdListener (「InterstitialAd」也是一種廣告)，或是直接使用布林屬性 isReady。</p>
+
+<p>一旦 load Ad 成功，廣告就可以顯示了：</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">ad</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">interstitialAd</span><span class="o">)</span> <span class="o">{</span>
+                         <span class="c1">//show interstitial ad 或可以延後在show</span>
+             <span class="n">interstitialAd</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div>
+<p>接著，插頁式廣告會佔據整個畫面，直到使用者點擊關閉；這時控制權才會交還給應用程式。<a href="/vpon-sdk/zh-tw/android/advanced">進階設定</a>中 Vpadn Ad Listener 小節列出了多種實用的回呼方式，供您參考。</p>
+
+<h1 id="download-sample-code">Download Sample Code</h1>
+
+<hr>
+
+<p>SDK 4 JAR 檔 在Sample code libs folder內</p>
+
+<p><a href="/vpon-sdk/zh-tw/android/download">Go to Download Page</a></p>
+
+<h1 id="注意事項">注意事項</h1>
+
+<hr>
+
+<blockquote>
+<ol>
+<li><span style="line-height:2.5em"><strong>我們不建議您在程式開啓時直接拉取 interstitial ad 並立即顯示</strong><br></span>
+如此將會拖慢程式開啓時的執行速度。因此我們建議您可以先 load interstitial 但不顯示，等待特定事件(e.g. 使用者過關、停留在某個畫面超過特定時間、按下某個 button 或離開 app 之前...)發生再顯示。</li>
+<li><span style="line-height:2em"> <strong>請避免沒有 load 就要求顯示廣告</strong> <br> </span>
+<code>android:configChanges=“orientation|screenSize”</code>若您沒在 activity 裡沒有加上這句，請避免在 onCreate 時做 load interstitial 並立即顯示插頁廣告。</li>
+</ol>
+</blockquote>
 
       </div>
       <div class="col-md-3">
@@ -235,9 +311,7 @@
         </div>
       </div>
     </div>
-
   </div>
-
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
@@ -245,7 +319,7 @@
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>

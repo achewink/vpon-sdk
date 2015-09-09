@@ -4,7 +4,7 @@ title:          "Update to SDK 4.2.x "
 lead:           "sub-title"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:      update-to-SDK4_2_x/
+permalink:      latest-news/update-to-SDK4_2_x/
 lang:            "en"
 ---
 

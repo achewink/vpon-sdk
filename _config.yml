@@ -31,19 +31,13 @@ meta:
   author:           "Finn"
 
 # multiple language
-
-languages:          ["en", "zh-tw", "zh-cn", "jp"]
-
-
-
-
-
+lang:          ["en", "zh-tw", "zh-cn", "jp"]
 
 # left navigation
 left_nav:
   en:
     title:          "Vpon SDK"
-    path:           /en
+    path:           /vpon-sdk/
     # items:
     #   - path:       /page1
     #     title:      "Another page"
@@ -51,54 +45,42 @@ left_nav:
     #     title:      "Yet another page"
   zh-tw:
     title:          "Vpon SDK"
-    path:           /zh-tw
-    # items:
-    #   - path:       /zh-tw/page1
-    #     title:      "頁面1"
-    #   - path:       /zh-tw/page2
-    #     title:      "頁面2"
+    path:           /vpon-sdk/zh-tw
+
   zh-cn:
     title:          "Vpon SDK"
-    path:           /zh-cn
-    # items:
-    #   - path:       /zh-cn/page1
-    #     title:      "页面1"
-    #   - path:       /zh-cn/page2
-    #     title:      "页面2"
+    path:           /vpon-sdk/zh-cn
+
   jp:
     title:          "Vpon SDK"
-    path:           /jp
-    # items:
-    #   - path:       /jp/page1
-    #     title:      "jp1"
-    #   - path:       /jp/page2
-    #     title:      "jp2"
+    path:           /vpon-sdk/jp
+
 
 # right navigation
 right_nav:
   - title:          English
-    url:            /
-    url1:           /android/
-    url2:           /ios/
-    url3:           /web/
+    url:            /vpon-sdk/
+    url1:           /vpon-sdk/android/
+    url2:           /vpon-sdk/ios/
+    url3:           /vpon-sdk/web/
 
   - title:          繁體中文
-    url:            /zh-tw/
-    url1:           /zh-tw/android/
-    url2:           /zh-tw/ios/
-    url3:           /zh-tw/web/
+    url:            /vpon-sdk/zh-tw/
+    url1:           /vpon-sdk/zh-tw/android/
+    url2:           /vpon-sdk/zh-tw/ios/
+    url3:           /vpon-sdk/zh-tw/web/
 
   - title:          简体中文
-    url:            /zh-cn
-    url1:           /zh-cn/android/
-    url2:           /zh-cn/ios/
-    url3:           /zh-cn/web/
+    url:            /vpon-sdk/zh-cn
+    url1:           /vpon-sdk/zh-cn/android/
+    url2:           /vpon-sdk/zh-cn/ios/
+    url3:           /vpon-sdk/zh-cn/web/
 
   - title:          日本語
-    url:            /jp
-    url1:           /jp/android/
-    url2:           /jp/ios/
-    url3:           /jp/web/
+    url:            /vpon-sdk/jp
+    url1:           /vpon-sdk/jp/android/
+    url2:           /vpon-sdk/jp/ios/
+    url3:           /vpon-sdk/jp/web/
 
 # analytics account information, remember to change this.
 analytics:

@@ -13,7 +13,7 @@
     <!-- Docs master nav -->
     {% include nav-main.html %}
       <!-- Menu -->
-      <nav class="menu" id="theMenu">
+      <!-- <nav class="menu" id="theMenu">
           <div class="menu-wrap">
               <h1 class="logo"><a href="index.html#home">Minimal</a></h1>
               <i class="icon-remove menu-close"></i>
@@ -27,9 +27,9 @@
               <a href="#"><i class="icon-dribbble"></i></a>
               <a href="#"><i class="icon-envelope"></i></a>
           </div>
-          <!-- Menu button -->
+          Menu button
           <div id="menuToggle"><i class="icon-reorder"></i></div>
-      </nav>
+      </nav> -->
       <!-- ========== HEADER SECTION ========== -->
       <section id="home" name="home"></section>
       <div id="headerwrap">
@@ -39,6 +39,7 @@
                   <h1>VPON SDK</h1>
                   <br>
                   <h3>Hello, welcome to Vpon SDK Instruction	.</h3>
+                    <a href="#download" class="btn btn-lg btn-outline" role="button">Get started</a>
                   <br>
                   <br>
                   <div class="col-lg-6 col-lg-offset-3">
@@ -92,13 +93,13 @@
                           <!-- Wrapper for slides -->
                           <div class="carousel-inner">
                               <div class="item active centered">
-                                  <img class="img-responsive img-example" src="/assets/img/c1.png" alt="">
+                                  <img class="img-example" src="{{ site.baseurl }}/assets/img/c1.png" alt="">
                               </div>
                               <div class="item centered">
-                                  <img class="img-responsive img-example" src="assets/img/c2.png" alt="">
+                                  <img class="img-example" src="{{ site.baseurl }}/assets/img/c2.png" alt="">
                               </div>
                               <div class="item centered">
-                                  <img class="img-responsive img-example" src="assets/img/c3.png" alt="">
+                                  <img class="img-example" src="{{ site.baseurl }}/assets/img/c3.png" alt="">
                               </div>
                           </div>
                           <br>
@@ -122,13 +123,13 @@
       <section id="download" name="download"></section>
       <div id="f" >
           <div class="container">
-              <div class="row">
+              <div class="row" id="download-row">
                   <h3>Download</h3>
                   <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
                   <div class="col-lg-6 col-lg-offset-3">
-                    <p><a href="android/index.html" class="btn btn-lg btn-outline" role="button">Android</a></p>
-                    <p><a href="ios/index.html" class="btn btn-lg btn-outline" role="button">iOS</a></p>
-                    <p><a href="web/index.html" class="btn btn-lg btn-outline" role="button">Web</a></p>
+                    <p><img src="{{site.baseurl}}/assets/img/logo-android.png" class="download-icon" alt=""><a href="android/index.html" class="btn btn-lg btn-outline" role="button">Android</a>
+                    <img src="{{site.baseurl}}/assets/img/logo-apple.png" class="download-icon" alt=""><a href="ios/index.html" class="btn btn-lg btn-outline" role="button">iOS</a>
+                    <img src="{{site.baseurl}}/assets/img/logo-phone.png" class="download-icon" alt=""><a href="web/index.html" class="btn btn-lg btn-outline" role="button">Web</a></p>
 
                   </div>
               </div>

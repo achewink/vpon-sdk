@@ -1,12 +1,115 @@
 ---
 layout:         "android"
-title:          "Android SDK 中級使用"
-lead:           "Banner Ad"
+title:          "廣告形式 - 橫幅廣告 "
+lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       /zh-tw/android/advanced/
+permalink:       /zh-tw/android/banner/
 lang:           "zh-tw"
 ---
+# 完成串接指示
+---
+若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
+
+# 開始撰寫 Banner
+---
+Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕等控制項的形式向使用者呈現的 Java 執行個體。VpadnBanner 只是另一種 View 子類別，用來顯示由使用者點擊觸發的小型 HTML5 廣告。
+和所有的 View 一樣，AdView 可以單用程式碼撰寫，也可以絕大部分用 XML 寫成。
+加入橫幅廣告會用到程式碼：
+
+1. 匯入 com.vpadn.ads.*
+2. 宣告 VpadnBanner 執行個體
+3. 建立例項，指定BannerId，也就是Vpon申請的BannerId
+4. 將該檢視加進使用者介面
+5. 透過廣告載入例項
+
+最簡易的方式是在應用程式的 Activity 內進行上述所有步驟。
+
+```java
+  import com.vpadn.ads.*
+  public class MainActivity extends Activity {
+  	private RelativeLayout adBannerLayout;
+  	private VpadnBanner vponBanner = null;
+  	//TODO: VPON Banner ID
+  	private String bannerId = CHANGE ME ;
+
+         @Override
+  	protected void onCreate(Bundle savedInstanceState) {
+  		super.onCreate(savedInstanceState);
+  		setContentView(R.layout.activity_main);
+  		//get your layout view for Vpon banner
+  		adBannerLayout = (RelativeLayout) findViewById(R.id.adLayout);
+  		//create VpadnBanner instance
+                  vponBanner = new VpadnBanner(this, bannerId, VpadnAdSize.SMART_BANNER, "TW");
+  		VpadnAdRequest adRequest = new VpadnAdRequest();
+  		//set auto refresh to get banner
+  		adRequest.setEnableAutoRefresh(true);
+                  //load vpon banner
+  		vponBanner.loadAd(adRequest);
+                  //add vpon banner to your layout view
+  		adBannerLayout.addView(vponBanner);
+  	}
+
+  	@Override
+  	protected void onDestroy() {
+  		super.onDestroy();
+  		if (vponBanner != null) {
+  			//remember to call destroy method
+  			vponBanner.destroy();
+  			vponBanner = null;
+  		}
+  	}
+    }
+```
+  <br>
+
+# 使用 layout xml 設定
+---
+也可以直接使用xml 定義Banner 這樣你就不需要寫任何java code
+
+``` xml
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:vpadn="http://schemas.android.com/apk/lib/com.vpadn.ads"
+      android:id="@+id/mainLayout"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical" >
+
+      <RelativeLayout
+          android:id="@+id/adLayout"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content" >
+
+          <com.vpadn.ads.VpadnBanner
+              android:id="@+id/vpadnBannerXML"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              vpadn:adSize="SMART_BANNER"
+              vpadn:autoFresh="true"
+              vpadn:bannerId= CHANGE_ME
+              vpadn:loadAdOnCreate="true"
+              vpadn:platform="TW" />
+      </RelativeLayout>
+  </LinearLayout>
+```
+<br>
+記得將上面的 vpon:bannerId 填入你真實的 banner ID
+如果你的 banner ID 還未經過審核可以使用下列的方式取得測試廣告
+<br>
+
+```java
+      VpadnAdRequest adRequest =  new VpadnAdRequest();
+      HashSet<String> testDeviceImeiSet = new HashSet<String>();
+      testDeviceImeiSet.add("your device advertising id");
+      //TODO: put Android device advertising id
+      adRequest.setTestDevices(testDeviceImeiSet);
+      vponBanner.loadAd(adRequest);
+```
+可以使用下列任一方式取得 device 上的 Advertising ID
+
+1. 於 log 搜尋"advertising_id"
+2. 直接操作手機: 設定 → Google → 廣告 → 您的廣告 ID (Advertising ID)
+
 # 橫幅廣告大小
 ---
 除了支援手機上的 320x50 大小外，VPON還支援各種不同的橫幅廣告：
@@ -18,13 +121,12 @@ lang:           "zh-tw"
 728x90                     | IAB 超級橫幅廣告 |  VpadnAdSize.IAB\_LEADERBOARD
 device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
 
-如無特定需求，我們建議您直接使用上面最後一項smart banner即可 (目前不支援VpadnAdSize.IAB\_WIDE\_SKYSCRAPER)
+如無特定需求，我們建議您直接使用上面最後一項 `smart banner` 即可 (目前不支援VpadnAdSize.IAB_WIDE_SKYSCRAPER)
 
 
 #  更新廣告
   --------
-
-  如果您在伺服器的 VPON 帳戶中指定了更新速率，且需要使用下面的sample才會啟動banner自動更新
+如果您在伺服器的 VPON 帳戶中指定了更新速率，且需要使用下面的sample才會啟動banner自動更新
 
 ```java
  VpadnAdRequest adRequest = new VpadnAdRequest();
@@ -32,87 +134,18 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
  adShowBanner.loadAd(adRequest);
 ```
 
+# 下載 Sample code
+---
+[Go to download page]
+<br>
 
-# com.adshow.ads.VpadnAdRequest
-  -----------------------------
-  您可以先自訂 VpadnAdRequest，再將它傳送給 VpadnBanner.loadAd，讓 VPON 以更精確的方式指定廣告。
-
-## 指定接收廣告
-
-  您可以使用這些屬性來指定要接收測試廣告的裝置或裝置 Set。若要確認 SDK 是否已順利整合，請加入您的測試裝置並執行應用程式，然後按一下所顯示的測試廣告。
-
-
-```Java
-  VpadnAdRequest request = new VpadnAdRequest();
-  request.addTestDevice("your test device advertising id");
-  //TODO 需要填入您測試機的advertising id
-```
-
-## 指定目標
-
-  您也可以指定位置和客層相關資訊。不過，為了保護使用者隱私，請只指定您的應用程式中現有的位置和客層資料。
-
-
-```Java
-VpadnAdRequest request = new VpadnAdRequest();
-request.setGender(VpadnAdRequest.Gender.FEMALE);
-request.setBirthday("1977-08-23");
-```
-
-
-  系統會以[適當的方法][1]取得使用者的[位置][2]。
-
-# com.adshow.ads.VpadnAdListener
-  ------------------------------
-
-您可以選擇在傳送給 VpadnBanner.setAdListener 的物件中執行 com.adshow.ads.VpadnAdListener，藉此追蹤請求失敗或「點閱」等廣告生命週期事件。
-
-```java
-   public interface VpadnAdListener {
-     void onVpadnReceiveAd(VpadnAd ad);
-     void onVpadnFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode errorCode);
-     void onVpadnPresentScreen(VpadnAd ad);
-     void onVpadnDismissScreen(VpadnAd ad);
-     void onVpadnLeaveApplication(VpadnAd ad);
-   }
-```
-
-這個介面可由您的活動或任何其他物件執行：
-
-```java
-import com.vpadn.ads.*;
-public class VpadnBannerExample extends Activity implements VpadnAdListener {
-  //TODO: Implements all interface methods }
-}
-```
-
-然後傳給 VpadnBanner：
-
-```java
- vponBanner.setAdListener(this);
-```
-
-  public void onVpadnReceiveAd(VpadnAd ad) 當 VpadnBanner.loadAd 成功時傳送。 public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error) 當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。建議您將這些事件記錄下來以便偵錯：
-
-```java
- @Override public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode errorCode) { Log.d(MY\_LOG\_TAG, "failed to receive ad (" + errorCode + ")"); }
-```
-
-  public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊，在您的應用程式之前建立了 Activity 並呈現出全螢幕廣告使用者介面時呼叫。 public void onVpadnDismissScreen(VpadnAd ad) 當使用者關閉與 onVponPresentScreen 一同顯示的全螢幕 Activity，控制權也交還給應用程式時呼叫。 public void onVpadnLeaveApplication(VpadnAd ad) 當 Ad 點擊會啟動新的應用程式時呼叫。
-
+# 結果
+---
+現在只要執行這個應用程式，您應該就會在畫面上方看到橫幅廣告：
+![gogo]({{site.baseurl}}/assets/img/A-sdk330-03.png)
 
 # 其他訣竅
-  ----
-  請參閱[進階指南][3]中有關插頁式廣告的簡介。
+> 請參閱[插頁廣告](../Interstitial)、[中介服務](../mediation)、[進階設定](../advanced)中獲取更多簡介。
 
-
-# Download Sample Code
-  -------------------
-  SDK 4 JAR 檔 在Sample code libs folder內
-
-  [Go to download page](/tw/#download)
-
-
-[1]: http://developer.android.com/guide/topics/location/strategies.html
-[2]: http://developer.android.com/reference/android/location/Location.html
-[3]: interstitial-ad/
+[串接說明]: {{site.baseurl}}/zh-tw/android/integration-guide/
+[Go to download page]: {{site.baseurl}}/zh-tw/download/
