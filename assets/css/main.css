@@ -120,9 +120,9 @@ a:after {
 
 #headerwrap h3 {
 	color: white;
-	font-size: 30px;
-	font-weight: 100;
-    font-family: 'Open Sans', serif;
+	font-size: 40px;
+	font-weight: 400;
+    font-family: 'Oswald', serif;
 }
 
 #headerwrap .logo {
@@ -347,10 +347,12 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
-img.img-example{
-  border: 0px;
-  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);
-  border-radius: 0px 0px 0px 0px;
+.img-md{
+  margin: 13px 5px 45px 0px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.download-icon{
+  width: 12%;
+  display: inline;
 }

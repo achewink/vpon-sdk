@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Update to SDK 4.2.x  &middot; Vpon-SDK
+  升級至 SDK 4.2.x  &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -52,6 +52,7 @@
 </script>
 
 
+</head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
   <!-- Docs master nav -->
@@ -65,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/zh-tw" class="navbar-brand">Vpon SDK</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -121,14 +122,101 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Update to SDK 4.2.x </h1>
-      <p>sub-title</p>
+      <h1>升級至 SDK 4.2.x </h1>
+      <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
-
     <div class="row">
-      <div class="col-md-9" role="main">
+      <div class="col-sm-3 col-md-2" role="complementary" >
+      <div class="bs-sidebar-left bs-sidenav">
+        
+  <ul class="nav nav-sidebar">
+    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
+    <li><a id="banner-id"></a></li>
+    <li><a id="interstitial-id"></a></li>
+    <li><a id="mediation"></a></li>
+    <li><a id="advanced"></a></li>
+    <li><a id="latest-news"></a></li>
+    <li><a id="download"></a></li>
+    <li><a id="support"></a></li>
+  </ul>
+
+  <script type="text/javascript">
+    // var usrlang = navigator.language || navigator.userLanguage;
+    var lang = $('html').attr("lang");
+    var userLang = lang.toLowerCase();
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
+    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
+    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
+    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
+    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
+    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
+    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
+    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+
+  $(document).ready(function(){
+    //show the text in right lang
+    if (userLang == "zh-tw") {
+      $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
+      $('#banner-id').text("橫幅廣告");
+      $('#interstitial-id').text('插頁廣告');
+      $('#mediation').text("中介服務");
+      $('#advanced').text("進階設定");
+      $('#latest-news').text("最新消息");
+      $('#download').text("下載SDK");
+      $('#support').text("其他協助");
+    } else if (userLang == "zh-cn") {
+      $('#getting-started').text("开始使用");
+      $('#integration-guide').text("Getting Started");
+      $('#banner-id').text("横幅广告");
+      $('#interstitial-id').text('插页广告');
+      $('#mediation').text("中介服务");
+      $('#advanced').text("进阶设定");
+      $('#latest-news').text("最新消息");
+      $('#download').text("下载SDK");
+      $('#support').text("其他协助");
+    } else if (userLang == "jp"){
+      $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
+      $('#banner-id').text("バナー広告");
+      $('#interstitial-id').text('インタースティシャル広告');
+      $('#mediation').text("メディエーション");
+      $('#latest-news').text("最新ニュース");
+      $('#download').text("ダウンロード");
+      $('#support').text("サポート");
+    } else {
+     $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Getting Started");
+     $('#banner-id').text("Banner Ad");
+     $('#interstitial-id').text('Interstitial Ad');
+     $('#mediation').text("Mediation");
+     $('#advanced').text("Advanced Setting");
+     $('#latest-news').text("Latest News");
+     $('#download').text("Download");
+     $('#support').text("Support"); }
+   //add right linking url to right title
+    $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
+    $('#banner-id').attr({href:urlBanner});
+    $('#interstitial-id').attr({href:urlInterstitial});
+    $('#mediation').attr({href:urlMediation});
+    $('#advanced').attr({href:urlAdvanced});
+    $('#latest-news').attr({href:urlLatestNews});
+    $('#download').attr({href:urlDownload});
+    $('#support').attr({href:urlSupport});
+    // $('#').attr({href:url});
+  });
+  </script>
+
+      </div>
+      </div>
+      <div class="col-md-7" role="main">
         <h1 id="steps-to-update">Steps to update</h1>
 
 <hr>
@@ -145,15 +233,17 @@
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdSize</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdSize</span>
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponInterstitialAd</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnInterstitialAd</span>
 </code></pre></div>
-<p>3.You have to modify the last one parameter of the constructor of VpadnBanner and VpadnInterstitialAd. Please change the VponPlatform.TW to be the String “TW” or “CN”(only for China) original version：  </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">`new VponBanner(this, bannerId1,VponAdSize.SMART_BANNER , VponPlatform.TW);`
+<p>3.將VpadnBanner和VpadnInterstitialAd的constructor，最後一個參數VponPlatform.TW ，改為字串&quot;TW&quot;</p>
 
-Change it like this:
+<p>由：</p>
 
-`new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,&quot;TW&quot;);`
-</code></pre></div>
-<p>4.Please change activity tag in Androidmanifest.xml:  <br>
-original version:</p>
+<p><code>new VponBanner(this, bannerId1,VponAdSize.SMART_BANNER , VponPlatform.TW);</code><br>
+改為</p>
+
+<p><code>new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,&quot;TW&quot;);</code>
+<br>
+4.改變Androidmanifest.xml 裡的activity tag，
+由</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;activity</span>
             <span class="na">android:name=</span><span class="s">&quot;com.vpon.widget.VponActivity&quot;</span>
             <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
@@ -162,7 +252,7 @@ original version:</p>
             <span class="nt">&gt;</span>
            <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
-<p>Change it like this:</p>
+<p>改為：</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml">        <span class="nt">&lt;activity</span>
             <span class="na">android:name=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
             <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
@@ -171,10 +261,7 @@ original version:</p>
             <span class="nt">&gt;</span>  
         <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
-<p>5.If you used the interface of VponAdListener, please modify it to
-VpadnAdListener.<br>
-All names of methods used in interface should be changed to vpadn, for
-example:  </p>
+<p>5.如果您有使用到Interface VponAdListener 請改為VpadnAdListener 這interface裡面所有的method name都由vpon改為vpadn，如下：</p>
 
 <p><code>onVponReceiveAd</code> -&gt; <code>onVpadnReceiveAd</code>  </p>
 
@@ -195,9 +282,7 @@ example:  </p>
         </div>
       </div>
     </div>
-
   </div>
-
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
@@ -205,7 +290,7 @@ example:  </p>
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>

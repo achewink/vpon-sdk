@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Android SDK 中級使用 &middot; Vpon-SDK
+  下載SDK &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,8 +122,8 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Android SDK 中級使用</h1>
-      <p>Crazy Ad</p>
+      <h1>下載SDK</h1>
+      <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -134,12 +134,13 @@
   <ul class="nav nav-sidebar">
     <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
     <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
     <li><a id="latest-news"></a></li>
-    <li><a id="reference"></a></li>
+    <li><a id="download"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -147,13 +148,14 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android//';
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
     var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
     var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
     var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
     var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
     var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlReference = '/vpon-sdk/' + userLang + '/android/reference/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
     var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
     // var  = "'/vpon-sdk/'+ userLang + '/android/'";
 
@@ -161,73 +163,97 @@
     //show the text in right lang
     if (userLang == "zh-tw") {
       $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("參考資料");
+      $('#download').text("下載SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
       $('#getting-started').text("开始使用");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("参考资料");
+      $('#download').text("下载SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
       $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
       $('#latest-news').text("最新ニュース");
-      $('#reference').text("参照");
+      $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
      $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Getting Started");
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
      $('#latest-news').text("Latest News");
-     $('#reference').text("Reference");
+     $('#download').text("Download");
      $('#support').text("Support"); }
    //add right linking url to right title
     $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
     $('#banner-id').attr({href:urlBanner});
     $('#interstitial-id').attr({href:urlInterstitial});
     $('#mediation').attr({href:urlMediation});
     $('#advanced').attr({href:urlAdvanced});
     $('#latest-news').attr({href:urlLatestNews});
-    $('#reference').attr({href:urlReference});
+    $('#download').attr({href:urlDownload});
     $('#support').attr({href:urlSupport});
     // $('#').attr({href:url});
-
-
   });
   </script>
 
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="介紹">介紹</h1>
+        <h1 id="基本sdk">基本SDK</h1>
 
 <hr>
 
-<p>會從banner自動展開成Crazy Ad，全螢幕富媒體廣告的Crazy Ad呈現約5~7秒會自動關閉。
-<img src="../../../../assets/img/Crazyad.png" alt="海尼根廣告"></p>
+<p><a href="http://m.vpadn.com/sdk/vpadn-sdk-obf431-82605102-1506291043-d57fd2a.jar">Download</a>最新版 SDK <br>
+ <a href="2">Download</a> Banner Sample code
+ <a href="2.5">Download</a> Interstitial Sample code</p>
 
-<h1 id="設定">設定</h1>
+<h1 id="中介服務sdk">中介服務SDK</h1>
 
 <hr>
 
-<p>在後台註冊申請流程中可選擇是否播放Crazy Ad。<br>
-進入 <a href="http://cn.adon.vpon.com/">http://cn.adon.vpon.com/</a> 註冊中國區License Key。<br>
-進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。<br>
-如圖:
-<img src="../../../../assets/img/CrazyadSetting.png" alt="CrazyadSetting"></p>
+<h2 id="admob">AdMob</h2>
+
+<p><a href="3">Download</a> 最新版 SDK <br>
+ <a href="4">Download</a> Sample code</p>
+
+<h2 id="dfp">DFP</h2>
+
+<p><a href="5">Download</a> 最新版 SDK <br>
+ <a href="6">Download</a> Sample code</p>
+
+<h2 id="mopub">MoPub</h2>
+
+<p><a href="7">Download</a> Sample code</p>
+
+<h2 id="mogo">MOGO</h2>
+
+<h1 id="其他下載">其他下載</h1>
+
+<hr>
+
+<blockquote>
+<p><strong>Note:</strong> <br>
+1. 若您曾使用過舊版SDK，請閱讀: <a href="/vpon-sdk/zh-tw/latest-news/update-to-SDK4_2_x/">升級最新SDK所需修改</a><br>
+2. Sample code 內不含jar檔</p>
+</blockquote>
 
       </div>
       <div class="col-md-3">
@@ -246,7 +272,7 @@
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>
@@ -261,4 +287,4 @@
 
 </body>
 
-/html>
+</html>

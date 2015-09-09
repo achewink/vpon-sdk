@@ -134,12 +134,13 @@
   <ul class="nav nav-sidebar">
     <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
     <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
     <li><a id="latest-news"></a></li>
-    <li><a id="reference"></a></li>
+    <li><a id="download"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -147,13 +148,14 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android//';
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
     var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
     var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
     var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
     var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
     var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlReference = '/vpon-sdk/' + userLang + '/android/reference/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
     var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
     // var  = "'/vpon-sdk/'+ userLang + '/android/'";
 
@@ -161,51 +163,54 @@
     //show the text in right lang
     if (userLang == "zh-tw") {
       $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("參考資料");
+      $('#download').text("下載SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
       $('#getting-started').text("开始使用");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("参考资料");
+      $('#download').text("下载SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
       $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
       $('#latest-news').text("最新ニュース");
-      $('#reference').text("参照");
+      $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
      $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Getting Started");
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
      $('#latest-news').text("Latest News");
-     $('#reference').text("Reference");
+     $('#download').text("Download");
      $('#support').text("Support"); }
    //add right linking url to right title
     $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
     $('#banner-id').attr({href:urlBanner});
     $('#interstitial-id').attr({href:urlInterstitial});
     $('#mediation').attr({href:urlMediation});
     $('#advanced').attr({href:urlAdvanced});
     $('#latest-news').attr({href:urlLatestNews});
-    $('#reference').attr({href:urlReference});
+    $('#download').attr({href:urlDownload});
     $('#support').attr({href:urlSupport});
     // $('#').attr({href:url});
-
-
   });
   </script>
 
@@ -224,35 +229,35 @@
 
 <ol>
 <li><p>請登入到 <a href="https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android">這裡</a><br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid1.png" alt="1">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid1.png" alt="1">  </p></li>
 <li><p>盈利 -&gt; 透過新應用程式盈利<br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid2.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid2.png" alt="">  </p></li>
 <li><p>選取應用程式:
 (1) 填入app name
 (2) 選取平台
 (3) 點選 “新增應用程式&quot;
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid3.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid3.png" alt="">  </p></li>
 <li><p>選取廣告格式並對廣告單元命名: (1) 選擇橫幅廣告或者插頁廣告 (2) 設定,  (3) 廣告單元名稱(ex. Vpon_Banner)  (4) 儲存<br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid4.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid4.png" alt="">  </p></li>
 <li><p>得到一組廣告單元編號，選取完成<br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid5.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid5.png" alt="">  </p></li>
 <li><p>編輯中介服務<br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid6.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid6.png" alt="">  </p></li>
 <li><p>新增廣告連播網<br>
-<img src="../../../assets/img/AdMobScreenshotTradChineseAndroid7.png" alt="">  </p></li>
+<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid7.png" alt="">  </p></li>
 <li><p>設定Vpon進入您的聚合列表：<br>
 (1) 在可用的廣告聯播網中找到 Vpon<br>
-(2) Vpon Ad Id: 填入您在Vpon後台申請的版位ID<br>
-(3) Zone:選擇您欲請求的廣告平台的地區<br>
-(例：如果您的 App 是欲給大陸平台使用者使用，則您需在此欄位中填入cn，若您App是給除了大陸平台以外地區使用者使用則填入tw)  </p></li>
+(2) Vpon Ad Id: 填入您在 Vpon 後台申請的版位ID<br>
+(3) Zone: 選擇您欲請求的廣告平台的地區<br>
+(例：如果您的 App 是欲給大陸平台使用者使用，則您需在此欄位中填入<code>cn</code>，若您 app 是給除了大陸平台以外地區使用者使用則填入<code>tw</code>)  </p></li>
 </ol>
 
-<p><img src="../../../assets/img/AdMobScreenshotTradChineseAndroid8.png" alt="">  </p>
+<p><img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid8.png" alt="">  </p>
 
-<h2 id="integrate-vpon-adnetwork-into-your-project">Integrate Vpon AdNetwork into your project</h2>
+<h1 id="串接-vpon-進專案">串接 Vpon 進專案</h1>
 
 <p>您需將載入兩個 Jar 檔進入您專案中的 libs 資料夾，分別是：admob-adapter-****.jar 和 vpadn-sdk-***-***-***.jar.<br>
-<img src="../../../assets/img/AdMobLibJarFiles.jpg" alt="">  </p>
+<img src="/vpon-sdk/assets/img/AdMobLibJarFiles.jpg" alt="">  </p>
 
 <h1 id="需求條件">需求條件</h1>
 
@@ -265,6 +270,8 @@
 
 <h1 id="導入sdk">導入SDK</h1>
 
+<hr>
+
 <p>以下的步驟為將Google Mobile Ads SDK 導入您的App中:  </p>
 
 <ol>
@@ -274,23 +281,48 @@
 <li>在 manifest 中加入 permissions<br></li>
 </ol>
 
-<h2 id="新增並reference-google-play-services-library">新增並reference Google Play Services library</h2>
+<h2 id="google-play-services-library">Google Play Services library</h2>
 
 <p>請先安裝設定 Google Play Service SDK: <a href="https://developer.android.com/google/play-services/setup.html">Android instructions</a></p>
 
+<h3 id="eclipse">Eclipse</h3>
+
+<hr>
+
 <p>a.在您的應用程式專案中按右鍵並選擇“內容”  </p>
 
-<p><img src="../../../assets/img/GooglePlay_Properties.png" alt="">  </p>
+<p><img src="/vpon-sdk/assets/img/GooglePlay_Properties.png" alt="">  </p>
 
 <p>b.選擇Android -&gt;
 Add...尋找google-play-services_lib內容後按下OK新增Google Play services
 library.  </p>
 
-<p><img src="../../../assets/img/GooglePlay_Addlib.png" alt="">  </p>
+<p><img src="/vpon-sdk/assets/img/GooglePlay_Addlib.png" alt="">  </p>
 
 <p>如圖示，您的專案已經reference Google Play services library.  </p>
 
-<p><img src="../../../assets/img/GooglePlay_Addlib2.png" alt="">  </p>
+<p><img src="/vpon-sdk/assets/img/GooglePlay_Addlib2.png" alt="">  </p>
+
+<h3 id="android-studio">Android Studio</h3>
+
+<hr>
+
+<ol>
+<li><p>請打開 <code>app</code> 模組下的 <code>build.gradle</code></p>
+
+<blockquote>
+<p><strong>Note</strong>: Android Studio 專案下有兩個 <code>build.gradle</code>，請小心以免搞混</p>
+</blockquote></li>
+<li><p>增加 build rule 在 dependencies 底下，已取得最新版 <code>play-services</code></p></li>
+</ol>
+<div class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;com.android.application&#39;</span>
+    <span class="o">...</span>
+
+    <span class="n">dependencies</span> <span class="o">{</span>
+      <span class="n">compile</span> <span class="s1">&#39;com.google.android.gms:play-services:+&#39;</span>
+    <span class="o">}</span>
+</code></pre></div>
+<p>接著，存擋並至 toolbar 點選 <strong>Sync Project with Gradle Files</strong></p>
 
 <h2 id="新增-meta-data-tag">新增 meta-data tag</h2>
 
@@ -312,7 +344,7 @@ library.  </p>
  <span class="nt">&lt;/application&gt;</span>  
 <span class="nt">&lt;/manifest&gt;</span>
 </code></pre></div>
-<h2 id="宣告-com-google-android-gms-ads-adactivity">宣告 com.google.android.gms.ads.AdActivity</h2>
+<h2 id="宣告-adactivity">宣告 AdActivity</h2>
 
 <hr>
 
@@ -428,7 +460,7 @@ library.  </p>
 </code></pre></div>
 <p>參考更多的 banner 設定: <a href="https://developers.google.com/mobile-ads-sdk/docs/admob/intermediate#play">here</a></p>
 
-<h1 id="interstitial插頁廣告">Interstitial插頁廣告</h1>
+<h1 id="interstitial-插頁廣告">Interstitial 插頁廣告</h1>
 
 <p>和AdView的使用方式相似:
 • 匯入 <code>com.google.android.gms.ads.*</code>
@@ -466,11 +498,11 @@ library.  </p>
    <span class="o">}</span>
  <span class="o">}</span>
 </code></pre></div>
-<h1 id="download-sample-code">Download Sample Code</h1>
+<h1 id="下載-sample-code">下載 Sample Code</h1>
 
 <hr>
 
-<p><a href="../../#download">Download Sample Code</a></p>
+<p><a href="/vpon-sdk/android/download/">Download Sample Code</a></p>
 
       </div>
       <div class="col-md-3">
@@ -489,7 +521,7 @@ library.  </p>
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>
@@ -504,4 +536,4 @@ library.  </p>
 
 </body>
 
-/html>
+</html>

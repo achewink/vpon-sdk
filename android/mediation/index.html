@@ -134,12 +134,13 @@
   <ul class="nav nav-sidebar">
     <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
     <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
     <li><a id="latest-news"></a></li>
-    <li><a id="reference"></a></li>
+    <li><a id="download"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -147,13 +148,14 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android//';
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
     var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
     var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
     var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
     var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
     var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlReference = '/vpon-sdk/' + userLang + '/android/reference/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
     var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
     // var  = "'/vpon-sdk/'+ userLang + '/android/'";
 
@@ -161,51 +163,54 @@
     //show the text in right lang
     if (userLang == "zh-tw") {
       $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("參考資料");
+      $('#download').text("下載SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
       $('#getting-started').text("开始使用");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("参考资料");
+      $('#download').text("下载SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
       $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
       $('#latest-news').text("最新ニュース");
-      $('#reference').text("参照");
+      $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
      $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Getting Started");
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
      $('#latest-news').text("Latest News");
-     $('#reference').text("Reference");
+     $('#download').text("Download");
      $('#support').text("Support"); }
    //add right linking url to right title
     $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
     $('#banner-id').attr({href:urlBanner});
     $('#interstitial-id').attr({href:urlInterstitial});
     $('#mediation').attr({href:urlMediation});
     $('#advanced').attr({href:urlAdvanced});
     $('#latest-news').attr({href:urlLatestNews});
-    $('#reference').attr({href:urlReference});
+    $('#download').attr({href:urlDownload});
     $('#support').attr({href:urlSupport});
     // $('#').attr({href:url});
-
-
   });
   </script>
 
@@ -245,7 +250,7 @@
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>
@@ -260,4 +265,4 @@
 
 </body>
 
-/html>
+</html>

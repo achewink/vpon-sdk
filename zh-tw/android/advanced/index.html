@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Android SDK 中級使用 &middot; Vpon-SDK
+  進階設定 &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,8 +122,8 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Android SDK 中級使用</h1>
-      <p>Banner Ad</p>
+      <h1>進階設定</h1>
+      <p>Crazy Ad, Proguard, Cocoa</p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -134,12 +134,13 @@
   <ul class="nav nav-sidebar">
     <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
     <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
     <li><a id="latest-news"></a></li>
-    <li><a id="reference"></a></li>
+    <li><a id="download"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -147,13 +148,14 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android//';
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
     var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
     var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
     var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
     var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
     var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlReference = '/vpon-sdk/' + userLang + '/android/reference/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
     var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
     // var  = "'/vpon-sdk/'+ userLang + '/android/'";
 
@@ -161,108 +163,65 @@
     //show the text in right lang
     if (userLang == "zh-tw") {
       $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("參考資料");
+      $('#download').text("下載SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
       $('#getting-started').text("开始使用");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
       $('#latest-news').text("最新消息");
-      $('#reference').text("参考资料");
+      $('#download').text("下载SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
       $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("Getting Started");
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
       $('#latest-news').text("最新ニュース");
-      $('#reference').text("参照");
+      $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
      $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Getting Started");
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
      $('#latest-news').text("Latest News");
-     $('#reference').text("Reference");
+     $('#download').text("Download");
      $('#support').text("Support"); }
    //add right linking url to right title
     $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
     $('#banner-id').attr({href:urlBanner});
     $('#interstitial-id').attr({href:urlInterstitial});
     $('#mediation').attr({href:urlMediation});
     $('#advanced').attr({href:urlAdvanced});
     $('#latest-news').attr({href:urlLatestNews});
-    $('#reference').attr({href:urlReference});
+    $('#download').attr({href:urlDownload});
     $('#support').attr({href:urlSupport});
     // $('#').attr({href:url});
-
-
   });
   </script>
 
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="橫幅廣告大小">橫幅廣告大小</h1>
+        <h1 id="vpadnadrequest">VpadnAdRequest</h1>
 
 <hr>
 
-<p>除了支援手機上的 320x50 大小外，VPON還支援各種不同的橫幅廣告：</p>
-
-<table><thead>
-<tr>
-<th style="text-align: center">大小 (寬度x高度)</th>
-<th style="text-align: center">說明</th>
-<th style="text-align: center">VponAdSize 常數值</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: center">320x50</td>
-<td style="text-align: center">標準橫幅廣告</td>
-<td style="text-align: center">VpadnAdSize.BANNER</td>
-</tr>
-<tr>
-<td style="text-align: center">468x60</td>
-<td style="text-align: center">IAB 全橫幅廣告</td>
-<td style="text-align: center">VpadnAdSize.IAB_BANNER</td>
-</tr>
-<tr>
-<td style="text-align: center">728x90</td>
-<td style="text-align: center">IAB 超級橫幅廣告</td>
-<td style="text-align: center">VpadnAdSize.IAB_LEADERBOARD</td>
-</tr>
-<tr>
-<td style="text-align: center">device width x auto height</td>
-<td style="text-align: center">Smart Banner</td>
-<td style="text-align: center">VpadnAdSize.SMART_BANNER</td>
-</tr>
-</tbody></table>
-
-<p>如無特定需求，我們建議您直接使用上面最後一項smart banner即可 (目前不支援VpadnAdSize.IAB_WIDE_SKYSCRAPER)</p>
-
-<h1 id="更新廣告">更新廣告</h1>
-
-<hr>
-
-<p>如果您在伺服器的 VPON 帳戶中指定了更新速率，且需要使用下面的sample才會啟動banner自動更新</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
- <span class="c1">//設定成true才會自動更新 adRequest.setEnableAutoRefresh(true);</span>
- <span class="n">adShowBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
-</code></pre></div>
-<h1 id="com-adshow-ads-vpadnadrequest">com.adshow.ads.VpadnAdRequest</h1>
-
-<hr>
-
-<p>您可以先自訂 VpadnAdRequest，再將它傳送給 VpadnBanner.loadAd，讓 VPON 以更精確的方式指定廣告。</p>
+<p>您可以先自訂 <code>VpadnAdRequest</code>，再將它傳送給 <code>VpadnBanner.loadAd</code>，讓 Vpon 以更精確的方式指定廣告 (com.adshow.ads.VpadnAdRequest)</p>
 
 <h2 id="指定接收廣告">指定接收廣告</h2>
 
@@ -278,13 +237,13 @@
 <span class="n">request</span><span class="o">.</span><span class="na">setGender</span><span class="o">(</span><span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">);</span>
 <span class="n">request</span><span class="o">.</span><span class="na">setBirthday</span><span class="o">(</span><span class="s">&quot;1977-08-23&quot;</span><span class="o">);</span>
 </code></pre></div>
-<p>系統會以<a href="http://developer.android.com/guide/topics/location/strategies.html">適當的方法</a>取得使用者的<a href="http://developer.android.com/reference/android/location/Location.html">位置</a>。</p>
+<p>系統會以適當的方法取得使用者的位置</p>
 
-<h1 id="com-adshow-ads-vpadnadlistener">com.adshow.ads.VpadnAdListener</h1>
+<h1 id="vpadnadlistener">VpadnAdListener</h1>
 
 <hr>
 
-<p>您可以選擇在傳送給 VpadnBanner.setAdListener 的物件中執行 com.adshow.ads.VpadnAdListener，藉此追蹤請求失敗或「點閱」等廣告生命週期事件。</p>
+<p>您可以選擇在傳送給 <code>VpadnBanner.setAdListener</code> 的物件中執行 <code>com.adshow.ads.VpadnAdListener</code>，藉此追蹤請求失敗或「點閱」等廣告生命週期事件。</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java">   <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">VpadnAdListener</span> <span class="o">{</span>
      <span class="kt">void</span> <span class="nf">onVpadnReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">);</span>
      <span class="kt">void</span> <span class="nf">onVpadnFailedToReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">VpadnErrorCode</span> <span class="n">errorCode</span><span class="o">);</span>
@@ -299,27 +258,32 @@
   <span class="c1">//TODO: Implements all interface methods }</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>然後傳給 VpadnBanner：</p>
+<p>然後傳給 <code>VpadnBanner</code>：</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="n">vponBanner</span><span class="o">.</span><span class="na">setAdListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
 </code></pre></div>
-<p>public void onVpadnReceiveAd(VpadnAd ad) 當 VpadnBanner.loadAd 成功時傳送。 public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error) 當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。建議您將這些事件記錄下來以便偵錯：</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailedToReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">VpadnErrorCode</span> <span class="n">errorCode</span><span class="o">)</span> <span class="o">{</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">MY</span><span class="err">\</span><span class="n">_LOG</span><span class="err">\</span><span class="n">_TAG</span><span class="o">,</span> <span class="s">&quot;failed to receive ad (&quot;</span> <span class="o">+</span> <span class="n">errorCode</span> <span class="o">+</span> <span class="s">&quot;)&quot;</span><span class="o">);</span> <span class="o">}</span>
+<p>public void onVpadnReceiveAd(VpadnAd ad) 當 VpadnBanner.loadAd 成功時傳送。 public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error) 當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。</p>
+
+<p>建議您將這些事件記錄下來以便偵錯：</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailedToReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">VpadnErrorCode</span> <span class="n">errorCode</span><span class="o">)</span> <span class="o">{</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">MY_LOG_TAG</span><span class="o">,</span> <span class="s">&quot;failed to receive ad (&quot;</span> <span class="o">+</span> <span class="n">errorCode</span> <span class="o">+</span> <span class="s">&quot;)&quot;</span><span class="o">);</span> <span class="o">}</span>
 </code></pre></div>
 <p>public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊，在您的應用程式之前建立了 Activity 並呈現出全螢幕廣告使用者介面時呼叫。 public void onVpadnDismissScreen(VpadnAd ad) 當使用者關閉與 onVponPresentScreen 一同顯示的全螢幕 Activity，控制權也交還給應用程式時呼叫。 public void onVpadnLeaveApplication(VpadnAd ad) 當 Ad 點擊會啟動新的應用程式時呼叫。</p>
 
-<h1 id="其他訣竅">其他訣竅</h1>
+<h1 id="crazy-ad">Crazy Ad</h1>
 
 <hr>
 
-<p>請參閱<a href="interstitial-ad/">進階指南</a>中有關插頁式廣告的簡介。</p>
+<p>會從banner自動展開成Crazy Ad，全螢幕富媒體廣告的Crazy Ad呈現約5~7秒會自動關閉。
+<img src="/vpon-sdk/assets/img/Crazyad.png" alt="海尼根廣告"></p>
 
-<h1 id="download-sample-code">Download Sample Code</h1>
+<h2 id="設定">設定</h2>
 
 <hr>
 
-<p>SDK 4 JAR 檔 在Sample code libs folder內</p>
-
-<p><a href="/tw/#download">Go to download page</a></p>
+<p>在後台註冊申請流程中可選擇是否播放Crazy Ad。<br>
+進入 <a href="http://cn.adon.vpon.com/">http://cn.adon.vpon.com/</a> 註冊中國區License Key。<br>
+進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。<br>
+如圖:
+<img src="/vpon-sdk/assets/img/CrazyadSetting.png" alt="CrazyadSetting"></p>
 
       </div>
       <div class="col-md-3">
@@ -338,7 +302,7 @@
     <ul class="footer-links muted">
       <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
       <li>&middot;</li>
-      <li>Proudly hosted by <a href="https://pages.github.com">Github Pages</a></li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
     </ul>
   </div>
 </footer>
@@ -353,4 +317,4 @@
 
 </body>
 
-/html>
+</html>
