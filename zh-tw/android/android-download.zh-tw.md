@@ -9,9 +9,10 @@ lang:           "zh-tw"
 ---
 # 基本SDK
 ---
- [Download][1]最新版 SDK <br>
- [Download](2) Banner Sample code
- [Download](2.5) Interstitial Sample code
+<a href="http://m.vpadn.com/sdk/vpadn-sdk-obf431-82605102-1506291043-d57fd2a.jar" class="btn btn-lg btn-outline" role="button">最新版SDK</a><br>
+<a href="http://m.vpon.com/sdk/VpadnBanner.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a> <br>
+<a href="http://m.vpon.com/sdk/VpadnBanner.zip" class="btn btn-lg btn-outline" role="button">Interstitial Sample code</a>
+
 
 
 
@@ -19,13 +20,12 @@ lang:           "zh-tw"
 ---
 ## AdMob
 
- [Download](3) 最新版 SDK <br>
- [Download](4) Sample code
-
+ <a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">AdMob SDK</a><br>
+<a href="http://m.vpon.com/sdk/AdmobSample.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a>
 ## DFP
 
- [Download](5) 最新版 SDK <br>
- [Download](6) Sample code
+ <a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">DFP SDK</a><br>
+  <a href="http://m.vpon.com/sdk/DFPsample.zip" class="btn btn-lg btn-outline" role="button">DFP Sample Code</a><br>
 
 ## MoPub
  [Download](7) Sample code

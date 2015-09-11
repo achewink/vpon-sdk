@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  下載SDK &middot; Vpon-SDK
+  Mediation - MOGO &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>下載SDK</h1>
+      <h1>Mediation - MOGO</h1>
       <p></p>
     </div>
   </div>
@@ -217,43 +217,48 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="基本sdk">基本SDK</h1>
+        <h1 id="串接mogo-mediation">串接MOGO Mediation</h1>
 
 <hr>
 
-<p><a href="http://m.vpadn.com/sdk/vpadn-sdk-obf431-82605102-1506291043-d57fd2a.jar" class="btn btn-lg btn-outline" role="button">最新版SDK</a><br>
-<a href="http://m.vpon.com/sdk/VpadnBanner.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a> <br>
-<a href="http://m.vpon.com/sdk/VpadnBanner.zip" class="btn btn-lg btn-outline" role="button">Interstitial Sample code</a></p>
+<p>MOGO Mediation 請先註冊帳號: <a href="/vpon-sdk/assets/img/http://www.adsmogo.com/">進入</a>  </p>
 
-<h1 id="中介服務sdk">中介服務SDK</h1>
+<h1 id="進入我的芒果">進入我的芒果</h1>
 
-<hr>
+<p>點選 visit AdsMOGO&#39;s Chinese Website -&gt; 進入芒果  </p>
 
-<h2 id="admob">AdMob</h2>
+<p><img src="/vpon-sdk/assets/img/MyMOGO.png" alt=""></p>
 
-<p><a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">AdMob SDK</a><br>
-<a href="http://m.vpon.com/sdk/AdmobSample.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a></p>
-
-<h2 id="dfp">DFP</h2>
-
-<p><a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">DFP SDK</a><br>
-  <a href="http://m.vpon.com/sdk/DFPsample.zip" class="btn btn-lg btn-outline" role="button">DFP Sample Code</a><br></p>
-
-<h2 id="mopub">MoPub</h2>
-
-<p><a href="7">Download</a> Sample code</p>
-
-<h2 id="mogo">MOGO</h2>
-
-<h1 id="其他下載">其他下載</h1>
+<h1 id="申請mogo-id">申請MOGO ID</h1>
 
 <hr>
 
-<blockquote>
-<p><strong>Note:</strong> <br>
-1. 若您曾使用過舊版SDK，請閱讀: <a href="/vpon-sdk/zh-tw/latest-news/update-to-SDK4_2_x/">升級最新SDK所需修改</a><br>
-2. Sample code 內不含jar檔</p>
-</blockquote>
+<ol>
+<li>App 管理下添加App<br></li>
+</ol>
+
+<p><img src="/vpon-sdk/assets/img/AddApp.png" alt=""> 2. 添加APP信息：1. App名稱。2. 選擇平台。3. App類型  </p>
+
+<p><img src="/vpon-sdk/assets/img/AppType.png" alt="" title="fig:AppType.png"> 3. 開啓“地域優化”：<font size="4" color="red">1. 中文廣告平台
+適用大陸地區。2. 英文廣告平台 適用台灣地區。</font>  </p>
+
+<p><img src="/vpon-sdk/assets/img/ChinaArea.png" alt="" title="fig:ChinaArea.png"><br>
+<img src="/vpon-sdk/assets/img/TWArea.png" alt="" title="fig:TWArea.png"><br>
+4. 點選Vpon輸入由Vpon後台申請的Banner ID  </p>
+
+<p><img src="/vpon-sdk/assets/img/VponBannerID.png" alt="" title="fig:VponBannerID.png"><br>
+5. 調整投放量  </p>
+
+<p><img src="/vpon-sdk/assets/img/Vpon.png" alt="" title="fig:Vpon.png"><br>
+6. 將芒果ID填入串接code裏  </p>
+
+<p><img src="/vpon-sdk/assets/img/MOGOID.png" alt="" title="fig:MOGOID.png"></p>
+
+<h1 id="download-sample-code">Download Sample Code</h1>
+
+<hr>
+
+<p><a href="/vpon-sdk/assets/img/">Go to download MOGO Mediation Sample Code</a></p>
 
       </div>
       <div class="col-md-3">
