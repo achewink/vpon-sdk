@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  ios &middot; Vpon-SDK
+  iOS - 插頁廣告 &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -68,7 +68,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/zh-tw" class="navbar-brand">Vpon SDK</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -124,7 +124,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>ios</h1>
+      <h1>iOS - 插頁廣告</h1>
       <p></p>
     </div>
   </div>
@@ -234,7 +234,42 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="is-this-under-ios-folder">is this under iOS folder?</h1>
+        <h1 id="總覽">總覽</h1>
+
+<hr>
+
+<p>插頁式廣告是互動式多媒體 HTML5 或「網路應用程式」，在應用程式的正常轉換點顯示 (例如啟動、影片播放前或遊戲關卡載入時)。網路應用程式使用上就像在應用程式內瀏覽一樣，只有簡單的關閉按鈕，而沒有任何導覽列，因為導覽配置就包含在內容本身。這類廣告由於內容更豐富、更吸引人，因此製作起來更昂貴，而曝光機會卻有限。</p>
+
+<p><img src="/vpon-sdk/assets/img/Interstitial.png" alt=""></p>
+
+<h1 id="vpadn-interstitial-ad">Vpadn Interstitial Ad</h1>
+
+<hr>
+
+<p>Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實例化、載入和顯示步驟的 Object，而不是 View。
+不過，它的用法與 Vpadn Banner 非常類似：</p>
+
+<ol>
+<li>匯入 lib檔與標頭檔</li>
+<li>宣告物件</li>
+<li>建立物件，並指定 VPON interstitial banner Id (不能與橫幅廣告所用banner Id重複)
+&gt; <strong>Note</strong>: 再次提醒您，最好在應用程式的 ViewController 內執行上述步驟。</li>
+</ol>
+<div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="k">@implementation</span> <span class="nc">ViewController</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+    <span class="n">vpadnInterstitial</span> <span class="o">=</span> <span class="p">[[</span><span class="n">VpadnInterstitial</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+    <span class="n">vpadnInterstitial</span><span class="p">.</span><span class="n">strBannerId</span> <span class="o">=</span> <span class="s">@&quot;&quot;</span><span class="p">;</span>    <span class="c1">// 填入您的Interstitial BannerId</span>
+    <span class="n">vpadnInterstitial</span><span class="p">.</span><span class="n">platform</span> <span class="o">=</span> <span class="s">@&quot;TW&quot;</span><span class="p">;</span>     <span class="c1">// 台灣地區請填TW 大陸則填CN</span>
+    <span class="n">vpadnInterstitial</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">vpadnInterstitial</span> <span class="nl">getInterstitial</span><span class="p">:[</span><span class="nb">self</span> <span class="n">getTestIdentifiers</span><span class="p">]];</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</code></pre></div>
+<p>不過，目前沒有任何項目可加入ViewController，而且您必須等到這個請求成功後才能嘗試顯示廣告，
+這點請格外注意。最簡單的做法是當onVpadnInterstitialAdReceived收到通知時 則執行[vpadnInterstitial show]
+若想進一步瞭解 protocol 相關詳情，請參閱<a href="../advanced/">進階設定</a>。</p>
 
       </div>
       <div class="col-md-3">

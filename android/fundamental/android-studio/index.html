@@ -132,15 +132,17 @@
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -162,41 +164,53 @@
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("Android Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }

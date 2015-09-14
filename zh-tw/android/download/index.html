@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  下載SDK &middot; Vpon-SDK
+  Android - 下載SDK &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>下載SDK</h1>
+      <h1>Android - 下載SDK</h1>
       <p></p>
     </div>
   </div>
@@ -132,15 +132,17 @@
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -162,41 +164,53 @@
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("Android Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -232,7 +246,7 @@
 <h2 id="admob">AdMob</h2>
 
 <p><a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">AdMob SDK</a><br>
-<a href="http://m.vpon.com/sdk/AdmobSample.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a></p>
+<a href="http://m.vpon.com/sdk/AdmobSample.zip" class="btn btn-lg btn-outline" role="button">Sample code</a></p>
 
 <h2 id="dfp">DFP</h2>
 
@@ -241,9 +255,19 @@
 
 <h2 id="mopub">MoPub</h2>
 
-<p><a href="7">Download</a> Sample code</p>
+<p><a href="http://m.vpon.com/sdk/Mopub_Android_Vpon_Adapter.zip" class="btn btn-lg btn-outline" role="button">Adapter Code</a><br></p>
 
 <h2 id="mogo">MOGO</h2>
+
+<p><a href="http://m.vpon.com/sdk/MOGO/AdsMogoBanner.zip" class="btn btn-lg btn-outline" role="button">Sample Code</a><br></p>
+
+<h1 id="平台">平台</h1>
+
+<hr>
+
+<h2 id="unity">Unity</h2>
+
+<p><a href="http://wiki.vpon.com/index.php?title=Unity_With_Android_Vpon_SDK_4" class="btn btn-lg btn-outline" role="button">Vpon SDK with Unity</a><br></p>
 
 <h1 id="其他下載">其他下載</h1>
 
@@ -251,7 +275,7 @@
 
 <blockquote>
 <p><strong>Note:</strong> <br>
-1. 若您曾使用過舊版SDK，請閱讀: <a href="/vpon-sdk/zh-tw/latest-news/update-to-SDK4_2_x/">升級最新SDK所需修改</a><br>
+1. 若您曾使用過舊版SDK，請閱讀: <a href="/vpon-sdk/zh-tw/android/latest-news/update-to-SDK4_2_x/">升級最新SDK所需修改</a><br>
 2. Sample code 內不含jar檔</p>
 </blockquote>
 

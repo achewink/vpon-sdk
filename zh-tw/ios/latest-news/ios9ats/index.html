@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  升級至 SDK 4.2.x  &middot; Vpon-SDK
+  最新消息 - iOS9 ATS &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -52,6 +52,8 @@
 </script>
 
 
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
 </head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
@@ -122,25 +124,28 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>升級至 SDK 4.2.x </h1>
+      <h1>最新消息 - iOS9 ATS</h1>
       <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
+
     <div class="row">
-      <div class="col-sm-3 col-md-2" role="complementary" >
-      <div class="bs-sidebar-left bs-sidenav">
+      <div class="bs-sidebar-left">
+      <div class="col-sm-3 col-md-2" >
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -148,55 +153,67 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
+    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
+    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
+    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
+    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
+    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
+    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
+    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("iOS SDK 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("iOS SDK 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("iOS Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -217,61 +234,34 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="steps-to-update">Steps to update</h1>
+        <h1 id="ios9-ats">iOS9 ATS</h1>
 
 <hr>
 
-<p>本文件是從SDK 4.0.0 或是SDK 4.1.0 升級到SDK 4.2.x的方法。因為新版SDK 4.2.x更改了package, class, interface和method的名稱，另外刪除 com.vpon.ads.VponPlatform這個class，請依照以下步驟做修改。</p>
+<h2 id="概覽">概覽</h2>
 
-<p>1.請將位於libs folder內舊的Vpon SDK jar檔刪除，並放入新的jar檔 <a href="http://m.vpon.com/sdk/vpadn-sdk-obf426-8270410.jar">SDK4.2.6</a></p>
+<p>Apple 將在 iOS9 加上新的安全條款—<a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/%7CApp">Transport Security
+(ATS)</a>，要求所有版本 iOS9 以上裝置的 app 只能使用 HTTPS
+傳輸。若您現在使用 Xcode 7 並企圖瞄準該客群，請將您的 info.plist
+做修改以符合規範。</p>
 
-<p>2.更改import 的package, interface 和 class名稱</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponBanner</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnBanner</span>
-    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAd</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAd</span>
-    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdListener</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdListener</span>
-    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdRequest</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdRequest</span>
-    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdSize</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdSize</span>
-    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponInterstitialAd</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnInterstitialAd</span>
+<h2 id="info-plist">info.plist</h2>
+
+<p>您可以在 info.plist 中加入例外，允許 HTTPS 外的連結</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
 </code></pre></div>
-<p>3.將VpadnBanner和VpadnInterstitialAd的constructor，最後一個參數VponPlatform.TW ，改為字串&quot;TW&quot;</p>
+<h2 id="參考">參考</h2>
 
-<p>由：</p>
+<p>相關資料請參考 ：</p>
 
-<p><code>new VponBanner(this, bannerId1,VponAdSize.SMART_BANNER , VponPlatform.TW);</code><br>
-改為</p>
-
-<p><code>new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,&quot;TW&quot;);</code>
-<br>
-4.改變Androidmanifest.xml 裡的activity tag，
-由</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;activity</span>
-            <span class="na">android:name=</span><span class="s">&quot;com.vpon.widget.VponActivity&quot;</span>
-            <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span>
-            <span class="nt">&gt;</span>
-           <span class="nt">&lt;/activity&gt;</span>
-</code></pre></div>
-<p>改為：</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">        <span class="nt">&lt;activity</span>
-            <span class="na">android:name=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
-            <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span>
-            <span class="nt">&gt;</span>  
-        <span class="nt">&lt;/activity&gt;</span>
-</code></pre></div>
-<p>5.如果您有使用到Interface VponAdListener 請改為VpadnAdListener 這interface裡面所有的method name都由vpon改為vpadn，如下：</p>
-
-<p><code>onVponReceiveAd</code> -&gt; <code>onVpadnReceiveAd</code>  </p>
-
-<p><code>onVponFailedToReceiveAd</code> -&gt; <code>onVpadnFailedToReceiveAd</code>  </p>
-
-<p><code>onVponPresentScreen</code> -&gt; <code>onVpadnPresentScreen</code>  </p>
-
-<p><code>onVponDismissScreen</code> -&gt; <code>onVpadnDismissScreen</code>  </p>
-
-<p><code>onVponLeaveApplication</code> -&gt; <code>onVpadnLeaveApplication</code></p>
+<ul>
+<li><a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/%7CApp">Transport Security (ATS)</a></li>
+<li><a href="http://googleadsdeveloper.blogspot.tw/2015/08/handling-app-transport-security-in-ios-9.html%7CGoogle">Ads Developer Blog</a></li>
+</ul>
 
       </div>
       <div class="col-md-3">
@@ -282,7 +272,9 @@
         </div>
       </div>
     </div>
+
   </div>
+
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
