@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Mediation - DFP &middot; Vpon-SDK
+  Android 中介服務 - DFP &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Mediation - DFP</h1>
+      <h1>Android 中介服務 - DFP</h1>
       <p></p>
     </div>
   </div>
@@ -132,15 +132,17 @@
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -162,41 +164,53 @@
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("Android Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -219,7 +233,7 @@
       <div class="col-md-7" role="main">
         <p>本頁專為 DFP 使用者而設，主要說明 DoubleClick 聯播網搭配 Google AdMob 廣告 SDK 的方式。請先從<a href="../../integration-guide">串接說明</a>看起，熟悉文件後，再回來參考本頁，瞭解如何同時執行 SDK 和 DFP。</p>
 
-<p>使用 AdMob 或 DFP 串接時，請務必將兩個 JAR 檔都要加入到您的專案內(<a href="/vpon-sdk/zh-tw/android/download/">下載</a>)</p>
+<p>使用 AdMob 或 DFP 串接時，請務必將兩個 JAR 檔都要加入到您的專案內(<a href="/vpon-sdk/zh-tw/android/download/#dfp">下載</a>)</p>
 
 <ol>
 <li>Fundamental SDK</li>
@@ -227,6 +241,8 @@
 </ol>
 
 <h1 id="dfp-廣告單元編號">DFP 廣告單元編號</h1>
+
+<hr>
 
 <p>DFP 使用者必須指定「DFP 廣告單元編號」，而不是「AdMob 發佈商編號」，這樣 Google AdMob 廣告 SDK 才知道要使用 DoubleClick 聯播網，而不是 AdMob 聯播網。DFP 廣告單元編號的格式像這樣：<span style="color:#228B22">/networkCode/adUnitName。</span></p>
 
@@ -312,14 +328,41 @@
 <p>範例：
 <img src="/vpon-sdk/assets/img/DFP_Partner_Traditional_Chinese.png" alt="DFP Partner Traditional Chinese.png"></p>
 
+<h1 id="橫幅-插頁式廣告單元">橫幅/插頁式廣告單元</h1>
+
+<hr>
+
+<h2 id="橫幅廣告單元">橫幅廣告單元</h2>
+
+<p>文章前面篇幅皆討論橫幅的廣告單元，尺寸設定值為 320x50</p>
+
+<h2 id="插頁廣告單元">插頁廣告單元</h2>
+
+<p>您可以在 DFP 中建立廣告單元，做為插頁式廣告單元。插頁式廣告單元有四種常見大小，與各裝置的實際螢幕大小無關。SDK 會調整廣告素材，以便正確呈現在大小稍微不同的螢幕上。</p>
+
+<ul>
+<li>手機：320x480 (直向)、480x320 (縱向)</li>
+<li>平板電腦：768x1024 (直向)、1024x768 (縱向)</li>
+</ul>
+
+<p>您不需特別為縱向模式建立個別的廣告單元，只要在指定插頁式廣告單元的訂單項中加入縱向大小 (例如，智慧型手機採 480x320)，然後除了一般的直向大小外，另外加入縱向大小的廣告素材。</p>
+
+<p>範例：
+<img src="/vpon-sdk/assets/img/%E6%8F%92%E9%A0%81%E5%B0%BA%E5%AF%B8.png" alt="插頁尺寸"></p>
+
 <h1 id="其它訣竅">其它訣竅</h1>
 
-<p>[<a href="https://support.google.com/dfp_sb/">https://support.google.com/dfp_sb/</a> DFP Small Business]<br>
-[<a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android">https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android</a> Google Developers DFP Banner Ads]<br></p>
+<hr>
+
+<p><a href="https://support.google.com/dfp_sb/">DFP Small Business</a><br>
+<a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android">Google Developers DFP Banner Ads</a><br>
+<a href="https://developers.google.com/mobile-ads-sdk/docs/android/doubleclick/#support">Google Developers Interstitial Ads</a></p>
 
 <h1 id="sample-code-下載">Sample Code 下載</h1>
 
-<p>[[Android_Download | Go to download page]]</p>
+<hr>
+
+<p><a href="/vpon-sdk/zh-tw/android/download/#dfp">Android Download</a></p>
 
       </div>
       <div class="col-md-3">

@@ -1,7 +1,7 @@
 ---
 layout:         "android"
-title:          "Admob 使用串接"
-lead:           "sub-title"
+title:          "Android - Admob 使用串接"
+lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/mediation/admob/
@@ -304,7 +304,7 @@ Mobile Ads SDK 需要在AndroidManifest.xml中宣告com.google.android.gms.ads.A
   [10]: {{site.baseurl}}/assets/img/GooglePlay_Properties.png
   [11]: {{site.baseurl}}/assets/img/GooglePlay_Addlib.png
   [12]: {{site.baseurl}}/assets/img/GooglePlay_Addlib2.png
-  [Download Sample Code]: {{site.baseurl}}/android/download/
+  [Download Sample Code]: {{site.baseurl}}/zh-tw/android/download/#admob
   [Android SDK]: https://developer.android.com/sdk/index.html
   [Android instructions]: https://developer.android.com/google/play-services/setup.html
   [13]: https://developers.google.com/mobile-ads-sdk/docs/admob/intermediate#play

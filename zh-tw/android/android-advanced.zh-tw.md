@@ -1,6 +1,6 @@
 ---
 layout:         "android"
-title:          "進階設定"
+title:          "Android - 進階設定"
 lead:           "Crazy Ad, Proguard, Cocoa"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
@@ -94,13 +94,27 @@ public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊�
 ![CrazyadSetting]
 
 
+# Proguard Configuration
+---
+如果您的APP本身需要經過proguard混淆，請增加下面的設定：<br>
+- dontwarn c.\*\* <br>
+- dontwarn com.vpon.\*\* <br>
+- dontwarn vpadn.\*\* <br>
+- keep class c.\*\*{ \*; } <br>
+- keep class com.vpon.\*\* { \*; } <br>
+- keep class vpon.\*\* { \*; } <br>
+- keep class com.vpadn.\*\* { \*; } <br>
+- keep class vpadn.\*\* { \*; } <br>
 
 
+# Corona User
+---
+如果您 App 使用 Corona 欲串接 Vpon 廣告，我們建議您用 web SDK 的方式串接，使用方法如下:  
 
+將 web SDK 裡的 html 寫進 local file 再讓 webview 去 load 這個 file (例如: webView:request( “localfile.html”, system.ResourceDirectory ))。  
 
-
-
-
+html內容可參考vpon wiki的web SDK操作手冊: [Web SDK]  
+更多Corona SDK文件可參考: [Corona Document]  
 
 
 
@@ -108,3 +122,5 @@ public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊�
 
 [海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
 [CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
+[Web SDK]: {{site.baseurl}}/zh-tw/web/
+[Corona Document]: http://docs.coronalabs.com/api/library/native/newWebView.html

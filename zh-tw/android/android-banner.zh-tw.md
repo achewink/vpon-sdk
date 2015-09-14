@@ -1,7 +1,7 @@
 ---
 layout:         "android"
-title:          "廣告形式 - 橫幅廣告 "
-lead:           ""
+title:          "Android - 橫幅廣告 "
+lead:           "Android - Banner"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/banner/
@@ -133,6 +133,9 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
  //設定成true才會自動更新 adRequest.setEnableAutoRefresh(true);
  adShowBanner.loadAd(adRequest);
 ```
+
+
+
 
 # 下載 Sample code
 ---

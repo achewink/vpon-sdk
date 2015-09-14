@@ -1,6 +1,6 @@
 ---
 layout:         "android"
-title:          "串接說明"
+title:          "Android - 串接說明"
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
@@ -8,7 +8,7 @@ permalink:       zh-tw/android/integration-guide/
 lang:           "zh-tw"
 ---
 
-# VPON SDK 基本使用
+# Vpon SDK 基本使用
 ----
 若您曾使用過舊版SDK，請先閱讀: [升級最新 SDK 所需修改](../../latest-news/update-to-SDK4_2_x/)
 
@@ -72,12 +72,12 @@ VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使�
 加入以下設定在您的 AndroidManifest.xml
 
 ``` java
-      <activity
-            android:name="com.vpadn.widget.VpadnActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent"
-            android:hardwareAccelerated="true" >
-      </activity>
+    <activity
+          android:name="com.vpadn.widget.VpadnActivity"
+          android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
+          android:theme="@android:style/Theme.Translucent"
+          android:hardwareAccelerated="true" >
+    </activity>
 ```
 > **注意**: 上面**每一個**屬性都不能少,其值都需要相同！
 
@@ -88,24 +88,24 @@ VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使�
 加入以下 permission 在您的 AndroidManifest.xml
 
 ```java
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 上面六個是必要的 permission，另外建議您可以開啟下面這個 permission，將可以更精準的定位取得地理位置相關的廣告
 
 
 ```java
-      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 ```
 另外下面這個permission可以提高辨識使用者身分的能力，讓廣告能更精準的被投放，進而為您帶入更多的營收
 
 
 ```java
-      <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 ```
 
 由於Vpon SDK 4有大量的 Video 廣告，建議您在你放 Banner 的 Activity 內加入硬體加速，如下
@@ -113,14 +113,14 @@ VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使�
 
 ```xml
 <activity
-       android:name="com.vpadn.example.MainActivity"
-       android:label="@string/app_name"
-       android:configChanges="keyboardHidden|orientation"
-       android:hardwareAccelerated="true" >
-       <intent-filter>
-           <action android:name="android.intent.action.MAIN" />
-           <category android:name="android.intent.category.LAUNCHER" />
-       </intent-filter>
+     android:name="com.vpadn.example.MainActivity"
+     android:label="@string/app_name"
+     android:configChanges="keyboardHidden|orientation"
+     android:hardwareAccelerated="true" >
+     <intent-filter>
+         <action android:name="android.intent.action.MAIN" />
+         <category android:name="android.intent.category.LAUNCHER" />
+     </intent-filter>
    </activity>
 ```
 

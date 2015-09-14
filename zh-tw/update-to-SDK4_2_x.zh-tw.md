@@ -4,7 +4,7 @@ title:          "升級至 SDK 4.2.x "
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       zh-tw/latest-news/update-to-SDK4_2_x/
+permalink:       zh-tw/android/latest-news/update-to-SDK4_2_x/
 lang:           "zh-tw"
 
 ---
@@ -35,6 +35,7 @@ lang:           "zh-tw"
 
   `new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,"TW");`
 <br>
+
 4.改變Androidmanifest.xml 裡的activity tag，
 由
 
@@ -71,4 +72,4 @@ lang:           "zh-tw"
 
 `onVponLeaveApplication` -> `onVpadnLeaveApplication`
 
-  [SDK4.2.6]: http://m.vpon.com/sdk/vpadn-sdk-obf426-8270410.jar
+  [SDK4.2.6]: {{site.baseurl}}/zh-tw/android/download/

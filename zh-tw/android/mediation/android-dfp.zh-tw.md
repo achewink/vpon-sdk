@@ -1,6 +1,6 @@
 ---
 layout:         "android"
-title:          "Mediation - DFP"
+title:          "Android 中介服務 - DFP"
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
@@ -10,13 +10,14 @@ lang:           "zh-tw"
 
 本頁專為 DFP 使用者而設，主要說明 DoubleClick 聯播網搭配 Google AdMob 廣告 SDK 的方式。請先從[串接說明]看起，熟悉文件後，再回來參考本頁，瞭解如何同時執行 SDK 和 DFP。
 
-使用 AdMob 或 DFP 串接時，請務必將兩個 JAR 檔都要加入到您的專案內([下載])
+使用 AdMob 或 DFP 串接時，請務必將兩個 JAR 檔都要加入到您的專案內([下載][1])
 
 1. Fundamental SDK
 2. Adapter SDK
 
 
 # DFP 廣告單元編號
+---
 DFP 使用者必須指定「DFP 廣告單元編號」，而不是「AdMob 發佈商編號」，這樣 Google AdMob 廣告 SDK 才知道要使用 DoubleClick 聯播網，而不是 AdMob 聯播網。DFP 廣告單元編號的格式像這樣：<span style="color:#228B22">/networkCode/adUnitName。</span>
 
 
@@ -102,22 +103,44 @@ DFP 使用者必須指定「DFP 廣告單元編號」，而不是「AdMob 發佈
 
 
 
+# 橫幅/插頁式廣告單元
+---
+## 橫幅廣告單元
+文章前面篇幅皆討論橫幅的廣告單元，尺寸設定值為 320x50
+
+## 插頁廣告單元
+您可以在 DFP 中建立廣告單元，做為插頁式廣告單元。插頁式廣告單元有四種常見大小，與各裝置的實際螢幕大小無關。SDK 會調整廣告素材，以便正確呈現在大小稍微不同的螢幕上。
+
+* 手機：320x480 (直向)、480x320 (縱向)
+* 平板電腦：768x1024 (直向)、1024x768 (縱向)
+
+您不需特別為縱向模式建立個別的廣告單元，只要在指定插頁式廣告單元的訂單項中加入縱向大小 (例如，智慧型手機採 480x320)，然後除了一般的直向大小外，另外加入縱向大小的廣告素材。
+
+範例：
+![插頁尺寸]
+
+
+
 
 
 
 # 其它訣竅
-[https://support.google.com/dfp_sb/ DFP Small Business]<br>
-[https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android Google Developers DFP Banner Ads]<br>
+---
+[DFP Small Business](https://support.google.com/dfp_sb/)<br>
+[Google Developers DFP Banner Ads](https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android)<br>
+[Google Developers Interstitial Ads](https://developers.google.com/mobile-ads-sdk/docs/android/doubleclick/#support)
 
 # Sample Code 下載
- [[Android_Download | Go to download page]]
+---
+ [Android Download][1]
 
 
 [串接說明]: ../../integration-guide
-[下載]: {{site.baseurl}}/zh-tw/android/download/
+[1]: {{site.baseurl}}/zh-tw/android/download/#dfp
 [Here]: https://www.google.com/dfp/
 [DFP 廣告空間]: {{site.baseurl}}/assets/img/DFP_廣告空間.png
 [DFP Partner Traditional Chinese.png]: {{site.baseurl}}/assets/img/DFP_Partner_Traditional_Chinese.png
 [新增指定目標]: {{site.baseurl}}/assets/img/新增指定目標.png
 [廣告素材類型]: {{site.baseurl}}/assets/img/廣告素材類型.png
 [Warning]: {{site.baseurl}}/assets/img/Warning.png
+[插頁尺寸]: {{site.baseurl}}/assets/img/插頁尺寸.png

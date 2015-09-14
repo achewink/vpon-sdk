@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  進階設定 &middot; Vpon-SDK
+  Android - 進階設定 &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>進階設定</h1>
+      <h1>Android - 進階設定</h1>
       <p>Crazy Ad, Proguard, Cocoa</p>
     </div>
   </div>
@@ -132,15 +132,17 @@
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -162,41 +164,53 @@
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("Android Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -284,6 +298,31 @@
 進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。<br>
 如圖:
 <img src="/vpon-sdk/assets/img/CrazyadSetting.png" alt="CrazyadSetting"></p>
+
+<h1 id="proguard-configuration">Proguard Configuration</h1>
+
+<hr>
+
+<p>如果您的APP本身需要經過proguard混淆，請增加下面的設定：<br>
+- dontwarn c.** <br>
+- dontwarn com.vpon.** <br>
+- dontwarn vpadn.** <br>
+- keep class c.**{ *; } <br>
+- keep class com.vpon.** { *; } <br>
+- keep class vpon.** { *; } <br>
+- keep class com.vpadn.** { *; } <br>
+- keep class vpadn.** { *; } <br></p>
+
+<h1 id="corona-user">Corona User</h1>
+
+<hr>
+
+<p>如果您 App 使用 Corona 欲串接 Vpon 廣告，我們建議您用 web SDK 的方式串接，使用方法如下:  </p>
+
+<p>將 web SDK 裡的 html 寫進 local file 再讓 webview 去 load 這個 file (例如: webView:request( “localfile.html”, system.ResourceDirectory ))。  </p>
+
+<p>html內容可參考vpon wiki的web SDK操作手冊: <a href="/vpon-sdk/zh-tw/web/">Web SDK</a><br>
+更多Corona SDK文件可參考: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">Corona Document</a>  </p>
 
       </div>
       <div class="col-md-3">

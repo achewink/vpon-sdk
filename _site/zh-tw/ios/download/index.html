@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Mediation - MOGO &middot; Vpon-SDK
+  iOS - 下載 SDK &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -52,6 +52,8 @@
 </script>
 
 
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
 </head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
@@ -122,25 +124,28 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Mediation - MOGO</h1>
+      <h1>iOS - 下載 SDK</h1>
       <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
+
     <div class="row">
-      <div class="col-sm-3 col-md-2" role="complementary" >
-      <div class="bs-sidebar-left bs-sidenav">
+      <div class="bs-sidebar-left">
+      <div class="col-sm-3 col-md-2" >
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -148,55 +153,67 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
+    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
+    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
+    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
+    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
+    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
+    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
+    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
+    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
+    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("iOS SDK 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("iOS SDK 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("iOS Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -217,48 +234,46 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="串接mogo-mediation">串接MOGO Mediation</h1>
+        <h1 id="基本sdk">基本SDK</h1>
 
 <hr>
 
-<p>MOGO Mediation 請先註冊帳號: <a href="/vpon-sdk/assets/img/http://www.adsmogo.com/">進入</a>  </p>
+<p><a href="http://m.vpon.com/sdk/VponSDK-iOS/Lib64bit/64bit_vpadn_4215_libAdOn_b9417f9.a" class="btn btn-lg btn-outline" role="button">SDK 4.2.15</a><br>
+<a href="http://m.vpon.com/sdk/VponSDK-iOS/BannerInterstitialSample_42x.zip" class="btn btn-lg btn-outline" role="button">
+Sample Code</a>  (include Unity)</p>
 
-<h1 id="進入我的芒果">進入我的芒果</h1>
-
-<p>點選 visit AdsMOGO&#39;s Chinese Website -&gt; 進入芒果  </p>
-
-<p><img src="/vpon-sdk/assets/img/MyMOGO.png" alt=""></p>
-
-<h1 id="申請mogo-id">申請MOGO ID</h1>
+<h1 id="中介服務sdk">中介服務SDK</h1>
 
 <hr>
 
-<ol>
-<li>App 管理下添加App<br></li>
-</ol>
+<h2 id="admob">AdMob</h2>
 
-<p><img src="/vpon-sdk/assets/img/AddApp.png" alt=""> 2. 添加APP信息：1. App名稱。2. 選擇平台。3. App類型  </p>
+<p><a href="http://m.vpadn.com/sdk/VponAdapter_iOS_eff8d70_v1.0.1.a" class="btn btn-lg btn-outline" role="button">AdMob SDK 1.0.1</a><br>
+<a href="http://m.vpon.com/sdk/iosAdmobBanner.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a><br>
+<a href="http://m.vpon.com/sdk/iosAdmobIS.zip" class="btn btn-lg btn-outline" role="button">Interstitial Sample Code</a></p>
 
-<p><img src="/vpon-sdk/assets/img/AppType.png" alt="" title="fig:AppType.png"> 3. 開啓“地域優化”：<font size="4" color="red">1. 中文廣告平台
-適用大陸地區。2. 英文廣告平台 適用台灣地區。</font>  </p>
+<h2 id="dfp">DFP</h2>
 
-<p><img src="/vpon-sdk/assets/img/ChinaArea.png" alt="" title="fig:ChinaArea.png"><br>
-<img src="/vpon-sdk/assets/img/TWArea.png" alt="" title="fig:TWArea.png"><br>
-4. 點選Vpon輸入由Vpon後台申請的Banner ID  </p>
+<p><a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">DFP SDK</a><br>
+  <a href="http://m.vpon.com/sdk/iosDFPsample.zip" class="btn btn-lg btn-outline" role="button">Sample Code</a><br></p>
 
-<p><img src="/vpon-sdk/assets/img/VponBannerID.png" alt="" title="fig:VponBannerID.png"><br>
-5. 調整投放量  </p>
+<h2 id="mopub">MoPub</h2>
 
-<p><img src="/vpon-sdk/assets/img/Vpon.png" alt="" title="fig:Vpon.png"><br>
-6. 將芒果ID填入串接code裏  </p>
+<p><a href="http://m.vpon.com/sdk/Mopub_iOS_Vpon_Adapter1.0.zip" class="btn btn-lg btn-outline" role="button">MoPub Adapter Code</a><br></p>
 
-<p><img src="/vpon-sdk/assets/img/MOGOID.png" alt="" title="fig:MOGOID.png"></p>
+<h2 id="mogo">MOGO</h2>
 
-<h1 id="download-sample-code">Download Sample Code</h1>
+<p><a hre="http://m.vpon.com/sdk/MOGO/MangoDemo.zip" class="btn btn-lg btn-outline" role="button">Sample Code</a><br></p>
+
+<h1 id="其他下載">其他下載</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/assets/img/">Go to download MOGO Mediation Sample Code</a></p>
+<blockquote>
+<p><strong>Note:</strong> <br>
+1. 若您曾使用過舊版SDK，請閱讀: <a href="/vpon-sdk/zh-tw/ios/latest-news/update-to-SDK4_2_x/">升級最新SDK所需修改</a><br>
+2. Sample code 內不含 SDK lib 檔</p>
+</blockquote>
 
       </div>
       <div class="col-md-3">
@@ -269,7 +284,9 @@
         </div>
       </div>
     </div>
+
   </div>
+
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">

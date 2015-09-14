@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  串接說明 &middot; Vpon-SDK
+  Android - 串接說明 &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>串接說明</h1>
+      <h1>Android - 串接說明</h1>
       <p></p>
     </div>
   </div>
@@ -132,15 +132,17 @@
       <div class="bs-sidebar-left bs-sidenav">
         
   <ul class="nav nav-sidebar">
-    <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+    <span id="sidebar-title1"></span>
     <li><a id="getting-started"></a></li>
     <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
     <li><a id="banner-id"></a></li>
     <li><a id="interstitial-id"></a></li>
     <li><a id="mediation"></a></li>
     <li><a id="advanced"></a></li>
-    <li><a id="latest-news"></a></li>
+    <span id="sidebar-title3"></span>
     <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
     <li><a id="support"></a></li>
   </ul>
 
@@ -162,41 +164,53 @@
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
       $('#banner-id').text("橫幅廣告");
       $('#interstitial-id').text('插頁廣告');
       $('#mediation').text("中介服務");
       $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下載SDK");
+      $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("开始使用");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
       $('#banner-id').text("横幅广告");
       $('#interstitial-id').text('插页广告');
       $('#mediation').text("中介服务");
       $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
       $('#latest-news').text("最新消息");
-      $('#download').text("下载SDK");
+      $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("Getting Started");
+      $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
+      $("#sidebar-title1").text("Android Integration");
      $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Getting Started");
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
      $('#banner-id').text("Banner Ad");
      $('#interstitial-id').text('Interstitial Ad');
      $('#mediation').text("Mediation");
      $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
      $('#latest-news').text("Latest News");
      $('#download').text("Download");
      $('#support').text("Support"); }
@@ -217,7 +231,7 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="vpon-sdk-基本使用">VPON SDK 基本使用</h1>
+        <h1 id="vpon-sdk-基本使用">Vpon SDK 基本使用</h1>
 
 <hr>
 
@@ -288,12 +302,12 @@ China  平台為 <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a></
 <hr>
 
 <p>加入以下設定在您的 AndroidManifest.xml</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">activity</span>
-            <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
-            <span class="nl">android:</span><span class="n">configChanges</span><span class="o">=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="nl">android:</span><span class="n">theme</span><span class="o">=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="nl">android:</span><span class="n">hardwareAccelerated</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">activity</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="o">&lt;</span><span class="n">activity</span>
+          <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
+          <span class="nl">android:</span><span class="n">configChanges</span><span class="o">=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
+          <span class="nl">android:</span><span class="n">theme</span><span class="o">=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
+          <span class="nl">android:</span><span class="n">hardwareAccelerated</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">activity</span><span class="o">&gt;</span>
 </code></pre></div>
 <blockquote>
 <p><strong>注意</strong>: 上面<strong>每一個</strong>屬性都不能少,其值都需要相同！</p>
@@ -306,29 +320,29 @@ China  平台為 <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a></
 <hr>
 
 <p>加入以下 permission 在您的 AndroidManifest.xml</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>上面六個是必要的 permission，另外建議您可以開啟下面這個 permission，將可以更精準的定位取得地理位置相關的廣告</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>另外下面這個permission可以提高辨識使用者身分的能力，讓廣告能更精準的被投放，進而為您帶入更多的營收</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.GET_ACCOUNTS&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.GET_ACCOUNTS&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>由於Vpon SDK 4有大量的 Video 廣告，建議您在你放 Banner 的 Activity 內加入硬體加速，如下</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;activity</span>
-       <span class="na">android:name=</span><span class="s">&quot;com.vpadn.example.MainActivity&quot;</span>
-       <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
-       <span class="na">android:configChanges=</span><span class="s">&quot;keyboardHidden|orientation&quot;</span>
-       <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span> <span class="nt">&gt;</span>
-       <span class="nt">&lt;intent-filter&gt;</span>
-           <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.MAIN&quot;</span> <span class="nt">/&gt;</span>
-           <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.LAUNCHER&quot;</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;/intent-filter&gt;</span>
+     <span class="na">android:name=</span><span class="s">&quot;com.vpadn.example.MainActivity&quot;</span>
+     <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
+     <span class="na">android:configChanges=</span><span class="s">&quot;keyboardHidden|orientation&quot;</span>
+     <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span> <span class="nt">&gt;</span>
+     <span class="nt">&lt;intent-filter&gt;</span>
+         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.MAIN&quot;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.LAUNCHER&quot;</span> <span class="nt">/&gt;</span>
+     <span class="nt">&lt;/intent-filter&gt;</span>
    <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
 <h1 id="其他訣竅">其他訣竅</h1>

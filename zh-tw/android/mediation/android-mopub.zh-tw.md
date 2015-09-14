@@ -1,6 +1,6 @@
 ---
 layout:         "android"
-title:          "Mediation - MoPub"
+title:          "Android 中介服務 - MoPub"
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
