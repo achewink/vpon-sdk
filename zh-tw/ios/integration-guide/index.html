@@ -153,21 +153,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -180,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -238,19 +244,13 @@
 
 <hr>
 
-<p>Note:
-1. 請先從註冊網址檢查您的Ad Network平台</p>
-
-<p>Taiwan平台為: <a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a></p>
-
-<p>China平台為: <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a></p>
-
 <ol>
-<li><p>如果您申請的是Taiwan的平台，請使用：
-<code>vpadnAd.platform = @&quot;TW&quot;</code>;</p></li>
-<li><p>如果您申請的是China的平台，請使用：
-<code>vpadnAd.platform = @&quot;CN&quot;</code>;</p></li>
-<li><p>在 iOS8 之後如果沒有看到 didImpression， 可能是因為 window 沒有預設大小的關係，需要手動去setFrame設定大小，請注意！看到didImpression的log才是正確的串接完成。</p></li>
+<li><p>請先從註冊網址檢查您的Ad Network平台<br>
+Taiwan平台為: <a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a><br>
+China平台為: <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a><br></p></li>
+<li><p>如果您申請的是Taiwan的平台，請使用:<code>vpadnAd.platform = @&quot;TW&quot;</code>;</p></li>
+<li><p>如果您申請的是China的平台，請使用:<code>vpadnAd.platform = @&quot;CN&quot;</code>;</p></li>
+<li><p>在 iOS8 之後如果沒有看到 <code>didImpression</code>， 可能是因為 window 沒有預設大小的關係，需要手動去setFrame設定大小，請注意！看到 <code>didImpression</code>的log才是正確的串接完成。</p></li>
 </ol>
 
 <h1 id="總覽">總覽</h1>
@@ -269,46 +269,46 @@
 
 <hr>
 
-<p>解壓縮後的 SDK 包含Objective-C 標頭、一個執行期間程式庫 要在應用程式中加入 Vpon 廣告，您必須完成三個步驟：
-1. 在專案中加入 <code>libAdOn.a</code>， <code>VpadnBanner.h</code> 與 <code>VpadnInterstitial.h</code>
-2. 加入相關所需的 frameworks
-3. 在 <code>Build Settings</code> 內 <code>Other Linker Flags</code> 請填入 <code>-all_load</code> 與 <code>-Obj-C</code>，並把 <code>Summary</code> 下把 <code>AdSupport</code> 設為 <code>Optional</code></p>
+<p>解壓縮後的 SDK 包含Objective-C 標頭、一個執行期間程式庫 要在應用程式中加入 Vpon 廣告，您必須完成三個步驟：</p>
 
-<blockquote>
-<p><strong>Note</strong>: 上述三項缺一不可，請務必完成！</p>
-</blockquote>
+<ol>
+<li>在專案中加入 <code>libAdOn.a</code>， <code>VpadnBanner.h</code> 與 <code>VpadnInterstitial.h</code></li>
+<li>加入相關所需的 frameworks</li>
+<li>在 <code>Build Settings</code> 內 <code>Other Linker Flags</code> 請填入 <code>-all_load</code> 與 <code>-Obj-C</code>，並把 <code>Summary</code> 下把 <code>AdSupport</code> 設為 <code>Optional</code>
+&gt; <strong>Note</strong>: 上述三項缺一不可，請務必完成！</li>
+</ol>
 
 <h2 id="新增-sdk-lib">新增 SDK lib</h2>
 
 <ol>
-<li>解壓縮後的 SDK 包含一個lib檔、及兩個標頭檔。 對 Xcode 中的專案按一下滑鼠右鍵，然後選取 <a href="%E5%9C%A8%20%22Vpadn_BannerInter_x5%22%20%E4%B8%AD%E6%96%B0%E5%A2%9E%E6%AA%94%E6%A1%88">Add Files to &quot;Vpadn_BannerInter_x5&quot;...</a>。
+<li>解壓縮後的 SDK 包含一個 lib 檔、及兩個標頭檔。 對 Xcode 中的專案按一下滑鼠右鍵，然後選取 <a href="%E5%9C%A8%20%22Vpadn_BannerInter_x5%22%20%E4%B8%AD%E6%96%B0%E5%A2%9E%E6%AA%94%E6%A1%88">Add Files to &quot;Vpadn_BannerInter_x5&quot;...</a>。
 <img src="/vpon-sdk/assets/img/IOS-add-file_vpadn.png" alt="IOS-add-file_vpadn.png"></li>
-<li>接著在 SDK 中選取 libAdOn.a , VpadnBanner.h與VpadnInterstitial.h
+<li>接著在 SDK 中選取 <code>libAdOn.a</code>, <code>VpadnBanner.h</code> 與 <code>VpadnInterstitial.h</code>
 <img src="/vpon-sdk/assets/img/IOS-add-lib&amp;header_vpadn.png" alt="IOS-add-lib&amp;header_vpadn"></li>
-<li>SDK lib會參照iOS的frameworks：
-<code>AdSupport</code> ,
-<code>AssetsLibrary</code> ,
-<code>AudioToolbox</code> ,
-<code>AVFoundation</code> ,
-<code>CoreFoundation</code> ,
-<code>CoreGraphics</code> ,
-<code>CoreLocation</code> ,
-<code>CoreMedia</code> ,
-<code>CoreMotion</code> ,
-<code>CoreTelephony</code> ,
-<code>EventKit</code> ,
-<code>Foundation</code> ,
-<code>MediaPlayer</code> ,
-<code>MessageUI</code> ,
-<code>MobileCoreServices</code> ,
-<code>QuartzCore</code> ,
-<code>Security</code> ,
-<code>StoreKit</code> ,
-<code>SystemConfiguration</code> ,
+<li>SDK lib 會參照 iOS 的 frameworks： <br  >
+<code>AdSupport</code>, <br>
+<code>AssetsLibrary</code>, <br>
+<code>AudioToolbox</code>, <br>
+<code>AVFoundation</code>, <br>
+<code>CoreFoundation</code>, <br>
+<code>CoreGraphics</code>, <br>
+<code>CoreLocation</code>, <br>
+<code>CoreMedia</code>, <br>
+<code>CoreMotion</code>, <br>
+<code>CoreTelephony</code>, <br>
+<code>EventKit</code>, <br>
+<code>Foundation</code>, <br>
+<code>MediaPlayer</code>, <br>
+<code>MessageUI</code>, <br>
+<code>MobileCoreServices</code>, <br>
+<code>QuartzCore</code>, <br>
+<code>Security</code>, <br>
+<code>StoreKit</code>, <br>
+<code>SystemConfiguration</code>, <br>
 <code>UIKit</code></li>
 </ol>
 
-<p>若要加入這些Framework，請對 Vpadn_BannerInter_x5 這個專案名稱按兩下滑鼠，開啟 [Build Phases] 分頁下的 [Link Binary With Libraries]下拉式選單，然後用畫面上出現的 [+] 按鈕加入 iOS SDK 中的架構。
+<p>若要加入這些 Framework，請對 Vpadn_BannerInter_x5 這個專案名稱按兩下滑鼠，開啟 <code>Build Phases</code> 分頁下的 <code>Link Binary With Libraries</code> 下拉式選單，然後用畫面上出現的 <code>+</code> 按鈕加入 iOS SDK 中的架構。
 <img src="/vpon-sdk/assets/img/IOS-add-frameworks_vpadn.png" alt="IOS-add-frameworks_vpadn"></p>
 
 <h1 id="app-transport-security">App Transport Security</h1>

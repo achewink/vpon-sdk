@@ -153,21 +153,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -180,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -267,10 +273,16 @@
 
 <hr>
 
-<p>所有 iOS 相關資訊都在左排列表中，右排為文章的目錄，若想跳轉其他裝置平台或語言，請點選網站右上角的目標語言與平台。若您有任何技術問題，請不吝聯絡 <a href="mailto:fae@vpon.com">FAE 團隊</a></p>
+<p>所有 iOS 相關資訊都在左排列表中，右排為文章的目錄，若想跳轉其他裝置平台或語言，請點選網站右上角的目標語言與平台。若您有任何技術問題，請不吝聯絡 <a href="mailto:fae@vpon.com">FAE 團隊</a>
+<br><br></p>
 
 <blockquote>
-<p><strong>Note</strong>: 若您曾使用過舊版SDK，請先閱讀: <a href="../../zh-tw/ios/latest-news/update-to-SDK4_2_x/">升級最新 SDK 所需修改</a></p>
+<p><strong>Note</strong>:</p>
+
+<ol>
+<li>串接完畢後，請自行檢查是否有印出VponLog:didImpression，以確認有成功回傳資訊到Vpon Server</li>
+<li>iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 專案，請參考<a href="../latest-news/ios9ats/">這篇</a>來修改部份設定</li>
+</ol>
 </blockquote>
 
       </div>

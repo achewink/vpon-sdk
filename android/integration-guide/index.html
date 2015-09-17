@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Fundamental - Eclipse  &middot; Vpon-SDK
+  Android SDK &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -66,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Fundamental - Eclipse </h1>
+      <h1>Android SDK</h1>
       <p></p>
     </div>
   </div>
@@ -150,16 +150,22 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
@@ -192,11 +198,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
@@ -235,7 +242,7 @@
 
 <hr>
 
-<p>If you are using the previous version of vpon SDK, please read this first: <a href="../../update-to-SDK4_2_x/">How to update to SDK4.2.x</a></p>
+<p>If you are using the previous version of vpon SDK, please read this first: <a href="/vpon-sdk/latest-news/update-to-SDK4_2_x/">How to update to SDK4.2.x</a></p>
 
 <ol>
 <li><p>Check your ad network from registering url first:<br>
@@ -277,13 +284,39 @@ to your Eclipse project and add a com.vpadn.ads.VpadnBanner to your UI.</p>
 <p>Show Vpon banner on your Android App, you must complete three steps:  </p>
 
 <ol>
-<li><p>Import Vpon SDK Jar file to your eclipse project. (copy jar file to
+<li> Import Vpon SDK JAR into your Android Studio/Eclipse project.</li>
+<li> Declare com.vpadn.widget.VpadnActivity in AndroidManifest.xml.</li>
+<li> Set necessary permissions.</li>
+</ol>
+
+<h2 id="eclipse">Eclipse</h2>
+
+<hr>
+
+<ol>
+<li><p>Import Vpon SDK Jar file to your eclipse  project. (copy jar file to
 libs folder)<br>
-<img src="../../assets/img/A-sdk330-01.png" class="img-responsive"></p></li>
+<img src="/vpon-sdk/assets/img//A-sdk330-01.png" alt=""></p></li>
 <li><p>Add com.vpadn.widget.VpadnActivity to your AndroidManifest.xml.
-<img src="../../assets/img/A-sdk330-02.png" class="img-responsive"></p></li>
+<img src="/vpon-sdk/assets/img/A-sdk330-02.png" alt=""></p></li>
 <li><p>Add required permissons to your AndroidManifest.xml.<br>
 <br></p></li>
+</ol>
+
+<h2 id="android-studio">Android Studio</h2>
+
+<hr>
+
+<ol>
+<li><p>Find <code>libs</code> in your Android project (Route：Project Name -&gt; app
+-&gt; libs)
+<img src="/vpon-sdk/assets/img/ProjectLibFolder.jpg" alt=""></p></li>
+<li><p>Right-click on <code>libs</code> and follow with a left-click on <code>Reveal in Finder</code>
+<img src="/vpon-sdk/assets/img/DropJarFileToLibFolder.jpg" alt=""></p></li>
+<li><p>Move the JAR downloaded to <code>libs</code> on finder (You can also grab Vpon JAR into <code>libs</code> on IDE)<br>
+<img src="/vpon-sdk/assets/img/MainInterface.jpg" alt=""></p></li>
+<li><p>Go back to your Android project and you will see that the Vpon JAR we just added shows up in [libs]. Make a right-click and choose <code>Add as library</code> to link reference. Please check the build.gradle at the same time to make sure there&#39;s a sentence &quot; compile files(&#39;libs/vpon_SDK_version_name.jar&#39;) &quot;. See the photo below.<br>
+<img src="/vpon-sdk/assets/img/ModifyBuildGradle.jpg" alt=""></p></li>
 </ol>
 
 <h2 id="vpadnactivity">VpadnActivity</h2>
@@ -309,19 +342,19 @@ libs folder)<br>
 <hr>
 
 <p>Add following permissions in AndroidManifest.xml</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>The six permissions above are necessary. In addition, we recommend that you can add the following permission for being able to obtain more accurate banner related location.  </p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>Use following permission could make ads to be more accurate delivery,
 and bring more revenue.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.GET_ACCOUNTS&quot;</span><span class="o">/&gt;</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.GET_ACCOUNTS&quot;</span><span class="o">/&gt;</span>
 </code></pre></div>
 <p>Since there would be plenty of Video ads displayed on devices, we
 recommend you to add hardware acceleration in your main Activity.</p>
@@ -433,14 +466,14 @@ recommend you to add hardware acceleration in your main Activity.</p>
 
 <hr>
 
-<p><a href="../../index.html#download">Go to download page</a></p>
+<p><a href="/vpon-sdk/android/download">Go to download page</a></p>
 
 <h1 id="the-result">The Result</h1>
 
 <hr>
 
 <p>When you now run your app you should see a banner at the top of the screen:<br>
-<img src="../../assets/img/A-sdk330-03.png" alt="gogo"></p>
+<img src="/vpon-sdk/assets/img/A-sdk330-03.png" alt="gogo"></p>
 
       </div>
       <div class="col-md-3">

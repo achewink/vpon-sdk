@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Fundamental - Android Studio  &middot; Vpon-SDK
+  Android - Banner Ad &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Fundamental - Android Studio </h1>
+      <h1>Android - Banner Ad</h1>
       <p></p>
     </div>
   </div>
@@ -150,16 +150,22 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
@@ -192,11 +198,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
@@ -231,104 +238,12 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="vpon-sdk-4-fundamental">VPON SDK 4 Fundamental</h1>
+        <h1 id="finished-integration-guide">Finished Integration Guide</h1>
 
 <hr>
 
-<p>If you are using the previous version of vpon SDK, please read this first: <a href="../../../update-to-SDK4_2_x/">How to update to SDK4.2.x</a></p>
+<p>If you haven&#39;t finished the previous integration guide, please check all the <a href="/vpon-sdk/android/integration-guide/">settings here</a>. </p>
 
-<ol>
-<li><p>Check your ad network from registering url first:<br>
-Taiwan is <a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> <br>
-China  is <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a></p></li>
-<li><p>If you register Taiwan platform, please use:
-<code>vponBanner = new VpadnBanner(this, bannerId, VpadnAdSize.SMART_BANNER,
-“TW”);</code></p></li>
-<li><p>If you register China platform, please use: <br>
-<code>vponBanner = new VpadnBanner(this, bannerId, VpadnAdSize.SMART_BANNER,
-“CN”);</code>
-<br></p></li>
-</ol>
-
-<h1 id="import-sdk">Import SDK</h1>
-
-<hr>
-
-<p>To show Vpon banner on your Android App, you must complete three steps
-below:  </p>
-
-<ol>
-<li> Import VPON SDK JAR into your Android Studio project.</li>
-<li> Declare com.vpadn.widget.VpadnActivity in AndroidManifest.xml.</li>
-<li> Set necessary permissions.</li>
-</ol>
-
-<h2 id="import-sdk-jar">Import SDK JAR</h2>
-
-<hr>
-
-<ol>
-<li><p>Find <code>libs</code> in your Android project (Route：Project Name -&gt; app
--&gt; libs)
-<img src="../../../assets/img/ProjectLibFolder.jpg" alt=""></p></li>
-<li><p>Right-click on <code>libs</code> and follow with a left-click on <code>Reveal in Finder</code>
-<img src="../../../assets/img/DropJarFileToLibFolder.jpg" alt=""></p></li>
-<li><p>Move the JAR downloaded to <code>libs</code> on finder (You can also grab Vpon JAR into <code>libs</code> on IDE)<br>
-<img src="../../../assets/img/MainInterface.jpg" alt=""></p></li>
-<li><p>Go back to your Android project and you will see that the Vpon JAR we just added shows up in [libs]. Make a right-click and choose <code>Add as library</code> to link reference. Please check the build.gradle at the same time to make sure there&#39;s a sentence &quot; compile files(&#39;libs/vpon_SDK_version_name.jar&#39;) &quot;. See the photo below.<br>
-<img src="../../../assets/img/ModifyBuildGradle.jpg" alt=""></p></li>
-</ol>
-
-<h2 id="vpadnactivity">VpadnActivity</h2>
-
-<hr>
-
-<p>Add com.vpadn.widget.VpadnActivity to your AndroidManifest.xml</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">activity</span>
-            <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
-            <span class="nl">android:</span><span class="n">configChanges</span><span class="o">=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="nl">android:</span><span class="n">theme</span><span class="o">=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="nl">android:</span><span class="n">hardwareAccelerated</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">activity</span><span class="o">&gt;</span>
-</code></pre></div>
-<blockquote>
-<p><strong>Note</strong>: <strong>EVERY</strong> attribute is required!</p>
-</blockquote>
-
-<p><br></p>
-
-<h2 id="permissions">Permissions</h2>
-
-<hr>
-
-<p>Add following permissions in AndroidManifest.xml</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.READ_PHONE_STATE&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="o">/&gt;</span>
-</code></pre></div>
-<p>The six permissions above are necessary. In addition, we recommend that you can add the following permission for being able to obtain more accurate banner related location.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span><span class="o">/&gt;</span>
-</code></pre></div>
-<p>Use following permission could make ads to be more accurate delivery,
-and bring more revenue.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;android.permission.GET_ACCOUNTS&quot;</span><span class="o">/&gt;</span>
-</code></pre></div>
-<p>Since there would be plenty of Video ads displayed on devices, we
-recommend you to add hardware acceleration in your main Activity.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;activity</span>
-       <span class="na">android:name=</span><span class="s">&quot;com.vpadn.example.MainActivity&quot;</span>
-       <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
-       <span class="na">android:configChanges=</span><span class="s">&quot;keyboardHidden|orientation&quot;</span>
-       <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span> <span class="nt">&gt;</span>
-       <span class="nt">&lt;intent-filter&gt;</span>
-           <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.MAIN&quot;</span> <span class="nt">/&gt;</span>
-           <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.LAUNCHER&quot;</span> <span class="nt">/&gt;</span>
-       <span class="nt">&lt;/intent-filter&gt;</span>
-   <span class="nt">&lt;/activity&gt;</span>
-</code></pre></div>
 <h1 id="coding-for-showing-banner">Coding for showing Banner</h1>
 
 <hr>
@@ -337,15 +252,12 @@ recommend you to add hardware acceleration in your main Activity.</p>
 
 <p>Like any view, an VpadnBanner may be created either purely in code or largely in XML.</p>
 
-<p>The five lines of code it takes to add a Vpon banner:</p>
-
-<ol>
-<li>Import <code>com.vpadn.ads.*</code></li>
-<li>Declare an VpadnBanner instance</li>
-<li>Create it, specifying a unit ID—your VpadnBanner Banner ID</li>
-<li>Add the view to the UI</li>
-<li>Load it with an ad</li>
-</ol>
+<p>The five lines of code it takes to add a Vpon banner:
+1. Import com.vpadn.ads.*
+2. Declare an VpadnBanner instance
+3. Create it, specifying a unit ID—your VpadnBanner Banner ID
+4. Add the view to the UI
+5. Load it with an ad</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="kn">import</span> <span class="nn">com.vpadn.ads.*</span>
   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">RelativeLayout</span> <span class="n">adBannerLayout</span><span class="o">;</span>
@@ -404,39 +316,93 @@ recommend you to add hardware acceleration in your main Activity.</p>
               <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
               <span class="na">vpadn:adSize=</span><span class="s">&quot;SMART_BANNER&quot;</span>
               <span class="na">vpadn:autoFresh=</span><span class="s">&quot;true&quot;</span>
-              <span class="na">vpadn:bannerId=</span> <span class="s">CHANGE</span> <span class="err">ME</span>
+              <span class="na">vpadn:bannerId=</span> <span class="s">CHANGE_ME</span>
               <span class="na">vpadn:loadAdOnCreate=</span><span class="s">&quot;true&quot;</span>
               <span class="na">vpadn:platform=</span><span class="s">&quot;TW&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;/RelativeLayout&gt;</span>
   <span class="nt">&lt;/LinearLayout&gt;</span>
-  <span class="nt">&lt;/syntaxhighlight&gt;</span>
 </code></pre></div>
 <p><br>
   As usual you must replace CHANGE ME with your Vpon Banner ID.
   You can use the following code to get the Test Banner If your banner ID has not been vetted.
 <br></p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">          <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span>  <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
-          <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testDeviceImeiSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
-          <span class="n">testDeviceImeiSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;your device advertising id&quot;</span><span class="o">);</span> <span class="c1">//TODO: put Android device advertising id</span>
-          <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
-          <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span>  <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
+      <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testDeviceImeiSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+      <span class="n">testDeviceImeiSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;your device advertising id&quot;</span><span class="o">);</span>
+      <span class="c1">//TODO: put Android device advertising id</span>
+      <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
+      <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
 </code></pre></div>
 <p>You can get advertising ID by following methods:
   1. Search &quot;advertising_id&quot; from eclipse&#39;s log.
   2. Get your Advertising ID by clicking Ads in Google Settings from your phone directly.</p>
 
-<h1 id="download">Download</h1>
+<h1 id="vpon-banner-size">Vpon Banner Size</h1>
 
 <hr>
 
-<p><a href="../../index.html#download">Go to download page</a></p>
+<p>Vpon Banner supports three tablet-only banner sizes in addition to the 320x50 shown on phones:</p>
 
-<h1 id="the-result">The Result</h1>
+<table><thead>
+<tr>
+<th style="text-align: center">Size (WxH)</th>
+<th style="text-align: center">Description</th>
+<th style="text-align: center">VponAdSize Constant</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">320x50</td>
+<td style="text-align: center">Standard Banner</td>
+<td style="text-align: center">VpadnAdSize.BANNER</td>
+</tr>
+<tr>
+<td style="text-align: center">468x60</td>
+<td style="text-align: center">IAB Full-Size Banner</td>
+<td style="text-align: center">VpadnAdSize.IAB_BANNER</td>
+</tr>
+<tr>
+<td style="text-align: center">728x90</td>
+<td style="text-align: center">IAB Leaderboard</td>
+<td style="text-align: center">VpadnAdSize.IAB_LEADERBOARD</td>
+</tr>
+<tr>
+<td style="text-align: center">device width x auto height</td>
+<td style="text-align: center">Smart Banner</td>
+<td style="text-align: center">VpadnAdSize.SMART_BANNER</td>
+</tr>
+</tbody></table>
+
+<p>We recommend that you can use the smart banner constant. (Vpon Banner Don&#39;t support VpadnAdSize.IAB_WIDE_SKYSCRAPER)</p>
+
+<h1 id="banner-auto-refresh">Banner auto-refresh</h1>
 
 <hr>
 
-<p>When you now run your app you should see a banner at the top of the screen:
-<img src="../../../assets/img/A-sdk330-03.png" alt=""></p>
+<p>You need to use the following sample code to enable auto refresh banner.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">   <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
+   <span class="c1">//set auto-refresh</span>
+   <span class="n">adRequest</span><span class="o">.</span><span class="na">setEnableAutoRefresh</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+   <span class="n">adShowBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
+</code></pre></div>
+<h1 id="download-sample-code">Download Sample code</h1>
+
+<hr>
+
+<p><a href="/vpon-sdk/download/">Go to download page</a>
+<br></p>
+
+<h1 id="results">Results</h1>
+
+<hr>
+
+<p>Now run your demo app and you would see a banner at the top of the screen:
+<img src="/vpon-sdk/assets/img/A-sdk330-03.png" alt="gogo"></p>
+
+<h1 id="other-tips">Other tips</h1>
+
+<blockquote>
+<p>Please refer to <a href="../Interstitial">Interstitial Ads</a>、<a href="../mediation">Mediation</a>、<a href="../advanced">Advanced Setting</a> for more information.</p>
+</blockquote>
 
       </div>
       <div class="col-md-3">

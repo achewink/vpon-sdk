@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="The description for this page in the meta data in header.">
+
+
+<meta name="keywords" content="Keywords for this page, in the meta data">
+
+<meta name="author" content="Finn">
+<title>
+  
+  Android - インテグレーションガイド &middot; Vpon-SDK
+  
+</title>
+<!-- Bootstrap core CSS -->
+<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Google Noto Sans Font -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<!-- Documentation extras -->
+<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43024238-5']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <!-- Docs master nav -->
+  <header class="navbar navbar-static-top bs-docs-nav" role="banner">
+    <div class="container">
+        
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">English</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/">Home</a></li>
+                     <li><a href="/vpon-sdk/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">繁體中文</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/zh-tw/">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">简体中文</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/zh-cn">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">日本語</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/jp">Home</a></li>
+                     <li><a href="/vpon-sdk/jp/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/jp/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/jp/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <!-- Docs page layout -->
+  <div class="bs-header" id="content">
+    <div class="container">
+      <h1>Android - インテグレーションガイド</h1>
+      <p></p>
+    </div>
+  </div>
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-sm-3 col-md-2" role="complementary" >
+      <div class="bs-sidebar-left bs-sidenav">
+        
+  <ul class="nav nav-sidebar">
+    <span id="sidebar-title1"></span>
+    <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
+    <li><a id="banner-id"></a></li>
+    <li><a id="interstitial-id"></a></li>
+    <li><a id="mediation"></a></li>
+    <li><a id="advanced"></a></li>
+    <span id="sidebar-title3"></span>
+    <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
+    <li><a id="support"></a></li>
+  </ul>
+
+  <script type="text/javascript">
+    // var usrlang = navigator.language || navigator.userLanguage;
+    var lang = $('html').attr("lang");
+    var userLang = lang.toLowerCase();
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
+
+  $(document).ready(function(){
+    //show the text in right lang
+    if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("Android 串接");
+      $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
+      $('#banner-id').text("橫幅廣告");
+      $('#interstitial-id').text('插頁廣告');
+      $('#mediation').text("中介服務");
+      $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下載 SDK");
+      $('#support').text("其他協助");
+    } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("Android 串接");
+      $('#getting-started').text("开始使用");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
+      $('#banner-id').text("横幅广告");
+      $('#interstitial-id').text('插页广告');
+      $('#mediation').text("中介服务");
+      $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下载 SDK");
+      $('#support').text("其他协助");
+    } else if (userLang == "jp"){
+      $("#sidebar-title1").text("Android 串接");
+      $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("インテグレーションガイド");
+      $('#sidebar-title2').text('広告パターンとを選択');
+      $('#banner-id').text("バナー広告");
+      $('#interstitial-id').text('インタースティシャル広告');
+      $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
+      $('#sidebar-title3').text('ダウンロード/その他');
+      $('#latest-news').text("最新ニュース");
+      $('#download').text("ダウンロード");
+      $('#support').text("サポート");
+    } else {
+      $("#sidebar-title1").text("Android Integration");
+     $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
+     $('#banner-id').text("Banner Ad");
+     $('#interstitial-id').text('Interstitial Ad');
+     $('#mediation').text("Mediation");
+     $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
+     $('#latest-news').text("Latest News");
+     $('#download').text("Download");
+     $('#support').text("Support"); }
+   //add right linking url to right title
+    $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
+    $('#banner-id').attr({href:urlBanner});
+    $('#interstitial-id').attr({href:urlInterstitial});
+    $('#mediation').attr({href:urlMediation});
+    $('#advanced').attr({href:urlAdvanced});
+    $('#latest-news').attr({href:urlLatestNews});
+    $('#download').attr({href:urlDownload});
+    $('#support').attr({href:urlSupport});
+    // $('#').attr({href:url});
+  });
+  </script>
+
+      </div>
+      </div>
+      <div class="col-md-7" role="main">
+        
+      </div>
+      <div class="col-md-3">
+        <div class="bs-sidebar hidden-print" role="complementary">
+          <ul class="nav bs-sidenav">
+            <!-- auto gen -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer
+================================================== -->
+<footer class="bs-footer" role="contentinfo">
+  <div class="container">
+    <ul class="footer-links muted">
+      <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
+      <li>&middot;</li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- <script src="/dist/js/bootstrap.min.js"></script> -->
+<script src="/vpon-sdk/dist/js/bootstrap.js"></script>
+<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+
+</body>
+
+</html>

@@ -150,16 +150,22 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
@@ -192,11 +198,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");

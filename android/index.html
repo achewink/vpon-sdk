@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Android SDK &middot; Vpon-SDK
+  Android - Getting Started &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Android SDK</h1>
+      <h1>Android - Getting Started</h1>
       <p></p>
     </div>
   </div>
@@ -150,16 +150,22 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
@@ -192,11 +198,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
@@ -231,13 +238,50 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="eclipse">Eclipse</h1>
+        <h1 id="a-quick-overview">A Quick Overview</h1>
 
-<p><a href="%7Bbaseurl%7D/fundamental/">here</a></p>
+<h2 id="step1-sdk-download">Step1: SDK Download</h2>
 
-<h1 id="android-studio">Android Studio</h1>
+<hr>
 
-<p><a href="%7Bbaseurl%7D/fundamental/android-studio/">here</a></p>
+<p>Please <a href="/vpon-sdk/android/download/">download latest SDK</a> first. If you are not one of Vpon developer yet, please refer to <a href="/vpon-sdk/registration/">this guide</a> for registration. <br><br></p>
+
+<h2 id="step2-sdk-integration">Step2: SDK Integration</h2>
+
+<hr>
+
+<p>Please follow the <a href="/vpon-sdk/android/integration-guide/">Integration Guide</a> to finish Vpon SDK integration, including minimum requirement, authorities and other settings.<br><br></p>
+
+<h2 id="step3-ad-integration">Step3: Ad Integration</h2>
+
+<hr>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="/vpon-sdk/android/banner/">Banner Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/android/interstitial/">Interstitial Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/android/mediation/">Mediation</a></th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p><br><br></p>
+
+<h2 id="tips">Tips</h2>
+
+<hr>
+
+<ul>
+<li>All Android-relevant information are listed left.</li>
+<li>The right sidebar tells you where you are in current article.</li>
+<li>Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.</li>
+</ul>
+
+<p>Still have prolems? Please send us,<a href="mailto:fae@vpon.com">Vpon FAE</a>. We will render the best service for you.</p>
+
+<blockquote>
+<p><strong>Note</strong>: If you used the previous version of vpon SDK, please read this first: <a href="/vpon-sdk/android/latest-news/update-to-SDK4_2_x/">How to update to the new version of SDK4.2.x</a></p>
+</blockquote>
 
       </div>
       <div class="col-md-3">
