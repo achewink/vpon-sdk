@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  ios &middot; Vpon-SDK
+  iOS - Getting Started  &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -124,7 +124,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>ios</h1>
+      <h1>iOS - Getting Started </h1>
       <p></p>
     </div>
   </div>
@@ -153,21 +153,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -180,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -234,7 +240,50 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="is-this-under-ios-folder">is this under iOS folder?</h1>
+        <h1 id="a-quick-overview">A Quick Overview</h1>
+
+<h2 id="step1-sdk-download">Step1: SDK Download</h2>
+
+<hr>
+
+<p>Please <a href="/vpon-sdk/ios/download/">download latest SDK</a> first. If you are not one of Vpon developer yet, please refer to <a href="/vpon-sdk/registration/">this guide</a> for registration. <br><br></p>
+
+<h2 id="step2-sdk-integration">Step2: SDK Integration</h2>
+
+<hr>
+
+<p>Please follow the <a href="/vpon-sdk/ios/integration-guide/">Integration Guide</a> to finish Vpon SDK integration, including minimum requirement, authorities and other settings.<br><br></p>
+
+<h2 id="step3-ad-integration">Step3: Ad Integration</h2>
+
+<hr>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="/vpon-sdk/ios/banner/">Banner Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/ios/interstitial/">Interstitial Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/ios/mediation/">Mediation</a></th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p><br><br></p>
+
+<h2 id="tips">Tips</h2>
+
+<hr>
+
+<ul>
+<li>All iOS-relevant information are listed left.</li>
+<li>The right sidebar tells you where you are in current article.</li>
+<li>Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.</li>
+</ul>
+
+<p>Still have prolems? Please send us,<a href="mailto:fae@vpon.com">Vpon FAE</a>. We will render the best service for you.</p>
+
+<blockquote>
+<p><strong>Note</strong>: Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to <a href="http://wiki.vpon.com/index.php?title=English_iOS_App_Transport_Security">this link</a> for some modification.</p>
+</blockquote>
 
       </div>
       <div class="col-md-3">

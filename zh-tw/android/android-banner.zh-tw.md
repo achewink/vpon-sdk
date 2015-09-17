@@ -130,7 +130,8 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
 
 ```java
  VpadnAdRequest adRequest = new VpadnAdRequest();
- //設定成true才會自動更新 adRequest.setEnableAutoRefresh(true);
+ //設定成true才會自動更新
+ adRequest.setEnableAutoRefresh(true);
  adShowBanner.loadAd(adRequest);
 ```
 

@@ -153,21 +153,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -180,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -238,7 +244,7 @@
 
 <hr>
 
-<p>您可以在固定需要新增的function(getTestIdentifiers)中設定測試手機的識別碼(在第一次發出request時會提示開發者要新增什麼識別碼)，讓 VPON 以更精確的方式指定廣告。 在開發期間 建議將自己的手機識別碼加在getTestIdentifiers函式中以免產生不實曝光，造成您收益上的損失，並請在上架前將識別碼刪除，否則之後填入識別碼的手機將無法抓到正常廣告</p>
+<p>您可以在固定需要新增的 function(getTestIdentifiers) 中設定測試手機的識別碼(在第一次發出 request 時會提示開發者要新增什麼識別碼)，讓 VPON 以更精確的方式指定廣告。 在開發期間 建議將自己的手機識別碼加在 getTestIdentifiers 函式中以免產生不實曝光，造成您收益上的損失，並請在上架前將識別碼刪除，否則之後填入識別碼的手機將無法抓到正常廣告</p>
 
 <h2 id="增加測試手機的識別碼">增加測試手機的識別碼</h2>
 
@@ -264,35 +270,42 @@
 
 <hr>
 
-<p>您可以在ViewController宣告時加入 VpadnBannerDelegate || VpadnInterstitialDelegate 此兩個protocol，藉此追蹤請求失敗或「點擊」等廣告事件。</p>
-<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#pragma mark VpadnBannerDelegate  一般Banner protocol</span>
+<p>您可以在 ViewController 宣告時加入 VpadnBannerDelegate || VpadnInterstitialDelegate 此兩個 protocol，藉此追蹤請求失敗或「點擊」等廣告事件。</p>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#pragma mark VpadnBannerDelegate  一般 Banner protocol</span>
 <span class="k">@protocol</span> <span class="nc">VpadnBannerDelegate</span> <span class="o">&lt;</span><span class="bp">NSObject</span><span class="o">&gt;</span>
 <span class="k">@optional</span>
-<span class="cp">#pragma mark 通知拉取廣告成功pre-fetch完成</span>
+
+<span class="cp">#pragma mark 通知拉取廣告成功 pre-fetch 完成</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">onVpadnAdReceived</span><span class="p">:(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="n">bannerView</span><span class="p">;</span>
+
 <span class="cp">#pragma mark 通知拉取廣告失敗</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span> <span class="nf">didFailToReceiveAdWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span> <span class="c1">// alan todo code need to add</span>
-<span class="cp">#pragma mark 通知開啟vpadn廣告頁面</span>
+
+<span class="cp">#pragma mark 通知開啟 vpadn 廣告頁面</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnPresent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
+
 <span class="cp">#pragma mark 通知關閉vpadn廣告頁面</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
-<span class="cp">#pragma mark 通知離開publisher application</span>
+
+<span class="cp">#pragma mark 通知離開 publisher application</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnLeaveApplication:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
 <span class="k">@end</span>
-
-<span class="cp">#pragma mark VpadnInterstitialDelegate Interstitial Ad protocol</span>
+</code></pre></div><div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">pragma</span> <span class="n">mark</span> <span class="n">VpadnInterstitialDelegate</span> <span class="n">Interstitial</span> <span class="n">Ad</span> <span class="n">protocol</span>
 <span class="k">@protocol</span> <span class="nc">VpadnInterstitialDelegate</span> <span class="o">&lt;</span><span class="n">VpadnBannerDelegate</span><span class="o">&gt;</span>
 <span class="k">@optional</span>
+
 <span class="cp">#pragma mark 通知取得插屏廣告成功pre-fetch完成</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">onVpadnInterstitialAdReceived</span><span class="p">:(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="n">bannerView</span><span class="p">;</span>
+
 <span class="cp">#pragma mark 通知取得插屏廣告失敗</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
+
 <span class="cp">#pragma mark 通知關閉vpadn廣告頁面</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
 <span class="k">@end</span>
 </code></pre></div>
 <p>這些方法可用於個別的物件，例如</p>
-<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#import &quot;VpadnBanner.h&quot;</span>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">  <span class="cp">#import &quot;VpadnBanner.h&quot;</span>
   <span class="cp">#import &quot;VpadnInterstitial.h&quot;</span>
   <span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="bp">UIViewController</span><span class="o">&lt;</span><span class="n">VpadnBannerDelegate</span><span class="p">,</span> <span class="n">VpadnInterstitialDelegate</span><span class="o">&gt;</span>
 </code></pre></div>
@@ -303,11 +316,9 @@
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">  <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">onVpadnAdReceived</span><span class="p">:(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="n">bannerView</span><span class="p">{}</span>
 </code></pre></div>
 <p>當 VpadnBanner 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。建議您將這些事件記錄下來以便偵錯：</p>
-
-<ul>
-<li>(void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{}
-當廣告因獲得使用者點擊，在您的應用程式之前webView 並呈現出全螢幕廣告使用者介面時呼叫。</li>
-</ul>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">  <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">onVpadnAdFailed</span><span class="p">:(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="n">bannerView</span> <span class="nl">didFailToReceiveAdWithError</span><span class="p">:(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="n">error</span><span class="p">{}</span>
+</code></pre></div>
+<p>當廣告因獲得使用者點擊，在您的應用程式之前webView 並呈現出全螢幕廣告使用者介面時呼叫。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">  <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">onVpadnPresent</span><span class="p">:(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="n">bannerView</span><span class="p">{}</span>
 </code></pre></div>
 <p>當使用者關閉與 onVpadnDismiss 一同顯示的webView，控制權也交還給應用程式時呼叫。</p>
@@ -332,6 +343,16 @@
 進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。<br>
 如圖:
 <img src="/vpon-sdk/assets/img/CrazyadSetting.png" alt="CrazyadSetting"></p>
+
+<h1 id="corona-user">Corona User</h1>
+
+<hr>
+
+<p>如果您App使用Corona欲串接Vpon廣告，我們建議您用web SDK的方式串接，使用方法如下:
+將web SDK裡的html 寫進local file再讓webview去load這個file (例如: webView:request( &quot;localfile.html&quot;, system.ResourceDirectory ))。</p>
+
+<p>html內容可參考vpon wiki的web SDK操作手冊: <a href="/vpon-sdk/zh-tw/web/">Web SDK</a>
+更多Corona SDK文件可參考: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">Corona Document</a></p>
 
       </div>
       <div class="col-md-3">

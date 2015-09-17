@@ -150,16 +150,22 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/android/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/android/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/android/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/android/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/android/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/android/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/android/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/android/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/android/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/android/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/android/';
+    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
+    var urlBanner = baseUrl + userLang + '/android/banner/';
+    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
+    var urlMediation = baseUrl + userLang + '/android/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
+    var urlDownload = baseUrl + userLang + '/android/download/';
+    var urlSupport = baseUrl + userLang + '/android/support/';
+    // var  = "baseUrl + userLang + '/android/'";
 
   $(document).ready(function(){
     //show the text in right lang
@@ -192,11 +198,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("Android 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
@@ -411,7 +418,9 @@ library.  </p>
   <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span><span class="nt">/&gt;&lt;/span&gt;</span>
  <span class="nt">&lt;/manifest&gt;</span>
 </code></pre></div>
-<h1 id="banner橫幅廣告">Banner橫幅廣告</h1>
+<h1 id="banner-橫幅廣告">Banner 橫幅廣告</h1>
+
+<hr>
 
 <p>要在您的Android app中展示橫幅廣告，只需要簡單的新增 com.google.android.gms.ads.AdView 到您的使用者介面。
 新增 com.google.android.gms.ads.AdView</p>
@@ -476,12 +485,14 @@ library.  </p>
 
 <h1 id="interstitial-插頁廣告">Interstitial 插頁廣告</h1>
 
+<hr>
+
 <p>和AdView的使用方式相似:
 • 匯入 <code>com.google.android.gms.ads.*</code>
 • 宣告物件
 • 建立並指定一個和banner不同的 AdMob Ad Unit ID。</p>
 
-<p>同樣的，最方便的方式為在您的Activity中做以下的步驟。</p>
+<p>同樣的，最方便的方式為在您的 Activity 中做以下的步驟。</p>
 <div class="highlight"><pre><code class="language-Java" data-lang="Java"> <span class="kn">import</span> <span class="nn">com.google.android.gms.ads.*</span><span class="o">;</span>
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BannerExample</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
 

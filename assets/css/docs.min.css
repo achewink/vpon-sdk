@@ -1365,8 +1365,6 @@ table td {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .bs-sidebar-left .nav-sidebar{
-  /*background-color: #00BA7D;
-  font:white;*/
-  border: dashed 1px #00BA7D;
-  padding: 15px 0px 15px 15px;
+  /*border: dashed 1px #00BA7D;
+  padding: 20px 0px 20px 20px;*/
 }

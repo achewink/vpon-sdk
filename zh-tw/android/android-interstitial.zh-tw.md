@@ -19,9 +19,10 @@ lang: zh-tw
 Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實例化、載入和顯示步驟的 Object，而不是 View。
 
 不過，它的用法與 Banner 非常類似：
-1. 匯入 com.vpadn.ads.*
-2. 宣告例項
-- 建立例項，並指定 VPON 發佈商編號(bannerId)
+
+* 匯入 com.vpadn.ads.*
+* 宣告例項
+* 建立例項，並指定 VPON 發佈商編號(bannerId)
 
   (不能與橫幅廣告所用發佈商編號重複)
 

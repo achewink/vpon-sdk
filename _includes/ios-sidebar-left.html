@@ -18,21 +18,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '{{ site.baseurl }}/' + userLang + '/ios/';
-    var urlIntegrationGuide = '{{ site.baseurl }}/' + userLang + '/ios/integration-guide';
-    var urlBanner = '{{ site.baseurl }}/' + userLang + '/ios/banner/';
-    var urlInterstitial = '{{ site.baseurl }}/' + userLang + '/ios/interstitial/';
-    var urlMediation = '{{ site.baseurl }}/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '{{ site.baseurl }}/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '{{ site.baseurl }}/' + userLang + '/ios/latest-news/';
-    var urlDownload = '{{ site.baseurl }}/' + userLang + '/ios/download/';
-    var urlSupport = '{{ site.baseurl }}/' + userLang + '/ios/support/';
-    // var  = "'{{ site.baseurl }}/'+ userLang + '/ios/'";
+    var baseUrl = '{{ site.baseurl }}';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '{{ site.baseurl }}/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -45,7 +51,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');

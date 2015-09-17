@@ -153,21 +153,27 @@
     // var usrlang = navigator.language || navigator.userLanguage;
     var lang = $('html').attr("lang");
     var userLang = lang.toLowerCase();
-    var urlGettingStarted = '/vpon-sdk/' + userLang + '/ios/';
-    var urlIntegrationGuide = '/vpon-sdk/' + userLang + '/ios/integration-guide';
-    var urlBanner = '/vpon-sdk/' + userLang + '/ios/banner/';
-    var urlInterstitial = '/vpon-sdk/' + userLang + '/ios/interstitial/';
-    var urlMediation = '/vpon-sdk/' + userLang + '/ios/mediation/';
-    var urlAdvanced = '/vpon-sdk/' + userLang + '/ios/advanced/';
-    var urlLatestNews = '/vpon-sdk/' + userLang + '/ios/latest-news/';
-    var urlDownload = '/vpon-sdk/' + userLang + '/ios/download/';
-    var urlSupport = '/vpon-sdk/' + userLang + '/ios/support/';
-    // var  = "'/vpon-sdk/'+ userLang + '/ios/'";
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -180,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("iOS SDK 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -238,7 +244,7 @@
 
 <hr>
 
-<p>若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定</p>
+<p>若您尚未完成串接廣告形式前的串接說明，請先前往<a href="../integration-guide/">串接說明</a>完成相關設定</p>
 
 <h1 id="開始撰寫-banner">開始撰寫 Banner</h1>
 
@@ -249,12 +255,12 @@
 <p>和所有的 UIView 一樣，用程式碼編寫 VpadnBanner 很簡單。以下為所需步驟:</p>
 
 <ol>
-<li>匯入 VpadnBanner.h與VpadnInterstitial.h</li>
-<li>在應用程式的 UIViewController 中宣告 VpadnBanner</li>
-<li>建立VpadnBanner物件</li>
-<li>指定BannerId，也就是Vpadn申請的BannerId</li>
-<li>設定window的rootViewController</li>
-<li>將該View加進ViewController內</li>
+<li>匯入 <code>VpadnBanner.h</code> 與 <code>VpadnInterstitial.h</code></li>
+<li>在應用程式的 UIViewController 中宣告 <code>VpadnBanner</code></li>
+<li>建立 VpadnBanner 物件</li>
+<li>指定 BannerId，也就是 Vpadn 申請的 BannerId</li>
+<li>設定 window 的rootViewController</li>
+<li>將該 View 加進 ViewController 內</li>
 <li>拉取廣告</li>
 </ol>
 
@@ -272,7 +278,7 @@
 <span class="p">}</span>
 <span class="k">@end</span>
 </code></pre></div>
-<p>以下程式碼會在viewController的 viewDidLoad 初始化步驟中設定橫幅廣告。</p>
+<p>以下程式碼會在 viewController的 viewDidLoad 初始化步驟中設定橫幅廣告。</p>
 <div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="k">@implementation</span> <span class="nc">ViewController</span>
 
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">dealloc</span>
@@ -318,44 +324,42 @@
             <span class="c1">// add your test UUID</span>
             <span class="nb">nil</span><span class="p">];</span>
 <span class="p">}</span>
-
-<span class="cp">#pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增</span>
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+</code></pre></div><div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="cp">#pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;廣告抓取成功&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span> <span class="nf">didFailToReceiveAdWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span> <span class="nf">didFailToReceiveAdWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;廣告抓取失敗&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnPresent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnPresent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;開啟vpadn廣告頁面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;關閉vpadn廣告頁面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnLeaveApplication:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnLeaveApplication:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;離開publisher application&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="cp">#pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增</span>
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;插屏廣告抓取成功&quot;</span><span class="p">);</span>
     <span class="c1">// 顯示插屏廣告</span>
     <span class="p">[</span><span class="n">vpadnInterstitial</span> <span class="n">show</span><span class="p">];</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;插屏廣告抓取失敗&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="err">\</span><span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;關閉插屏廣告頁面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
 <span class="p">}</span>
-
-<span class="cp">#pragma mark 通知關閉vpadn開屏廣告</span>
+</code></pre></div><div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="cp">#pragma mark 通知關閉vpadn開屏廣告</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnSplashAdDismiss</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;關閉vpadn開屏廣告頁面&quot;</span><span class="p">);</span>
 <span class="p">}</span>

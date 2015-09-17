@@ -17,12 +17,12 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
 
 和所有的 UIView 一樣，用程式碼編寫 VpadnBanner 很簡單。以下為所需步驟:
 
-1. 匯入 VpadnBanner.h與VpadnInterstitial.h
-2. 在應用程式的 UIViewController 中宣告 VpadnBanner
-3. 建立VpadnBanner物件
-4. 指定BannerId，也就是Vpadn申請的BannerId
-5. 設定window的rootViewController
-6. 將該View加進ViewController內
+1. 匯入 `VpadnBanner.h` 與 `VpadnInterstitial.h`
+2. 在應用程式的 UIViewController 中宣告 `VpadnBanner`
+3. 建立 VpadnBanner 物件
+4. 指定 BannerId，也就是 Vpadn 申請的 BannerId
+5. 設定 window 的rootViewController
+6. 將該 View 加進 ViewController 內
 7. 拉取廣告
 
 建議您最好在應用程式的 UIViewController 內執行上述所有步驟。
@@ -42,7 +42,7 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
 @end
 ```
 
-以下程式碼會在viewController的 viewDidLoad 初始化步驟中設定橫幅廣告。
+以下程式碼會在 viewController的 viewDidLoad 初始化步驟中設定橫幅廣告。
 
 ```Objective-C
 @implementation ViewController
@@ -90,43 +90,49 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
             // add your test UUID
             nil];
 }
+```
 
+
+```Objective-C
 #pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
-- (void)onVpadnAdReceived:(UIView \*)bannerView{
+- (void)onVpadnAdReceived:(UIView *)bannerView{
     NSLog(@"廣告抓取成功");
 }
 
-- (void)onVpadnAdFailed:(UIView \*)bannerView didFailToReceiveAdWithError:(NSError *)error{
+- (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{
     NSLog(@"廣告抓取失敗");
 }
 
-- (void)onVpadnPresent:(UIView \*)bannerView{
+- (void)onVpadnPresent:(UIView *)bannerView{
     NSLog(@"開啟vpadn廣告頁面 %@",bannerView);
 }
 
-- (void)onVpadnDismiss:(UIView \*)bannerView{
+- (void)onVpadnDismiss:(UIView *)bannerView{
     NSLog(@"關閉vpadn廣告頁面 %@",bannerView);
 }
 
-- (void)onVpadnLeaveApplication:(UIView \*)bannerView{
+- (void)onVpadnLeaveApplication:(UIView *)bannerView{
     NSLog(@"離開publisher application");
 }
 
 #pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
-- (void)onVpadnInterstitialAdReceived:(UIView \*)bannerView{
+- (void)onVpadnInterstitialAdReceived:(UIView *)bannerView{
     NSLog(@"插屏廣告抓取成功");
     // 顯示插屏廣告
     [vpadnInterstitial show];
 }
 
-- (void)onVpadnInterstitialAdFailed:(UIView \*)bannerView{
+- (void)onVpadnInterstitialAdFailed:(UIView *)bannerView{
     NSLog(@"插屏廣告抓取失敗");
 }
 
-- (void)onVpadnInterstitialAdDismiss:(UIView \*)bannerView{
+- (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView{
     NSLog(@"關閉插屏廣告頁面 %@",bannerView);
 }
+```
 
+
+```Objective-C
 #pragma mark 通知關閉vpadn開屏廣告
 - (void)onVpadnSplashAdDismiss{
     NSLog(@"關閉vpadn開屏廣告頁面");
@@ -176,6 +182,7 @@ iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建�
 > 請參閱[插頁廣告](../Interstitial)、[中介服務](../mediation)、[進階設定](../advanced)中獲取更多簡介。
 
 
+[串接說明]: ../integration-guide/
 [IOS-Banner_result]: {{site.baseurl}}/assets/img/IOS-Banner_result.png
 [Go to download page]: ../download/
 [這篇]: {{site.baseurl}}/zh-tw/ios/latest-news/ios9ats/

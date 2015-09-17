@@ -106,8 +106,9 @@ Vpon Mobile Web SDK 可以讓各種規模的行動網站發佈商方便的顯示
 ```
 
 > **Note**:
-> 若將 Vpon 廣告嵌入在 iframe 內，請記得調整 iframe 到適當大小，以符合 Vpon 廣告的長寬。
-> 以上的 License Key 為範例，請置換為您自己申請的 License Key 以防收益分潤無法取得。
+
+> 1. 若將 Vpon 廣告嵌入在 iframe 內，請記得調整 iframe 到適當大小，以符合 Vpon 廣告的長寬。
+> 2. 以上的 License Key 為範例，請置換為您自己申請的 License Key 以防收益分潤無法取得。
 <br>
 
 
@@ -119,7 +120,7 @@ Vpon Mobile Web SDK 可以讓各種規模的行動網站發佈商方便的顯示
 勾選「啟用單一請求」後將 「Google發佈商廣告代碼」裡產生的「標頭」放在網頁的HEAD元素中，將「文件內文」放在您要顯示這個廣告單元的網頁內文中。
 
 ## 設定廣告空間
-在 DFP 使用者介面中 Here:
+在 DFP 使用者介面中 [Here]:
 
 1. 新增廣告空間
 2. 在廣告單元中設定名稱、 大小、目標視窗後儲存
@@ -261,3 +262,4 @@ Vpon Mobile Web SDK 可以讓各種規模的行動網站發佈商方便的顯示
 [素材設定_DFP]: {{site.baseurl}}/assets/img/素材設定_DFP.png
 [DFP_WEB_CALLBACK]: {{site.baseurl}}/assets/img/DFP_WEB_CALLBACK.png
 [Warning]: {{site.baseurl}}/assets/img/Warning.png
+[Here]: https://www.google.com/dfp/

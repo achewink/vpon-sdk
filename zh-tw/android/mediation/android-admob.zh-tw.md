@@ -180,7 +180,8 @@ Mobile Ads SDK 需要在AndroidManifest.xml中宣告com.google.android.gms.ads.A
  </manifest>
 ```
 
-# Banner橫幅廣告
+# Banner 橫幅廣告
+---
 要在您的Android app中展示橫幅廣告，只需要簡單的新增 com.google.android.gms.ads.AdView 到您的使用者介面。
 新增 com.google.android.gms.ads.AdView
 
@@ -246,13 +247,13 @@ Mobile Ads SDK 需要在AndroidManifest.xml中宣告com.google.android.gms.ads.A
 
 
 # Interstitial 插頁廣告
-
+---
 和AdView的使用方式相似:
 • 匯入 `com.google.android.gms.ads.*`
 • 宣告物件
 • 建立並指定一個和banner不同的 AdMob Ad Unit ID。
 
-同樣的，最方便的方式為在您的Activity中做以下的步驟。
+同樣的，最方便的方式為在您的 Activity 中做以下的步驟。
 
 ```Java
  import com.google.android.gms.ads.*;
