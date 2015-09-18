@@ -1,5 +1,5 @@
 ---
-layout:         "default"
+layout:         "home-zh-tw"
 title:          "Vpon SDK 中文說明"
 lead:           ""
 description:    "當前頁面的description, 存於head的meta中。"

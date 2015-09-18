@@ -35,15 +35,13 @@ To run a new ad campaign through DFP Small Business, you'll first need to create
 ##
 To create an order before running an inventory forecast:
 
-1. I n your DFP Small Business account, click the Orders tab.
+1. In your DFP Small Business account, click the Orders tab.
 2. Click New order.
 3. Enter your order information in the appropriate fields.
-
-Order names must be unique within your network.
+(Order names must be unique within your network.)
 
 4. Enter your line item information.
 5. Click Check inventory to ensure the order will have enough available impressions.
-
 ![Warning]
 
 6. Click `Save`。
@@ -130,9 +128,9 @@ Example：
 [integration guide]: ../../integration-guide
 [1]: {{site.baseurl}}/android/download/#dfp
 [Here]: https://www.google.com/dfp/
-[DFP 廣告空間]: {{site.baseurl}}/assets/img/DFP_廣告空間.png
-[DFP Partner Traditional Chinese.png]: {{site.baseurl}}/assets/img/DFP_Partner_Traditional_Chinese.png
-[新增指定目標]: {{site.baseurl}}/assets/img/新增指定目標.png
-[廣告素材類型]: {{site.baseurl}}/assets/img/廣告素材類型.png
-[Warning]: {{site.baseurl}}/assets/img/Warning.png
-[插頁尺寸]: {{site.baseurl}}/assets/img/插頁尺寸.png
+[DFP 廣告空間]: {{site.baseurl}}/assets/img/ADUNIT_DFP.png
+[DFP_Partner_English.png]: {{site.baseurl}}/assets/img/DFP_Partner_English.png
+[新增指定目標]: {{site.baseurl}}/assets/img/AddTargeting.png
+[廣告素材類型]: {{site.baseurl}}/assets/img/SDKMediation.png
+[Warning]: {{site.baseurl}}/assets/img/DFP_EN2.png
+[插頁尺寸]: {{site.baseurl}}/assets/img/dfp_interstitial.png

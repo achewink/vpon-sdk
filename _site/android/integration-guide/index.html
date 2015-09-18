@@ -369,111 +369,17 @@ recommend you to add hardware acceleration in your main Activity.</p>
        <span class="nt">&lt;/intent-filter&gt;</span>
    <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
-<h1 id="coding-for-showing-banner">Coding for showing Banner</h1>
-
-<hr>
-
-<p>Android apps are composed of View objects, Java instances the user sees as text areas, buttons and other controls. VpadnBanner is simply another View subclass displaying small HTML5 ads that respond to user touch.</p>
-
-<p>Like any view, an VpadnBanner may be created either purely in code or largely in XML.</p>
-
-<p>The five lines of code it takes to add a Vpon banner:
-1. Import com.vpadn.ads.*
-2. Declare an VpadnBanner instance
-3. Create it, specifying a unit ID—your VpadnBanner Banner ID
-4. Add the view to the UI
-5. Load it with an ad</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="kn">import</span> <span class="nn">com.vpadn.ads.*</span>
-  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">RelativeLayout</span> <span class="n">adBannerLayout</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">VpadnBanner</span> <span class="n">vponBanner</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-    <span class="c1">//TODO: VPON Banner ID</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">bannerId</span> <span class="o">=</span> <span class="n">CHANGE</span> <span class="n">ME</span> <span class="o">;</span>
-
-         <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-        <span class="c1">//get your layout view for Vpon banner</span>
-        <span class="n">adBannerLayout</span> <span class="o">=</span> <span class="o">(</span><span class="n">RelativeLayout</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">adLayout</span><span class="o">);</span>
-        <span class="c1">//create VpadnBanner instance</span>
-                  <span class="n">vponBanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnBanner</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">bannerId</span><span class="o">,</span> <span class="n">VpadnAdSize</span><span class="o">.</span><span class="na">SMART_BANNER</span><span class="o">,</span> <span class="s">&quot;TW&quot;</span><span class="o">);</span>
-        <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
-        <span class="c1">//set auto refresh to get banner</span>
-        <span class="n">adRequest</span><span class="o">.</span><span class="na">setEnableAutoRefresh</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-                  <span class="c1">//load vpon banner</span>
-        <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
-                  <span class="c1">//add vpon banner to your layout view</span>
-        <span class="n">adBannerLayout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">vponBanner</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">vponBanner</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="c1">//remember to call destroy method</span>
-            <span class="n">vponBanner</span><span class="o">.</span><span class="na">destroy</span><span class="o">();</span>
-            <span class="n">vponBanner</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="o">}</span>
-</code></pre></div>
-<p><br></p>
-
-<h1 id="create-your-banner-in-xml">Create your banner in XML</h1>
-
-<hr>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
-      <span class="na">xmlns:vpadn=</span><span class="s">&quot;http://schemas.android.com/apk/lib/com.vpadn.ads&quot;</span>
-      <span class="na">android:id=</span><span class="s">&quot;@+id/mainLayout&quot;</span>
-      <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
-      <span class="na">android:layout_height=</span><span class="s">&quot;fill_parent&quot;</span>
-      <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span> <span class="nt">&gt;</span>
-
-  <span class="nt">&lt;RelativeLayout</span>
-          <span class="na">android:id=</span><span class="s">&quot;@+id/adLayout&quot;</span>
-          <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
-          <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span> <span class="nt">&gt;</span>
-
-          <span class="nt">&lt;com.vpadn.ads.VpadnBanner</span>
-              <span class="na">android:id=</span><span class="s">&quot;@+id/vpadnBannerXML&quot;</span>
-              <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-              <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-              <span class="na">vpadn:adSize=</span><span class="s">&quot;SMART_BANNER&quot;</span>
-              <span class="na">vpadn:autoFresh=</span><span class="s">&quot;true&quot;</span>
-              <span class="na">vpadn:bannerId=</span> <span class="s">CHANGE_ME</span>
-              <span class="na">vpadn:loadAdOnCreate=</span><span class="s">&quot;true&quot;</span>
-              <span class="na">vpadn:platform=</span><span class="s">&quot;TW&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;/RelativeLayout&gt;</span>
-  <span class="nt">&lt;/LinearLayout&gt;</span>
-</code></pre></div>
-<p><br>
-  As usual you must replace CHANGE ME with your Vpon Banner ID.
-  You can use the following code to get the Test Banner If your banner ID has not been vetted.
-<br></p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span>  <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
-      <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testDeviceImeiSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
-      <span class="n">testDeviceImeiSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;your device advertising id&quot;</span><span class="o">);</span>
-      <span class="c1">//TODO: put Android device advertising id</span>
-      <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
-      <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
-</code></pre></div>
-<p>You can get advertising ID by following methods:
-  1. Search &quot;advertising_id&quot; from eclipse&#39;s log.
-  2. Get your Advertising ID by clicking Ads in Google Settings from your phone directly.</p>
-
 <h1 id="download">Download</h1>
 
 <hr>
 
 <p><a href="/vpon-sdk/android/download">Go to download page</a></p>
 
-<h1 id="the-result">The Result</h1>
+<h1 id="other-tips">Other Tips</h1>
 
 <hr>
 
-<p>When you now run your app you should see a banner at the top of the screen:<br>
-<img src="/vpon-sdk/assets/img/A-sdk330-03.png" alt="gogo"></p>
+<p>Please refer to <a href="../banner">Banner Ad</a>、<a href="../Interstitial">Interstitial Ad</a>、<a href="../mediation">Mediation</a> for more information.</p>
 
       </div>
       <div class="col-md-3">

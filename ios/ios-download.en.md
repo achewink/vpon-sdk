@@ -12,7 +12,7 @@ lang:            "en"
 ---
 <a href="http://m.vpon.com/sdk/VponSDK-iOS/Lib64bit/64bit_vpadn_4216_libAdOn_ebf2c28.a" class="btn btn-lg btn-outline" role="button">SDK 4.2.16</a><br>
 <a href="http://m.vpon.com/sdk/VponSDK-iOS/BannerInterstitialSample_42x.zip" class="btn btn-lg btn-outline" role="button">
-Sample Code</a>  (including Unity)
+Sample Code</a>  (Unity included)
 
 
 # Mediation SDK

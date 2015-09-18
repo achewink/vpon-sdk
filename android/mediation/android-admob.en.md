@@ -14,7 +14,8 @@ Google Admob Mediation document, please refer to [here].
 # Google Ad Network Mediation
 -----
 
-1. Login Google AdMob Please log in to your [AdMob account][]
+1. Log in Google AdMob.
+ Please log in to your [AdMob account][]
 ![1]  
 
 2. `Monetise` -> `+ Monetise new app`  
@@ -42,10 +43,10 @@ Google Admob Mediation document, please refer to [here].
 7. New ad network
 ![][7]  
 
-8. Set Vpon into mediation list：  
-(1) Find the VPON Network tag in Available ad netwroks
-(2) Vpon Ad ID: put the Vpon’s Banner ID that you get from vpon’s back office.
-(3) Zone: Choose the region, which you want to request ads from Vpon Platform.
+8. Set Vpon into mediation list：    <br>
+(1) Find the VPON Network tag in Available ad netwroks <br>
+(2) Vpon Ad ID: put the Vpon’s Banner ID that you get from vpon’s back office.  <br>
+(3) Zone: Choose the region, which you want to request ads from Vpon Platform.  <br>
 
 (If the user of your app is from China, you need to fill with `cn` in this column; otherwise, you need to fill with `tw`.)
 
@@ -190,7 +191,7 @@ To display banners in your Android app, simply add a com.google.android.gms.ads.
 
 The five lines of code it takes to add a banner:
 
-* Import com.google.android.gms.ads.*
+* Import `com.google.android.gms.ads.*`
 * Declare an AdView instance
 * Create it, specifying the ad unit ID
 * Add the view to the UI

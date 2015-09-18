@@ -36,31 +36,28 @@ lang:           "zh-tw"
   `new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,"TW");`
 <br>
 
-4.改變Androidmanifest.xml 裡的activity tag，
-由
+4.改變Androidmanifest.xml 裡的activity tag，由
 
  ```xml
  <activity
-            android:name="com.vpon.widget.VponActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent"
-            android:hardwareAccelerated="true"
-            >
-           </activity>
+      android:name="com.vpon.widget.VponActivity"
+      android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
+      android:theme="@android:style/Theme.Translucent"
+      android:hardwareAccelerated="true">
+</activity>
 ```
 改為：
 
 ```xml
-        <activity
-            android:name="com.vpadn.widget.VpadnActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent"
-            android:hardwareAccelerated="true"
-            >  
-        </activity>
+  <activity
+      android:name="com.vpadn.widget.VpadnActivity"
+      android:configChanges="orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize"
+      android:theme="@android:style/Theme.Translucent"
+      android:hardwareAccelerated="true">
+  </activity>
 ```
 
-5.如果您有使用到Interface VponAdListener 請改為VpadnAdListener 這interface裡面所有的method name都由vpon改為vpadn，如下：
+5.如果您有使用到 Interface VponAdListener 請改為 `VpadnAdListener` 這interface裡面所有的  method name 都由 vpon 改為 `vpadn`，如下：
 
 `onVponReceiveAd` -> `onVpadnReceiveAd`  
 
@@ -72,4 +69,51 @@ lang:           "zh-tw"
 
 `onVponLeaveApplication` -> `onVpadnLeaveApplication`
 
-  [SDK4.2.6]: {{site.baseurl}}/zh-tw/android/download/
+6. 如果有使用layout.xml 產生Vpon Banner，請將裡面所有 vpon 改為 `vpadn` 即可
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpadn="http://schemas.android.com/apk/lib/com.vpadn.ads"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<RelativeLayout
+        android:id="@+id/adLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.vpadn.ads.VpadnBanner
+            android:id="@+id/vpadnBannerXML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            vpadn:adSize="SMART_BANNER"
+            vpadn:autoFresh="true"
+            vpadn:bannerId= CHANGE ME
+            vpadn:loadAdOnCreate="true"
+            vpadn:platform="TW" />
+    </RelativeLayout>
+</LinearLayout>
+
+As usual you must replace CHANGE ME with your Vpon Banner ID.
+You can use the following code to get the Test Banner If your banner ID has not been vetted
+
+```java
+      VpadnAdRequest adRequest =  new VpadnAdRequest();
+      HashSet<String> testDeviceImeiSet = new HashSet<String>();
+      testDeviceImeiSet.add("Advertising ID"); //TODO: put Android Advertising ID
+      adRequest.setTestDevices(testDeviceImeiSet);
+      vponBanner.loadAd(adRequest);
+```
+
+7. 如果有使用 Proguard 請將 vpon 改為 vpadn，改後範例:
+-dontwarn c.**
+-dontwarn com.vpon.**
+-dontwarn vpadn.**
+-keep class c.**{ *; }
+-keep class com.vpon.** { *; }
+-keep class vpon.** { *; }
+-keep class com.vpadn.** { *; }
+-keep class vpadn.** { *; }
