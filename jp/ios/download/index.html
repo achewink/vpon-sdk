@@ -160,7 +160,7 @@
       var baseUrl = '/vpon-sdk/';
     }
     var urlGettingStarted = baseUrl + userLang + '/ios/';
-    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide/';
     var urlBanner = baseUrl + userLang + '/ios/banner/';
     var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
     var urlMediation = baseUrl + userLang + '/ios/mediation/';
@@ -201,11 +201,12 @@
     } else if (userLang == "jp"){
       $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("Getting Started");
+      $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
       $('#banner-id').text("バナー広告");
       $('#interstitial-id').text('インタースティシャル広告');
       $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
       $('#sidebar-title3').text('ダウンロード/その他');
       $('#latest-news').text("最新ニュース");
       $('#download').text("ダウンロード");
@@ -240,7 +241,52 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        
+        <h1 id="基本-sdk">基本 SDK</h1>
+
+<hr>
+
+<p><a href="http://m.vpon.com/sdk/VponSDK-iOS/Lib64bit/64bit_vpadn_4216_libAdOn_ebf2c28.a" class="btn btn-lg btn-outline" role="button">SDK 4.2.16</a><br>
+<a href="http://m.vpon.com/sdk/VponSDK-iOS/BannerInterstitialSample_42x.zip" class="btn btn-lg btn-outline" role="button">
+Sample Code</a>  (Unity included)</p>
+
+<h1 id="メディエーション-sdk">メディエーション SDK</h1>
+
+<hr>
+
+<h2 id="admob">AdMob</h2>
+
+<p><a href="http://m.vpadn.com/sdk/VponAdapter_iOS_eff8d70_v1.0.1.a" class="btn btn-lg btn-outline" role="button">AdMob SDK 1.0.1</a><br>
+<a href="http://m.vpon.com/sdk/iosAdmobBanner.zip" class="btn btn-lg btn-outline" role="button">Banner Sample code</a><br>
+<a href="http://m.vpon.com/sdk/iosAdmobIS.zip" class="btn btn-lg btn-outline" role="button">Interstitial Sample Code</a></p>
+
+<h2 id="dfp">DFP</h2>
+
+<p><a href="http://m.vpon.com/sdk/admob-adapter-1.0.0-1505261651-830485e.jar" class="btn btn-lg btn-outline" role="button">DFP SDK</a><br>
+  <a href="http://m.vpon.com/sdk/iosDFPsample.zip" class="btn btn-lg btn-outline" role="button">Sample Code</a><br></p>
+
+<h2 id="mopub">MoPub</h2>
+
+<p><a href="http://m.vpon.com/sdk/Mopub_iOS_Vpon_Adapter1.0.zip" class="btn btn-lg btn-outline" role="button">MoPub Adapter Code</a><br></p>
+
+<h2 id="mogo">MOGO</h2>
+
+<p><a href="http://m.vpon.com/sdk/MOGO/MangoDemo.zip" class="btn btn-lg btn-outline" role="button">Sample Code</a><br></p>
+
+<h1 id="その他のダウンロード">その他のダウンロード</h1>
+
+<hr>
+
+<blockquote>
+<p><strong>Note:</strong></p>
+
+<ol>
+<li>サンプルコードにはsdk lib が含まれていません。</li>
+<li>旧バージョンの SDK を使用していた場合、まず全ての vpon API: Vpon -&gt; Vpadn を変更してく ださい。また最新版SDK にバージョンアップする際に必要な修正をお読みください。 Please read this first: <a href="/vpon-sdk/jp/ios/latest-news/update-to-SDK4_2_x/">Read</a>.</li>
+<li>After Integration, please check if it has <code>VponLog:didImpression</code> in Log to make sure the information of impression will send back to our server</li>
+<li>Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to <a href="../latest-news/ios9ats/">this link</a> for some modification.</li>
+</ol>
+</blockquote>
+
       </div>
       <div class="col-md-3">
         <div class="bs-sidebar hidden-print" role="complementary">

@@ -244,7 +244,7 @@
 
 <p>本文件是從SDK 4.0.0 或是SDK 4.1.0 升級到SDK 4.2.x的方法。因為新版SDK 4.2.x更改了package, class, interface和method的名稱，另外刪除 com.vpon.ads.VponPlatform這個class，請依照以下步驟做修改。</p>
 
-<p>1.請將位於libs folder內舊的Vpon SDK jar檔刪除，並放入新的jar檔 <a href="/vpon-sdk/zh-tw/android/download/">SDK4.2.6</a></p>
+<p>1.請將位於libs folder內舊的Vpon SDK jar檔刪除，並放入新的jar檔 [SDK4.2.6]</p>
 
 <p>2.更改import 的package, interface 和 class名稱</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponBanner</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnBanner</span>
@@ -264,26 +264,23 @@
 <p><code>new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,&quot;TW&quot;);</code>
 <br></p>
 
-<p>4.改變Androidmanifest.xml 裡的activity tag，
-由</p>
+<p>4.改變Androidmanifest.xml 裡的activity tag，由</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;activity</span>
-            <span class="na">android:name=</span><span class="s">&quot;com.vpon.widget.VponActivity&quot;</span>
-            <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span>
-            <span class="nt">&gt;</span>
-           <span class="nt">&lt;/activity&gt;</span>
+      <span class="na">android:name=</span><span class="s">&quot;com.vpon.widget.VponActivity&quot;</span>
+      <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
+      <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
+      <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
 <p>改為：</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">        <span class="nt">&lt;activity</span>
-            <span class="na">android:name=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
-            <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
-            <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
-            <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span>
-            <span class="nt">&gt;</span>  
-        <span class="nt">&lt;/activity&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;activity</span>
+      <span class="na">android:name=</span><span class="s">&quot;com.vpadn.widget.VpadnActivity&quot;</span>
+      <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
+      <span class="na">android:theme=</span><span class="s">&quot;@android:style/Theme.Translucent&quot;</span>
+      <span class="na">android:hardwareAccelerated=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/activity&gt;</span>
 </code></pre></div>
-<p>5.如果您有使用到Interface VponAdListener 請改為VpadnAdListener 這interface裡面所有的method name都由vpon改為vpadn，如下：</p>
+<p>5.如果您有使用到 Interface VponAdListener 請改為 <code>VpadnAdListener</code> 這interface裡面所有的  method name 都由 vpon 改為 <code>vpadn</code>，如下：</p>
 
 <p><code>onVponReceiveAd</code> -&gt; <code>onVpadnReceiveAd</code>  </p>
 
@@ -294,6 +291,56 @@
 <p><code>onVponDismissScreen</code> -&gt; <code>onVpadnDismissScreen</code>  </p>
 
 <p><code>onVponLeaveApplication</code> -&gt; <code>onVpadnLeaveApplication</code></p>
+
+<ol>
+<li>如果有使用layout.xml 產生Vpon Banner，請將裡面所有 vpon 改為 <code>vpadn</code> 即可</li>
+</ol>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="na">xmlns:vpadn=</span><span class="s">&quot;http://schemas.android.com/apk/lib/com.vpadn.ads&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/mainLayout&quot;</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;fill_parent&quot;</span>
+    <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span> <span class="nt">&gt;</span>
+
+<span class="nt">&lt;RelativeLayout</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/adLayout&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span> <span class="nt">&gt;</span>
+
+        <span class="nt">&lt;com.vpadn.ads.VpadnBanner</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/vpadnBannerXML&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">vpadn:adSize=</span><span class="s">&quot;SMART_BANNER&quot;</span>
+            <span class="na">vpadn:autoFresh=</span><span class="s">&quot;true&quot;</span>
+            <span class="na">vpadn:bannerId=</span> <span class="s">CHANGE</span> <span class="err">ME</span>
+            <span class="na">vpadn:loadAdOnCreate=</span><span class="s">&quot;true&quot;</span>
+            <span class="na">vpadn:platform=</span><span class="s">&quot;TW&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/RelativeLayout&gt;</span>
+<span class="nt">&lt;/LinearLayout&gt;</span>
+
+As usual you must replace CHANGE ME with your Vpon Banner ID.
+You can use the following code to get the Test Banner If your banner ID has not been vetted
+
+```java
+      VpadnAdRequest adRequest =  new VpadnAdRequest();
+      HashSet<span class="nt">&lt;String&gt;</span> testDeviceImeiSet = new HashSet<span class="nt">&lt;String&gt;</span>();
+      testDeviceImeiSet.add(&quot;Advertising ID&quot;); //TODO: put Android Advertising ID
+      adRequest.setTestDevices(testDeviceImeiSet);
+      vponBanner.loadAd(adRequest);
+</code></pre></div>
+<ol>
+<li>如果有使用 Proguard 請將 vpon 改為 vpadn，改後範例:
+-dontwarn c.**
+-dontwarn com.vpon.**
+-dontwarn vpadn.**
+-keep class c.<strong>{ *; }
+-keep class com.vpon.</strong> { <em>; }
+-keep class vpon.</em>* { <em>; }
+-keep class com.vpadn.</em>* { <em>; }
+-keep class vpadn.</em>* { *; }</li>
+</ol>
 
       </div>
       <div class="col-md-3">

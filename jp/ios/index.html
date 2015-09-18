@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  日本語ios &middot; Vpon-SDK
+  iOS - スタートガイド &middot; Vpon-SDK
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -52,6 +52,9 @@
 </script>
 
 
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
+</head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
   <!-- Docs master nav -->
@@ -121,15 +124,167 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>日本語ios</h1>
+      <h1>iOS - スタートガイド</h1>
       <p>The sub title.</p>
     </div>
   </div>
   <div class="container bs-docs-container">
 
     <div class="row">
-      <div class="col-md-9" role="main">
-        <p>＃これは、下の日本 iOS フォルダですか？</p>
+      <div class="bs-sidebar-left">
+      <div class="col-sm-3 col-md-2" >
+        
+  <ul class="nav nav-sidebar">
+    <span id="sidebar-title1"></span>
+    <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
+    <li><a id="banner-id"></a></li>
+    <li><a id="interstitial-id"></a></li>
+    <li><a id="mediation"></a></li>
+    <li><a id="advanced"></a></li>
+    <span id="sidebar-title3"></span>
+    <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
+    <li><a id="support"></a></li>
+  </ul>
+
+  <script type="text/javascript">
+    // var usrlang = navigator.language || navigator.userLanguage;
+    var lang = $('html').attr("lang");
+    var userLang = lang.toLowerCase();
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide/';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
+
+  $(document).ready(function(){
+    //show the text in right lang
+    if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
+      $('#banner-id').text("橫幅廣告");
+      $('#interstitial-id').text('插頁廣告');
+      $('#mediation').text("中介服務");
+      $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下載 SDK");
+      $('#support').text("其他協助");
+    } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("开始使用");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
+      $('#banner-id').text("横幅广告");
+      $('#interstitial-id').text('插页广告');
+      $('#mediation').text("中介服务");
+      $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下载 SDK");
+      $('#support').text("其他协助");
+    } else if (userLang == "jp"){
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("インテグレーションガイド");
+      $('#sidebar-title2').text('広告パターンとを選択');
+      $('#banner-id').text("バナー広告");
+      $('#interstitial-id').text('インタースティシャル広告');
+      $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
+      $('#sidebar-title3').text('ダウンロード/その他');
+      $('#latest-news').text("最新ニュース");
+      $('#download').text("ダウンロード");
+      $('#support').text("サポート");
+    } else {
+      $("#sidebar-title1").text("iOS Integration");
+     $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
+     $('#banner-id').text("Banner Ad");
+     $('#interstitial-id').text('Interstitial Ad');
+     $('#mediation').text("Mediation");
+     $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
+     $('#latest-news').text("Latest News");
+     $('#download').text("Download");
+     $('#support').text("Support"); }
+   //add right linking url to right title
+    $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
+    $('#banner-id').attr({href:urlBanner});
+    $('#interstitial-id').attr({href:urlInterstitial});
+    $('#mediation').attr({href:urlMediation});
+    $('#advanced').attr({href:urlAdvanced});
+    $('#latest-news').attr({href:urlLatestNews});
+    $('#download').attr({href:urlDownload});
+    $('#support').attr({href:urlSupport});
+    // $('#').attr({href:url});
+  });
+  </script>
+
+      </div>
+      </div>
+      <div class="col-md-7" role="main">
+        <h1 id="a-quick-overview">A Quick Overview</h1>
+
+<h2 id="step1-sdk-download">Step1: SDK Download</h2>
+
+<hr>
+
+<p>Please <a href="/vpon-sdk/jp/ios/download/">download latest SDK</a> first. If you are not one of Vpon developer yet, please refer to <a href="/vpon-sdk/jp/registration/">this guide</a> for registration. <br><br></p>
+
+<h2 id="step2-sdk-integration">Step2: SDK Integration</h2>
+
+<hr>
+
+<p>Please follow the <a href="/vpon-sdk/jp/ios/integration-guide/">Integration Guide</a> to finish Vpon SDK integration, including minimum requirement, authorities and other settings.<br><br></p>
+
+<h2 id="step3-ad-integration">Step3: Ad Integration</h2>
+
+<hr>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="/vpon-sdk/jp/ios/banner/">Banner Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/jp/ios/interstitial/">Interstitial Ad</a></th>
+<th style="text-align: center"><a href="/vpon-sdk/jp/ios/mediation/">Mediation</a></th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p><br><br></p>
+
+<h2 id="tips">Tips</h2>
+
+<hr>
+
+<ul>
+<li>All iOS-relevant information are listed left.</li>
+<li>The right sidebar tells you where you are in current article.</li>
+<li>Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.</li>
+</ul>
+
+<p>Still have prolems? Please send us,<a href="mailto:fae@vpon.com">Vpon FAE</a>. We will render the best service for you.</p>
+
+<blockquote>
+<p><strong>Note</strong>: Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to <a href="http://wiki.vpon.com/index.php?title=English_iOS_App_Transport_Security">this link</a> for some modification.</p>
+</blockquote>
 
       </div>
       <div class="col-md-3">
