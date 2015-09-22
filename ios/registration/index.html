@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  iOS - DFP &middot; Vpon-SDK
+  Registration &middot; Vpon-SDK (Alpha)
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -68,7 +68,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK (Alpha)</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -124,8 +124,8 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>iOS - DFP</h1>
-      <p>ios メディエーション</p>
+      <h1>Registration</h1>
+      <p>The sub title.</p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -241,143 +241,66 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <p>This document provides instructions for using the Google Mobile Ads SDK to display banner ads. If you&#39;re not familiar setting banner and interstitial, review <a href="../../integration-guide">integration guide</a> first for SDK and DFP.</p>
-
-<p>If you are using AdMob or DFP, please import 2 libs into your project. (<a href="/vpon-sdk/android/download/#dfp">download</a>)</p>
-
-<ol>
-<li>Fundamental SDK</li>
-<li>Adapter SDK</li>
-</ol>
-
-<h1 id="create-an-ad-unit">Create an Ad Unit</h1>
+        <h1 id="vpon-registration">Vpon Registration</h1>
 
 <hr>
 
-<p>Define ad units first in DoubleClick for Publishers and then add them to the ad tags on your mobile app. This is the typical method of creating an ad unit. The formate of ad unit is like: <code>/networkCode/adUnitName</code></p>
+<p>Please visit our website: <a href="http://tw.pub.vpon.com/register.action">Here</a>. You may change your language settings on the top-right hand side. Once having completed your registration, please check your emails to get the validation code. After entering the validation code, you will be verified immediately.</p>
 
-<h2 id="unit-ads-settings">Unit Ads Settings</h2>
+<p>If you haven&#39;t been able to receive the validation code, please contact us: <a href="mailro:bd@vpon.com">Vpon BD</a>. Thank you.</p>
 
-<p>Go to DFP (<a href="https://www.google.com/dfp/">Here</a>)：</p>
-
-<ol>
-<li>Inventory</li>
-<li>Setting New Ad Unit (Give your ad unit a descriptive name so that you can easily determine where that ad unit will be displayed and also include the size of that unit.)</li>
-<li>Generate tags (Choose mobile applications)</li>
-</ol>
-
-<p><img src="/vpon-sdk/assets/img/ADUNIT_DFP.png" alt="DFP 廣告空間"></p>
-
-<h2 id="setting-order-line-item-and-creative">Setting Order, Line Item and Creative</h2>
-
-<p>To run a new ad campaign through DFP Small Business, you&#39;ll first need to create a new order. After creating the order, you&#39;ll need to create line items, add creatives, and approve the order before it can serve. For reserved line item types (sponsorship and standard), DFP will not reserve inventory until the order is approved.<br><br></p>
-
-<p>To create an order before running an inventory forecast:</p>
-
-<ol>
-<li>In your DFP Small Business account, click the Orders tab.</li>
-<li>Click New order.</li>
-<li><p>Enter your order information in the appropriate fields.
-(Order names must be unique within your network.)</p></li>
-<li><p>Enter your line item information.</p></li>
-<li><p>Click Check inventory to ensure the order will have enough available impressions.
-<img src="/vpon-sdk/assets/img/DFP_EN2.png" alt="Warning"></p></li>
-<li><p>Click <code>Save</code>。
-Once you&#39;ve created an order, you&#39;ll need to approve it before the line items are eligible to serve. See Approve an order to learn how.
-<br><br></p></li>
-</ol>
-
-<h2 id="create-a-line-item">Create a Line Item</h2>
-
-<p>To create a line item:</p>
-
-<ol>
-<li>In your DFP Small Business account, click the Orders tab.</li>
-<li>Create a new order or click an existing order in the table.</li>
-<li>Click New line item.</li>
-<li>Enter a line item name. Line item names must be unique within your network.</li>
-<li>Enter the inventory sizes of the creatives you plan to upload.</li>
-<li>(Optional) Enter some comments about the line item that might help with trafficking the line item.</li>
-<li>Enter the line item type, dates, quantity and cost.</li>
-<li>Under Adjust delivery, configure your delivery settings (optional). See Optional delivery settings below for more information.</li>
-<li>Select the inventory you want to target.</li>
-</ol>
-
-<p>You can target ad units, placements, or both. To find inventory to target, you can either browse through your network’s inventory or perform a search.</p>
-
-<p>The ad unit named after your network represents all of the ad units in your network. If you target the line item to this network-level ad unit, the line item will target any ad unit in your network.</p>
-
-<p>Example：<br>
-<img src="/vpon-sdk/assets/img/AddTargeting.png" alt="新增指定目標"></p>
-
-<p>10.Enter additional targeting criteria to target a specific audience (optional). If you don’t target the line item to any ad units or placements, then the line item will be set to serve as run-of-network. This means the line item can serve to any ad unit on your website.</p>
-
-<p>11.Click <code>Save</code>.</p>
-
-<h2 id="upload-a-creative">Upload a creative</h2>
-
-<ol>
-<li>Click the line item where you&#39;d like to add the creative. You can also create a new line item if needed.</li>
-<li>Click Add creatives. All creatives and ad unit dimensions associated with your line item will be listed on the left-hand column. You can upload creatives to any unit size in this list.</li>
-<li>You can either drag and drop multiple creatives into the line item or just add one at a time.<br><br></li>
-</ol>
-
-<h3 id="add-only-one-creative">Add only one Creative</h3>
-
-<p>Click New creative and select the creative&#39;s dimensions. (Choose <code>Mobile App</code> → <code>SDK Mediation</code>)</p>
-
-<p><img src="/vpon-sdk/assets/img/SDKMediation.png" alt="廣告素材類型"></p>
-
-<h1 id="creative-setting">Creative Setting</h1>
+<h1 id="system-compatibility">System Compatibility</h1>
 
 <hr>
 
-<p>Input the following information:</p>
-
-<ol>
-<li>Select Network：Vpon</li>
-<li>Zone：<code>TW</code> or <code>CN</code></li>
-<li>Vpon Ad ID：the License Key observed obtained from Vpon</li>
-</ol>
-
-<p><img src="/vpon-sdk/assets/img/DFP_Partner_English.png" alt="DFP_Partner_English.png"></p>
-
-<h1 id="banner-interstitial-ad-delivery">Banner/Interstitial Ad delivery</h1>
-
-<hr>
-
-<h2 id="banner-ad-unit">Banner Ad Unit</h2>
-
-<p>As the article discussed above, ad size set at 320x50.</p>
-
-<h2 id="interstitial-ad-unit">Interstitial Ad Unit</h2>
-
-<p>Create an ad unit in DFP to represent the interstitial ad unit. Interstitial ad units can be defined with one of the four common sizes, regardless of the actual screen size of individual devices. The SDK will handle rendering the creative correctly on screens which are of slightly different sizes.</p>
+<h2 id="ios-os-versions">iOS OS versions</h2>
 
 <ul>
-<li>Cell phone：320x480 (portrait)、480x320 (landscape)</li>
-<li>Tablet：768x1024 (portrait)、1024x768 (landscape)</li>
+<li>iOS OS 5.0 or later</li>
 </ul>
 
-<p>There is no need to define a separate ad unit for landscape mode. You can simply add the landscape size (e.g. 480x320 for smartphones) to line items targeting the interstitial ad unit and include a creative with the landscape size in addition to the regular portrait size.</p>
+<h2 id="android-os-versions">Android OS versions</h2>
 
-<p>Example：</p>
+<ul>
+<li>Android 2.1 or later</li>
+</ul>
 
-<p><img src="/vpon-sdk/assets/img/dfp_interstitial.png" alt="插頁尺寸"></p>
+<h2 id="feasible-ad-size">Feasible Ad Size</h2>
 
-<h1 id="other-reference">Other Reference</h1>
+<ul>
+<li>Be sure at least 320x50 dip</li>
+</ul>
 
-<hr>
-
-<p><a href="https://support.google.com/dfp_sb/">DFP Small Business</a><br>
-<a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android">Google Developers DFP Banner Ads</a><br>
-<a href="https://developers.google.com/mobile-ads-sdk/docs/android/doubleclick/#support">Google Developers Interstitial Ads</a></p>
-
-<h1 id="download-sample-code">Download Sample Code</h1>
+<h1 id="license-key-application">License Key Application</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/android/download/#dfp">Android Download</a></p>
+<h2 id="apply-vpon-sdk-license-key">Apply Vpon SDK License Key</h2>
+
+<p>It is required to apply a unique license key in order to request for ADs. We strongly suggest developers apply both China and Taiwan license key to target Great China Market. <br>Enter in <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a> for China Vpon Platform. <br>Enter in <a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> for Taiwan Vpon Platform.</p>
+
+<h2 id="set-vpon-platform">Set Vpon platform</h2>
+
+<p><img src="/vpon-sdk/assets/img/VponSDK_400_NewApp.png" alt="VponSDK_400_NewApp"></p>
+
+<p><br>Click  &quot;Create New App&quot; button into add-application page: Input your application name, application device platform, URL and application instructions and choose whether or not to use crazy advertisement. Click &quot;Send&quot; button when you finish the form.<br><br></p>
+
+<p><img src="/vpon-sdk/assets/img/SDK_400_New_Banner_Position.png" alt="SDK_400_New_Banner_Position">
+Create Position Page：
+1. Inputs your advertisement position name, and choose your advertisement type.
+2. Choose whether or not to enable test mode.
+3. Set advertisement filter.
+4. Set the color of advertisement.</p>
+
+<p>When you finish the above actions, click &quot;Send&quot; button. <br></p>
+
+<p><img src="/vpon-sdk/assets/img/SDK400_Banner_Position_List.png" alt="SDK400_Banner_Position_List"></p>
+
+<p>Enter &quot;Position List&quot; page: You will see your application status and your Vpon Key. Click the tab named “Application”, you will go in &quot;Application List&quot; page.<br><br></p>
+
+<p><img src="/vpon-sdk/assets/img/SDK400_App_List.png" alt="SDK400_App_List"></p>
+
+<p>Enter “Application List” page: You will see the application-related setting, your applications and approved state of application.<br><br></p>
 
       </div>
       <div class="col-md-3">

@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Android - DFP &middot; Vpon-SDK
+  アプリ・サイト運営者の登録フロー  &middot; Vpon-SDK (Alpha)
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -52,6 +52,8 @@
 </script>
 
 
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
 </head>
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
@@ -66,7 +68,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -122,14 +124,15 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>Android - DFP</h1>
-      <p>Android メディエーション</p>
+      <h1>アプリ・サイト運営者の登録フロー </h1>
+      <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
+
     <div class="row">
-      <div class="col-sm-3 col-md-2" role="complementary" >
-      <div class="bs-sidebar-left bs-sidenav">
+      <div class="bs-sidebar-left">
+      <div class="col-sm-3 col-md-2" >
         
   <ul class="nav nav-sidebar">
     <span id="sidebar-title1"></span>
@@ -156,21 +159,21 @@
     } else {
       var baseUrl = '/vpon-sdk/';
     }
-    var urlGettingStarted = baseUrl + userLang + '/android/';
-    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
-    var urlBanner = baseUrl + userLang + '/android/banner/';
-    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
-    var urlMediation = baseUrl + userLang + '/android/mediation/';
-    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
-    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
-    var urlDownload = baseUrl + userLang + '/android/download/';
-    var urlSupport = baseUrl + userLang + '/android/support/';
-    // var  = "baseUrl + userLang + '/android/'";
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide/';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
 
   $(document).ready(function(){
     //show the text in right lang
     if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("Android 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("開始使用");
       $('#integration-guide').text("串接說明");
       $('#sidebar-title2').text('廣告型態選擇');
@@ -183,7 +186,7 @@
       $('#download').text("下載 SDK");
       $('#support').text("其他協助");
     } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("Android 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("开始使用");
       $('#integration-guide').text("串接说明");
       $('#sidebar-title2').text('广告型态选择');
@@ -196,7 +199,7 @@
       $('#download').text("下载 SDK");
       $('#support').text("其他协助");
     } else if (userLang == "jp"){
-      $("#sidebar-title1").text("Android 串接");
+      $("#sidebar-title1").text("iOS 串接");
       $('#getting-started').text("スタートガイド");
       $('#integration-guide').text("インテグレーションガイド");
       $('#sidebar-title2').text('広告パターンとを選択');
@@ -209,7 +212,7 @@
       $('#download').text("ダウンロード");
       $('#support').text("サポート");
     } else {
-      $("#sidebar-title1").text("Android Integration");
+      $("#sidebar-title1").text("iOS Integration");
      $('#getting-started').text("Getting Started")
      $('#integration-guide').text("Integration Guide");
      $('#sidebar-title2').text('Ad Type Choices');
@@ -238,143 +241,83 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <p>This document provides instructions for using the Google Mobile Ads SDK to display banner ads. If you&#39;re not familiar setting banner and interstitial, review <a href="../../integration-guide/">integration guide</a> first for SDK and DFP.</p>
-
-<p>If you are using AdMob or DFP, please import 2 JARs into your project. (<a href="/vpon-sdk/jp/android/download/#dfp">download</a>)</p>
-
-<ol>
-<li>Fundamental SDK</li>
-<li>Adapter SDK</li>
-</ol>
-
-<h1 id="create-an-ad-unit">Create an Ad Unit</h1>
+        <h1 id="vponへの登録">Vponへの登録</h1>
 
 <hr>
 
-<p>Define ad units first in DoubleClick for Publishers and then add them to the ad tags on your mobile app. This is the typical method of creating an ad unit. The formate of ad unit is like: <code>/networkCode/adUnitName</code></p>
+<p>Vpon ウェブサイトにアクセスしてください。: こちら<a href="http://tw.pub.vpon.com/register.action">ページ</a>右上で言語を変更することができます。 必要項目の記入完了後、登録メールアドレスに認証メールが届いているかを確認してください。サイト上で認証コードを入力すると登録完了となります。
+認証メールが届かない場合、当社 : <a href="mailto:bd@vpon.com">Vpon BD</a>. までご連絡ください。</p>
 
-<h2 id="unit-ads-settings">Unit Ads Settings</h2>
-
-<p>Go to DFP (<a href="https://www.google.com/dfp/">Here</a>)：</p>
-
-<ol>
-<li>Inventory</li>
-<li>Setting New Ad Unit (Give your ad unit a descriptive name so that you can easily determine where that ad unit will be displayed and also include the size of that unit.)</li>
-<li>Generate tags (Choose mobile applications)</li>
-</ol>
-
-<p><img src="/vpon-sdk/assets/img/ADUNIT_DFP.png" alt="DFP 廣告空間"></p>
-
-<h2 id="setting-order-line-item-and-creative">Setting Order, Line Item and Creative</h2>
-
-<p>To run a new ad campaign through DFP Small Business, you&#39;ll first need to create a new order. After creating the order, you&#39;ll need to create line items, add creatives, and approve the order before it can serve. For reserved line item types (sponsorship and standard), DFP will not reserve inventory until the order is approved.<br><br></p>
-
-<p>To create an order before running an inventory forecast:</p>
-
-<ol>
-<li>In your DFP Small Business account, click the Orders tab.</li>
-<li>Click New order.</li>
-<li><p>Enter your order information in the appropriate fields.
-(Order names must be unique within your network.)</p></li>
-<li><p>Enter your line item information.</p></li>
-<li><p>Click Check inventory to ensure the order will have enough available impressions.
-<img src="/vpon-sdk/assets/img/DFP_EN2.png" alt="Warning"></p></li>
-<li><p>Click <code>Save</code>。
-Once you&#39;ve created an order, you&#39;ll need to approve it before the line items are eligible to serve. See Approve an order to learn how.
-<br><br></p></li>
-</ol>
-
-<h2 id="create-a-line-item">Create a Line Item</h2>
-
-<p>To create a line item:</p>
-
-<ol>
-<li>In your DFP Small Business account, click the Orders tab.</li>
-<li>Create a new order or click an existing order in the table.</li>
-<li>Click New line item.</li>
-<li>Enter a line item name. Line item names must be unique within your network.</li>
-<li>Enter the inventory sizes of the creatives you plan to upload.</li>
-<li>(Optional) Enter some comments about the line item that might help with trafficking the line item.</li>
-<li>Enter the line item type, dates, quantity and cost.</li>
-<li>Under Adjust delivery, configure your delivery settings (optional). See Optional delivery settings below for more information.</li>
-<li>Select the inventory you want to target.</li>
-</ol>
-
-<p>You can target ad units, placements, or both. To find inventory to target, you can either browse through your network’s inventory or perform a search.</p>
-
-<p>The ad unit named after your network represents all of the ad units in your network. If you target the line item to this network-level ad unit, the line item will target any ad unit in your network.</p>
-
-<p>Example：<br>
-<img src="/vpon-sdk/assets/img/AddTargeting.png" alt="新增指定目標"></p>
-
-<p>10.Enter additional targeting criteria to target a specific audience (optional). If you don’t target the line item to any ad units or placements, then the line item will be set to serve as run-of-network. This means the line item can serve to any ad unit on your website.</p>
-
-<p>11.Click <code>Save</code>.</p>
-
-<h2 id="upload-a-creative">Upload a creative</h2>
-
-<ol>
-<li>Click the line item where you&#39;d like to add the creative. You can also create a new line item if needed.</li>
-<li>Click Add creatives. All creatives and ad unit dimensions associated with your line item will be listed on the left-hand column. You can upload creatives to any unit size in this list.</li>
-<li>You can either drag and drop multiple creatives into the line item or just add one at a time.<br><br></li>
-</ol>
-
-<h3 id="add-only-one-creative">Add only one Creative</h3>
-
-<p>Click New creative and select the creative&#39;s dimensions. (Choose <code>Mobile App</code> → <code>SDK Mediation</code>)</p>
-
-<p><img src="/vpon-sdk/assets/img/SDKMediation.png" alt="廣告素材類型"></p>
-
-<h1 id="creative-setting">Creative Setting</h1>
+<h1 id="システム要求">システム要求</h1>
 
 <hr>
 
-<p>Input the following information:</p>
-
-<ol>
-<li>Select Network：Vpon</li>
-<li>Zone：<code>TW</code> or <code>CN</code></li>
-<li>Vpon Ad ID：the License Key observed obtained from Vpon</li>
-</ol>
-
-<p>![DFP Partner Traditional Chinese.png]</p>
-
-<h1 id="banner-interstitial-ad-delivery">Banner/Interstitial Ad delivery</h1>
-
-<hr>
-
-<h2 id="banner-ad-unit">Banner Ad Unit</h2>
-
-<p>As the article discussed above, ad size set at 320x50.</p>
-
-<h2 id="interstitial-ad-unit">Interstitial Ad Unit</h2>
-
-<p>Create an ad unit in DFP to represent the interstitial ad unit. Interstitial ad units can be defined with one of the four common sizes, regardless of the actual screen size of individual devices. The SDK will handle rendering the creative correctly on screens which are of slightly different sizes.</p>
+<h2 id="iphone-os-バージョン">iPhone OS バージョン</h2>
 
 <ul>
-<li>Cell phone：320x480 (portrait)、480x320 (landscape)</li>
-<li>Tablet：768x1024 (portrait)、1024x768 (landscape)</li>
+<li><code>iPhone OS 5.0 以上</code></li>
 </ul>
 
-<p>There is no need to define a separate ad unit for landscape mode. You can simply add the landscape size (e.g. 480x320 for smartphones) to line items targeting the interstitial ad unit and include a creative with the landscape size in addition to the regular portrait size.</p>
+<h2 id="android-os-バージョン">Android OS バージョン</h2>
 
-<p>Example：</p>
+<ul>
+<li><code>Android 2.1 以上</code></li>
+</ul>
 
-<p><img src="/vpon-sdk/assets/img/dfp_interstitial.png" alt="插頁尺寸"></p>
+<h2 id="サポート対象のバナーサイズ">サポート対象のバナーサイズ</h2>
 
-<h1 id="other-reference">Other Reference</h1>
+<ul>
+<li>最小でも <code>320x50 dip</code> を確保してください</li>
+</ul>
 
-<hr>
-
-<p><a href="https://support.google.com/dfp_sb/">DFP Small Business</a><br>
-<a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android">Google Developers DFP Banner Ads</a><br>
-<a href="https://developers.google.com/mobile-ads-sdk/docs/android/doubleclick/#support">Google Developers Interstitial Ads</a></p>
-
-<h1 id="download-sample-code">Download Sample Code</h1>
+<h1 id="license-key（プロパティid）の取得">License Key（プロパティID）の取得</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/jp/android/download/#dfp">Android Download</a></p>
+<h2 id="vpon-sdk-license-key（プロパティid）の取得">Vpon SDK License Key（プロパティID）の取得</h2>
+
+<p>広告を取得するために、まずプロパティIDを取得してください。「台湾エリア」および「中国エリア」の 両方のプロパティIDを取得することで、 大中華圏のマーケットをカバーすることが可能です。</p>
+
+<p><a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a> 中国エリアのプロパティIDを登録</p>
+
+<p><a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> 台湾エリアのプロパティIDを登録</p>
+
+<h2 id="vponプラットフォームの設定">Vponプラットフォームの設定</h2>
+
+<p><img src="/vpon-sdk/assets/img/SDK400%E6%96%B0%E5%A2%9E%E7%89%88%E4%BD%8D_JP.png" alt="SDK400新增版位_JP"></p>
+
+<p>「アプリ・サイトの追加」をクリックすると、アプリ・サイトの新規登録を行うことができます。アプリ名・アプリのプラットフォーム・URL・アプリの説明を入力し、Crazy ADの掲載可否を選択します。入力後、「完了」ボタンを押してプロパティの新規作成を行います。</p>
+
+<p><img src="/vpon-sdk/assets/img/VponSDK_400_NewApp_JP.png" alt="VponSDK_400_NewApp_JP"></p>
+
+<p>「プロパティ詳細」ページを開きます。</p>
+
+<ol>
+<li>広告掲載位置名称の入力、広告タイプの選択、Vpon 広告と mix 広告の使用の有無を選択します。Vpon 広告使 用の有効化及び mix 広告使用の無効化の選択を使用するようお勧めします。</li>
+<li>テストモードの設定</li>
+<li>広告フィルタの設定</li>
+<li>広告カラーの設定</li>
+</ol>
+
+<p>すべての設定完了後、「完了」をクリックしてください。</p>
+
+<p>![Trandationchinesefrontserver3_JP.png]</p>
+
+<ol>
+<li>プロパティの審査ステータスbr&gt;</li>
+<li>プロパティ ID</li>
+</ol>
+
+<p>アプリ・サイトリストページでは、審査ステータスとVPON license Keyをご確認いただけます。</p>
+
+<p><img src="/vpon-sdk/assets/img/Trandationchinesefrontserver4_JP.png" alt="Trandationchinesefrontserver4_JP.png"></p>
+
+<ol>
+<li>アプリ・サイト一覧</li>
+<li>アプリの審査ステータス</li>
+</ol>
+
+<p>アプリ・サイト一覧ページでは、登録されたアプリ・アプリの設定・審査ステータスをご確認いただけます。</p>
 
       </div>
       <div class="col-md-3">
@@ -385,7 +328,9 @@ Once you&#39;ve created an order, you&#39;ll need to approve it before the line 
         </div>
       </div>
     </div>
+
   </div>
+
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">

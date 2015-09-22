@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  Android - インタースティシャル広告 &middot; Vpon-SDK
+  Android - インタースティシャル広告 &middot; Vpon-SDK (Alpha)
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -66,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -238,11 +238,11 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="overview">Overview</h1>
+        <h1 id="インタースティシャル広告の概要">インタースティシャル広告の概要</h1>
 
 <hr>
 
-<p>Interstitials, on the other hand, immediately present rich HTML5 experiences or &quot;web apps&quot; at natural app transition points such as launch, video pre-roll or game level load. Web apps are in-app browsing experiences with a simple close button rather than any navigation bar—the content provides its own internal navigation scheme. Interstitial ads are typically more expensive and subject to impression constraints.
+<p>インタースティシャル広告は、インタラクティブなマルチメディア HTML5 もしくは「ネットワークアプリケーション」で、アプリの画面遷移時に表示されます (例えばアプリ起動・動画のプレロール・ゲームのレベル読み込時など)。 「ネットワークアプリケーション」とは、ナビゲーションバーの代わりにクローズボタンのみが配置されたアプリ内の画面です。この広告タイプはよりリッチで魅力的であるため、通常より高価となり、インプレッション機会は限られたものとなります。 ￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼
 <img src="/vpon-sdk/assets/img/Interstitial.png" alt=""></p>
 
 <blockquote>
@@ -250,23 +250,22 @@
 We suggest that the interstitial ads running in portrait mod for the best visual effects.</p>
 </blockquote>
 
-<h1 id="vpon-interstitial-ad">Vpon Interstitial Ad</h1>
+<h1 id="vponインタースティシャル広告">Vponインタースティシャル広告</h1>
 
 <hr>
 
-<p>The richer, more heavyweight nature of Vpadn interstitial is reflected by its definition not as a UIView but rather an NSObject requiring more distinct instantiation, load and display steps.</p>
-
-<p>Usage is nevertheless very similar to Vpadn banner:</p>
+<p>インタースティシャル広告は、インタラクティブでデータ量が多いため、View よりもインスタンス化・読み込み・表示の手順を より明確にしたObject として定義されます。
+利用方法は、バナー広告と非常によく似ています。</p>
 
 <ul>
-<li>Import lib file and head file</li>
-<li>Declare instance</li>
-<li>Create the object and set Vpadn interstitial banner ID (do not use the same ID as banner)</li>
+<li>com.vpadn.ads.*をインポートする</li>
+<li>インスタンスを宣言する</li>
+<li>プロパティIDを指定してインスタンスを作成する。（インタースティシャル広告とバナー広告のプロパティIDは重複不可です）</li>
 </ul>
 
-<p>Once again, the best place to do this is in your app&#39;s UIViewController</p>
+<p>上記ステップをアプリのアクティビティ内で実行してください。</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="kd">implements</span> <span class="n">VpadnAdListener</span> <span class="o">{</span>
-        <span class="c1">//TODO: The InterstitialBannerId which is you apply form Vpon.(Remind: This interstitial banner ID is different with normal banner ID).</span>
+         <span class="c1">//TODO: 登録済みプロパティID （注意：バナー広告用のプロパティIDとは異なるものを使用）</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">interstitialBannerId</span> <span class="o">=</span> <span class="s">&quot;xxxxxxxxxxxxxxxx&quot;</span><span class="o">;</span>
     <span class="kd">private</span> <span class="n">VpadnInterstitialAd</span> <span class="n">interstitialAd</span><span class="o">;</span>
 
@@ -274,56 +273,55 @@ We suggest that the interstitial ads running in portrait mod for the best visual
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-                <span class="c1">// Create interstitial instance</span>
+                 <span class="c1">// インタースティシャルのインスタンスを作成する</span>
                 <span class="n">interstitialAd</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnInterstitialAd</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">interstitialBannerId</span><span class="o">,</span> <span class="s">&quot;TW&quot;</span><span class="o">);</span>
-        <span class="c1">//Add listener</span>
+        <span class="c1">//listener を追加する。</span>
                 <span class="n">interstitialAd</span><span class="o">.</span><span class="na">setAdListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-        <span class="c1">// Create ad request</span>
+        <span class="c1">// 広告リクエストを作成する。</span>
                 <span class="n">VpadnAdRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
-                <span class="c1">//Begin loading your interstitial</span>
+                <span class="c1">//インタースティシャル広告の読み込みを開始する</span>
         <span class="n">interstitialAd</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
-        <span class="c1">// Remember to call the destory() when your app is destroying.</span>
+        <span class="c1">// インタースティシャルを表示する準備ができたら、 destroy を呼び出す。</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">interstitialAd</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">interstitialAd</span><span class="o">.</span><span class="na">destroy</span><span class="o">();</span>
                         <span class="n">interstitialAd</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
 </code></pre></div>
-<p>There is no item can be add to ViewController now and you must wait this request success before displaying the creative. The simplest way is showing ad [vpadnInterstitial show] once onVpadnInterstitialAdReceived load succeeds.</p>
+<p>また、広告を表示するまでは保持しておくことが可能です。 最も簡単な方法は、AdListenerを実行する、もしくはブー ル属性 isReady を直接使用することです。 AdListenerの詳細については中級編ガイドをご参照ください。</p>
 
-<p>Once load succeeds the full-screen ad is ready for presentation:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">ad</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">interstitialAd</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">//show interstitial ad or hold onto the interstitial untill you&#39;re ready to display it.</span>
-             <span class="n">interstitialAd</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
-        <span class="o">}</span>
+<p>広告のロードに成功すると、インタースティシャルを表示することができます。</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">ad</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">interstitialAd</span><span class="o">)</span> <span class="o">{</span>
+         <span class="c1">//インタースティシャル広告を表示する もしくは表示する準備が完了するまで保留する</span>
+         <span class="n">interstitialAd</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
     <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div>
-<p>The interstitial then takes over the screen until the user dismisses it, at which point control returns to your app and the view controller passes to this method.
-Vpadn Interstitial Delegate <a href="../advanced/">advanced setting</a> provides many callback methods for you.</p>
+<p>一度インタースティシャル広告が表示されると、ユーザが閉じるまでディスプレイ全体をカバーします。この時、制御権が アプリに渡されます。中級編ガイドの Vpadn Ad Listener の項目にて、いくつかのコ ールバック方式をご参照ください。</p>
 
-<h1 id="download-sample-code">Download Sample Code</h1>
+<h1 id="サンプルコードのダウンロード">サンプルコードのダウンロード</h1>
 
 <hr>
 
-<p>You can download an example project containing SDK 4 lib file in VpadnAd folder:</p>
+<p>SDK 4 JAR ファイルは、Sample code libs folder 内にあります。</p>
 
 <p><a href="/vpon-sdk/zh-tw/ios/download">Go to Download Page</a></p>
 
-<h1 id="note">Note</h1>
+<h1 id="注意事項">注意事項</h1>
 
 <hr>
 
 <blockquote>
 <ol>
-<li>We do not recommend trying to fetch and show immediately ad at app-open time. It would take users through a long wait screen as the interstitial tried to load. For this reason, we recommend fetching an interstitial and holding it until appropriate event happened. e.g. passing the game, staying in the same screen beyond specific time, pressing the button or before leaving app.</li>
-<li>Please do not load interstitial and show it immediately in onCreate method if you do not add this line <code>android:configChange=&quot;orientation|screenSize&quot;</code> in manifest file.</li>
+<li>インタースティシャル広告をロードする際にユーザーを長時間待たせてしまうため、アプリ起動時にただちに広告を取得・表示させることはお奨めしません。まずインタースティシャル広告を取得し、適切なイベントまで保持していただくことをお奨めします。（例えば、ゲームクリア・ある画面で特定の時間を経過した場合・ボタンをクリックする・アプリを終了する前など）</li>
+<li>マニフェストファイルに android: configChanges=&quot;orientation|screenSize&quot;を 追加しなかった場合、onCreateメソッドでインタースティシャル広告をただちにロード・表示させないでください。</li>
 </ol>
 </blockquote>
 

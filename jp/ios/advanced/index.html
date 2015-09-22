@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  iOS - 詳細設定 &middot; Vpon-SDK
+  iOS - 詳細設定 &middot; Vpon-SDK (Alpha)
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -68,7 +68,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -241,16 +241,18 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="custom-variable">Custom Variable</h1>
+        <h1 id="カスタムパラメータ">カスタムパラメータ</h1>
 
 <hr>
 
-<p>You can insert the test ID to your testDevices (first time, it&#39;ll give you a hint to add a uniqueID) in the function (getTestIdentifiers) in order to refine Vpadn tracking. We recommend you insert the test ID to your testDevices to avoid invalid impression and lost revenue during development. Please delete the test ID after testing your application so you do not receive test ads.</p>
+<p>本function(getTestIdentifiers) 内にテストIDを入力し、掲載テストを実施することができます。（最初のリクエスト時にユニークIDの追加を促します）開発中の広告の無駄な露出と収益損失を防ぐため、テスト用端末IDを入力いただくことをおすすめいたします。また、テスト完了後はテスト用広告を掲載しないよう、テスト用端末IDを忘れずに削除してください。</p>
 
-<h2 id="adding-test-id">Adding Test ID</h2>
+<h2 id="テスト用端末id-の追加">テスト用端末ID の追加</h2>
 
-<p>It will receive test ads when you use this property to specify a device. To verify that you&#39;ve integrated the SDK correctly, add your test device, run your application, and click on the displayed test ad.</p>
-<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="c1">// Add this function and test ID in your project to enable test ads.</span>
+<p>これらのプロパティでテスト広告を表示させる端末、もしくは端末セットを指定することができます。
+開発中に不要な広告を表示させないためにこのプロパティをご利用ください。
+SDKが正しく実装されていることを確認するには、テスト用端末を追加し、アプリを起動させ、表示されたテスト広告をクリックします。</p>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="c1">// この機能をプログラム内に追加し、下方にテスト端末IDを記入する</span>
 <span class="p">-(</span><span class="bp">NSArray</span><span class="o">*</span><span class="p">)</span><span class="nf">getTestIdentifiers</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span>
@@ -259,19 +261,23 @@
           <span class="nb">nil</span><span class="p">];</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="targeting">Targeting</h2>
+<h2 id="ターゲティング">ターゲティング</h2>
 
-<p>You can also specify location and demographic targeting information. But to protect the user privacy, please you only specify location and demographic data if that information is already used by your app.
-   [vpadnAd setUserInfoAge:25];
-   [vpadnAd setUserInfoKeyword:@&quot;Game,RPG&quot;];
-   [vpadnAd setUserInfoGender:female];
-   [vpadnAd setUserInfoBirthdayWithYear:1988 Month:6 andDay:9];</p>
+<p>位置情報とユーザー属性情報を指定することができます。ユーザーのプライバシー情報保護の観点から、アプリ内の既存情報としての位置情報とユーザー属性情報を指定してください。</p>
+
+<p>[vpadnAd setUserInfoAge:25];</p>
+
+<p>[vpadnAd setUserInfoKeyword:@&quot;Game,RPG&quot;];</p>
+
+<p>[vpadnAd setUserInfoGender:female];</p>
+
+<p>[vpadnAd setUserInfoBirthdayWithYear:1988 Month:6 andDay:9];</p>
 
 <h1 id="protocol">Protocol</h1>
 
 <hr>
 
-<p>You can add these two protocol when you declare ViewController to help you track ad events like request failures or click-through. (VpadnBannerDelegate || VpadnInterstitialDelegate)</p>
+<p>ViewController の宣言時にこの2つのプロトコルを追加することで、広告リクエストの失敗やクリックスルーなどのライフサイクルイベントをトラッキングすることができます。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#pragma mark VpadnBannerDelegate  general banner protocol</span>
 <span class="k">@protocol</span> <span class="nc">VpadnBannerDelegate</span> <span class="o">&lt;</span><span class="bp">NSObject</span><span class="o">&gt;</span>
 <span class="k">@optional</span>
@@ -297,59 +303,59 @@
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
 <span class="k">@end</span>
 </code></pre></div>
-<p>These methods can be used for specific object like a ViewController:</p>
+<p>これらのメソッドは、ViewController ような個別のオブジェクトに使用できます。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="cp">#import &quot;VpadnBanner.h&quot;</span>
 <span class="cp">#import &quot;VpadnInterstitial.h&quot;</span>
 <span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="bp">UIViewController</span><span class="o">&lt;</span><span class="n">VpadnBannerDelegate</span><span class="p">,</span> <span class="n">VpadnInterstitialDelegate</span><span class="o">&gt;</span>
 </code></pre></div>
-<p>Received objects and pass to VpadnBanner：</p>
+<p>受信しようとするオブジェクトを VpadnBanner に渡します。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">vpadnAd</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
 </code></pre></div>
-<p>sent when VpadnBanner ads has succeeded</p>
+<p>広告の取得に成功した際に受け渡します。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{}</span>
 </code></pre></div>
-<p>sent when VpadnBanner has failed, typically because of network failure, an application configuration error, or a lack of ad inventory. You may wish to log these events for debugging:</p>
+<p>広告取得失敗の際に渡します。一般的には、ネットワーク・アプリの設定ミス・広告在庫の不足が考えられます。デバッグ用にこれらのイベントを記録しておくことをお奨めします。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span> <span class="nf">didFailToReceiveAdWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">{}</span>
 </code></pre></div>
-<p>Sent immediately before the user is presented with a full-screen ad UI in response to their touching the sender.</p>
+<p>ユーザーが広告をクリックし、アプリ上でフルスクリーン広告のユーザーインターフェースが表示される時に呼び出されます。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnPresent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{}</span>
 </code></pre></div>
-<p>Sent when the user has exited</p>
+<p>ユーザーが onPresentScreen と一緒に表示されるフルスクリーンアクティビティを閉じ、制御権がアプリに返された時に呼び出す。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">;</span>
 </code></pre></div>
-<p>Sent just before the application gets backgrounded or terminated</p>
+<p>新しいアプリケーションを起動したときに広告のクリックを呼び出します。</p>
 <div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnLeaveApplication:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{}</span>
 </code></pre></div>
 <h1 id="crazy-ad">Crazy Ad</h1>
 
 <hr>
 
-<p>Banner expands to take over the whole screen and automatically closes after 5-7 seconds.
+<p>バナーがディスプレイ全体にエキスパンドし、5-7秒後に自動的に閉じます。
 <img src="/vpon-sdk/assets/img/Crazyad.png" alt="海尼根廣告"></p>
 
 <h2 id="setting">Setting</h2>
 
 <hr>
 
-<p>Choose whether or not to use crazy advertisement from License Key Application.</p>
+<p>管理画面にてCrazy ADを配信するかどうかを選択します。</p>
 
-<p>Enter in <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a> for China Vpon Platform.</p>
+<p><a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a> 中国エリアのプロパティIDを登録</p>
 
-<p>Enter in <a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> for Taiwan Vpon Platform.</p>
+<p><a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> 台湾エリアのプロパティIDを登録</p>
 
-<p>Example:
-<img src="/vpon-sdk/assets/img/CrazyadSetting.png" alt="CrazyadSetting"></p>
+<p>図:
+<img src="/vpon-sdk/assets/img/CrazyadSetting_JP.png" alt="CrazyadSetting"></p>
 
 <h1 id="corona-user">Corona User</h1>
 
 <hr>
 
-<p>This guid shows how to use Corona SDK and display Vpon ads. We suggest you use Web SDK method. To use ad services:
-You can load local html files using this API like webView:request( &quot;localfile.html&quot;, system.ResourceDirectory ).</p>
+<p>App を Corona で Vpon 広告に連結しようとする場合、web SDK の方式で連結するようお勧めま す。使用方法は、以下の通りとします。
+web SDK 内の html を local file に書き込んでから webview にこの file を load させます (例: webView:request( &quot;localfile.html&quot;, system.ResourceDirectory ))。</p>
 
-<p>You can see the contents of html from Vpon wiki: <a href="/vpon-sdk/jp/web/">Web SDK</a></p>
+<p>html コンテンツは、vpon wiki の web SDK 操作マニュアル: <a href="/vpon-sdk/jp/web/">Web SDK をご覧ください</a></p>
 
-<p>See more Corona SDK Document: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">Corona Document</a></p>
+<p>詳細な Corona SDK ドキュメントは Corona Document: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">をご覧ください</a></p>
 
       </div>
       <div class="col-md-3">

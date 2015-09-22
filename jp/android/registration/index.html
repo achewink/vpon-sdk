@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="jp">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <meta name="author" content="Finn">
 <title>
   
-  註冊開發商 &middot; Vpon-SDK
+  アプリ・サイト運営者の登録フロー  &middot; Vpon-SDK (Alpha)
   
 </title>
 <!-- Bootstrap core CSS -->
@@ -66,7 +66,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/zh-tw" class="navbar-brand">Vpon SDK</a>
+            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -122,7 +122,7 @@
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
-      <h1>註冊開發商</h1>
+      <h1>アプリ・サイト運営者の登録フロー </h1>
       <p></p>
     </div>
   </div>
@@ -238,69 +238,83 @@
       </div>
       </div>
       <div class="col-md-7" role="main">
-        <h1 id="註冊新帳號">註冊新帳號</h1>
+        <h1 id="vponへの登録">Vponへの登録</h1>
 
 <hr>
 
-<p>請到Vpon網站: <a href="http://tw.pub.vpon.com/register.action">Here</a>。 進入網站之後，您可以到右上角更換語言。
-註冊填寫完畢之後，您會在註冊的信箱中，收到一封認證信，將認證碼填寫完，即完成註冊流程。
-如果您一直都沒有收到認證信件，請與我們聯絡: <a href="mailto:bd@vpon.com">Vpon BD</a>。 謝謝。</p>
+<p>Vpon ウェブサイトにアクセスしてください。: こちら<a href="http://tw.pub.vpon.com/register.action">ページ</a>右上で言語を変更することができます。 必要項目の記入完了後、登録メールアドレスに認証メールが届いているかを確認してください。サイト上で認証コードを入力すると登録完了となります。
+認証メールが届かない場合、当社 : <a href="mailto:bd@vpon.com">Vpon BD</a>. までご連絡ください。</p>
 
-<h1 id="系統需求">系統需求</h1>
-
-<hr>
-
-<h2 id="iphone-os-版本">iPhone OS 版本</h2>
-
-<p><code>iPhone OS 5.0以上</code></p>
-
-<h2 id="android-os-版本">Android OS 版本</h2>
-
-<p><code>Android 2.1 以上</code></p>
-
-<h2 id="設定廣告區塊大小">設定廣告區塊大小</h2>
-
-<p><code>請務必預留至少 320x50 dip</code></p>
-
-<h1 id="申請-license-key">申請 License Key</h1>
+<h1 id="システム要求">システム要求</h1>
 
 <hr>
 
-<p>進行開發之前，請務必為您的應用程式取得License Key。
-我們強烈建議您同時註冊「台灣區」以及「中國區」的License
-Key，可以幫助您橫跨大中華區的行動廣告市場。
-進入 <a href="http://cn.adon.vpon.com/">http://cn.adon.vpon.com/</a> 註冊中國區License Key。
-進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。</p>
+<h2 id="iphone-os-バージョン">iPhone OS バージョン</h2>
 
-<h1 id="後台申請流程">後台申請流程</h1>
+<ul>
+<li><code>iPhone OS 5.0 以上</code></li>
+</ul>
+
+<h2 id="android-os-バージョン">Android OS バージョン</h2>
+
+<ul>
+<li><code>Android 2.1 以上</code></li>
+</ul>
+
+<h2 id="サポート対象のバナーサイズ">サポート対象のバナーサイズ</h2>
+
+<ul>
+<li>最小でも <code>320x50 dip</code> を確保してください</li>
+</ul>
+
+<h1 id="license-key（プロパティid）の取得">License Key（プロパティID）の取得</h1>
 
 <hr>
 
-<p><img src="/vpon-sdk/assets/img/SDK400%E5%BB%BA%E7%AB%8B%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F.jpeg" alt=""></p>
+<h2 id="vpon-sdk-license-key（プロパティid）の取得">Vpon SDK License Key（プロパティID）の取得</h2>
 
-<p>點選【建立軟體】即可進行新增應用程式頁面：輸入您要串接廣告的應用程式名稱、應用程式所使用的平台、
-URL 與應用程式說明與選擇是否可播放CrazyAD
-。填完後按下【送出】鍵進行新增版位頁面。</p>
+<p>広告を取得するために、まずプロパティIDを取得してください。「台湾エリア」および「中国エリア」の 両方のプロパティIDを取得することで、 大中華圏のマーケットをカバーすることが可能です。</p>
 
-<p><img src="/vpon-sdk/assets/img/SDK400%E6%96%B0%E5%A2%9E%E7%89%88%E4%BD%8D.jpeg" alt=""></p>
+<p><a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a> 中国エリアのプロパティIDを登録</p>
 
-<p>進入新增版位頁面：</p>
+<p><a href="http://tw.pub.vpon.com/">http://tw.pub.vpon.com/</a> 台湾エリアのプロパティIDを登録</p>
+
+<h2 id="vponプラットフォームの設定">Vponプラットフォームの設定</h2>
+
+<p><img src="/vpon-sdk/assets/img/SDK400%E6%96%B0%E5%A2%9E%E7%89%88%E4%BD%8D_JP.png" alt="SDK400新增版位_JP"></p>
+
+<p>「アプリ・サイトの追加」をクリックすると、アプリ・サイトの新規登録を行うことができます。アプリ名・アプリのプラットフォーム・URL・アプリの説明を入力し、Crazy ADの掲載可否を選択します。入力後、「完了」ボタンを押してプロパティの新規作成を行います。</p>
+
+<p><img src="/vpon-sdk/assets/img/VponSDK_400_NewApp_JP.png" alt="VponSDK_400_NewApp_JP"></p>
+
+<p>「プロパティ詳細」ページを開きます。</p>
 
 <ol>
-<li> 輸入您的廣告版位名稱、選擇您的廣告種類，選擇是否使用Vpon廣告與是否使用mix廣告。<font color="red">建議使用選擇開啟使用Vpon廣告及關閉使用mix廣告</font></li>
-<li> 測試模式設定</li>
-<li> 設定廣告過濾</li>
-<li> 廣告顏色設定
-<br>
-按下【送出】鍵進入版位列表頁面。</li>
+<li>広告掲載位置名称の入力、広告タイプの選択、Vpon 広告と mix 広告の使用の有無を選択します。Vpon 広告使 用の有効化及び mix 広告使用の無効化の選択を使用するようお勧めします。</li>
+<li>テストモードの設定</li>
+<li>広告フィルタの設定</li>
+<li>広告カラーの設定</li>
 </ol>
 
-<p><img src="/vpon-sdk/assets/img/trandationchinesefrontserver3.png" alt="">
-進入版位列表頁面後，將會看見您的申請狀態與您這個應用程式的Vpon
-Key。按下左選單的【軟體列表】進入軟體列表頁面。</p>
+<p>すべての設定完了後、「完了」をクリックしてください。</p>
 
-<p><img src="/vpon-sdk/assets/img/trandationchinesefrontserver4.png" alt="">
-進入軟體列表頁面，會看到您所建立的應用程式、應用程式的審核狀態與相關設定</p>
+<p><img src="/vpon-sdk/assets/img/Trandationchinesefrontserver3_JP.png" alt="Trandationchinesefrontserver3 JP.png"></p>
+
+<ol>
+<li>プロパティの審査ステータスbr&gt;</li>
+<li>プロパティ ID</li>
+</ol>
+
+<p>アプリ・サイトリストページでは、審査ステータスとVPON license Keyをご確認いただけます。</p>
+
+<p><img src="/vpon-sdk/assets/img/Trandationchinesefrontserver4_JP.png" alt="Trandationchinesefrontserver4_JP.png"></p>
+
+<ol>
+<li>アプリ・サイト一覧</li>
+<li>アプリの審査ステータス</li>
+</ol>
+
+<p>アプリ・サイト一覧ページでは、登録されたアプリ・アプリの設定・審査ステータスをご確認いただけます。</p>
 
       </div>
       <div class="col-md-3">
