@@ -8,6 +8,6 @@ permalink:       android/latest-news/
 lang:            "en"
 
 ---
-# iOS9 ATS
+# Update to SDK 4.2.x
 ---
-Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to this link for some modification. [[Continue reading]({{site.baseurl}}/ios/latest-news/ios9ats/)]
+The messages below show you how to upgrade to SDK4.2.x from the previous version of SDK 4.0.0 or SDK 4.1.0. Because we've change the name of package, class, interface, method and also delete the class of com.vpon.ads.VponPlatform in SDK4.2.x. So please follow the steps below to modify. [continue reading](update-to-SDK4_2_x)

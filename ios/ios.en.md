@@ -38,7 +38,7 @@ Still have prolems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will rend
 
 
 [1]:{{ site.baseurl }}/ios/download/
-[2]:{{ site.baseurl }}/registration/
+[2]:{{ site.baseurl }}/ios/registration/
 [3]:{{ site.baseurl }}/ios/integration-guide/
 [4]:{{ site.baseurl }}/ios/banner/
 [5]:{{ site.baseurl }}/ios/interstitial/

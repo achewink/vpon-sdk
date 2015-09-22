@@ -7,15 +7,18 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/advanced/
 lang:            "jp"
 ---
-# Custom Variable
+# カスタムパラメータ
 ---
-You can insert the test ID to your testDevices (first time, it'll give you a hint to add a uniqueID) in the function (getTestIdentifiers) in order to refine Vpadn tracking. We recommend you insert the test ID to your testDevices to avoid invalid impression and lost revenue during development. Please delete the test ID after testing your application so you do not receive test ads.
+本function(getTestIdentifiers) 内にテストIDを入力し、掲載テストを実施することができます。（最初のリクエスト時にユニークIDの追加を促します）開発中の広告の無駄な露出と収益損失を防ぐため、テスト用端末IDを入力いただくことをおすすめいたします。また、テスト完了後はテスト用広告を掲載しないよう、テスト用端末IDを忘れずに削除してください。
 
-## Adding Test ID
-It will receive test ads when you use this property to specify a device. To verify that you've integrated the SDK correctly, add your test device, run your application, and click on the displayed test ad.
+## テスト用端末ID の追加
+これらのプロパティでテスト広告を表示させる端末、もしくは端末セットを指定することができます。
+開発中に不要な広告を表示させないためにこのプロパティをご利用ください。
+SDKが正しく実装されていることを確認するには、テスト用端末を追加し、アプリを起動させ、表示されたテスト広告をクリックします。
+
 
 ```objective-c
-// Add this function and test ID in your project to enable test ads.
+// この機能をプログラム内に追加し、下方にテスト端末IDを記入する
 -(NSArray*)getTestIdentifiers
 {
     return [NSArray arrayWithObjects:
@@ -24,17 +27,22 @@ It will receive test ads when you use this property to specify a device. To veri
           nil];
 }
 ```
-## Targeting
-You can also specify location and demographic targeting information. But to protect the user privacy, please you only specify location and demographic data if that information is already used by your app.
+## ターゲティング
+位置情報とユーザー属性情報を指定することができます。ユーザーのプライバシー情報保護の観点から、アプリ内の既存情報としての位置情報とユーザー属性情報を指定してください。
+
    [vpadnAd setUserInfoAge:25];
+
    [vpadnAd setUserInfoKeyword:@"Game,RPG"];
+
    [vpadnAd setUserInfoGender:female];
+
    [vpadnAd setUserInfoBirthdayWithYear:1988 Month:6 andDay:9];
 
 
 # Protocol
 ---
-You can add these two protocol when you declare ViewController to help you track ad events like request failures or click-through. (VpadnBannerDelegate || VpadnInterstitialDelegate)
+ViewController の宣言時にこの2つのプロトコルを追加することで、広告リクエストの失敗やクリックスルーなどのライフサイクルイベントをトラッキングすることができます。
+
 
 ```objective-c
 #pragma mark VpadnBannerDelegate  general banner protocol
@@ -66,7 +74,7 @@ You can add these two protocol when you declare ViewController to help you track
 @end
 ```
 
-These methods can be used for specific object like a ViewController:
+これらのメソッドは、ViewController ような個別のオブジェクトに使用できます。
 
 ```objective-c
 #import "VpadnBanner.h"
@@ -74,33 +82,33 @@ These methods can be used for specific object like a ViewController:
 @interface ViewController : UIViewController<VpadnBannerDelegate, VpadnInterstitialDelegate>
 ```
 
-Received objects and pass to VpadnBanner：
+受信しようとするオブジェクトを VpadnBanner に渡します。
 
 ```objective-c
 vpadnAd.delegate = self;
 ```
-sent when VpadnBanner ads has succeeded
+広告の取得に成功した際に受け渡します。
 
 ```objective-c
 - (void)onVpadnAdReceived:(UIView *)bannerView{}
 ```
-sent when VpadnBanner has failed, typically because of network failure, an application configuration error, or a lack of ad inventory. You may wish to log these events for debugging:
+広告取得失敗の際に渡します。一般的には、ネットワーク・アプリの設定ミス・広告在庫の不足が考えられます。デバッグ用にこれらのイベントを記録しておくことをお奨めします。
 
 ```objective-c
 - (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{}
 ```
 
-Sent immediately before the user is presented with a full-screen ad UI in response to their touching the sender.
+ユーザーが広告をクリックし、アプリ上でフルスクリーン広告のユーザーインターフェースが表示される時に呼び出されます。
 
 ```objective-c
 - (void)onVpadnPresent:(UIView *)bannerView{}
 ```  
-Sent when the user has exited
+ユーザーが onPresentScreen と一緒に表示されるフルスクリーンアクティビティを閉じ、制御権がアプリに返された時に呼び出す。
 
 ```objective-c
 - (void)onVpadnDismiss:(UIView *)bannerView;
 ```
-Sent just before the application gets backgrounded or terminated
+新しいアプリケーションを起動したときに広告のクリックを呼び出します。
 
 ```objective-c
 - (void)onVpadnLeaveApplication:(UIView *)bannerView{}
@@ -108,31 +116,36 @@ Sent just before the application gets backgrounded or terminated
 
 # Crazy Ad
 ---
-Banner expands to take over the whole screen and automatically closes after 5-7 seconds.
+バナーがディスプレイ全体にエキスパンドし、5-7秒後に自動的に閉じます。
 ![海尼根廣告]
 
 
 ## Setting
 ---
-Choose whether or not to use crazy advertisement from License Key Application.
+管理画面にてCrazy ADを配信するかどうかを選択します。
 
-Enter in http://cn.pub.vpon.com/ for China Vpon Platform.
+http://cn.pub.vpon.com/ 中国エリアのプロパティIDを登録
 
-Enter in http://tw.pub.vpon.com/ for Taiwan Vpon Platform.
+http://tw.pub.vpon.com/ 台湾エリアのプロパティIDを登録
 
-Example:
+図:
 ![CrazyadSetting]
 
-
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
 
 
 # Corona User
 ---
-This guid shows how to use Corona SDK and display Vpon ads. We suggest you use Web SDK method. To use ad services:
-You can load local html files using this API like webView:request( "localfile.html", system.ResourceDirectory ).
+App を Corona で Vpon 広告に連結しようとする場合、web SDK の方式で連結するようお勧めま す。使用方法は、以下の通りとします。
+web SDK 内の html を local file に書き込んでから webview にこの file を load させます (例: webView:request( "localfile.html", system.ResourceDirectory ))。
 
-You can see the contents of html from Vpon wiki: [Web SDK]({{site.baseurl}}/jp/web/)
+html コンテンツは、vpon wiki の web SDK 操作マニュアル: [Web SDK をご覧ください]
 
-See more Corona SDK Document: [Corona Document](http://docs.coronalabs.com/api/library/native/newWebView.html)
+詳細な Corona SDK ドキュメントは Corona Document: [をご覧ください]
+
+
+
+
+[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
+[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting_JP.png
+[Web SDK をご覧ください]: {{site.baseurl}}/jp/web/
+[をご覧ください]: http://docs.coronalabs.com/api/library/native/newWebView.html

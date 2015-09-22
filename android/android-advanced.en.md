@@ -106,7 +106,7 @@ Example:
 
 # Proguard Configuration
 ---
-If your app need obfuscateed before release, please add settings belowe：<br>
+If your app need obfuscateed before release, please add settings below：<br>
 - dontwarn c.\*\* <br>
 - dontwarn com.vpon.\*\* <br>
 - dontwarn vpadn.\*\* <br>

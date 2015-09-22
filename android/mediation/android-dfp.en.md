@@ -91,7 +91,7 @@ Input the following information:
 2. Zone：`TW` or `CN`
 3. Vpon Ad ID：the License Key observed obtained from Vpon
 
-![DFP Partner Traditional Chinese.png]
+![DFP_Partner_English.png]
 
 
 

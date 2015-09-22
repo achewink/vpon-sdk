@@ -37,7 +37,7 @@ Still have prolems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will rend
 
 
 [1]:{{ site.baseurl }}/android/download/
-[2]:{{ site.baseurl }}/registration/
+[2]:{{ site.baseurl }}/android/registration/
 [3]:{{ site.baseurl }}/android/integration-guide/
 [4]:{{ site.baseurl }}/android/banner/
 [5]:{{ site.baseurl }}/android/interstitial/

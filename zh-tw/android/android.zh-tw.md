@@ -33,7 +33,7 @@ lang:           "zh-tw"
 
 
 [1]:{{ site.baseurl }}/zh-tw/android/download/
-[2]:{{ site.baseurl }}/zh-tw/registration/
+[2]:{{ site.baseurl }}/zh-tw/android/registration/
 [3]:{{ site.baseurl }}/zh-tw/android/integration-guide/
 [4]:{{ site.baseurl }}/zh-tw/android/banner/
 [5]:{{ site.baseurl }}/zh-tw/android/interstitial/

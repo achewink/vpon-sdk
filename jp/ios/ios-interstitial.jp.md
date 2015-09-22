@@ -7,27 +7,27 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/interstitial/
 lang:            "jp"
 ---
-# Overview
+# インタースティシャル広告の概要
 ---
-Interstitials, on the other hand, immediately present rich HTML5 experiences or "web apps" at natural app transition points such as launch, video pre-roll or game level load. Web apps are in-app browsing experiences with a simple close button rather than any navigation bar—the content provides its own internal navigation scheme. Interstitial ads are typically more expensive and subject to impression constraints.
+インタースティシャル広告は、インタラクティブなマルチメディア HTML5 もしくは「ネットワークアプリケーション」で、アプリの画面遷移時に表示されます (例えばアプリ起動・動画のプレロール・ゲームのレベル読み込時など)。 「ネットワークアプリケーション」とは、ナビゲーションバーの代わりにクローズボタンのみが配置されたアプリ内の画面です。この広告タイプはよりリッチで魅力的であるため、通常より高価となり、インプレッション機会は限られたものとなります。
 ![]({{site.baseurl}}/assets/img/Interstitial.png)
 
-> **Note**:
-> We suggest that the interstitial ads running in portrait mod for the best visual effects.
+> **ご注意**:
+> インタースティシャル広告は、ベストな視覚効果を提供するためにポートレートモードで掲載されることを推奨します。
 
 
-# Vpon Interstitial Ad
+# Vponインタースティシャル広告
 ---
-The richer, more heavyweight nature of Vpadn interstitial is reflected by its definition not as a UIView but rather an NSObject requiring more distinct instantiation, load and display steps.
+インタースティシャル広告は、インタラクティブでデータ量が多いため、View よりもインスタンス化・読み込み・表示の手順を より明確にしたObject として定義されます。
+利用方法は、Vponバナー広告と非常によく似ています。
 
-Usage is nevertheless very similar to Vpadn banner:
+* lib ファイルとヘッダーファイルをインポートする
+* オブジェクトを宣言する
+* インタースティシャル用のBanner ID(=プロパティID。通常のバナー広告用のBanner IDと重複不可)を指定してオブジェクトを作成する。
 
-* Import lib file and head file
-* Declare instance
-* Create the object and set Vpadn interstitial banner ID (do not use the same ID as banner)
+この場合も、これらの処理に最も適しているのはアプリの ViewController 内です。
 
 
-Once again, the best place to do this is in your app's UIViewController
 
 ```objective-c
 @implementation ViewController
@@ -35,32 +35,32 @@ Once again, the best place to do this is in your app's UIViewController
 - (void)viewDidLoad
 {
     vpadnInterstitial = [[VpadnInterstitial alloc] init];
-    vpadnInterstitial.strBannerId = @"";   // Write your Interstitial BannerId
-    vpadnInterstitial.platform = @"TW";       // Taiwan: TW China: CN
+    vpadnInterstitial.strBannerId = @"";   //インタースティシャル広告用 BannerID を記入する
+    vpadnInterstitial.platform = @"TW";       //台湾エリアはTW、中国エリアは CN を入力
     vpadnInterstitial.delegate = self;
     [vpadnInterstitial getInterstitial:[self getTestIdentifiers]];
 }
 @end
 ```
 
-There is no item can be add to ViewController now and you must wait this request success before displaying the creative. The simplest way is showing ad [vpadnInterstitial show] once onVpadnInterstitialAdReceived load succeeds.
+また、広告を表示するまでは保持しておくことが可能です。 最も簡単な方法は、onVpadnInterstitialAdReceived が通知を受信した時に [vpadnInterstitial show]を実行することです。 protocol に関する詳細な情報につきましては、中級編ガイドをご参照ください。 また、初級編ガイドにの更新項目についても併せてご確認ください。 初級編ガイドはこちら。
 
-Once load succeeds the full-screen ad is ready for presentation:
+広告のロードに成功すると、インタースティシャルを表示することができます。
 
 ```objective-c
-#pragma mark VpadnInterstitial Delegate Only when you want to show interstitial ad can add this one
+#pragma mark VpadnInterstitial Delegate が インタースティシャル広告を取得する場合、追加する必要があります。
 - (void)onVpadnInterstitialAdReceived:(UIView *)bannerView{
-   NSLog(@"interstitial ad received");
-   [vpadnInterstitial show];
+     NSLog(@"インタースティシャル広告の取得に成功");
+    [vpadnInterstitial show];
 }
 ```
 
 The interstitial then takes over the screen until the user dismisses it, at which point control returns to your app and the view controller passes to this method.
 Vpadn Interstitial Delegate [advanced setting] provides many callback methods for you.
 
-# Download Sample Code
+# サンプルコードのダウンロード
 ---
-You can download an example project containing SDK 4 lib file in VpadnAd folder:
+SDK 4 lib ファイルは、Sample code folder 内にあります:
 
 [Go to Download Page]
 

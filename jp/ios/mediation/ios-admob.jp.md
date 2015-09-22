@@ -4,67 +4,68 @@ title:          "iOS - AdMob"
 lead:           "iOS メディエーション"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       jp/ios/advanced/admob/
+permalink:       jp/ios/mediation/admob/
 lang:            "jp"
 ---
 # Google AdMob mediation
 --------
-Google Admob Mediation document, please refer to [here].
+Google AdMob mediation は[こちら]をご覧ください。
 
 # Google Ad Network Mediation
 -----
 
-1. Log in Google AdMob.
- Please log in to your [AdMob account][0]
+1. Numbered list item.
+ログイン - [AdMob account][0]
 ![1]  
 
-2. `Monetise` -> `+ Monetise new app`  
+2. `収益` ->`新アプリケーションによる収益化 `
 ![][2]  
 
-3. Select an app: <br>
-  (1) Put your app name.<br>
-  (2) Select `platform`. <br>
-  (3) Click `Add app`. <br>
+3. アプリケーションの選択: <br>
+(1) app name の記入。<br>
+(2) プラットフォームの選択。<br>
+(3)「アプリケーションの追加」をクリック。 <br>
 ![][3]  
 
-4. Select ad format and name ad unit: <br>
-(1) Choose "banner" or "interstitial" ad type. <br>
-(2) Setting. <br>
-(3) Ad unit name (ex. Vpon_Banner).  <br>
-(4) Save it. <br>
+4. 広告フォームの選択と広告ユニットの命名: <br>
+(1) バナー広告またはインターステイシャル広告の選択。 <br>
+(2) 設定。 <br>
+(3) 広告ユニット名(例:Vpon_Banner)。 <br>
+(4) 保存<br>
 ![][4]  
 
-5. Get an Ad unit ID, then click Done.
+5. 一組の広告ユニット番号を取得し、選択が完了。
 ![][5]  
 
-6. Edit mediation
+6. 仲介サービスの編集
 ![][6]  
 
-7. New ad network
+7. 広告放送ネットワークの追加
 ![][7]  
 
-8. Set Vpon into mediation list：    <br>
-(1) Find the VPON Network tag in Available ad netwroks <br>
-(2) Vpon Ad ID: put the Vpon’s Banner ID that you get from vpon’s back office.  <br>
-(3) Zone: Choose the region, which you want to request ads from Vpon Platform.  <br>
+8. Vponをメディエーションリストに設定する：    <br>
+(1) Vponネットワークタグを利用可能な広告ネットワークで検索  <br>
+(2) Vpon広告ID：Vponのバックオフィスから取得したVponバナーIDを入力  <br>
+(3) 地域：Vponプラットフォームからリクエストしたい地域を選択する  <br>
 
-(If the user of your app is from China, you need to fill with `cn` in this column; otherwise, you need to fill with `tw`.)
+(あなたのアプリのユーザーが中国から利用している場合は、この列に`cn`と入力し、それ以外は`tw`と入力します)
 
 ![][8]  
 
 
-# Download Sample Code
+
+# サンプルコードのダウンロード
 --------------------
 [Download Sample Code]
 
-  [here]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
-  [0]: http://www.google.com.tw/ads/admob/
-  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid1.jpg
-  [2]:  {{site.baseurl}}/assets/img/Admob2_eng.png
-  [3]:  {{site.baseurl}}/assets/img/Admob3_eng.png
-  [4]:  {{site.baseurl}}/assets/img/Admob4-Android_eng.png
-  [5]:  {{site.baseurl}}/assets/img/Admob5-Android_eng.png
-  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid6.jpg
-  [7]:  {{site.baseurl}}/assets/img/Admob7-Android_eng.png
-  [8]:  {{site.baseurl}}/assets/img/AdMobDefaultAdNetWork.jpg
-  [Download Sample Code]: {{site.baseurl}}/ios/download/#admob
+[こちら]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
+[0]: http://www.google.com.tw/ads/admob/
+[1]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP1.PNG
+[2]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP2.png
+[3]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP3.png
+[4]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP4.png
+[5]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP5.png
+[6]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP6.PNG
+[7]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP7.png
+[8]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP8.png
+[Download Sample Code]: {{site.baseurl}}/ios/download/#admob

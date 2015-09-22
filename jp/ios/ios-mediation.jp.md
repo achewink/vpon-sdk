@@ -18,8 +18,10 @@ lang:            "jp"
 AdMob</a>
 <a href="dfp" class="btn btn-lg btn-outline" role="button">
 DFP</a>
-<a href="mopub" class="btn btn-lg btn-outline" role="button">
-MoPub</a>
+
+
+<!-- <a href="mopub" class="btn btn-lg btn-outline" role="button">
+MoPub</a> -->
 
 <!-- <a href="mogo" class="btn btn-lg btn-outline" role="button">
 MOGO</a> -->

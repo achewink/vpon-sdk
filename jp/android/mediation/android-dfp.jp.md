@@ -4,7 +4,7 @@ title:          "Android - DFP"
 lead:           "Android メディエーション"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       jp/android/advanced/dfp/
+permalink:       jp/android/mediation/dfp/
 lang:            "jp"
 ---
 This document provides instructions for using the Google Mobile Ads SDK to display banner ads. If you're not familiar setting banner and interstitial, review [integration guide] first for SDK and DFP.
@@ -15,112 +15,114 @@ If you are using AdMob or DFP, please import 2 JARs into your project. ([downloa
 2. Adapter SDK
 
 
-# Create an Ad Unit
+# DFP Ad unitの作成
 ---
-Define ad units first in DoubleClick for Publishers and then add them to the ad tags on your mobile app. This is the typical method of creating an ad unit. The formate of ad unit is like: `/networkCode/adUnitName`
+まず、DFPでAd unit IDを生成し、アプリに設定します。これが一般的なAd unitの設定方法です。Ad unitのフォーマットは、`/networkCode/adUnitName` となります
 
 
 ## Unit Ads Settings
-Go to DFP ([Here])：
+DFP ユーザインターフェースにて [Here]：
 
-1. Inventory
-2. Setting New Ad Unit (Give your ad unit a descriptive name so that you can easily determine where that ad unit will be displayed and also include the size of that unit.)
-3. Generate tags (Choose mobile applications)
+1. Inventoryをクリック
+2. Settings内項目の入力 （Ad unitに掲載位置・ユニットサイズを含め簡単に判別できるような名前をつけてください）
+3. 広告コードを生成します （"Mobile application"を選択)。
 
 ![DFP 廣告空間]
 
-## Setting Order, Line Item and Creative
-To run a new ad campaign through DFP Small Business, you'll first need to create a new order. After creating the order, you'll need to create line items, add creatives, and approve the order before it can serve. For reserved line item types (sponsorship and standard), DFP will not reserve inventory until the order is approved.<br><br>
+## オーダー、広告申込情報及び広告クリエイティブの設定
+DFP Small Businessを通じて新しい広告キャンペーンを実行する場合、まず新しいオーダーを作成してください。オー ダーを作成した後、広告申込情報の作成・広告クリエイティブの追加および承認を受けてから掲載が開始されます。留保された広告申込情報(sponsorshipとstandard)につきましては、承認を得るまで DFP は広告在庫を確保しません。 <br><br>
 
-##
-To create an order before running an inventory forecast:
+## オーダーの作成
+広告枠予測を行う前にオーダーを作成する方法：
 
-1. In your DFP Small Business account, click the Orders tab.
-2. Click New order.
-3. Enter your order information in the appropriate fields.
-(Order names must be unique within your network.)
-
-4. Enter your line item information.
-5. Click Check inventory to ensure the order will have enough available impressions.
+1. DFP Small Businessアカウント内で`オーダー` タグをクリックします。
+2. `新しいオーダー`をクリックします。
+3. オーダー情報を適切に入力します。
+(オーダー名は他のアドネットワークと重複しないようにしてください。)
+4. 広告申込情報を入力します。
+5. `広告枠のチェック`タブでオーダーに十分なインプレッションがあることを確認します。
 ![Warning]
 
-6. Click `Save`。
-Once you've created an order, you'll need to approve it before the line items are eligible to serve. See Approve an order to learn how.
+6. `保存`をクリックします。
+オーダーを作成後、まず承認されてから広告申込情報を掲載することができます。
 <br><br>
 
-## Create a Line Item
+## 広告申込情報
 To create a line item:
 
-1. In your DFP Small Business account, click the Orders tab.
-2. Create a new order or click an existing order in the table.
-3. Click New line item.
-4. Enter a line item name. Line item names must be unique within your network.
-5. Enter the inventory sizes of the creatives you plan to upload.
-6. (Optional) Enter some comments about the line item that might help with trafficking the line item.
-7. Enter the line item type, dates, quantity and cost.
-8. Under Adjust delivery, configure your delivery settings (optional). See Optional delivery settings below for more information.
-9. Select the inventory you want to target.
+広告申込情報の作成方法:
+1. DFP Small Businessアカウント内の[オーダー] タブを開きます。
+2. 新しいオーダーを作成、もしくはフォーム内の既存オーダーを開きます。
+3. [新しい広告申込情報]をクリックします。
+4. 広告申込情報の名称を入力してください。他アドネットワーク内の広告申込情報の名称と重複しないようにしてください。
+5. アップロードしたい広告クリエイティブの広告枠のサイズを入力します。
+6. (オプション)広告申込情報の投稿作業をアシストするあらゆる注釈を入力します。
+7. 広告申込情報のタイプ、期日、数量及び費用を入力します。
+8. (オプション) [放送調整] 下方で放送設定を行います。
+9. ターゲット広告枠を選択します。
+広告ユニット、プレースメントを指定或いは同時に両者を指定できます。指定したい広告枠を探す場合、アドネットワークの 広告枠を一つずつ閲覧または検索を実行できます。
 
-You can target ad units, placements, or both. To find inventory to target, you can either browse through your network’s inventory or perform a search.
+広告ユニットは、アドネットワーク名称をそのまま使用し、アドネットワーク内の全ての広告ユニットを代表します。広告申込 情報のためにこのアドネットワークレベルの広告ユニットを指定する場合、広告申込情報はアドネットワーク内のあらゆる 広告ユニットを指定します。
 
-The ad unit named after your network represents all of the ad units in your network. If you target the line item to this network-level ad unit, the line item will target any ad unit in your network.
-
-Example：<br>
+例：<br>
 ![新增指定目標]
 
-10.Enter additional targeting criteria to target a specific audience (optional). If you don’t target the line item to any ad units or placements, then the line item will be set to serve as run-of-network. This means the line item can serve to any ad unit on your website.
+10.(オプション)その他の指定条件を入力して特定ターゲット対象を指定します。広告申込情報を広告ユニット或いはプレ ースメントに指定しなかった場合、システムは広告申込情報を全てのアドネットワークにランダム放送するよう設定します。 これは、広告申込情報が、ウェブサイト上のいかなる広告ユニット内でも放送できることを示しています。
 
-11.Click `Save`.
+11.`保存`をクリックします。
 
-## Upload a creative
+## 広告クリエイティブ のアップロード
 
-1. Click the line item where you'd like to add the creative. You can also create a new line item if needed.
-2. Click Add creatives. All creatives and ad unit dimensions associated with your line item will be listed on the left-hand column. You can upload creatives to any unit size in this list.
-3. You can either drag and drop multiple creatives into the line item or just add one at a time.<br><br>
+1. 新しい広告クリエイティブの広告申込情報をクリックします。ニーズを見て新しい広告申込情報も作成できます。
+2. [新しい広告クリエイティブ]をクリックします。広告申込情報に係る全ての広告クリエイティブと広告ユニットのサイズが、 左欄内にリストアップされます。広告クリエイティブをマニフェスト内のあらゆるサイズの広告ユニットにアップロードできます。
+3. 広告申込情報に複数のクリエイティブをまとめてドラッグ&ドロップするか、1 つずつ追加します。
 
-### Add only one Creative
-Click New creative and select the creative's dimensions. (Choose `Mobile App` → `SDK Mediation`)
-
+### 広告クリエイティブを 1 つだけ追加
+広告クリエイティブタイプの選択:`モバイルアプリケーションプログラム`内の`SDK 仲介サービスの広告クリエイティブ`を選択します。
 ![廣告素材類型]
 
-# Creative Setting
+# 広告クリエイティブの設定
 ---
-Input the following information:
+順次通り：
 
-1. Select Network：Vpon
-2. Zone：`TW` or `CN`
-3. Vpon Ad ID：the License Key observed obtained from Vpon
+1. Vponネットワークタグを利用可能な広告ネットワークで検索
+2. 地域：Vponプラットフォームからリクエストしたい地域を選択する
+（あなたのアプリのユーザーが中国から利用している場合は、この列にcnと入力し、それ以外はtwと入力します）
+3. Vpon広告ID：Vponのバックオフィスから取得したVponバナーIDを入力
+記入します。
 
-![DFP Partner Traditional Chinese.png]
+例:
+![DFP_Partner_Japanese]
 
 
 
-# Banner/Interstitial Ad delivery
+# 広告の放送
+
 ---
-## Banner Ad Unit
-As the article discussed above, ad size set at 320x50.
+## バナー広告
+320x50.
 
-## Interstitial Ad Unit
-Create an ad unit in DFP to represent the interstitial ad unit. Interstitial ad units can be defined with one of the four common sizes, regardless of the actual screen size of individual devices. The SDK will handle rendering the creative correctly on screens which are of slightly different sizes.
+## インターステイシャル広告
+お客様は DFP 内に広告ユニットを作成することで、インターステイシャル広告ユニットとすることができます。インターステイシャル広告ユニットは通常よく見られる四種類のサイズがあ りますが、各デバイスの実際のディスプレイのサイズとは関係ありません。SDK が広告素材を調整することで、サイズが若干異なるディスプレイ上に正確に表示します。
 
-* Cell phone：320x480 (portrait)、480x320 (landscape)
-* Tablet：768x1024 (portrait)、1024x768 (landscape)
+* モバイル:320×480(横向き)、480×320(縦向き)
+* タブレット:768×1024(横向き)、1024×768(縦向き)
 
-There is no need to define a separate ad unit for landscape mode. You can simply add the landscape size (e.g. 480x320 for smartphones) to line items targeting the interstitial ad unit and include a creative with the landscape size in addition to the regular portrait size.
+お客様は縦向きモードのために個別の広告ユニットを作成する必要はなく、インターステイシャル広告注文書に縦向きのサイズ(例:スマートフォン 480×320)を指定するだけです。 横向きサイズの他に、縦向きサイズの広告素材を加えてください。
 
-Example：
+範例:
 
 ![插頁尺寸]
 
 
 
-# Other Reference
+# その他の秘訣
 ---
 [DFP Small Business](https://support.google.com/dfp_sb/)<br>
 [Google Developers DFP Banner Ads](https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android)<br>
 [Google Developers Interstitial Ads](https://developers.google.com/mobile-ads-sdk/docs/android/doubleclick/#support)
 
-# Download Sample Code
+# Sample Code ダウンロード
 ---
 [Android Download][1]
 
@@ -128,7 +130,7 @@ Example：
 [1]: {{site.baseurl}}/jp/android/download/#dfp
 [Here]: https://www.google.com/dfp/
 [DFP 廣告空間]: {{site.baseurl}}/assets/img/ADUNIT_DFP.png
-[DFP_Partner_English.png]: {{site.baseurl}}/assets/img/DFP_Partner_English.png
+[DFP_Partner_Japanese]: {{site.baseurl}}/assets/img/DFP_Partner_Japanese.png
 [新增指定目標]: {{site.baseurl}}/assets/img/AddTargeting.png
 [廣告素材類型]: {{site.baseurl}}/assets/img/SDKMediation.png
 [Warning]: {{site.baseurl}}/assets/img/DFP_EN2.png

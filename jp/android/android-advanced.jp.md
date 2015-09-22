@@ -9,7 +9,7 @@ lang:            "jp"
 ---
 # VpadnAdRequest
 ---
-  VPONにより正確なターティングをさせるために、VpadnBanner.loadAd に渡す前に、 VpadnAdRequest をカスタマイズすることが可能です。
+  Vponにより正確なターティングをさせるために、VpadnBanner.loadAd に渡す前に、 VpadnAdRequest をカスタマイズすることが可能です。
 
 ## デバイスのための広告を割り当て(!not sure)
 
@@ -99,12 +99,12 @@ http://cn.pub.vpon.com/ 中国エリアのプロパティIDを登録
 http://tw.pub.vpon.com/ 台湾エリアのプロパティIDを登録
 
 図:
-![CrazyadSetting]
+![CrazyadSetting_JP]
 
 
 # Proguard Configuration
 ---
-APP 自体が proguard の難読化を経る必要がある場合、次の設定を追加してください。
+APP 自体が proguard の難読化を経る必要がある場合、次の設定を追加してください。<br>
 - dontwarn c.\*\* <br>
 - dontwarn com.vpon.\*\* <br>
 - dontwarn vpadn.\*\* <br>
@@ -127,7 +127,7 @@ html コンテンツは、vpon wiki の web SDK 操作マニュアル: [Web SDK 
 
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting_En.png
+[海尼根廣告]: {{site.baseurl}}/assets/img/Crazyad.png
+[CrazyadSetting_JP]: {{site.baseurl}}/assets/img/CrazyadSetting_JP.png
 [Web SDK をご覧ください]: {{site.baseurl}}/jp/web/
 [をご覧ください]: http://docs.coronalabs.com/api/library/native/newWebView.html

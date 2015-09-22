@@ -37,7 +37,7 @@ Still have prolems? Please send us, [Vpon FAE](mailto:fae@vpon.com). We will ren
 
 
 [1]:{{ site.baseurl }}/jp/android/download/
-[2]:{{ site.baseurl }}/jp/registration/
+[2]:{{ site.baseurl }}/jp//android/registration/
 [3]:{{ site.baseurl }}/jp/android/integration-guide/
 [4]:{{ site.baseurl }}/jp/android/banner/
 [5]:{{ site.baseurl }}/jp/android/interstitial/

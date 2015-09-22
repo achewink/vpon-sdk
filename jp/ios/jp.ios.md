@@ -37,7 +37,7 @@ Still have prolems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will rend
 
 
 [1]:{{ site.baseurl }}/jp/ios/download/
-[2]:{{ site.baseurl }}/jp/registration/
+[2]:{{ site.baseurl }}/jp/ios/registration/
 [3]:{{ site.baseurl }}/jp/ios/integration-guide/
 [4]:{{ site.baseurl }}/jp/ios/banner/
 [5]:{{ site.baseurl }}/jp/ios/interstitial/

@@ -4,56 +4,57 @@ title:          "Android - AdMob"
 lead:           "Android メディエーション"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       jp/android/advanced/admob/
+permalink:       jp/android/mediation/admob/
 lang:            "jp"
 ---
 # Google AdMob mediation
 --------
-Google Admob Mediation document, please refer to [here].
+Google AdMob mediation は[こちら]をご覧ください。
 
 # Google Ad Network Mediation
 -----
 
-1. Log in Google AdMob.
- Please log in to your [AdMob account][]
+1. Numbered list item.
+ログイン - [AdMob account][0]
 ![1]  
 
-2. `Monetise` -> `+ Monetise new app`  
+
+2. `収益` ->`新アプリケーションによる収益化 `
 ![][2]  
 
-3. Select an app: <br>
-  (1) Put your app name.<br>
-  (2) Select `platform`. <br>
-  (3) Click `Add app`. <br>
+3. アプリケーションの選択: <br>
+(1) app name の記入。<br>
+(2) プラットフォームの選択。<br>
+(3)「アプリケーションの追加」をクリック。 <br>
 ![][3]  
 
-4. Select ad format and name ad unit: <br>
-(1) Choose "banner" or "interstitial" ad type. <br>
-(2) Setting. <br>
-(3) Ad unit name (ex. Vpon_Banner).  <br>
-(4) Save it. <br>
+4. 広告フォームの選択と広告ユニットの命名: <br>
+(1) バナー広告またはインターステイシャル広告の選択。 <br>
+(2) 設定。 <br>
+(3) 広告ユニット名(例:Vpon_Banner)。 <br>
+(4) 保存<br>
 ![][4]  
 
-5. Get an Ad unit ID, then click Done.
+5. 一組の広告ユニット番号を取得し、選択が完了。
 ![][5]  
 
-6. Edit mediation
+6. 仲介サービスの編集
 ![][6]  
 
-7. New ad network
+7. 広告放送ネットワークの追加
 ![][7]  
 
-8. Set Vpon into mediation list：    <br>
-(1) Find the VPON Network tag in Available ad netwroks <br>
-(2) Vpon Ad ID: put the Vpon’s Banner ID that you get from vpon’s back office.  <br>
-(3) Zone: Choose the region, which you want to request ads from Vpon Platform.  <br>
+8. Vponをメディエーションリストに設定する：    <br>
+(1) Vponネットワークタグを利用可能な広告ネットワークで検索  <br>
+(2) Vpon広告ID：Vponのバックオフィスから取得したVponバナーIDを入力  <br>
+(3) 地域：Vponプラットフォームからリクエストしたい地域を選択する  <br>
 
-(If the user of your app is from China, you need to fill with `cn` in this column; otherwise, you need to fill with `tw`.)
+(あなたのアプリのユーザーが中国から利用している場合は、この列に`cn`と入力し、それ以外は`tw`と入力します)
 
 ![][8]  
 
 
-# Integrate Vpon AdNetwork
+# Vpon広告ネットワークをあなたのプロジェクトに統合する
 You just need to import two jars into lib folder of your project, which are `admob-adapter-****.jar` and `vpadn-sdk-***-***-***.jar`.
 ![][9]  
 
@@ -61,33 +62,33 @@ You just need to import two jars into lib folder of your project, which are `adm
 
 # Requirement
 -----
-1. Make sure you have the latest copy of the [Android SDK] and that you're compiling against at least Android v3.2 (set target in project.properties to android-13).
-2. The Google Mobile Ads SDK for Android requires a run-time of Android 2.3 or later (set android:minSdkVersion to at least 9 in your AndroidManifest.xml). This means you can develop with the latest version of the Android SDK and your app will still run on an earlier Android version (2.3 minimum).
+1. 最新版の Android SDK latest copy of the Android SDK がインストール済みで、また少なくとも Android v3.2 (target in project.properties to android-13)でコンパイルすることをご確認ください。
+2. Google Mobile Ads SDK は、Android 2.3 以上のバージョン( AndroidManifest.xml で android:minSdkVersion を最低でも 9 に設定します)で実行可能です。
 
-# Import SDK
+# SDK の導入
 ---
-Incorporating Google Mobile Ads into your app is a straightforward process:
+以下のステップで Google Mobile Ads SDK を App 内に導入します。
 
-1. Add and reference the Google Play services library project in your Eclipse workspace.
-2. Add a meta-data tag in AndroidManifest.xml.
-3. Declare com.google.android.gms.ads.AdActivity in the manifest.
-4. Set up network permissions in the manifest.
+1. Google Play Services library を Eclipse workspace に追加と reference します。
+2. AndroidManifest.xml に meta-data tag を追加します。
+3. AndroidManifest で com.google.android.gms.ads.AdActivity を宣言します。
+4. Manifest で permissions を設定します。
 
-## Google Play Services library
-See the [Android instructions] for how to set up the Google Play services SDK.
+## Google Play Services library を追加、reference
+まず Google Play Service SDK: [instructions] をインストールして設定してください。
 
 
 ### Eclipse
 ---
-a. Right click on your app project in Eclipse and select `Properties`.
+a. アプリケーションプログラムプロジェクト内で右ボタンを押して`プロパティ`を選びます。
 
 ![][10]  
 
-b.Select Android and then click `Add....` Find the google-play-services_lib project and select OK to add the Google Play services library.
+b. Android を選択し-> Add..google-play-services_lib 内容を検索した後、OK を押して Google Play services library を追加し ます。
 
 ![][11]  
 
-c. The project now references the Google Play services library.  
+c. 図に示されるように、プロジェクトに Google Play services library が refernce されたことがわかります。  
 
 ![][12]  
 
@@ -108,8 +109,8 @@ apply plugin: 'com.android.application'
 ```
 Then, save and go to toolbar for **Sync Project with Gradle Files**
 
-## Add a meta-data tag
-Google Play services requires you to add the following meta-data tag within the element in your app's AndroidManifest.xml:
+## AndroidManifest.xml に meta-data tag を追加
+Google Play Service は、AndroidManifest.xml に以下の設定を追加する必要があります。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -130,10 +131,9 @@ Google Play services requires you to add the following meta-data tag within the 
 </manifest>
 ```
 
-## Declare AdActivity
+## AdActivity を宣言
 ---
-The Mobile Ads SDK requires that com.google.android.gms.ads.AdActivity be declared in your app's AndroidManifest.xml:
-
+Mobile Ads SDK は、AndroidManifest.xml で com.google.android.gms.ads.AdActivity を宣言する必要があります。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -157,9 +157,9 @@ The Mobile Ads SDK requires that com.google.android.gms.ads.AdActivity be declar
 ```
 ## Permissions
 ---
-Making ad requests requires these permissions to be declared in the manifest:<br>
-`'INTERNET"` is required, used to access the Internet to make ad requests. While<br>
-`'ACCESS_NETWORK_STATE"` is optional,u sed to check if an internet connection is available prior to making an ad request.。<br>
+Permission を AndroidManifest.xml に追加します。
+ネットワーク機能を有効にして送信するため、ここで`"INTERNET"`が必要となります。
+`"ACCESS_NETWORK_STATE"`は、ここを選択とし、ユーザの現在のネットワーク状態を読み取ります。
 
 ```xml
  <?xml version="1.0" encoding="utf-8"?>
@@ -184,20 +184,18 @@ Making ad requests requires these permissions to be declared in the manifest:<br
  </manifest>
 ```
 
-# Banner Ad
+# バナー広告
 ---
-To display banners in your Android app, simply add a com.google.android.gms.ads.AdView to your UI.
+お客様のAndroid appにバナー広告を掲載するには、簡単なcom.google.android.gms.ads.AdViewをお客様の ユーザーインターフェースに追加するだけです。
 
+以下の五つのステップでバナー広告が表示できます:
 
-The five lines of code it takes to add a banner:
+* `com.google.android.gms.ads.*` をインポート
+* AdViewを一つ発表
+* ad unit IDを一つ作成し指定
+* ユーザーインターフェースにviewを追加
 
-* Import `com.google.android.gms.ads.*`
-* Declare an AdView instance
-* Create it, specifying the ad unit ID
-* Add the view to the UI
-* Load it with an ad
-
-The easiest place to do all this is in your app's Activity.
+bannerを取得 最も簡単な方法でお客様のActivityにおける全ての手順をおこないます。
 
 ```Java
   import com.google.android.gms.ads.*;
@@ -250,15 +248,15 @@ The easiest place to do all this is in your app's Activity.
 ```
 For more about banner: [here][13]
 
-# Interstitial Ad
+# インターステイシャル広告
 ---
-Usage is nevertheless very similar to AdView:
+AdViewの使用方法との類似点
 
-* Import `com.google.android.gms.ads.*`
-* Declare the instance
-* Create it, specifying an AdMob Ad Unit ID distinct from any used for banners
+* `com.google.android.gms.ads.*` をインポート
+* 物品の発表
+* bannerとは異なるAdMob Ad Unit IDを作成し指定
 
-Once again, the easiest place to do this is somewhere in your app's Activity.
+同様に、最も便利な方法でお客様のActivityにおいて以下の手順をおこないます。
 
 ```Java
  import com.google.android.gms.ads.*;
@@ -291,25 +289,25 @@ Once again, the easiest place to do this is somewhere in your app's Activity.
  }
 ```
 
-# Download Sample Code
+# サンプルコードのダウンロード
 ---
 [Download Sample Code]
 
-  [here]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
-  []: http://www.google.com.tw/ads/admob/
-  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid1.jpg
-  [2]:  {{site.baseurl}}/assets/img/Admob2_eng.png
-  [3]:  {{site.baseurl}}/assets/img/Admob3_eng.png
-  [4]:  {{site.baseurl}}/assets/img/Admob4-Android_eng.png
-  [5]:  {{site.baseurl}}/assets/img/Admob5-Android_eng.png
-  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid6.jpg
-  [7]:  {{site.baseurl}}/assets/img/Admob7-Android_eng.png
-  [8]:  {{site.baseurl}}/assets/img/AdMobDefaultAdNetWork.jpg
+  [こちら]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
+  [0]: http://www.google.com.tw/ads/admob/
+  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP1.PNG
+  [2]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP2.png
+  [3]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP3.png
+  [4]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP4.png
+  [5]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP5.png
+  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP6.PNG
+  [7]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP7.png
+  [8]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP8.png
   [9]:  {{site.baseurl}}/assets/img/AdMobLibJarFiles.jpg
   [10]: {{site.baseurl}}/assets/img/GooglePlay_Properties.png
   [11]: {{site.baseurl}}/assets/img/GooglePlay_Addlib.png
   [12]: {{site.baseurl}}/assets/img/GooglePlay_Addlib2.png
   [Download Sample Code]: {{site.baseurl}}/jp/android/download/#admob
   [Android SDK]: https://developer.android.com/sdk/index.html
-  [Android instructions]: https://developer.android.com/google/play-services/setup.html
+  [instructions]: https://developer.android.com/google/play-services/setup.html
   [13]: https://developers.google.com/mobile-ads-sdk/docs/admob/intermediate#play

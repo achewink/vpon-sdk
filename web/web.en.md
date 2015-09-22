@@ -74,7 +74,7 @@ Name             |        Description                       | Necessary |  Examp
 vpon\_ad\_licensy\_key| Banner ID                           |  Y   |<font color="red">Put your Vpon License Key</font>
 vpon\_ad\_format      | Size：320x50\_mb, 300x250\_mb       |   Y |     “320x50\_mb”
 vpon\_ad\_test        |   Test Ad                           | N   |   1(是)/0(否)，預設為(是)
-debug                 | Debugging information in console訊  |  N   |   true/false，預設為false
+debug                 | Debugging information in console   |  N   |   true/false，預設為false
 openTab               |if open a new tab to show ad's contents  |N    |  true/false，預設為true
 <br>
 <br>
