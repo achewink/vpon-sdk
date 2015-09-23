@@ -129,35 +129,37 @@
 
     <div class="row">
       <div class="col-md-9" role="main">
-        <h1 id="overview">Overview</h1>
+        <h1 id="概要">概要</h1>
 
 <hr>
 
-<p>Vpon Mobile Web SDK enables mobile web developers to maximize their monetization on Android and iOS. <br>
-<font color="red">* NOTE：It only supports ads on mobile site, it would not show any ad if you open your website on personal computer.</font>
-<br></p>
+<p>Vpon モバイルウェブSDKは、あらゆる規模のウェブサイト運営者様のVpon広告による収益化を可能にします。</p>
 
-<h1 id="requirement">Requirement</h1>
+<blockquote>
+<p><strong>Note:</strong> この広告はモバイル端末にのみ対応しており、ユーザーがPCを通じて対象のウェブサイトを閲覧しても広告は表示されません。</p>
+</blockquote>
+
+<h1 id="要件">要件</h1>
 
 <hr>
 
 <ol>
-<li>The basic concept of HTML <br></li>
-<li>Registering a banner ID for Vpon Mobile Web<br></li>
-<li>Having the permission to modify code of mobile website
+<li>HTMLの基本的な概念</li>
+<li>Vponへの登録・ウェブサイトの申請・プロパティIDを取得します。</li>
+<li>モバイルウェブサイトコードを変更する権限
 <br><br></li>
 </ol>
 
-<h1 id="ad-formats">Ad Formats</h1>
+<h1 id="バナー広告のサイズ">バナー広告のサイズ</h1>
 
 <hr>
 
-<p>Vpon Mobile Web SDK supports the following formats:<br><br></p>
+<p>現在の Vpon モバイルウェブSDK は、以下の広告フォーマットをサポートします。</p>
 
 <table><thead>
 <tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: center">Size(WxH)</th>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">サイズ(幅×高さ)</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -173,14 +175,14 @@
 <p><br>
 <br></p>
 
-<h1 id="setups">Setups</h1>
+<h1 id="広告コードの組み込み">広告コードの組み込み</h1>
 
 <hr>
 
-<h2 id="basic-setup">Basic Setup</h2>
+<h2 id="基本編">基本編</h2>
 
 <ol>
-<li>You should insert the following snippet of code directly after the opening <body> tag on each page you want to load it:</li>
+<li>ウェブページ内の広告を配置したい位置に以下のコードを追加します。</li>
 </ol>
 <div class="highlight"><pre><code class="language-HTML" data-lang="HTML"><span class="nt">&lt;body&gt;</span>
 ...
@@ -202,58 +204,60 @@
   <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span>  <span class="na">src=</span><span class="s">&quot;http://m.vpon.com/sdk/vpadn-sdk.js&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
+<blockquote>
 <p>Note:<br>
-* You only allow to use 3 ads at most in one page and please use different banner ID for every ad.<br>
-* You only need to put <font color="red">just one</font> JavaScript before &quot;</body>&quot; like the sample code above. <br>
-* After saving the page, this code will load and initialize the SDK. You can load a test ad in the <vpon> tag. (If you want to see the official ad: vpon_ad_test=&quot;0&quot;)
+* 同一のウェブページ上には最多で3カ所のプロパティを組み込み、各プロパティはそれぞれ異なるプロパティIDを使用してください。
+* JavaScript は、1つだけを、かつ</body>の前に置きます。
+* 保存完了後、ウェブページを再読み込みすると、 <vpon> タグの位置に「テスト広告」を受け取ることを確認できます。(オンラインにする場合、vpon_ad_test=&quot;0&quot;と設定し、テスト広告を受け取らない設定に変更してください。
 <br></p>
+</blockquote>
 
 <h2 id="advanced-setup">Advanced Setup</h2>
 
 <table><thead>
 <tr>
-<th style="text-align: center">Name</th>
-<th style="text-align: center">Description</th>
-<th style="text-align: center">Necessary</th>
-<th style="text-align: center">Example</th>
+<th style="text-align: center">名称</th>
+<th style="text-align: center">說明</th>
+<th style="text-align: center">必須</th>
+<th style="text-align: center">インスタンス</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: center">vpon_ad_licensy_key</td>
-<td style="text-align: center">Banner ID</td>
+<td style="text-align: center">広告枠 ID</td>
 <td style="text-align: center">Y</td>
-<td style="text-align: center"><font color="red">Put your Vpon License Key</font></td>
+<td style="text-align: center"><font color="red">Vpon License Key（=プロパティID）を入力してく ださい</font></td>
 </tr>
 <tr>
 <td style="text-align: center">vpon_ad_format</td>
-<td style="text-align: center">Size：320x50_mb, 300x250_mb</td>
+<td style="text-align: center">広告フォーマット:320x50_mb, 300x250_mb</td>
 <td style="text-align: center">Y</td>
 <td style="text-align: center">“320x50_mb”</td>
 </tr>
 <tr>
 <td style="text-align: center">vpon_ad_test</td>
-<td style="text-align: center">Test Ad</td>
+<td style="text-align: center">テスト広告を取得するかどうか</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">1(是)/0(否)，預設為(是)</td>
+<td style="text-align: center">1(はい)/0(いいえ)、デフォルト: (はい)</td>
 </tr>
 <tr>
 <td style="text-align: center">debug</td>
-<td style="text-align: center">Debugging information in console訊</td>
+<td style="text-align: center">コンソールにデバッグ情報を表示するかどうか</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">true/false，預設為false</td>
+<td style="text-align: center">true/false、デフォルト:false</td>
 </tr>
 <tr>
 <td style="text-align: center">openTab</td>
-<td style="text-align: center">if open a new tab to show ad&#39;s contents</td>
+<td style="text-align: center">新しいタブで広告コンテンツを表示するには</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">true/false，預設為true</td>
+<td style="text-align: center">true/falseをtrueにセットしてください。</td>
 </tr>
 </tbody></table>
 
 <p><br>
 <br></p>
 
-<h1 id="sample-code">Sample Code</h1>
+<h1 id="インスタンスの作成">インスタンスの作成</h1>
 
 <hr>
 <div class="highlight"><pre><code class="language-HTML" data-lang="HTML"><span class="nt">&lt;html&gt;</span>
@@ -278,99 +282,108 @@
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://m.vpon.com/sdk/vpadn-sdk.js&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
-<p>Note
-If you use iframe for embedding vpon&#39;s ad, please remember to modify the size of iframe to fit the right size of vpon&#39;s ad.
-<br>
+<blockquote>
+<p><strong>ご注意：</strong> 下記LicenseKeyは例となりますので、収益化のためにはご自身で登録済みのLicenseKeyに変更してください。</p>
+</blockquote>
+
+<p><br>
 <br></p>
 
-<h1 id="mobile-site-dfp">Mobile Site DFP</h1>
+<h1 id="dfpモバイルウェブ">DFPモバイルウェブ</h1>
 
 <hr>
 
-<p>This document provides instructions for using the mobile site DFP to display banner ads. If you&#39;re not familiar setting mobile web api, review the documents first: &quot;Vpon Mobile Web SDK&quot; to become familiar with this document. Then come back this page and follow the DFP setting steps.</p>
+<p>このページはバナー広告の表示にモバイルサイトDFPを使用している方向けのものです。モバイルウェブAPIに親しみのない方はまず &quot;モバイルウェブSDK&quot; のページごご参照ください。その後、このページを参考にDFPの設定を進めてください。</p>
 
-<h2 id="generate-tags">Generate tags</h2>
-
-<hr>
-
-<p>Check the &quot;Enable single request&quot; and place Header code into the HEAD element of the web page and Document body code into the page body where you want to show ad.</p>
-
-<h2 id="setting-inventory">Setting Inventory</h2>
+<h2 id="dfp-広告タグの生成">DFP 広告タグの生成</h2>
 
 <hr>
 
-<p>Go to DFP <a href="https://www.google.com/dfp/">Here</a>:</p>
+<p>DFPのユーザーインターフェースにて、 [シングルリクエストを有効にする] にチェックを入れ生成したタグをウェブページのにヘッドタグ内に埋め込み、ドキュメントタグを広告を表示したい場所に埋め込みます。</p>
+
+<h2 id="広告枠の設定">広告枠の設定</h2>
+
+<hr>
+
+<p>DFP ユーザインターフェース内の<a href="https://www.google.com/dfp/">Here</a>:</p>
 
 <ol>
-<li>Create Inventory.</li>
-<li>Setting Name, Size, and other items.</li>
-<li>Generate tags (choose Google Publisher Tag)</li>
+<li>[在庫] をクリック。</li>
+<li>広告ユニットの各種設定（名称、サイズ、ターゲットウインドウなど）を保存。</li>
+<li>[タグを作成] をクリックし、広告コードを生成。
+(作成するタグの種類は [Google サイト運営者タグ] を選択。</li>
 </ol>
 
 <p><img src="/vpon-sdk/assets/img/MobileDPF_Eng.png" alt="MobileDPF_Eng"></p>
 
-<h2 id="setting-orders-items-and-creatives">Setting Orders, Items and Creatives</h2>
+<h2 id="オーダー、広告申込情報、クリエイティブの設定">オーダー、広告申込情報、クリエイティブの設定</h2>
 
-<p>To run a new ad campaign through DFP Small Business, you&#39;ll first need to create a new order. After creating the order, you&#39;ll need to create line items, add creatives, and approve the order before it can serve. For reserved line item types (sponsorship and standard), DFP will not reserve inventory until the order is approved.</p>
+<p>DFP スタンダードを使用して新しい広告キャンペーンを始めるには、まず新しいオーダーを作成します。次に広告申込情報を作成し、クリエイティブを追加します。最後にオーダーを承認すると、配信が可能になります。DFP では、予約タイプの広告申込情報（スポンサーシップ、標準）の場合、オーダーを承認するまで在庫は予約されません。</p>
 
-<h3 id="creat-orders-manually">Creat Orders Manually</h3>
+<h3 id="オーダーの手動による作成">オーダーの手動による作成</h3>
 
-<p>To create an order before running an inventory forecast:</p>
+<p>手動でオーダーを作成する方法は以下の通りです。
+1. DFP スタンダードのアカウントで、[オーダー] タブをクリックします。
+2. [新しいオーダー] をクリックします。
+3. 各欄にオーダー情報を入力します。</p>
 
+<blockquote>
+<div class="highlight"><pre><code class="language-text" data-lang="text">オーダーの名前は、ネットワーク内で固有である必要があります。
+</code></pre></div>
 <ol>
-<li>In your DFP Small Business account, click the <code>Orders</code> tab.</li>
-<li>Click <code>New order</code>.</li>
-<li>Enter your order information in the appropriate fields.
-&gt; Order names must be unique within your network.</li>
-<li>Enter your line item information.</li>
-<li>Click Check inventory to ensure the order will have enough available impressions.
+<li>広告申込情報の詳細を入力します。</li>
+<li>[在庫の確認] をクリックして、オーダーで十分なインプレッションを取得できることを確認します。十分なインプレッションを取得できないにもかかわらずオーダーを保存してしまうと、配信不足となり広告主との契約違反につながるおそれがあります。
 ![Warning]</li>
-<li>Click <code>Save</code>。Once you&#39;ve created an order, you&#39;ll need to approve it before the line items are eligible to serve. See Approve an order to learn how.</li>
+<li> [保存]をクリックします。オーダーを作成したら、次にオーダーを承認する必要があります。承認を行わないと広告申込情報は配信可能となりません。オーダーを承認する方法については、こちらをご覧ください。</li>
 </ol>
+</blockquote>
 
-<h3 id="create-a-line-item">Create a Line Item</h3>
+<h3 id="広告申込情報">広告申込情報</h3>
 
-<p>To create a line item:</p>
+<p>広告申込情報の作成方法</p>
 
 <ol>
-<li>In your DFP Small Business account, click the Orders tab.</li>
-<li>Create a new order or click an existing order in the table.</li>
-<li>Click New line item.</li>
-<li>Enter a line item name. Line item names must be unique within your network.</li>
-<li>Enter the inventory sizes of the creatives you plan to upload.</li>
-<li>(Optional) Enter some comments about the line item that might help with trafficking the line item.</li>
-<li>Enter the line item type, dates, quantity and cost.</li>
-<li>Under Adjust delivery, configure your delivery settings (optional). See Optional delivery settings below for more information.</li>
-<li>Select the inventory you want to target.</li>
+<li>DFP スタンダードのアカウントで、[オーダー] タブをクリックします。</li>
+<li>新しいオーダーを作成するか、リスト内の既存のオーダーをクリックします。</li>
+<li>[新しい広告申込情報] をクリックします。</li>
+<li>広告申込情報の名前を入力します。広告申込情報の名前は、ネットワーク内で固有のものにする必要があります。</li>
+<li>アップロードする広告に対応する広告枠のサイズを入力します。
+6.（オプション）広告申込情報に関するメモを入力します。メモを入力しておくと、広告申込情報の入稿に役立つことがあります。</li>
+<li>広告申込情報のタイプ、日付、数量、費用を入力します。</li>
+<li>[配信の調整] で配信設定を入力します（オプション）。詳しくは、下記のオプションの配信設定をご覧ください。</li>
+<li>ターゲティングする広告枠を選択します。</li>
 </ol>
 
-<p>You can target at ad units, placements, or both. To find inventory to target at, you can either browse through your network’s inventory or perform a search.</p>
+<p>広告ユニット、プレースメント、またはその両方を選択できます。ターゲティングする広告枠を探すには、ネットワークの広告枠のリストを見るか、検索を行います。</p>
 
-<p>The ad unit named after your network represents all of the ad units in your network. If you target the line item to this network-level ad unit, the line item will target any ad unit in your network.</p>
+<p>ネットワークの名前の付いた広告ユニットは、ネットワーク内のすべての広告ユニットを表します。広告申込情報でこのネットワーク レベルの広告ユニットをターゲティングすると、ネットワークに含まれるすべての広告ユニットがその広告申込情報のターゲットとなります。</p>
 
-<p>Example：
-<img src="/vpon-sdk/assets/img/AppType.png" alt="AppType.png"></p>
+<p>例:
+<img src="/vpon-sdk/assets/img/AddTargeting_jp.png" alt="AddTargeting_jp.png"></p>
 
-<p>10.Enter additional targeting criteria to target a specific audience (optional). If you don’t target the line item to any ad units or placements, then the line item will be set to serve as run-of-network. This means the line item can serve to any ad unit on your website.</p>
+<p>10.追加のターゲティング条件を入力し、特定のオーディエンスをターゲティングします（オプション）。広告申込情報で広告ユニットやプレースメントをターゲティングしない場合、その広告申込情報はネットワーク掲載として設定されます。つまり、ウェブサイト上のどの広告ユニットにも広告が配信される可能性があります。</p>
 
-<p>11.Click <code>Save</code>.</p>
+<p>11.[保存]をクリックします。</p>
 
-<h3 id="upload-a-creative">Upload a Creative</h3>
+<h3 id="クリエイティブの入稿">クリエイティブの入稿</h3>
 
 <ol>
-<li>Click the line item where you&#39;d like to add the creative. You can also create a new line item if needed.</li>
-<li>Click Add creatives. All creatives and ad unit dimensions associated with your line item will be listed on the left-hand column. You can upload creatives to any unit size in this list.</li>
-<li>You can either drag and drop multiple creatives into the line item or just add one at a time.</li>
+<li>クリエイティブを追加したい広告申込情報をクリックします。必要に応じて新しい広告申込情報を作成することも可能です。</li>
+<li>[クリエイティブを追加]をクリックします。広告申込情報の全てのクリエイティブと 広告ユニットのサイズが左パネルにリストアップされます。リスト内のいずれのユニットサイズの広告も追加することが可能です。</li>
+<li>広告申込情報に複数のクリエイティブをまとめてドラッグ&amp;ドロップするか、1 つずつ追加することができます。</li>
 </ol>
 
-<h3 id="add-only-one-creative">Add only one creative</h3>
+<h3 id="クリエイティブを-1-つだけ追加">クリエイティブを 1 つだけ追加</h3>
 
-<p>Click New creative and select the creative&#39;s dimensions. (Choose All → Third party)
-<img src="/vpon-sdk/assets/img/Moblie_DFP_creative.png" alt="Moblie_DFP_creative"></p>
+<p>クリエイティブタイプの選択: [所有] 内の [第三者] を選択します。
+<img src="/vpon-sdk/assets/img/Moblie_DFP_creative_jp.png" alt="Moblie_DFP_creative_jp"></p>
 
-<h4 id="creative-settings">Creative settings</h4>
+<h3 id="クリエイティブの設定">クリエイティブの設定</h3>
 
-<p>Input the snippet of code:</p>
+<p>[コード] フィールドには以下の通り記入してください。
+例:</p>
+
+<p><img src="/vpon-sdk/assets/img/MobileDFP_creativeSetting.png" alt="MobileDFP_creativeSetting"></p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;vpon</span> <span class="na">vpon_ad_test=</span><span class="s">&quot;0&quot;</span>
        <span class="na">vpon_ad_licensy_key=</span><span class="s">&quot;Your license Key&quot;</span>
        <span class="na">vpon_ad_format=</span><span class="s">&quot;320x50_mb&quot;</span>
@@ -378,13 +391,10 @@ If you use iframe for embedding vpon&#39;s ad, please remember to modify the siz
       <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span>  <span class="na">src=</span><span class="s">&quot;http://m.vpon.com/sdk/vpadn-sdk.js&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
 <blockquote>
-<p><strong>Note</strong>: vpon vpon_ad_test=&quot;1&quot; 爲開啓測試廣告， vpon vpon_ad_test=&quot;0&quot;爲拉取正式廣告。</p>
+<p><strong>Note</strong>: vpon vpon_ad_test=&quot;1&quot; はテスト広告を取得、 vpon vpon_ad_test=&quot;0&quot;は本番用広告を取得します。</p>
 </blockquote>
 
-<p>Example：
-<img src="/vpon-sdk/assets/img/MobileDFP_creativeSetting.png" alt="MobileDFP_creativeSetting"></p>
-
-<h4 id="callback-for-traffic-remnant-ads">Callback for traffic remnant ads</h4>
+<h4 id="空き枠に対するコールバック">空き枠に対するコールバック</h4>
 
 <p>snippet of code is provided below:</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;Vpadn_tag&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -418,42 +428,42 @@ If you use iframe for embedding vpon&#39;s ad, please remember to modify the siz
 <p><strong>Note</strong>：</p>
 
 <ol>
-<li>write_your_ad_unit: put the other ad unit, which got from inventory. This ad unit formate is like: <code>/network_ID/ad_unit</code> And this ad unit is target by the line item, which is the next ads you want to show when vpon lack of ads. For example, in this line item it includes Adsense script. Make sure that the subsequent ad requests that are passed-back from the third-party ad server to DFP are unique and therefore do not call that same third party for an ad.</li>
-<li>[320, 50]： change it to the ad size you want.</li>
-<li>vpon vpon_ad_test=&quot;1&quot; is for test ad， vpon vpon_ad_test=&quot;0&quot; is to get official ad</li>
-<li>write_your_license_key：please put the vpon&#39;s Banner ID here</li>
-<li>320x50_mb：change it to the ad size you want: 320x50_mb or 300x250_mb</li>
+<li>write_your_ad_unit: [在庫]から取得した広告ユニットに差し替えてください。ここでの広告ユニットフォーマットは次のようになります：&#39;/network_ID/ad_unit.&#39;　また、この広告ユニットは、Vponの広告在庫が不足している場合に次に呼び出す広告申込情報の対象となっています。 例えば、ここでの広告申込情報はAdsenseのスクリプトを含んでいます。第三者広告配信サーバーからDFPに返された後続の広告リクエストは必ず固有である必要があります。したがって、1広告に対して同じ第三者ネットワークは呼び出すことはしないでください。</li>
+<li>[320, 50]： 必要な広告サイズに変更してください。</li>
+<li>vpon vpon_ad_test=&quot;1&quot; はテスト広告を取得、 vpon vpon_ad_test=&quot;0&quot;は本番用広告を取得します。</li>
+<li>write_your_license_key：VponのバナーIDを記載してください。</li>
+<li>320x50_mb：必要な広告サイズに変更してください（320x50_mb もしくは 300x250_mb）</li>
 </ol>
 </blockquote>
 
 <p>Example：
 <img src="/vpon-sdk/assets/img/DFP_WEB_CALLBACK.png" alt="DFP_WEB_CALLBACK"></p>
 
-<p>Need more details to understand how its working, please take a look at this page:<a href="https://support.google.com/dfp_sb/answer/1693146?hl=en">GAM tags</a></p>
+<p>このタグがどのように動くかについての詳しい情報はこちらをご参照ください: <a href="https://support.google.com/dfp_sb/answer/1693146?hl=en">GAM tags</a></p>
 
-<h1 id="getting-support">Getting Support</h1>
+<h1 id="ヒント">ヒント</h1>
 
 <hr>
 
 <p><a href="https://support.google.com/dfp_sb/">DFP Small Business</a> <br>
 <a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/fundamentals#android">Google Developers DFP Banner Ads</a></p>
 
-<h1 id="faq">FAQ</h1>
+<h1 id="よくある質問">よくある質問</h1>
 
 <hr>
 
-<h2 id="still-can-39-t-see-any-ad">Still can&#39;t see any ad</h2>
+<h2 id="広告コードを追加したが、広告が表示されない">広告コードを追加したが、広告が表示されない</h2>
 
-<p>Please check the following items:</p>
+<p>以下の項目を確認してください:</p>
 
 <ul>
-<li>Please open the page by mobile browser not the personal computer.<br></li>
-<li>Clean the cache, delete cookie and reload the page.</li>
+<li>モバイル端末のブラウザでウェブサイトを開いてください。</li>
+<li>まずブラウザのキャッシュをクリアし、クッキーを削除してから改めてウェブサイトに接続します。</li>
 </ul>
 
-<h2 id="still-can-39-t-solve-it">Still can&#39;t solve it</h2>
+<h2 id="やはり解決できない場合">やはり解決できない場合</h2>
 
-<p>Open the debug mode and send all of  &quot;Vpadn-&quot; informations to <a href="mailto:fae@vpon.com">Vpon FAE</a></p>
+<p>debugモードを開いて改めてウェブサイトに接続し、先頭に&quot;Vpadn-&quot;のあるメッセージを受信して Vpon FAE へ連絡してください。 <a href="mailto:fae@vpon.com">Vpon FAE</a></p>
 
       </div>
       <div class="col-md-3">

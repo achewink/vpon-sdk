@@ -148,10 +148,10 @@ body {
 
 
   background-color: #00b07b;
-  background-image: -webkit-linear-gradient(top, #00b07b 0, #00b07b 100%);
-  background-image: linear-gradient(to bottom, #00b07b 0, #00b07b 100%);
+  background-image: -webkit-linear-gradient(top, #00C39E 0, #00C39E 100%);
+  background-image: linear-gradient(to bottom, #00C39E 0, #00C39E 100%);
   background-repeat: repeat-x;
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00b07b', endColorstr='#00b07b', GradientType=0)
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00C39E', endColorstr='#00C39E', GradientType=0)
 }
 .bs-masthead .bs-booticon {
   margin: 0 auto 30px

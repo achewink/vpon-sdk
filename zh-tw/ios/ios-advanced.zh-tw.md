@@ -1,7 +1,7 @@
 ---
 layout: "ios"
 title: "iOS - 進階設定"
-lead: ""
+lead: "幫助您取得更多廣告功能與資料收集"
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/advanced/
@@ -9,7 +9,7 @@ lang: "zh-tw"
 ---
 # 自定參數
 ---
-您可以在固定需要新增的 function(getTestIdentifiers) 中設定測試手機的識別碼(在第一次發出 request 時會提示開發者要新增什麼識別碼)，讓 VPON 以更精確的方式指定廣告。 在開發期間 建議將自己的手機識別碼加在 getTestIdentifiers 函式中以免產生不實曝光，造成您收益上的損失，並請在上架前將識別碼刪除，否則之後填入識別碼的手機將無法抓到正常廣告
+您可以在固定需要新增的 function(getTestIdentifiers) 中設定測試手機的識別碼 (在第一次發出 request 時會提示開發者要新增什麼識別碼)，讓 Vpon 以更精確的方式指定廣告。 在開發期間 建議將自己的手機識別碼加在 getTestIdentifiers 函式中以免產生不實曝光，造成您收益上的損失，並請在上架前將識別碼刪除，否則之後填入識別碼的手機將無法抓到正常廣告
 
 ## 增加測試手機的識別碼
 您可以使用這些屬性來指定要接收測試廣告的裝置或裝置 Set。若要確認 SDK 是否已順利整合，請加入您的測試裝置並執行應用程式，然後按一下所顯示的測試廣告。
@@ -26,9 +26,13 @@ lang: "zh-tw"
 ```
 ## 指定目標
 您也可以指定位置和客層相關資訊。不過，為了保護使用者隱私，請只指定您的應用程式中現有的位置和客層資料。
+
    [vpadnAd setUserInfoAge:25];
+
    [vpadnAd setUserInfoKeyword:@"Game,RPG"];
+
    [vpadnAd setUserInfoGender:female];
+   
    [vpadnAd setUserInfoBirthdayWithYear:1988 Month:6 andDay:9];
 
 
@@ -118,15 +122,15 @@ vpadnAd.delegate = self;
 
 # Crazy Ad
 ---
-會從banner自動展開成Crazy Ad，全螢幕富媒體廣告的Crazy Ad呈現約5~7秒會自動關閉。
+會從banner自動展開成 Crazy Ad，全螢幕富媒體廣告的 Crazy Ad 呈現約 5~7 秒會自動關閉。
 ![海尼根廣告]
 
 
 ## 設定
 ---
-在後台註冊申請流程中可選擇是否播放Crazy Ad。<br>
-進入 http://cn.adon.vpon.com/ 註冊中國區License Key。<br>
-進入 http://tw.adon.vpon.com/ 註冊台灣區License Key。<br>
+在後台註冊申請流程中可選擇是否播放 Crazy Ad。<br>
+進入 http://cn.adon.vpon.com/ 註冊中國區 License Key。<br>
+進入 http://tw.adon.vpon.com/ 註冊台灣區 License Key。<br>
 如圖:
 ![CrazyadSetting]
 
@@ -135,10 +139,11 @@ vpadnAd.delegate = self;
 [CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
 
 
-#Corona User
+# Corona User
 ---
-如果您App使用Corona欲串接Vpon廣告，我們建議您用web SDK的方式串接，使用方法如下:
-將web SDK裡的html 寫進local file再讓webview去load這個file (例如: webView:request( "localfile.html", system.ResourceDirectory ))。
+如果您 App 使用 Corona 欲串接 Vpon 廣告，我們建議您用 web SDK 的方式串接，使用方法如下:
+將 web SDK 裡的 html 寫進 local file 再讓 webview 去 load 這個 file (例如: webView:request( "localfile.html", system.ResourceDirectory ))。
 
-html內容可參考vpon wiki的web SDK操作手冊: [Web SDK]({{site.baseurl}}/zh-tw/web/)
-更多Corona SDK文件可參考: [Corona Document](http://docs.coronalabs.com/api/library/native/newWebView.html)
+HTML 內容可參考 Vpon SDK 的 web SDK 操作手冊: [Web SDK]({{site.baseurl}}/zh-tw/web/)
+
+更多 Corona SDK 文件可參考: [Corona Document](http://docs.coronalabs.com/api/library/native/newWebView.html)

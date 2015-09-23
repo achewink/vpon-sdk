@@ -15,11 +15,18 @@ lang:           "zh-tw"
 
 # 中介平台
 ---
-<a href="admob" class="btn btn-lg btn-outline" role="button">
-AdMob</a>
-<a href="dfp" class="btn btn-lg btn-outline" role="button">
-DFP</a>
-<a href="mopub" class="btn btn-lg btn-outline" role="button">
-MoPub</a>
-<a href="mogo" class="btn btn-lg btn-outline" role="button">
-MOGO</a>
+Google AdMob    |  Google DFP |      MoPub   |   MOGO
+--------------: | :----------:| :-----------:| :-------
+[![admob]][1]   | [![dfp]][2] | [![mopub]][3]| [![mogo]][4]
+
+
+
+[admob]: {{site.baseurl}}/assets/img/admob-logo.png
+[dfp]:   {{site.baseurl}}/assets/img/dfp-logo.png
+[mopub]: {{site.baseurl}}/assets/img/mopub-logo.png
+[mogo]: {{site.baseurl}}/assets/img/mogo-logo.png
+
+[1]: admob
+[2]: dfp
+[3]: mopub
+[4]: mogo

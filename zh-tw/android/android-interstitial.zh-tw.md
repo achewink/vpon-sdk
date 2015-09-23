@@ -14,19 +14,19 @@ lang: zh-tw
 
 ![]({{site.baseurl}}/assets/img/Interstitial.png)
 
-# Vpon Interstitial Ad
+# Vpon 插頁廣告
 ---
-Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實例化、載入和顯示步驟的 Object，而不是 View。
+插頁廣告的內容更加豐富精彩，因為它是需要更多不同實例化、載入和顯示步驟的 Object，而不是 View。
 
 不過，它的用法與 Banner 非常類似：
 
-* 匯入 com.vpadn.ads.*
+* 匯入 `com.vpadn.ads.*`
 * 宣告例項
-* 建立例項，並指定 VPON 發佈商編號(bannerId)
+* 建立例項，並指定 Vpon 發佈商編號 (bannerId)
 
-  (不能與橫幅廣告所用發佈商編號重複)
+(不能與橫幅廣告所用發佈商編號重複)
 
-  再次提醒您，最好在應用程式的 Activity 內執行上述步驟。
+再次提醒您，最好在應用程式的 Activity 內執行上述步驟。
 
 ```java
 public class MainActivity extends Activity implements VpadnAdListener {
@@ -76,9 +76,7 @@ public class MainActivity extends Activity implements VpadnAdListener {
 接著，插頁式廣告會佔據整個畫面，直到使用者點擊關閉；這時控制權才會交還給應用程式。[進階設定]中 Vpadn AdListener 小節列出了多種實用的回呼方式，供您參考。
 
 # Download Sample Code
----
-SDK 4 JAR 檔 在Sample code libs folder內
-
+--- 
 [Go to Download Page]
 
 # 注意事項

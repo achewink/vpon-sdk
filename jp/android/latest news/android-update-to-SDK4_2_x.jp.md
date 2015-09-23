@@ -71,7 +71,7 @@ original version:
 
 `onVponLeaveApplication` -> `onVpadnLeaveApplication`
 
-6. layout.xml を使って Vpon Banner を生成した場合、その中の全ての vpon を vpadn に変更するだけで結構です。
+6.layout.xml を使って Vpon Banner を生成した場合、その中の全ての vpon を vpadn に変更するだけで結構です。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -111,12 +111,12 @@ You can use the following code to get the Test Banner If your banner ID has not 
     vponBanner.loadAd(adRequest);
 ```
 
-7. Proguard を使用している場合、vpon を vpadn に変更してから次のインスタンスを修正します。
--dontwarn c.**
--dontwarn com.vpon.**
--dontwarn vpadn.**
--keep class c.**{ *; }
--keep class com.vpon.** { *; }
--keep class vpon.** { *; }"
--keep class com.vpadn.** { *; }
--keep class vpadn.** { *; }
+7.Proguard を使用している場合、vpon を vpadn に変更してから次のインスタンスを修正します。<br>
+-dontwarn c.\*\* <br>
+-dontwarn com.vpon.\*\* <br>
+-dontwarn vpadn.\*\* <br>
+-keep class c.\*\*{ \*; } <br>
+-keep class com.vpon.\*\* { \*; } <br>
+-keep class vpon.\*\* { \*; } <br>
+-keep class com.vpadn.\*\* { \*; } <br>
+-keep class vpadn.\*\* { \*; } <br>

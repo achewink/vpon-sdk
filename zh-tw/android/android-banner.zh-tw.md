@@ -11,15 +11,21 @@ lang:           "zh-tw"
 ---
 若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
 
+# 概要
+--------
+Vpon 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。
+若要在 Android 應用程式中顯示橫幅廣告，只要在您的 Eclipse 專案中導入 SDK，然後在使用者介面上加入 com.vpadn.ads.VpadnBanner 即可。
+
 # 開始撰寫 Banner
 ---
 Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕等控制項的形式向使用者呈現的 Java 執行個體。VpadnBanner 只是另一種 View 子類別，用來顯示由使用者點擊觸發的小型 HTML5 廣告。
 和所有的 View 一樣，AdView 可以單用程式碼撰寫，也可以絕大部分用 XML 寫成。
+
 加入橫幅廣告會用到程式碼：
 
-1. 匯入 com.vpadn.ads.*
+1. 匯入 `com.vpadn.ads.*`
 2. 宣告 VpadnBanner 執行個體
-3. 建立例項，指定BannerId，也就是Vpon申請的BannerId
+3. 建立例項，指定 BannerId，也就是 Vpon 申請的 BannerId
 4. 將該檢視加進使用者介面
 5. 透過廣告載入例項
 
@@ -65,7 +71,7 @@ Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕
 
 # 使用 layout xml 設定
 ---
-也可以直接使用xml 定義Banner 這樣你就不需要寫任何java code
+也可以直接使用 xml 定義 Banner 這樣你就不需要寫任何 java code
 
 ``` xml
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -93,7 +99,13 @@ Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕
   </LinearLayout>
 ```
 <br>
+
+> **Note:**
 記得將上面的 vpon:bannerId 填入你真實的 banner ID
+
+
+# 測試廣告
+---
 如果你的 banner ID 還未經過審核可以使用下列的方式取得測試廣告
 <br>
 
@@ -105,6 +117,8 @@ Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕
       adRequest.setTestDevices(testDeviceImeiSet);
       vponBanner.loadAd(adRequest);
 ```
+
+## Advertising ID
 可以使用下列任一方式取得 device 上的 Advertising ID
 
 1. 於 log 搜尋"advertising_id"
@@ -112,7 +126,7 @@ Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕
 
 # 橫幅廣告大小
 ---
-除了支援手機上的 320x50 大小外，VPON還支援各種不同的橫幅廣告：
+除了支援手機上的 320x50 大小外，Vpon 還支援各種不同的橫幅廣告：
 
 大小 (寬度x高度)             |     說明       |  VponAdSize 常數值
 :------------------------: | :-------------:| :-----------------------------:
@@ -125,16 +139,15 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
 
 
 #  更新廣告
-  --------
-如果您在伺服器的 VPON 帳戶中指定了更新速率，且需要使用下面的sample才會啟動banner自動更新
+---
+如果您在伺服器的 Vpon 帳戶中指定了更新速率，則需要使用下面的 sample 才會啟動 banner 自動更新
 
 ```java
  VpadnAdRequest adRequest = new VpadnAdRequest();
- //設定成true才會自動更新
+ //設定成 true 才會自動更新
  adRequest.setEnableAutoRefresh(true);
  adShowBanner.loadAd(adRequest);
 ```
-
 
 
 

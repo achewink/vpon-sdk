@@ -20,7 +20,7 @@ Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實�
 
 1. 匯入 lib檔與標頭檔
 2. 宣告物件
-3. 建立物件，並指定 VPON interstitial banner Id (不能與橫幅廣告所用banner Id重複)
+3. 建立物件，並指定 Vpon interstitial banner Id (不能與橫幅廣告所用 banner Id 重複)
 > **Note**: 再次提醒您，最好在應用程式的 ViewController 內執行上述步驟。
 
 ```Objective-C
@@ -37,8 +37,8 @@ Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實�
 @end
 ```
 
-不過，目前沒有任何項目可加入ViewController，而且您必須等到這個請求成功後才能嘗試顯示廣告，
-這點請格外注意。最簡單的做法是當onVpadnInterstitialAdReceived收到通知時 則執行[vpadnInterstitial show]
+不過，目前沒有任何項目可加入 ViewController，而且您必須等到這個請求成功後才能嘗試顯示廣告，
+這點請格外注意。最簡單的做法是當 onVpadnInterstitialAdReceived 收到通知時 則執行 [vpadnInterstitial show]
 若想進一步瞭解 protocol 相關詳情，請參閱[進階設定]。
 
 

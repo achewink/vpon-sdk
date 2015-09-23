@@ -4,7 +4,7 @@ title:          "Android - 串接說明"
 lead:           ""
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       zh-tw/android/integration-guide/
+permalink:       zh-cn/android/integration-guide/
 lang:           "zh-tw"
 ---
 
@@ -25,10 +25,7 @@ China  平台為 <http://cn.pub.vpon.com/>
 “CN”);`
 <br>
 
-# 概要
---------
-VPON 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。
-若要在 Android 應用程式中顯示橫幅廣告，只要在您的 Eclipse 專案中導入 SDK，然後在使用者介面上加入 com.vpadn.ads.VpadnBanner 即可。
+
 # 系統需求
 -----------
 VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使用。請確認您所使用的是最新版的 Android SDK，並依據 Android v4.X 或更新版本進行編譯 (將 default.properties 中的 target 設為 android-17)。

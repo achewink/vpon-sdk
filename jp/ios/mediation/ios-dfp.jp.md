@@ -134,7 +134,7 @@ To create a line item:
 [Here]: https://www.google.com/dfp/
 [DFP 廣告空間]: {{site.baseurl}}/assets/img/ADUNIT_DFP.png
 [DFP_Partner_Japanese]: {{site.baseurl}}/assets/img/DFP_Partner_Japanese.png
-[新增指定目標]: {{site.baseurl}}/assets/img/AddTargeting.png
-[廣告素材類型]: {{site.baseurl}}/assets/img/SDKMediation.png
+[新增指定目標]: {{site.baseurl}}/assets/img/AddTargeting_jp.png
+[廣告素材類型]: {{site.baseurl}}/assets/img/SDKMediation_jp.png
 [Warning]: {{site.baseurl}}/assets/img/DFP_EN2.png
 [插頁尺寸]: {{site.baseurl}}/assets/img/dfp_interstitial.png

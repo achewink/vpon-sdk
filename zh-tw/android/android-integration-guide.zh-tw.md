@@ -25,19 +25,16 @@ China  平台為 <http://cn.pub.vpon.com/>
 “CN”);`
 <br>
 
-# 概要
---------
-VPON 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。
-若要在 Android 應用程式中顯示橫幅廣告，只要在您的 Eclipse 專案中導入 SDK，然後在使用者介面上加入 com.vpadn.ads.VpadnBanner 即可。
+
 # 系統需求
 -----------
-VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使用。請確認您所使用的是最新版的 Android SDK，並依據 Android v4.X 或更新版本進行編譯 (將 default.properties 中的 target 設為 android-17)。
+Vpon 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使用。請確認您所使用的是最新版的 Android SDK，並依據 Android v4.X 或更新版本進行編譯 (將 default.properties 中的 target 設為 android-17)。
 
 # 導入 SDK
 ----------
-要在應用程式中加入 VPON 廣告，您必須完成三個步驟：
+要在應用程式中加入 Vpon 廣告，您必須完成三個步驟：
 
-1. 在 Eclipse 專案中加入 VPON SDK 4 JAR
+1. 在 Android Studio/Eclipse 專案中加入 Vpon SDK 4 JAR
 2. 在 AndroidManifest.xml 中宣告 com.vpadn.widget.VpadnActivity
 3. 在資訊清單中設定必要的 permissions。
 
@@ -101,14 +98,14 @@ VPON 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使�
 ```java
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 ```
-另外下面這個permission可以提高辨識使用者身分的能力，讓廣告能更精準的被投放，進而為您帶入更多的營收
+另外下面這個 permission 可以提高辨識使用者身分的能力，讓廣告能更精準的被投放，進而為您帶入更多的營收
 
 
 ```java
   <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 ```
 
-由於Vpon SDK 4有大量的 Video 廣告，建議您在你放 Banner 的 Activity 內加入硬體加速，如下
+由於Vpon SDK 4 有大量的 Video 廣告，建議您在你放 Banner 的 Activity 內加入硬體加速，如下
 
 
 ```xml

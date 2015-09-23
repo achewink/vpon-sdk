@@ -244,18 +244,26 @@
 
 <p>若您尚未完成串接廣告形式前的串接說明，請先前往<a href="/vpon-sdk/zh-tw/android/integration-guide/">串接說明</a>完成相關設定</p>
 
+<h1 id="概要">概要</h1>
+
+<hr>
+
+<p>Vpon 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。
+若要在 Android 應用程式中顯示橫幅廣告，只要在您的 Eclipse 專案中導入 SDK，然後在使用者介面上加入 com.vpadn.ads.VpadnBanner 即可。</p>
+
 <h1 id="開始撰寫-banner">開始撰寫 Banner</h1>
 
 <hr>
 
 <p>Android 應用程式由 View 物件所組成，也就是以文字區域和按鈕等控制項的形式向使用者呈現的 Java 執行個體。VpadnBanner 只是另一種 View 子類別，用來顯示由使用者點擊觸發的小型 HTML5 廣告。
-和所有的 View 一樣，AdView 可以單用程式碼撰寫，也可以絕大部分用 XML 寫成。
-加入橫幅廣告會用到程式碼：</p>
+和所有的 View 一樣，AdView 可以單用程式碼撰寫，也可以絕大部分用 XML 寫成。</p>
+
+<p>加入橫幅廣告會用到程式碼：</p>
 
 <ol>
-<li>匯入 com.vpadn.ads.*</li>
+<li>匯入 <code>com.vpadn.ads.*</code></li>
 <li>宣告 VpadnBanner 執行個體</li>
-<li>建立例項，指定BannerId，也就是Vpon申請的BannerId</li>
+<li>建立例項，指定 BannerId，也就是 Vpon 申請的 BannerId</li>
 <li>將該檢視加進使用者介面</li>
 <li>透過廣告載入例項</li>
 </ol>
@@ -302,7 +310,7 @@
 
 <hr>
 
-<p>也可以直接使用xml 定義Banner 這樣你就不需要寫任何java code</p>
+<p>也可以直接使用 xml 定義 Banner 這樣你就不需要寫任何 java code</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
       <span class="na">xmlns:vpadn=</span><span class="s">&quot;http://schemas.android.com/apk/lib/com.vpadn.ads&quot;</span>
       <span class="na">android:id=</span><span class="s">&quot;@+id/mainLayout&quot;</span>
@@ -327,9 +335,18 @@
       <span class="nt">&lt;/RelativeLayout&gt;</span>
   <span class="nt">&lt;/LinearLayout&gt;</span>
 </code></pre></div>
-<p><br>
-記得將上面的 vpon:bannerId 填入你真實的 banner ID
-如果你的 banner ID 還未經過審核可以使用下列的方式取得測試廣告
+<p><br></p>
+
+<blockquote>
+<p><strong>Note:</strong>
+記得將上面的 vpon:bannerId 填入你真實的 banner ID</p>
+</blockquote>
+
+<h1 id="測試廣告">測試廣告</h1>
+
+<hr>
+
+<p>如果你的 banner ID 還未經過審核可以使用下列的方式取得測試廣告
 <br></p>
 <div class="highlight"><pre><code class="language-java" data-lang="java">      <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span>  <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
       <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testDeviceImeiSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
@@ -338,6 +355,8 @@
       <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
       <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
 </code></pre></div>
+<h2 id="advertising-id">Advertising ID</h2>
+
 <p>可以使用下列任一方式取得 device 上的 Advertising ID</p>
 
 <ol>
@@ -349,7 +368,7 @@
 
 <hr>
 
-<p>除了支援手機上的 320x50 大小外，VPON還支援各種不同的橫幅廣告：</p>
+<p>除了支援手機上的 320x50 大小外，Vpon 還支援各種不同的橫幅廣告：</p>
 
 <table><thead>
 <tr>
@@ -386,9 +405,9 @@
 
 <hr>
 
-<p>如果您在伺服器的 VPON 帳戶中指定了更新速率，且需要使用下面的sample才會啟動banner自動更新</p>
+<p>如果您在伺服器的 Vpon 帳戶中指定了更新速率，則需要使用下面的 sample 才會啟動 banner 自動更新</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
- <span class="c1">//設定成true才會自動更新</span>
+ <span class="c1">//設定成 true 才會自動更新</span>
  <span class="n">adRequest</span><span class="o">.</span><span class="na">setEnableAutoRefresh</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
  <span class="n">adShowBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
 </code></pre></div>

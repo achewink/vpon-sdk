@@ -107,14 +107,14 @@ Example:
 # Proguard Configuration
 ---
 If your app need obfuscateed before release, please add settings below：<br>
-- dontwarn c.\*\* <br>
-- dontwarn com.vpon.\*\* <br>
-- dontwarn vpadn.\*\* <br>
-- keep class c.\*\*{ \*; } <br>
-- keep class com.vpon.\*\* { \*; } <br>
-- keep class vpon.\*\* { \*; } <br>
-- keep class com.vpadn.\*\* { \*; } <br>
-- keep class vpadn.\*\* { \*; } <br>
+-dontwarn c.\*\* <br>
+-dontwarn com.vpon.\*\* <br>
+-dontwarn vpadn.\*\* <br>
+-keep class c.\*\*{ \*; } <br>
+-keep class com.vpon.\*\* { \*; } <br>
+-keep class vpon.\*\* { \*; } <br>
+-keep class com.vpadn.\*\* { \*; } <br>
+-keep class vpadn.\*\* { \*; } <br>
 
 
 # Corona User

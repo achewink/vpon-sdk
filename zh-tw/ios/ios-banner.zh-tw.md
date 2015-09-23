@@ -11,6 +11,10 @@ lang: "zh-tw"
 ---
 若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
 
+# 概要
+--------
+Vpon 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。
+
 # 開始撰寫 Banner
 ---
 iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕等控制項的形式向使用者顯示的 Objective-C 執行個體。VpadnBanner 只是一種 UIView 子類別，用來顯示由使用者點擊觸發的小型 HTML5 廣告。
@@ -129,10 +133,7 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
 - (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView{
     NSLog(@"關閉插屏廣告頁面 %@",bannerView);
 }
-```
 
-
-```Objective-C
 #pragma mark 通知關閉vpadn開屏廣告
 - (void)onVpadnSplashAdDismiss{
     NSLog(@"關閉vpadn開屏廣告頁面");
@@ -159,8 +160,8 @@ device width x auto height |Smart Banner Landscape|VpadnAdSizeSmartBannerLandsca
 # 更新廣告
 ---
 如果您在伺服器的 Vpon 帳戶中指定了更新速率，且需要使用下面的 sample 才會啟動 banner 自動更新
-  [vpadnAd setAdAutoRefresh:YES];
 
+  [vpadnAd setAdAutoRefresh:YES];
 
 
 

@@ -105,14 +105,14 @@ http://tw.pub.vpon.com/ 台湾エリアのプロパティIDを登録
 # Proguard Configuration
 ---
 APP 自体が proguard の難読化を経る必要がある場合、次の設定を追加してください。<br>
-- dontwarn c.\*\* <br>
-- dontwarn com.vpon.\*\* <br>
-- dontwarn vpadn.\*\* <br>
-- keep class c.\*\*{ \*; } <br>
-- keep class com.vpon.\*\* { \*; } <br>
-- keep class vpon.\*\* { \*; } <br>
-- keep class com.vpadn.\*\* { \*; } <br>
-- keep class vpadn.\*\* { \*; } <br>
+-dontwarn c.\*\* <br>
+-dontwarn com.vpon.\*\* <br>
+-dontwarn vpadn.\*\* <br>
+-keep class c.\*\*{ \*; } <br>
+-keep class com.vpon.\*\* { \*; } <br>
+-keep class vpon.\*\* { \*; } <br>
+-keep class com.vpadn.\*\* { \*; } <br>
+-keep class vpadn.\*\* { \*; } <br>
 
 
 # Corona User
