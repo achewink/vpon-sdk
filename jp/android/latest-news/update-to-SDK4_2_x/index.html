@@ -296,9 +296,7 @@ original version:</p>
 
 <p><code>onVponLeaveApplication</code> -&gt; <code>onVpadnLeaveApplication</code></p>
 
-<ol>
-<li>layout.xml を使って Vpon Banner を生成した場合、その中の全ての vpon を vpadn に変更するだけで結構です。</li>
-</ol>
+<p>6.layout.xml を使って Vpon Banner を生成した場合、その中の全ての vpon を vpadn に変更するだけで結構です。</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
     <span class="na">xmlns:vpadn=</span><span class="s">&quot;http://schemas.android.com/apk/lib/com.vpadn.ads&quot;</span>
@@ -332,17 +330,15 @@ You can use the following code to get the Test Banner If your banner ID has not 
     <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
     <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
 </code></pre></div>
-<ol>
-<li>Proguard を使用している場合、vpon を vpadn に変更してから次のインスタンスを修正します。
--dontwarn c.**
--dontwarn com.vpon.**
--dontwarn vpadn.**
--keep class c.<strong>{ *; }
--keep class com.vpon.</strong> { <em>; }
--keep class vpon.</em>* { <em>; }&quot;
--keep class com.vpadn.</em>* { <em>; }
--keep class vpadn.</em>* { *; }</li>
-</ol>
+<p>7.Proguard を使用している場合、vpon を vpadn に変更してから次のインスタンスを修正します。<br>
+-dontwarn c.** <br>
+-dontwarn com.vpon.** <br>
+-dontwarn vpadn.** <br>
+-keep class c.**{ *; } <br>
+-keep class com.vpon.** { *; } <br>
+-keep class vpon.** { *; } <br>
+-keep class com.vpadn.** { *; } <br>
+-keep class vpadn.** { *; } <br></p>
 
       </div>
       <div class="col-md-3">

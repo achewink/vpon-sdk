@@ -123,7 +123,7 @@
   <div class="bs-header" id="content">
     <div class="container">
       <h1>Android - 進階設定</h1>
-      <p>Crazy Ad, Proguard, Cocoa</p>
+      <p>幫助您取得更多廣告功能與資料收集</p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -282,25 +282,38 @@
 <p>然後傳給 <code>VpadnBanner</code>：</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="n">vponBanner</span><span class="o">.</span><span class="na">setAdListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
 </code></pre></div>
-<p>public void onVpadnReceiveAd(VpadnAd ad) 當 VpadnBanner.loadAd 成功時傳送。 public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error) 當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。</p>
+<hr>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span>
+</code></pre></div>
+<p>當 VpadnBanner.loadAd 成功時傳送。</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailedToReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">VpadnErrorCode</span> <span class="n">error</span><span class="o">)</span>
+</code></pre></div>
+<p>當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。</p>
 
 <p>建議您將這些事件記錄下來以便偵錯：</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"> <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailedToReceiveAd</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">,</span> <span class="n">VpadnAdRequest</span><span class="o">.</span><span class="na">VpadnErrorCode</span> <span class="n">errorCode</span><span class="o">)</span> <span class="o">{</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">MY_LOG_TAG</span><span class="o">,</span> <span class="s">&quot;failed to receive ad (&quot;</span> <span class="o">+</span> <span class="n">errorCode</span> <span class="o">+</span> <span class="s">&quot;)&quot;</span><span class="o">);</span> <span class="o">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnPresentScreen</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span>
 </code></pre></div>
-<p>public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊，在您的應用程式之前建立了 Activity 並呈現出全螢幕廣告使用者介面時呼叫。 public void onVpadnDismissScreen(VpadnAd ad) 當使用者關閉與 onVponPresentScreen 一同顯示的全螢幕 Activity，控制權也交還給應用程式時呼叫。 public void onVpadnLeaveApplication(VpadnAd ad) 當 Ad 點擊會啟動新的應用程式時呼叫。</p>
+<p>當廣告因獲得使用者點擊，在您的應用程式之前建立了 Activity 並呈現出全螢幕廣告使用者介面時呼叫。</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnDismissScreen</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span>
+</code></pre></div>
+<p>當使用者關閉與 onVponPresentScreen 一同顯示的全螢幕 Activity，控制權也交還給應用程式時呼叫。</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVpadnLeaveApplication</span><span class="o">(</span><span class="n">VpadnAd</span> <span class="n">ad</span><span class="o">)</span>
+</code></pre></div>
+<p>當 Ad 點擊會啟動新的應用程式時呼叫。</p>
 
 <h1 id="crazy-ad">Crazy Ad</h1>
 
 <hr>
 
-<p>會從banner自動展開成Crazy Ad，全螢幕富媒體廣告的Crazy Ad呈現約5~7秒會自動關閉。
+<p>會從 banner 自動展開成 Crazy Ad，全螢幕富媒體廣告的 Crazy Ad 呈現約 5~7 秒會自動關閉。
 <img src="/vpon-sdk/assets/img/Crazyad.png" alt="海尼根廣告"></p>
 
 <h2 id="設定">設定</h2>
 
 <hr>
 
-<p>在後台註冊申請流程中可選擇是否播放Crazy Ad。<br>
+<p>在後台註冊申請流程中可選擇是否播放 Crazy Ad。<br>
 進入 <a href="http://cn.adon.vpon.com/">http://cn.adon.vpon.com/</a> 註冊中國區License Key。<br>
 進入 <a href="http://tw.adon.vpon.com/">http://tw.adon.vpon.com/</a> 註冊台灣區License Key。<br>
 如圖:
@@ -310,15 +323,15 @@
 
 <hr>
 
-<p>如果您的APP本身需要經過proguard混淆，請增加下面的設定：<br>
-- dontwarn c.** <br>
-- dontwarn com.vpon.** <br>
-- dontwarn vpadn.** <br>
-- keep class c.**{ *; } <br>
-- keep class com.vpon.** { *; } <br>
-- keep class vpon.** { *; } <br>
-- keep class com.vpadn.** { *; } <br>
-- keep class vpadn.** { *; } <br></p>
+<p>如果您的 App 本身需要經過 proguard 混淆，請增加下面的設定：<br>
+-dontwarn c.** <br>
+-dontwarn com.vpon.** <br>
+-dontwarn vpadn.** <br>
+-keep class c.**{ *; } <br>
+-keep class com.vpon.** { *; } <br>
+-keep class vpon.** { *; } <br>
+-keep class com.vpadn.** { *; } <br>
+-keep class vpadn.** { *; } <br></p>
 
 <h1 id="corona-user">Corona User</h1>
 
@@ -328,8 +341,8 @@
 
 <p>將 web SDK 裡的 html 寫進 local file 再讓 webview 去 load 這個 file (例如: webView:request( “localfile.html”, system.ResourceDirectory ))。  </p>
 
-<p>html內容可參考vpon wiki的web SDK操作手冊: <a href="/vpon-sdk/zh-tw/web/">Web SDK</a><br>
-更多Corona SDK文件可參考: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">Corona Document</a>  </p>
+<p>HTML 內容可參考 Vpon wiki的web SDK 操作手冊: <a href="/vpon-sdk/zh-tw/web/">Web SDK</a><br>
+更多 Corona SDK 文件可參考: <a href="http://docs.coronalabs.com/api/library/native/newWebView.html">Corona Document</a>  </p>
 
       </div>
       <div class="col-md-3">

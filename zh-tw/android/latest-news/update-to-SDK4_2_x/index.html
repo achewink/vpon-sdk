@@ -242,11 +242,11 @@
 
 <hr>
 
-<p>本文件是從SDK 4.0.0 或是SDK 4.1.0 升級到SDK 4.2.x的方法。因為新版SDK 4.2.x更改了package, class, interface和method的名稱，另外刪除 com.vpon.ads.VponPlatform這個class，請依照以下步驟做修改。</p>
+<p>本文件是從 SDK 4.0.0 或是 SDK 4.1.0 升級到 SDK 4.2.x的方法。因為新版 SDK 4.2.x更改了 package, class, interface和method 的名稱，另外刪除 com.vpon.ads.VponPlatform這個class，請依照以下步驟做修改。</p>
 
-<p>1.請將位於libs folder內舊的Vpon SDK jar檔刪除，並放入新的jar檔 [SDK4.2.6]</p>
+<p>1.請將位於 libs folder 內舊的 Vpon SDK JAR 檔刪除，並放入新的 JAR 檔</p>
 
-<p>2.更改import 的package, interface 和 class名稱</p>
+<p>2.更改 import 的 package, interface 和 class 名稱</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponBanner</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnBanner</span>
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAd</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAd</span>
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdListener</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdListener</span>
@@ -254,7 +254,7 @@
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponAdSize</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnAdSize</span>
     <span class="n">com</span><span class="o">.</span><span class="na">vpon</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VponInterstitialAd</span> <span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">vpadn</span><span class="o">.</span><span class="na">ad</span><span class="o">.</span><span class="na">VpadnInterstitialAd</span>
 </code></pre></div>
-<p>3.將VpadnBanner和VpadnInterstitialAd的constructor，最後一個參數VponPlatform.TW ，改為字串&quot;TW&quot;</p>
+<p>3.將 VpadnBanner 和 VpadnInterstitialAd 的 constructor，最後一個參數 VponPlatform.TW ，改為字串 &quot;TW&quot;</p>
 
 <p>由：</p>
 
@@ -264,7 +264,7 @@
 <p><code>new VpadnBanner(this, bannerId1,VpadnAdSize.SMART_BANNER ,&quot;TW&quot;);</code>
 <br></p>
 
-<p>4.改變Androidmanifest.xml 裡的activity tag，由</p>
+<p>4.改變 Androidmanifest.xml 裡的 activity tag，由</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;activity</span>
       <span class="na">android:name=</span><span class="s">&quot;com.vpon.widget.VponActivity&quot;</span>
       <span class="na">android:configChanges=</span><span class="s">&quot;orientation|keyboardHidden|navigation|keyboard|screenLayout|uiMode|screenSize|smallestScreenSize&quot;</span>
@@ -292,9 +292,7 @@
 
 <p><code>onVponLeaveApplication</code> -&gt; <code>onVpadnLeaveApplication</code></p>
 
-<ol>
-<li>如果有使用layout.xml 產生Vpon Banner，請將裡面所有 vpon 改為 <code>vpadn</code> 即可</li>
-</ol>
+<p>6.如果有使用layout.xml 產生Vpon Banner，請將裡面所有 vpon 改為 <code>vpadn</code> 即可</p>
 <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
     <span class="na">xmlns:vpadn=</span><span class="s">&quot;http://schemas.android.com/apk/lib/com.vpadn.ads&quot;</span>
@@ -319,28 +317,24 @@
             <span class="na">vpadn:platform=</span><span class="s">&quot;TW&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/RelativeLayout&gt;</span>
 <span class="nt">&lt;/LinearLayout&gt;</span>
-
-As usual you must replace CHANGE ME with your Vpon Banner ID.
-You can use the following code to get the Test Banner If your banner ID has not been vetted
-
-```java
-      VpadnAdRequest adRequest =  new VpadnAdRequest();
-      HashSet<span class="nt">&lt;String&gt;</span> testDeviceImeiSet = new HashSet<span class="nt">&lt;String&gt;</span>();
-      testDeviceImeiSet.add(&quot;Advertising ID&quot;); //TODO: put Android Advertising ID
-      adRequest.setTestDevices(testDeviceImeiSet);
-      vponBanner.loadAd(adRequest);
 </code></pre></div>
-<ol>
-<li>如果有使用 Proguard 請將 vpon 改為 vpadn，改後範例:
--dontwarn c.**
--dontwarn com.vpon.**
--dontwarn vpadn.**
--keep class c.<strong>{ *; }
--keep class com.vpon.</strong> { <em>; }
--keep class vpon.</em>* { <em>; }
--keep class com.vpadn.</em>* { <em>; }
--keep class vpadn.</em>* { *; }</li>
-</ol>
+<p>As usual you must replace CHANGE ME with your Vpon Banner ID.
+You can use the following code to get the Test Banner If your banner ID has not been vetted</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">  <span class="n">VpadnAdRequest</span> <span class="n">adRequest</span> <span class="o">=</span>  <span class="k">new</span> <span class="nf">VpadnAdRequest</span><span class="o">();</span>
+  <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testDeviceImeiSet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+  <span class="n">testDeviceImeiSet</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&quot;Advertising ID&quot;</span><span class="o">);</span> <span class="c1">//TODO: put Android Advertising ID</span>
+  <span class="n">adRequest</span><span class="o">.</span><span class="na">setTestDevices</span><span class="o">(</span><span class="n">testDeviceImeiSet</span><span class="o">);</span>
+  <span class="n">vponBanner</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
+</code></pre></div>
+<p>7.如果有使用 Proguard 請將 vpon 改為 vpadn，改後範例:<br>
+- dontwarn c.** <br>
+- dontwarn com.vpon.** <br>
+- dontwarn vpadn.** <br>
+- keep class c.**{ *; } <br>
+- keep class com.vpon.** { *; } <br>
+- keep class vpon.** { *; } <br>
+- keep class com.vpadn.** { *; } <br>
+- keep class vpadn.** { *; } <br></p>
 
       </div>
       <div class="col-md-3">

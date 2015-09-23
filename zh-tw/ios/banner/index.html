@@ -247,6 +247,12 @@
 
 <p>若您尚未完成串接廣告形式前的串接說明，請先前往<a href="../integration-guide/">串接說明</a>完成相關設定</p>
 
+<h1 id="概要">概要</h1>
+
+<hr>
+
+<p>Vpon 橫幅廣告 (banner) 利用畫面的一小部分來吸引使用者點擊，即可打開全螢幕享受更豐富的瀏覽體驗，例如網站或應用程式商店網頁。</p>
+
 <h1 id="開始撰寫-banner">開始撰寫 Banner</h1>
 
 <hr>
@@ -360,7 +366,8 @@
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;關閉插屏廣告頁面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="cp">#pragma mark 通知關閉vpadn開屏廣告</span>
+
+<span class="cp">#pragma mark 通知關閉vpadn開屏廣告</span>
 <span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnSplashAdDismiss</span><span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;關閉vpadn開屏廣告頁面&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -425,8 +432,9 @@
 
 <hr>
 
-<p>如果您在伺服器的 Vpon 帳戶中指定了更新速率，且需要使用下面的 sample 才會啟動 banner 自動更新
-  [vpadnAd setAdAutoRefresh:YES];</p>
+<p>如果您在伺服器的 Vpon 帳戶中指定了更新速率，且需要使用下面的 sample 才會啟動 banner 自動更新</p>
+
+<p>[vpadnAd setAdAutoRefresh:YES];</p>
 
 <h1 id="下載-sample-code">下載 Sample code</h1>
 
