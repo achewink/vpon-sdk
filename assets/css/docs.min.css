@@ -1379,3 +1379,7 @@ table td {
     background: #7d00ba;
     color: #fff;
 }
+
+ul.nav-sidebar li:hover {
+    background-color: yellow;
+}
