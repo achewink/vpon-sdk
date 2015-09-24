@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="The description for this page in the meta data in header.">
+
+
+<meta name="keywords" content="Keywords for this page, in the meta data">
+
+<meta name="author" content="Finn">
+<title>
+  
+  iOS - 横幅广告 &middot; Vpon-SDK (Alpha)
+  
+</title>
+<!-- Bootstrap core CSS -->
+<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Google Noto Sans Font -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<!-- Documentation extras -->
+<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43024238-5']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  <!-- Google Developer CSS -->
+  <!-- <link href="https://developers.google.com/_static/3278e19b82/css/devsite-google-red.css" rel="stylesheet"> -->
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <!-- Docs master nav -->
+  <header class="navbar navbar-static-top bs-docs-nav" role="banner">
+    <div class="container">
+        
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/vpon-sdk/zh-cn" class="navbar-brand"><img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" /></a>
+            <!-- <a href="/vpon-sdk/zh-cn" class="navbar-brand">Vpon SDK (Alpha)</a> -->
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">English</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/">Home</a></li>
+                     <li><a href="/vpon-sdk/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">繁體中文</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/zh-tw/">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-tw/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">简体中文</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/zh-cn">Home</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/zh-cn/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">日本語</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="/vpon-sdk/jp">Home</a></li>
+                     <li><a href="/vpon-sdk/jp/android/">Android</a></li>
+                     <li><a href="/vpon-sdk/jp/ios/">iOS</a></li>
+                     <li><a href="/vpon-sdk/jp/web/">Web</a></li>
+                  </ul>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <!-- Docs page layout -->
+  <div class="bs-header" id="content">
+    <div class="container">
+      <h1>iOS - 横幅广告</h1>
+      <p></p>
+    </div>
+  </div>
+  <div class="container bs-docs-container">
+
+    <div class="row">
+      <div class="bs-sidebar-left">
+      <div class="col-sm-3 col-md-2" >
+        
+  <ul class="nav nav-sidebar nav-left">
+    <span id="sidebar-title1"></span>
+    <li><a id="getting-started"></a></li>
+    <li><a id="integration-guide"></a></li>
+    <span id="sidebar-title2"></span>
+    <li><a id="banner-id"></a></li>
+    <li><a id="interstitial-id"></a></li>
+    <li><a id="mediation"></a></li>
+    <li><a id="advanced"></a></li>
+    <span id="sidebar-title3"></span>
+    <li><a id="download"></a></li>
+    <li><a id="latest-news"></a></li>
+    <li><a id="support"></a></li>
+  </ul>
+
+  <script type="text/javascript">
+    // var usrlang = navigator.language || navigator.userLanguage;
+    var lang = $('html').attr("lang");
+    var userLang = lang.toLowerCase();
+    var baseUrl = '/vpon-sdk';
+    if (userLang=="en"){
+      var userLang = '';
+    } else {
+      var baseUrl = '/vpon-sdk/';
+    }
+    var urlGettingStarted = baseUrl + userLang + '/ios/';
+    var urlIntegrationGuide = baseUrl + userLang + '/ios/integration-guide/';
+    var urlBanner = baseUrl + userLang + '/ios/banner/';
+    var urlInterstitial = baseUrl + userLang + '/ios/interstitial/';
+    var urlMediation = baseUrl + userLang + '/ios/mediation/';
+    var urlAdvanced = baseUrl + userLang + '/ios/advanced/';
+    var urlLatestNews = baseUrl + userLang + '/ios/latest-news/';
+    var urlDownload = baseUrl + userLang + '/ios/download/';
+    var urlSupport = baseUrl + userLang + '/ios/support/';
+    // var  = "baseUrl + userLang + '/ios/'";
+
+  $(document).ready(function(){
+    //show the text in right lang
+    if (userLang == "zh-tw") {
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("開始使用");
+      $('#integration-guide').text("串接說明");
+      $('#sidebar-title2').text('廣告型態選擇');
+      $('#banner-id').text("橫幅廣告");
+      $('#interstitial-id').text('插頁廣告');
+      $('#mediation').text("中介服務");
+      $('#advanced').text("進階設定");
+      $('#sidebar-title3').text('下載/其他輔助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下載 SDK");
+      $('#support').text("其他協助");
+    } else if (userLang == "zh-cn") {
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("开始使用");
+      $('#integration-guide').text("串接说明");
+      $('#sidebar-title2').text('广告型态选择');
+      $('#banner-id').text("横幅广告");
+      $('#interstitial-id').text('插页广告');
+      $('#mediation').text("中介服务");
+      $('#advanced').text("进阶设定");
+      $('#sidebar-title3').text('下载/其他辅助');
+      $('#latest-news').text("最新消息");
+      $('#download').text("下载 SDK");
+      $('#support').text("其他协助");
+    } else if (userLang == "jp"){
+      $("#sidebar-title1").text("iOS 串接");
+      $('#getting-started').text("スタートガイド");
+      $('#integration-guide').text("インテグレーションガイド");
+      $('#sidebar-title2').text('広告パターンとを選択');
+      $('#banner-id').text("バナー広告");
+      $('#interstitial-id').text('インタースティシャル広告');
+      $('#mediation').text("メディエーション");
+      $('#advanced').text("詳細設定");
+      $('#sidebar-title3').text('ダウンロード/その他');
+      $('#latest-news').text("最新ニュース");
+      $('#download').text("ダウンロード");
+      $('#support').text("サポート");
+    } else {
+      $("#sidebar-title1").text("iOS Integration");
+     $('#getting-started').text("Getting Started")
+     $('#integration-guide').text("Integration Guide");
+     $('#sidebar-title2').text('Ad Type Choices');
+     $('#banner-id').text("Banner Ad");
+     $('#interstitial-id').text('Interstitial Ad');
+     $('#mediation').text("Mediation");
+     $('#advanced').text("Advanced Setting");
+     $('#sidebar-title3').text('Download/Other');
+     $('#latest-news').text("Latest News");
+     $('#download').text("Download");
+     $('#support').text("Support"); }
+   //add right linking url to right title
+    $('#getting-started').attr({href:urlGettingStarted});
+    $('#integration-guide').attr({href:urlIntegrationGuide});
+    $('#banner-id').attr({href:urlBanner});
+    $('#interstitial-id').attr({href:urlInterstitial});
+    $('#mediation').attr({href:urlMediation});
+    $('#advanced').attr({href:urlAdvanced});
+    $('#latest-news').attr({href:urlLatestNews});
+    $('#download').attr({href:urlDownload});
+    $('#support').attr({href:urlSupport});
+    // $('#').attr({href:url});
+  });
+  </script>
+
+      </div>
+      </div>
+      <div class="col-md-7" role="main">
+        <h1 id="完成串接指示">完成串接指示</h1>
+
+<hr>
+
+<p>若您尚未完成串接广告形式前的串接说明，请先前往<a href="../integration-guide/">串接说明</a>完成相关设定</p>
+
+<h1 id="概要">概要</h1>
+
+<hr>
+
+<p>Vpon 横幅广告 (banner) 利用画面的一小部分来吸引使用者点击，即可打开全萤幕享受更丰富的浏览体验，例如网站或应用程式商店网页。</p>
+
+<h1 id="开始撰写-banner">开始撰写 Banner</h1>
+
+<hr>
+
+<p>iOS 应用程式由 UIView 物件所组成，也就是以文字区域和按钮等控制项的形式向使用者显示的 Objective-C 执行个体。VpadnBanner 只是一种 UIView 子类别，用来显示由使用者点击触发的小型 HTML5 广告。</p>
+
+<p>和所有的 UIView 一样，用程式码编写 VpadnBanner 很简单。以下为所需步骤:</p>
+
+<ol>
+<li>汇入 <code>VpadnBanner.h</code> 与 <code>VpadnInterstitial.h</code></li>
+<li>在应用程式的 UIViewController 中宣告 <code>VpadnBanner</code></li>
+<li>建立 VpadnBanner 物件</li>
+<li>指定 BannerId，也就是 Vpadn 申请的 BannerId</li>
+<li>设定 window 的rootViewController</li>
+<li>将该 View 加进 ViewController 内</li>
+<li>拉取广告</li>
+</ol>
+
+<p>建议您最好在应用程式的 UIViewController 内执行上述所有步骤。</p>
+<div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+<span class="c1">// 载入标头档</span>
+<span class="cp">#import &quot;VpadnBanner.h&quot;</span>
+<span class="cp">#import &quot;VpadnInterstitial.h&quot;</span>
+
+<span class="c1">// 增加两个protocol接收广告状态</span>
+<span class="k">@interface</span> <span class="nc">ViewController</span> : <span class="bp">UIViewController</span><span class="o">&lt;</span><span class="n">VpadnBannerDelegate</span><span class="p">,</span> <span class="n">VpadnInterstitialDelegate</span><span class="o">&gt;</span>
+<span class="p">{</span>
+    <span class="n">VpadnBanner</span><span class="o">*</span>    <span class="n">vpadnAd</span><span class="p">;</span> <span class="c1">// 宣告使用VpadnBanner广告</span>
+    <span class="n">VpadnInterstitial</span><span class="o">*</span>    <span class="n">vpadnInterstitial</span><span class="p">;</span> <span class="c1">// 宣告使用Vpadn插屏广告</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</code></pre></div>
+<p>以下程式码会在 viewController的 viewDidLoad 初始化步骤中设定横幅广告。</p>
+<div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="k">@implementation</span> <span class="nc">ViewController</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">dealloc</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">nil</span> <span class="o">!=</span> <span class="n">vpadnAd</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="n">vpadnAd</span> <span class="k">release</span><span class="p">];</span>
+        <span class="n">vpadnAd</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">nil</span> <span class="o">!=</span> <span class="n">vpadnInterstitial</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="n">vpadnInterstitial</span> <span class="k">release</span><span class="p">];</span>
+        <span class="n">vpadnInterstitial</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">dealloc</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+    <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+    <span class="kt">BOOL</span> <span class="n">bStatusBarHide</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">].</span><span class="n">statusBarHidden</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">screenHeight</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">UIScreen</span> <span class="n">mainScreen</span><span class="p">]</span> <span class="n">bounds</span><span class="p">].</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">bStatusBarHide</span><span class="p">)</span>
+        <span class="n">screenHeight</span> <span class="o">-=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="c1">// 设定广告位置</span>
+    <span class="bp">CGPoint</span> <span class="n">origin</span> <span class="o">=</span> <span class="n">CGPointMake</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">screenHeight</span> <span class="o">-</span> <span class="n">CGSizeFromVpadnAdSize</span><span class="p">(</span><span class="n">VpadnAdSizeSmartBannerPortrait</span><span class="p">).</span><span class="n">height</span><span class="p">);</span>
+    <span class="n">vpadnAd</span> <span class="o">=</span> <span class="p">[[</span><span class="n">VpadnBanner</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithAdSize</span><span class="p">:</span><span class="n">VpadnAdSizeSmartBannerPortrait</span> <span class="nl">origin</span><span class="p">:</span><span class="n">origin</span><span class="p">];</span>  <span class="c1">// 初始化Banner物件</span>
+    <span class="n">vpadnAd</span><span class="p">.</span><span class="n">strBannerId</span> <span class="o">=</span> <span class="s">@&quot;&quot;</span><span class="p">;</span>   <span class="c1">// 填入您的BannerId</span>
+    <span class="n">vpadnAd</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>       <span class="c1">// 设定delegate接收protocol回传讯息</span>
+    <span class="n">vpadnAd</span><span class="p">.</span><span class="n">platform</span> <span class="o">=</span> <span class="s">@&quot;TW&quot;</span><span class="p">;</span>       <span class="c1">// 台湾地区请填TW 大陆则填CN</span>
+    <span class="p">[</span><span class="n">vpadnAd</span> <span class="nl">setAdAutoRefresh</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span> <span class="c1">//如果为mediation则set NO</span>
+    <span class="p">[</span><span class="n">vpadnAd</span> <span class="nl">setRootViewController</span><span class="p">:</span><span class="nb">self</span><span class="p">];</span> <span class="c1">//请将window的rootViewController设定在此 以便广告顺利执行</span>
+    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview</span><span class="p">:[</span><span class="n">vpadnAd</span> <span class="n">getVpadnAdView</span><span class="p">]];</span> <span class="c1">// 将VpadnBanner的View加入此ViewController中</span>
+    <span class="p">[</span><span class="n">vpadnAd</span> <span class="nl">startGetAd</span><span class="p">:[</span><span class="nb">self</span> <span class="n">getTestIdentifiers</span><span class="p">]];</span> <span class="c1">// 开始抓取Banner广告</span>
+
+<span class="p">}</span>
+
+<span class="c1">// 请新增此function到您的程式内 如果为测试用 则在下方填入UUID，即可看到测试广告。</span>
+<span class="p">-(</span><span class="bp">NSArray</span><span class="o">*</span><span class="p">)</span><span class="nf">getTestIdentifiers</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span>
+            <span class="c1">// add your test UUID</span>
+            <span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-Objective-C" data-lang="Objective-C"><span class="cp">#pragma mark VpadnAdDelegate method 接一般Banner广告就需要新增</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;广告抓取成功&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span> <span class="nf">didFailToReceiveAdWithError:</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;广告抓取失败&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnPresent:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;开启vpadn广告页面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;关闭vpadn广告页面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnLeaveApplication:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;离开publisher application&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#pragma mark VpadnInterstitial Delegate 有接Interstitial的广告才需要新增</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdReceived:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;插屏广告抓取成功&quot;</span><span class="p">);</span>
+    <span class="c1">// 显示插屏广告</span>
+    <span class="p">[</span><span class="n">vpadnInterstitial</span> <span class="n">show</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdFailed:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;插屏广告抓取失败&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnInterstitialAdDismiss:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">bannerView</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;关闭插屏广告页面 %@&quot;</span><span class="p">,</span><span class="n">bannerView</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#pragma mark 通知关闭vpadn开屏广告</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onVpadnSplashAdDismiss</span><span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;关闭vpadn开屏广告页面&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</code></pre></div>
+<h1 id="横幅广告大小">横幅广告大小</h1>
+
+<hr>
+
+<p>除了支援手机上的 320x50 大小外，VPON还支援各种不同的横幅广告：</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">大小 (宽度x高度)</th>
+<th style="text-align: center">说明</th>
+<th style="text-align: center">VponAdSize 常数值</th>
+<th style="text-align: center">适用装置</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">320x50</td>
+<td style="text-align: center">标准横幅广告</td>
+<td style="text-align: center">VpadnAdSizeBANNER</td>
+<td style="text-align: center">iPhone &amp; iPad</td>
+</tr>
+<tr>
+<td style="text-align: center">468x60</td>
+<td style="text-align: center">IAB 全横幅广告</td>
+<td style="text-align: center">VpadnAdSizeFullBanner</td>
+<td style="text-align: center">iPad</td>
+</tr>
+<tr>
+<td style="text-align: center">728x90</td>
+<td style="text-align: center">IAB 超级横幅广告</td>
+<td style="text-align: center">VpadnAdSizeLeaderboard</td>
+<td style="text-align: center">iPad</td>
+</tr>
+<tr>
+<td style="text-align: center">320x250</td>
+<td style="text-align: center">IAB 中矩形广告</td>
+<td style="text-align: center">VpadnAdSizeMediumRectangle</td>
+<td style="text-align: center">iPad</td>
+</tr>
+<tr>
+<td style="text-align: center">device width x auto height</td>
+<td style="text-align: center">Smart Banner Portrait</td>
+<td style="text-align: center">VpadnAdSizeSmartBannerPortrait</td>
+<td style="text-align: center">iPhone &amp; iPad</td>
+</tr>
+<tr>
+<td style="text-align: center">device width x auto height</td>
+<td style="text-align: center">Smart Banner Landscape</td>
+<td style="text-align: center">VpadnAdSizeSmartBannerLandscape</td>
+<td style="text-align: center">iPhone &amp; iPad</td>
+</tr>
+</tbody></table>
+
+<p>如无特定需求，我们建议您直接使用上面 <code>smart banner</code>(portrait or landscape)即可</p>
+
+<h1 id="更新广告">更新广告</h1>
+
+<hr>
+
+<p>如果您在伺服器的 Vpon 帐户中指定了更新速率，且需要使用下面的 sample 才会启动 banner 自动更新</p>
+
+<p>[vpadnAd setAdAutoRefresh:YES];</p>
+
+<h1 id="下载-sample-code">下载 Sample code</h1>
+
+<hr>
+
+<p><a href="../download/">Go to download page</a></p>
+
+<h1 id="结果">结果</h1>
+
+<hr>
+
+<p>现在只要执行这个应用程式，您应该就会在画面上看到横幅广告：
+<img src="/vpon-sdk/assets/img/IOS-Banner_result.png" alt="IOS-Banner_result"></p>
+
+<h1 id="app-transport-security">App Transport Security</h1>
+
+<hr>
+
+<p>iOS9 多了安全条款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 专案，请参考<a href="/vpon-sdk/zh-cn/ios/latest-news/ios9ats/">这篇</a>来修改部份设定</p>
+
+<h1 id="其他诀窍">其他诀窍</h1>
+
+<blockquote>
+<p>请参阅<a href="../Interstitial">插页广告</a>、<a href="../mediation">中介服务</a>、<a href="../advanced">进阶设定</a>中获取更多简介。</p>
+</blockquote>
+
+      </div>
+      <div class="col-md-3">
+        <div class="bs-sidebar hidden-print" role="complementary">
+          <ul class="nav bs-sidenav">
+            <!-- auto gen -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer
+================================================== -->
+<footer class="bs-footer" role="contentinfo">
+  <div class="container">
+    <ul class="footer-links muted">
+      <li>Document framework powered by <a href="http://bt-docs.liaohuqiu.net">Bt-docs</a></li>
+      <li>&middot;</li>
+      <li>Hosted by <a href="https://pages.github.com">Github Pages</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- <script src="/dist/js/bootstrap.min.js"></script> -->
+<script src="/vpon-sdk/dist/js/bootstrap.js"></script>
+<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+
+</body>
+
+</html>

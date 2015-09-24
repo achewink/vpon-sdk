@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -52,8 +53,14 @@
 </script>
 
 
-<body>
-  <a class="sr-only" href="#content">Skip to main content</a>
+  <link href="/vpon-sdk/assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
   <!-- Docs master nav -->
   <header class="navbar navbar-static-top bs-docs-nav" role="banner">
     <div class="container">
@@ -65,7 +72,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a>
+            <a href="/vpon-sdk/jp" class="navbar-brand"><img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" /></a>
+            <!-- <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a> -->
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -118,84 +126,202 @@
     </div>
 </header>
 
-  <!-- Docs page layout -->
-  <div class="bs-header" id="content">
+
+  <!-- ========== HEADER SECTION ========== -->
+  <section id="home" name="home"></section>
+  <div id="headerwrap">
     <div class="container">
-      <h1>Vpon SDK 日本語</h1>
-      <p>副標題</p>
-    </div>
-  </div>
-  <div class="container bs-docs-container">
 
-    <div class="row">
-      <div class="col-md-9" role="main">
-        <h1 id="大家來說日本語">大家來說日本語</h1>
-
-<hr>
-
-<h2 id="大家來說日本語">大家來說日本語</h2>
-
-<ul>
-<li><p>大家來說日本語</p>
-
-<p>大家來說日本語</p>
-
-<p>A flower that trying to bloom in snow.</p></li>
-<li><p>無序列表項2</p></li>
-<li><p>無序列表項3</p></li>
-<li><p>無序列表項4</p></li>
-<li><p>無序列表項5</p></li>
-<li><p>無序列表項6</p></li>
-</ul>
-
-<h2 id="二級標題2">二級標題2</h2>
-
-<ol>
-<li><p>有序列表</p></li>
-<li><p>有序列表</p></li>
-<li><p>有序列表</p></li>
-<li><p>有序列表</p></li>
-<li><p>有序列表</p></li>
-</ol>
-
-<h1 id="代碼">代碼</h1>
-
-<hr>
-
-<h3 id="c">c</h3>
-<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// main function</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-
-
-
-
-
-
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="java">java</h3>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">()</span> <span class="o">{</span>
-
-
-
-
-
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-      </div>
-      <div class="col-md-3">
-        <div class="bs-sidebar hidden-print" role="complementary">
-          <ul class="nav bs-sidenav">
-            <!-- auto gen -->
-          </ul>
+      <div class="row">
+        <h1>VPON SDK (Alpha)</h1>
+        <br>
+        <h3>こんにちは, welcome to Vpon SDK Instruction.</h3>
+        <a class="btn btn-lg btn-outline" role="button" id="btn-to-download">Get started</a>
+        <br>
+        <br>
+        <div class="col-lg-6 col-lg-offset-3">
         </div>
       </div>
     </div>
+    <!-- /container -->
+  </div>
+  <!-- /headerwrap -->
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" name="about"></section>
+  <div id="fff">
+    <div class="container">
+      <ul>
+        <h3 class="centered" id="about-vpon-sdk">VPON SDKについて</h3>
+        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+        <!-- INTRO INFORMATIO-->
+        <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
+          <div class="col-md-7">
+            <img src="/vpon-sdk/assets/img/publisher-img1.jpg" style="float: left" alt="" />
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+            <h3>
+              <strong>豊富なブランディング広告在庫</strong>
+            </h3>
+              <p>主な４A会社、両岸連鎖業協会(中国･台湾チェーン業協会)と長期的で密接な提携を保ち、更に多くの、優れたブランド広告資源を有します。プラットフォーム内のブランド広告比率は90％以上です。有効的にアプリケーションのイメージを向上、そして維持します。</p>
+          </div>
+        </li>
+<hr>
+        <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
+          <div class="col-md-4 col-md-offset-1">
+            <h3>
+              <strong>公平・合理的な支払いモデル</strong>
+            </h3><br>
+            <p>CPM/CPC費用制度を同時に採用し、アプリケーションの露出量、クリック数、CTR、ユニークユーザー数など他項目の指数動態で毎日の収益を計算し、公平性と合理性を増し、優秀なアプリケーションが高い広告収益を得られるよう保証します。また、ブランドクライアントの掲載ニーズを満たします。</p>
+          </div>
+          <div class="col-md-7">
+            <img src="/vpon-sdk/assets/img/publisher-img2.png" style="float: right" alt="" />
+          </div>
+        </li>
+<hr>
+        <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
+          <div class="col-md-7">
+            <img src="/vpon-sdk/assets/img/publisher-img3.png" style="float: right" alt="" />
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+            <h3>
+              <strong>LBSよる正確なポジショニングにより更に高いクリック率を保証</strong>
+            </h3>
+            <br>
+            <p>優秀なブランド広告資源にディスカウント券、特別キャンペーン、割引情報を組み合わせ、LBSを通じて策略的に広告を一定エリア内に掲載します。これにより、広告がユーザーの視点と同じなるようにし、ユーザーのニーズに近づき、広告に参加する意向を高め、有効的に広告のクリック数を増加します。
+            </p>
+          </div>
+        </li>
+<hr>
+        <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
+          <div class="col-md-4 col-md-offset-1">
+            <br><h3>
+              <strong>豊富なデータ分析機能</strong>
+            </h3><br>
+            <p>基本データ統計機能を満たした上で、データ検索ツールを提供し、アプリケーションのユーザーの使用行為、習慣、分布などのデータが理解できるよう協力します。</p>
+
+          </div>
+          <div class="col-md-7">
+            <img src="/vpon-sdk/assets/img/publisher-img4.png" style="float: right" alt="" />
+          </div>
+        </li>
+<hr>
+      <div class="row centered">
+        <br><p>No more time to waste on hesitation. Click the button</p>
+        <p>
+          <a href="http://tw.pub.vpon.com/register.action" class="btn btn-lg btn-outline" role="button">Register Now</a>
+        </p> </ul>
+    </div>
+
+    <!-- /container -->
 
   </div>
+  <!-- /f -->
+  <!-- ========== CAROUSEL SECTION ========== -->
+  <section id="examples" name="examples"></section>
+  <div id="headerwrap">
+  <div id="ff">
+    <div class="container">
 
+      <div class="row centered">
+        <h3>いくつかの例</h3>
+        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+        <div class="col-lg-6 col-lg-offset-3">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active centered">
+                <img class="img-example" src="/vpon-sdk/assets/img/c1.png" alt="">
+              </div>
+              <div class="item centered">
+                <img class="img-example" src="/vpon-sdk/assets/img/c2.png" alt="">
+              </div>
+              <div class="item centered">
+                <img class="img-example" src="/vpon-sdk/assets/img/c3.png" alt="">
+              </div>
+            </div>
+            <br>
+            <br>
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active slide-pt"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1" class="icon icon-circle"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2" class="icon icon-circle"></li>
+            </ol>
+          </div>
+        </div>
+        <!-- col-lg-8 -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </div>
+  </div>
+
+  <!-- Download Section -->
+  <section id="download" name="download"></section>
+  <div id="f">
+    <div class="container">
+      <div class="row" id="download-row">
+        <h3>ダウンロード/Quick-start</h3>
+        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+        <div class="col-lg-6 col-lg-offset-3">
+          <p>
+            <img src="/vpon-sdk/assets/img/logo-android.png" class="download-icon" alt=""><a href="android/index.html" class="btn btn-lg btn-outline" role="button">Android</a>
+            <img src="/vpon-sdk/assets/img/logo-apple.png" class="download-icon" alt=""><a href="ios/index.html" class="btn btn-lg btn-outline" role="button">iOS</a>
+            <img src="/vpon-sdk/assets/img/logo-phone.png" class="download-icon" alt=""><a href="web/index.html" class="btn btn-lg btn-outline" role="button">Web</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What to add???????????????????????? -->
+  <!-- <section id="what" name="what"></section>
+    <div id="ff">
+      <div class="container">
+        <div class="row">
+          <h3>What to add?</h3>
+          <p class="centered">
+            <i class="icon icon-circle"></i>
+            <i class="icon icon-circle"></i>
+            <i class="icon icon-circle"></i></p>
+          <div class="col-lg-6 col-lg-offset-3">
+            <p>
+              There should be somethgin here.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  <!-- f -->
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" name="contact"></section>
+  <div id="f">
+    <div class="container">
+      <div class="row">
+        <h3>お問い合わせ</h3>
+        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+        <div class="col-lg-6 col-lg-offset-3">
+          <p>Any monetization question?
+            <a href="mailto:bd@vpon.com" class="btn btn-lg btn-outline" role="button">E-mail BD</a>
+          </p>
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any technical question?
+            <a href="mailto:fae@vpon.com" class="btn btn-lg btn-outline" role="button">E-mail FAE</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+      ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/vpon-sdk/assets/js/classie.js"></script>
+  <script src="/vpon-sdk/assets/js/smoothscroll.js"></script>
+  <script src="/vpon-sdk/assets/js/main.js"></script>
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
