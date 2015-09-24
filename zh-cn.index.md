@@ -1,7 +1,7 @@
 ---
-layout:         "home-zh-cn "
-title:          "頁面的標題"
-lead:           "副標題"
+layout:         "home-zh-cn"
+title:          "Vpon SDK"
+lead:           ""
 description:    "當前頁面的description, 存於head的meta中。"
 keywords:       "當前頁面的head的meta中的關鍵字。"
 permalink:      /zh-cn/
