@@ -257,9 +257,9 @@ Vpon Mobile Web SDK 可以让各种规模的行动网站发佈商方便的显示
 [Vpon FAE]: mailto:fae@vpon.com
 [UnitAdSetting_DFP1]: {{site.baseurl}}/assets/img/UnitAdSetting_DFP1.png
 [UnitAdSetting_DFP2]: {{site.baseurl}}/assets/img/UnitAdSetting_DFP2.png
-[新增指定目标_DFP]: {{site.baseurl}}/assets/img/新增指定目标_DFP.png
-[广告素材类型_DFP]: {{site.baseurl}}/assets/img/广告素材类型_DFP.png
-[素材设定_DFP]: {{site.baseurl}}/assets/img/素材设定_DFP.png
+[新增指定目标_DFP]: {{site.baseurl}}/assets/img/新增指定目标.png
+[广告素材类型_DFP]: {{site.baseurl}}/assets/img/廣告素材類型_DFP.png
+[素材设定_DFP]: {{site.baseurl}}/assets/img/素材設定_DFP.png
 [DFP_WEB_CALLBACK]: {{site.baseurl}}/assets/img/DFP_WEB_CALLBACK.png
 [Warning]: {{site.baseurl}}/assets/img/Warning.png
 [Here]: https://www.google.com/dfp/

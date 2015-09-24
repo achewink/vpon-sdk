@@ -123,7 +123,7 @@ a:after {
 	color: white;
 	font-size: 40px;
 	font-weight: 400;
-    font-family: 'Oswald', serif;
+    font-family: 'Noto Sans', serif;
 }
 
 #headerwrap .logo {
@@ -152,6 +152,11 @@ a:after {
 	text-align: center
 }
 
+#fff {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: left;
+}
 
 #f h3 {
 	color: #1a1a1a;
@@ -217,7 +222,7 @@ a:after {
 }
 
 .menu h1.logo a {
-	font-family: 'Oswald', sans-serif;
+	/*font-family: 'Oswald', sans-serif;*/
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: 0.15em;
@@ -364,4 +369,14 @@ a:after {
 
 li{
   color:black;
+}
+
+.jumbo-list-item{
+  padding-top: 50px;
+}
+
+ #ff h3, #about-vpon-sdk{
+  font-weight: 700;
+  font-size: 40px;
+  font-family: Oswald;
 }

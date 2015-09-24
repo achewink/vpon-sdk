@@ -1,13 +1,13 @@
-# SDK download
+# SDK Download
 ---
-fundamental SDK | AdMob SDK |
+Fundamental SDK | AdMob SDK |
 :-------------: | :--------:|
 [download][1]   | [download][2]
 
 
 # Sample Code Download
 ---
-fundamental     | AdMob        |    DFP       |   MoPub     | Mogo
+Fundamental     | AdMob        |    DFP       |   MoPub     | Mogo
 :-------------: | :-----------:|:------------:|:-----------:|:--------:
 [download][3]   | [download][4]|[download][5] |[download][6]|[download][7]
 

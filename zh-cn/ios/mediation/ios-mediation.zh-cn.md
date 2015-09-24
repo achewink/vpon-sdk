@@ -1,20 +1,19 @@
 ---
 layout: "ios"
-title: "iOS - 中介服務"
+title: "iOS - 中介服务"
 lead: ""
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/ios/mediation/
-lang: "zh-tw"
+permalink: /zh-cn/ios/mediation/
+lang: "zh-cn"
 ---
 # 概要
 ---
-透過中介服務，您的應用程式就能放送眾多來源 (包括 AdMob 聯播網、MoPub 聯播網、第三方廣告聯播網和內部廣告活動) 的廣告。
+透过 AdMob 中介服务，您的应用程式就能放送众多来源 (包括 AdMob 联播网、MoPub 联播网、第三方广告联播网和内部广告活动) 的广告。
 
 
 # 中介平台
 ---
-
 Google AdMob    |  Google DFP |      MoPub   |   MOGO
 --------------: | :----------:| :-----------:| :-------
 [![admob]][1]   | [![dfp]][2] | [![mopub]][3]| [![mogo]][4]

@@ -65,7 +65,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK (Alpha)</a>
+            <a href="/vpon-sdk/" class="navbar-brand"><img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" /></a>
+            <!-- <a href="/vpon-sdk/" class="navbar-brand">Vpon SDK (Alpha)</a> -->
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
@@ -234,19 +235,19 @@
 <td style="text-align: center">vpon_ad_test</td>
 <td style="text-align: center">Test Ad</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">1(是)/0(否)，預設為(是)</td>
+<td style="text-align: center">1(Yes)/0(No)，Default(Yes)</td>
 </tr>
 <tr>
 <td style="text-align: center">debug</td>
 <td style="text-align: center">Debugging information in console</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">true/false，預設為false</td>
+<td style="text-align: center">true/false，Default:false</td>
 </tr>
 <tr>
 <td style="text-align: center">openTab</td>
-<td style="text-align: center">if open a new tab to show ad&#39;s contents</td>
+<td style="text-align: center">If open a new tab to show ad&#39;s contents</td>
 <td style="text-align: center">N</td>
-<td style="text-align: center">true/false，預設為true</td>
+<td style="text-align: center">true/false，Default:true</td>
 </tr>
 </tbody></table>
 
@@ -278,10 +279,12 @@
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://m.vpon.com/sdk/vpadn-sdk.js&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
-<p>Note
+<blockquote>
+<p><strong>Note:</strong>
 If you use iframe for embedding vpon&#39;s ad, please remember to modify the size of iframe to fit the right size of vpon&#39;s ad.
 <br>
 <br></p>
+</blockquote>
 
 <h1 id="mobile-site-dfp">Mobile Site DFP</h1>
 
@@ -368,7 +371,7 @@ If you use iframe for embedding vpon&#39;s ad, please remember to modify the siz
 <p>Click New creative and select the creative&#39;s dimensions. (Choose All → Third party)
 <img src="/vpon-sdk/assets/img/Moblie_DFP_creative.png" alt="Moblie_DFP_creative"></p>
 
-<h4 id="creative-settings">Creative settings</h4>
+<h3 id="creative-settings">Creative settings</h3>
 
 <p>Input the snippet of code:</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;vpon</span> <span class="na">vpon_ad_test=</span><span class="s">&quot;0&quot;</span>
@@ -384,7 +387,7 @@ If you use iframe for embedding vpon&#39;s ad, please remember to modify the siz
 <p>Example：
 <img src="/vpon-sdk/assets/img/MobileDFP_creativeSetting.png" alt="MobileDFP_creativeSetting"></p>
 
-<h4 id="callback-for-traffic-remnant-ads">Callback for traffic remnant ads</h4>
+<h3 id="callback-for-traffic-remnant-ads">Callback for traffic remnant ads</h3>
 
 <p>snippet of code is provided below:</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;Vpadn_tag&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>

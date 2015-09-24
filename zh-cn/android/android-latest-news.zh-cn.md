@@ -1,16 +1,15 @@
 ---
-layout: android
-title: "Android - 最新消息"
-lead: "Latest News Here"
-description: The description for this page in the meta data in header.
-keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/android/latest-news/
-lang: "zh-tw"
+layout:         "android"
+title:          "Android - 最新消息"
+lead:           "Latest News Here"
+description:    "The description for this page in the meta data in header."
+keywords:       'Keywords for this page, in the meta data'
+permalink:      zh-cn/android/latest-news/
+lang:           "zh-cn"
 ---
 
-# 升級至 SDK 4.2.x
-本文件是從SDK 4.0.0 或是SDK 4.1.0 升級到SDK 4.2.x的方法。因為新版SDK 4.2.x更改了package, class, interface和method的名稱，另外刪除 com.vpon.ads.VponPlatform這個class，請依照以下步驟做修改... [繼續閱讀][1]
-
+# 升级至 SDK 4.2.x
+本文件是从SDK 4.0.0 或是SDK 4.1.0 升级到SDK 4.2.x的方法。因为新版SDK 4.2.x更改了package, class, interface和method的名称，另外删除 com.vpon.ads.VponPlatform这个class，请依照以下步骤做修改... [[继续阅读][1]]
 
 
 

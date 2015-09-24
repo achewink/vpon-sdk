@@ -1,39 +1,39 @@
 ---
 layout: "ios"
-title: "iOS - 中介服務"
+title: "iOS - 中介服务"
 lead: ""
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/ios/mediation/mogo/
-lang: "zh-tw"
+permalink: /zh-cn/ios/mediation/mogo/
+lang: "zh-cn"
 ---
 # 串接MOGO Mediation
 ---
-MOGO Mediation 請先註冊帳號: [進入]  
+MOGO Mediation 请先注册帐号: [进入]  
 
-# 進入我的芒果
-點選 visit AdsMOGO's Chinese Website -&gt; 進入芒果  
+# 进入我的芒果
+点选 visit AdsMOGO's Chinese Website -&gt; 进入芒果  
 
 ![][0]
 
-# 申請MOGO ID
+# 申请MOGO ID
 ---
 1. App 管理下添加App  
 
-![][1] 2. 添加APP信息：1. App名稱。2. 選擇平台。3. App類型  
+![][1] 2. 添加APP信息：1. App名称。2. 选择平台。3. App类型  
 
-![][2] 3. 開啓“地域優化”：<font size="4" color="red">1. 中文廣告平台
-適用大陸地區。2. 英文廣告平台 適用台灣地區。</font>  
+![][2] 3. 开啓“地域优化”：<font size="4" color="red">1. 中文广告平台
+适用大陆地区。2. 英文广告平台 适用台湾地区。</font>  
 
 ![][3]  
 ![][4]  
-4. 點選Vpon輸入由Vpon後台申請的Banner ID  
+4. 点选Vpon输入由Vpon后台申请的Banner ID  
 
 ![][5]  
-5. 調整投放量  
+5. 调整投放量  
 
 ![][6]  
-6. 將芒果ID填入串接code裏  
+6. 将芒果ID填入串接code里  
 
 ![][7]
 
@@ -42,7 +42,7 @@ MOGO Mediation 請先註冊帳號: [進入]
 [Go to download]
 
 
-  [進入]: {{site.baseurl}}/assets/img/http://www.adsmogo.com/
+  [进入]: {{site.baseurl}}/assets/img/http://www.adsmogo.com/
   [0]: {{site.baseurl}}/assets/img/MyMOGO.png
   [1]: {{site.baseurl}}/assets/img/AddApp.png  
   [2]: {{site.baseurl}}/assets/img/AppType.png "fig:AppType.png"
@@ -51,4 +51,4 @@ MOGO Mediation 請先註冊帳號: [進入]
   [5]: {{site.baseurl}}/assets/img/VponBannerID.png "fig:VponBannerID.png"
   [6]: {{site.baseurl}}/assets/img/Vpon.png "fig:Vpon.png"
   [7]: {{site.baseurl}}/assets/img/MOGOID.png "fig:MOGOID.png"
-  [Go to download]: {{site.baseurl}}/zh-tw/ios/download/#mogo
+  [Go to download]: {{site.baseurl}}/zh-cn/ios/download/#mogo

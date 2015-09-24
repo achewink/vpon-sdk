@@ -4,20 +4,20 @@ title: "最新消息 - iOS9 ATS"
 lead: ""
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/ios/latest-news/ios9ats/
-lang: "zh-tw"
+permalink: /zh-cn/ios/latest-news/ios9ats/
+lang: "zh-cn"
 ---
 # iOS9 ATS
 ---
-## 概覽
-Apple 將在 iOS9 加上新的安全條款—[Transport Security
-(ATS)]，要求所有版本 iOS9 以上裝置的 app 只能使用 HTTPS
-傳輸。若您現在使用 Xcode 7 並企圖瞄準該客群，請將您的 info.plist
-做修改以符合規範。
+## 概览
+Apple 将在 iOS9 加上新的安全条款—[Transport Security
+(ATS)]，要求所有版本 iOS9 以上装置的 app 只能使用 HTTPS
+传输。若您现在使用 Xcode 7 并企图瞄准该客群，请将您的 info.plist
+做修改以符合规范。
 
 
 ## info.plist
-您可以在 info.plist 中加入例外，允許 HTTPS 外的連結
+您可以在 info.plist 中加入例外，允许 HTTPS 外的连结
 
     <key>NSAppTransportSecurity</key>
     <dict>
@@ -26,8 +26,8 @@ Apple 將在 iOS9 加上新的安全條款—[Transport Security
     </dict>
 
 
-## 參考
-相關資料請參考 ：
+## 参考
+相关资料请参考 ：
 
 - [Transport Security (ATS)]
 - [Ads Developer Blog]

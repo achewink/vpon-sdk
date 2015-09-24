@@ -1,48 +1,52 @@
 ---
 layout: "ios"
-title: "iOS - 橫幅廣告"
+title: "iOS - 横幅广告"
 lead: ""
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/ios/banner/
-lang: "zh-tw"
+permalink: /zh-cn/ios/banner/
+lang: "zh-cn"
 ---
 # 完成串接指示
 ---
-若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
+若您尚未完成串接广告形式前的串接说明，请先前往[串接说明]完成相关设定
 
-# 開始撰寫 Banner
+# 概要
+--------
+Vpon 横幅广告 (banner) 利用画面的一小部分来吸引使用者点击，即可打开全萤幕享受更丰富的浏览体验，例如网站或应用程式商店网页。
+
+# 开始撰写 Banner
 ---
-iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕等控制項的形式向使用者顯示的 Objective-C 執行個體。VpadnBanner 只是一種 UIView 子類別，用來顯示由使用者點擊觸發的小型 HTML5 廣告。
+iOS 应用程式由 UIView 物件所组成，也就是以文字区域和按钮等控制项的形式向使用者显示的 Objective-C 执行个体。VpadnBanner 只是一种 UIView 子类别，用来显示由使用者点击触发的小型 HTML5 广告。
 
-和所有的 UIView 一樣，用程式碼編寫 VpadnBanner 很簡單。以下為所需步驟:
+和所有的 UIView 一样，用程式码编写 VpadnBanner 很简单。以下为所需步骤:
 
-1. 匯入 `VpadnBanner.h` 與 `VpadnInterstitial.h`
-2. 在應用程式的 UIViewController 中宣告 `VpadnBanner`
+1. 汇入 `VpadnBanner.h` 与 `VpadnInterstitial.h`
+2. 在应用程式的 UIViewController 中宣告 `VpadnBanner`
 3. 建立 VpadnBanner 物件
-4. 指定 BannerId，也就是 Vpadn 申請的 BannerId
-5. 設定 window 的rootViewController
-6. 將該 View 加進 ViewController 內
-7. 拉取廣告
+4. 指定 BannerId，也就是 Vpadn 申请的 BannerId
+5. 设定 window 的rootViewController
+6. 将该 View 加进 ViewController 内
+7. 拉取广告
 
-建議您最好在應用程式的 UIViewController 內執行上述所有步驟。
+建议您最好在应用程式的 UIViewController 内执行上述所有步骤。
 
 ```Objective-C
 #import <UIKit/UIKit.h>
-// 載入標頭檔
+// 载入标头档
 #import "VpadnBanner.h"
 #import "VpadnInterstitial.h"
 
-// 增加兩個protocol接收廣告狀態
+// 增加两个protocol接收广告状态
 @interface ViewController : UIViewController<VpadnBannerDelegate, VpadnInterstitialDelegate>
 {
-    VpadnBanner*    vpadnAd; // 宣告使用VpadnBanner廣告
-    VpadnInterstitial*    vpadnInterstitial; // 宣告使用Vpadn插屏廣告
+    VpadnBanner*    vpadnAd; // 宣告使用VpadnBanner广告
+    VpadnInterstitial*    vpadnInterstitial; // 宣告使用Vpadn插屏广告
 }
 @end
 ```
 
-以下程式碼會在 viewController的 viewDidLoad 初始化步驟中設定橫幅廣告。
+以下程式码会在 viewController的 viewDidLoad 初始化步骤中设定横幅广告。
 
 ```Objective-C
 @implementation ViewController
@@ -70,20 +74,20 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
     float screenHeight = [[UIScreen mainScreen] bounds].size.height;
     if(!bStatusBarHide)
         screenHeight -= 20;
-    // 設定廣告位置
+    // 设定广告位置
     CGPoint origin = CGPointMake(0.0,screenHeight - CGSizeFromVpadnAdSize(VpadnAdSizeSmartBannerPortrait).height);
     vpadnAd = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeSmartBannerPortrait origin:origin];  // 初始化Banner物件
     vpadnAd.strBannerId = @"";   // 填入您的BannerId
-    vpadnAd.delegate = self;       // 設定delegate接收protocol回傳訊息
-    vpadnAd.platform = @"TW";       // 台灣地區請填TW 大陸則填CN
-    [vpadnAd setAdAutoRefresh:YES]; //如果為mediation則set NO
-    [vpadnAd setRootViewController:self]; //請將window的rootViewController設定在此 以便廣告順利執行
-    [self.view addSubview:[vpadnAd getVpadnAdView]]; // 將VpadnBanner的View加入此ViewController中
-    [vpadnAd startGetAd:[self getTestIdentifiers]]; // 開始抓取Banner廣告
+    vpadnAd.delegate = self;       // 设定delegate接收protocol回传讯息
+    vpadnAd.platform = @"TW";       // 台湾地区请填TW 大陆则填CN
+    [vpadnAd setAdAutoRefresh:YES]; //如果为mediation则set NO
+    [vpadnAd setRootViewController:self]; //请将window的rootViewController设定在此 以便广告顺利执行
+    [self.view addSubview:[vpadnAd getVpadnAdView]]; // 将VpadnBanner的View加入此ViewController中
+    [vpadnAd startGetAd:[self getTestIdentifiers]]; // 开始抓取Banner广告
 
 }
 
-// 請新增此function到您的程式內 如果為測試用 則在下方填入UUID，即可看到測試廣告。
+// 请新增此function到您的程式内 如果为测试用 则在下方填入UUID，即可看到测试广告。
 -(NSArray*)getTestIdentifiers
 {
     return [NSArray arrayWithObjects:
@@ -94,95 +98,92 @@ iOS 應用程式由 UIView 物件所組成，也就是以文字區域和按鈕�
 
 
 ```Objective-C
-#pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
+#pragma mark VpadnAdDelegate method 接一般Banner广告就需要新增
 - (void)onVpadnAdReceived:(UIView *)bannerView{
-    NSLog(@"廣告抓取成功");
+    NSLog(@"广告抓取成功");
 }
 
 - (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"廣告抓取失敗");
+    NSLog(@"广告抓取失败");
 }
 
 - (void)onVpadnPresent:(UIView *)bannerView{
-    NSLog(@"開啟vpadn廣告頁面 %@",bannerView);
+    NSLog(@"开启vpadn广告页面 %@",bannerView);
 }
 
 - (void)onVpadnDismiss:(UIView *)bannerView{
-    NSLog(@"關閉vpadn廣告頁面 %@",bannerView);
+    NSLog(@"关闭vpadn广告页面 %@",bannerView);
 }
 
 - (void)onVpadnLeaveApplication:(UIView *)bannerView{
-    NSLog(@"離開publisher application");
+    NSLog(@"离开publisher application");
 }
 
-#pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
+#pragma mark VpadnInterstitial Delegate 有接Interstitial的广告才需要新增
 - (void)onVpadnInterstitialAdReceived:(UIView *)bannerView{
-    NSLog(@"插屏廣告抓取成功");
-    // 顯示插屏廣告
+    NSLog(@"插屏广告抓取成功");
+    // 显示插屏广告
     [vpadnInterstitial show];
 }
 
 - (void)onVpadnInterstitialAdFailed:(UIView *)bannerView{
-    NSLog(@"插屏廣告抓取失敗");
+    NSLog(@"插屏广告抓取失败");
 }
 
 - (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView{
-    NSLog(@"關閉插屏廣告頁面 %@",bannerView);
+    NSLog(@"关闭插屏广告页面 %@",bannerView);
 }
-```
 
-
-```Objective-C
-#pragma mark 通知關閉vpadn開屏廣告
+#pragma mark 通知关闭vpadn开屏广告
 - (void)onVpadnSplashAdDismiss{
-    NSLog(@"關閉vpadn開屏廣告頁面");
+    NSLog(@"关闭vpadn开屏广告页面");
 }
 
 @end
 ```
 
-# 橫幅廣告大小
+# 横幅广告大小
 ---
-除了支援手機上的 320x50 大小外，VPON還支援各種不同的橫幅廣告：
+除了支援手机上的 320x50 大小外，VPON还支援各种不同的横幅广告：
 
-大小 (寬度x高度)             |     說明       |  VponAdSize 常數值              | 適用裝置
+大小 (宽度x高度)             |     说明       |  VponAdSize 常数值              | 适用装置
 :------------------------: | :-------------:| :-----------------------------:|:-----------:
-320x50                     | 標準橫幅廣告     | VpadnAdSizeBANNER                   |iPhone & iPad
-468x60                     | IAB 全橫幅廣告   |VpadnAdSizeFullBanner              |iPad
-728x90                     | IAB 超級橫幅廣告 |  VpadnAdSizeLeaderboard        |iPad
-320x250                    |IAB 中矩形廣告    |VpadnAdSizeMediumRectangle            |iPad
+320x50                     | 标准横幅广告     | VpadnAdSizeBANNER                   |iPhone & iPad
+468x60                     | IAB 全横幅广告   |VpadnAdSizeFullBanner              |iPad
+728x90                     | IAB 超级横幅广告 |  VpadnAdSizeLeaderboard        |iPad
+320x250                    |IAB 中矩形广告    |VpadnAdSizeMediumRectangle            |iPad
 device width x auto height |Smart Banner Portrait |  VpadnAdSizeSmartBannerPortrait |iPhone & iPad
 device width x auto height |Smart Banner Landscape|VpadnAdSizeSmartBannerLandscape  |iPhone & iPad
 
-如無特定需求，我們建議您直接使用上面 `smart banner`(portrait or landscape)即可
+如无特定需求，我们建议您直接使用上面 `smart banner`(portrait or landscape)即可
 
-# 更新廣告
+# 更新广告
 ---
-如果您在伺服器的 Vpon 帳戶中指定了更新速率，且需要使用下面的 sample 才會啟動 banner 自動更新
+如果您在伺服器的 Vpon 帐户中指定了更新速率，且需要使用下面的 sample 才会启动 banner 自动更新
+
   [vpadnAd setAdAutoRefresh:YES];
 
 
 
-
-# 下載 Sample code
+# 下载 Sample code
 ---
 [Go to download page]
 
-# 結果
+# 结果
 ---
-現在只要執行這個應用程式，您應該就會在畫面上看到橫幅廣告：
+现在只要执行这个应用程式，您应该就会在画面上看到横幅广告：
 ![IOS-Banner_result]
 
 
 # App Transport Security
 ---
-iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 專案，請參考[這篇]來修改部份設定
+iOS9 多了安全条款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 专案，请参考[这篇]来修改部份设定
 
-# 其他訣竅
-> 請參閱[插頁廣告](../Interstitial)、[中介服務](../mediation)、[進階設定](../advanced)中獲取更多簡介。
+# 其他诀窍
+> 请参阅[插页广告](../Interstitial)、[中介服务](../mediation)、[进阶设定](../advanced)中获取更多简介。
 
 
-[串接說明]: ../integration-guide/
+[串接说明]: ../integration-guide/
 [IOS-Banner_result]: {{site.baseurl}}/assets/img/IOS-Banner_result.png
 [Go to download page]: ../download/
-[這篇]: {{site.baseurl}}/zh-tw/ios/latest-news/ios9ats/
+[这篇]: {{site.baseurl}}/zh-cn/ios/latest-news/ios9ats/

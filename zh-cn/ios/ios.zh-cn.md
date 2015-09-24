@@ -1,43 +1,43 @@
 ---
 layout: "ios"
-title: "iOS - 串接說明"
-lead: "快速上手 - 串接SDK與顯示廣告"
+title: "iOS - 串接说明"
+lead: "快速上手 - 串接SDK与显示广告"
 description: The description for this page in the meta data in header.
 keywords: 'Keywords for this page, in the meta data'
-permalink: /zh-tw/ios/
-lang: "zh-tw"
+permalink: /zh-cn/ios/
+lang: "zh-cn"
 ---
-# 快速上手 - 串接 SDK 與顯示廣告
-## Step1: 下載SDK
+# 快速上手 - 串接 SDK 与显示广告
+## Step1: 下载SDK
 ---
-請先[下載最新SDK][1]，若尚未加入Vpon開發商，請參照此[說明][2]成為開發商夥伴 <br><br>
+请先[下载最新SDK][1]，若尚未加入Vpon开发商，请参照此[说明][2]成为开发商伙伴 <br><br>
 
 ## Step2: 串接SDK
 ---
-請遵循[串接導引][3]完成各種SDK串接，包括最低需求、權限以及其他設定<br><br>
+请遵循[串接说明][3]完成各种SDK串接，包括最低需求、权限以及其他设定<br><br>
 
-## Step3: 串接廣告
+## Step3: 串接广告
 ---
-| [橫幅廣告][4]  |[插頁廣告][5] |[中介服務][6]|
+| [横幅广告][4]  |[插页广告][5] |[中介服务][6]|
 | :------------:|:-----------:| :--------: |
 <br><br>
 
-## 訣竅
+## 诀窍
 ---
-所有 iOS 相關資訊都在左排列表中，右排為文章的目錄，若想跳轉其他裝置平台或語言，請點選網站右上角的目標語言與平台。若您有任何技術問題，請不吝聯絡 [FAE 團隊](mailto:fae@vpon.com)
+所有 iOS 相关资讯都在左排列表中，右排为文章的目录，若想跳转其他装置平台或语言，请点选网站右上角的目标语言与平台。若您有任何技术问题，请不吝联络 [FAE 团队](mailto:fae@vpon.com)
 <br><br>
 
 > **Note**:
 
-> 1. 串接完畢後，請自行檢查是否有印出VponLog:didImpression，以確認有成功回傳資訊到Vpon Server
-> 2. iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 專案，請參考[這篇]來修改部份設定
+> 1. 串接完毕后，请自行检查是否有印出VponLog:didImpression，以确认有成功回传资讯到Vpon Server
+> 2. iOS9 多了安全条款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 专案，请参考[这篇]来修改部份设定
 
 
 
-[1]:{{ site.baseurl }}/zh-tw/ios/download/
-[2]:{{ site.baseurl }}/zh-tw/ios/registration/
-[3]:{{ site.baseurl }}/zh-tw/ios/integration-guide/
-[4]:{{ site.baseurl }}/zh-tw/ios/banner/
-[5]:{{ site.baseurl }}/zh-tw/ios/interstitial/
-[6]:{{ site.baseurl }}/zh-tw/ios/mediation/
-[這篇]: ../latest-news/ios9ats/
+[1]:{{ site.baseurl }}/zh-cn/ios/download/
+[2]:{{ site.baseurl }}/zh-cn/ios/registration/
+[3]:{{ site.baseurl }}/zh-cn/ios/integration-guide/
+[4]:{{ site.baseurl }}/zh-cn/ios/banner/
+[5]:{{ site.baseurl }}/zh-cn/ios/interstitial/
+[6]:{{ site.baseurl }}/zh-cn/ios/mediation/
+[这篇]: ../latest-news/ios9ats/

@@ -1,5 +1,5 @@
 ---
-layout:         "default"
+layout:         "home-zh-cn "
 title:          "頁面的標題"
 lead:           "副標題"
 description:    "當前頁面的description, 存於head的meta中。"

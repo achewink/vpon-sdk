@@ -1,40 +1,40 @@
 ---
 layout:         "android"
-title:          "Android - 開始使用"
-lead:           "快速上手 - 串接SDK與顯示廣告"
+title:          "Android - 开始使用"
+lead:           "快速上手 - 串接SDK与显示广告"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       zh-tw/android/
-lang:           "zh-tw"
+permalink:       zh-cn/android/
+lang:           "zh-cn"
 ---
-#快速上手 - 串接SDK與顯示廣告
-## Step1: 下載SDK
+#快速上手 - 串接 SDK 与显示广告
+## Step1: 下载 SDK
 ---
-請先[下載最新SDK][1]，若尚未加入Vpon開發商，請參照此[說明][2]成為開發商夥伴 <br><br>
+请先[下载最新 SDK][1]，若尚未加入 Vpon 开发商，请参照此[说明][2]成为开发商伙伴 <br><br>
 
-## Step2: 串接SDK
+## Step2: 串接 SDK
 ---
-請遵循[串接導引][3]完成各種SDK串接，包括最低需求、權限以及其他設定<br><br>
+请遵循[串接说明][3]完成各种 SDK 串接，包括最低需求、权限以及其他设定<br><br>
 
-## Step3: 串接廣告
+## Step3: 串接广告
 ---
-| [橫幅廣告][4]  |[插頁廣告][5] |[中介服務][6]|
+| [横幅广告][4]  |[插页广告][5] |[中介服务][6]|
 | :------------:|:-----------:| :--------: |
 <br><br>
 
-## 訣竅
+## 诀窍
 ---
-所有Android相關資訊都在左排列表中，右排為文章的目錄，若想跳轉其他裝置平台或語言，請點選網站右上角的目標語言與平台。若您有任何技術問題，請不吝聯絡 [FAE 團隊](mailto:fae@vpon.com)
+所有 Android 相关资讯都在左排列表中，右排为文章的目录，若想跳转其他装置平台或语言，请点选网站右上角的目标语言与平台。若您有任何技术问题，请不吝联络 [FAE 团队](mailto:fae@vpon.com)
 
 
-> **Note**: 若您曾使用過舊版SDK，請先閱讀: [升級最新 SDK 所需修改](../../zh-tw/android/latest-news/update-to-SDK4_2_x/)
+> **Note**: 若您曾使用过旧版SDK，请先阅读: [升级最新 SDK 所需修改](../../zh-cn/android/latest-news/update-to-SDK4_2_x/)
 
 
 
 
-[1]:{{ site.baseurl }}/zh-tw/android/download/
-[2]:{{ site.baseurl }}/zh-tw/registration/
-[3]:{{ site.baseurl }}/zh-tw/android/integration-guide/
-[4]:{{ site.baseurl }}/zh-tw/android/banner/
-[5]:{{ site.baseurl }}/zh-tw/android/interstitial/
-[6]:{{ site.baseurl }}/zh-tw/android/mediation/
+[1]:{{ site.baseurl }}/zh-cn/android/download/
+[2]:{{ site.baseurl }}/zh-cn/android/registration/
+[3]:{{ site.baseurl }}/zh-cn/android/integration-guide/
+[4]:{{ site.baseurl }}/zh-cn/android/banner/
+[5]:{{ site.baseurl }}/zh-cn/android/interstitial/
+[6]:{{ site.baseurl }}/zh-cn/android/mediation/

@@ -1370,9 +1370,9 @@ table td {
 }
 
 /*color when highlight words*/
-
 ::selection {
-    background: #7d00ba;
+    background: #cc002c;
+    /*#7d00ba*/
     color: #fff;
 }
 ::-moz-selection {
@@ -1381,5 +1381,13 @@ table td {
 }
 
 ul.nav-sidebar li:hover {
-    background-color: yellow;
+  background-color: #FCFF94;
+  }
+
+#vpon-logo{
+  height: 80%;
+}
+
+.jumbo-list-item{
+  padding: 20px;
 }

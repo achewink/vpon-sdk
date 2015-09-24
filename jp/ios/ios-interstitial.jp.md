@@ -55,13 +55,10 @@ lang:            "jp"
 }
 ```
 
-The interstitial then takes over the screen until the user dismisses it, at which point control returns to your app and the view controller passes to this method.
-Vpadn Interstitial Delegate [advanced setting] provides many callback methods for you.
+一度インタースティシャル広告が表示されると、ユーザが閉じるまでディスプレイ全体をカバーします。この時、制御権が アプリに渡されます。
 
 # サンプルコードのダウンロード
 ---
-SDK 4 lib ファイルは、Sample code folder 内にあります:
-
 [Go to Download Page]
 
 <!-- # **Note**:

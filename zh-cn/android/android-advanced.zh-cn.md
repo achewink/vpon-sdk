@@ -1,31 +1,31 @@
 ---
 layout:         "android"
-title:          "Android - 進階設定"
-lead:           "Crazy Ad, Proguard, Cocoa"
+title:          "Android - 进阶设定"
+lead:           "帮助您取得更多广告功能与资料收集"
 description:    "The description for this page in the meta data in header."
 keywords:       "Keywords for this page, in the meta data"
-permalink:       /zh-tw/android/advanced/
-lang:            "zh-tw"
+permalink:       /zh-cn/android/advanced/
+lang:            "zh-cn"
 ---
 
 # VpadnAdRequest
   -----------------------------
-  您可以先自訂 `VpadnAdRequest`，再將它傳送給 `VpadnBanner.loadAd`，讓 Vpon 以更精確的方式指定廣告 (com.adshow.ads.VpadnAdRequest)
+  您可以先自订 `VpadnAdRequest`，再将它传送给 `VpadnBanner.loadAd`，让 Vpon 以更精确的方式指定广告 (com.adshow.ads.VpadnAdRequest)
 
-## 指定接收廣告
+## 指定接收广告
 
-  您可以使用這些屬性來指定要接收測試廣告的裝置或裝置 Set。若要確認 SDK 是否已順利整合，請加入您的測試裝置並執行應用程式，然後按一下所顯示的測試廣告。
+  您可以使用这些属性来指定要接收测试广告的装置或装置 Set。若要确认 SDK 是否已顺利整合，请加入您的测试装置并执行应用程式，然后按一下所显示的测试广告。
 
 
 ```Java
   VpadnAdRequest request = new VpadnAdRequest();
   request.addTestDevice("your test device advertising id");
-  //TODO 需要填入您測試機的advertising id
+  //TODO 需要填入您测试机的advertising id
 ```
 
-## 指定目標
+## 指定目标
 
-  您也可以指定位置和客層相關資訊。不過，為了保護使用者隱私，請只指定您的應用程式中現有的位置和客層資料。
+您也可以指定位置和客层相关资讯。不过，为了保护使用者隐私，请只指定您的应用程式中现有的位置和客层资料。
 
 
 ```Java
@@ -33,13 +33,13 @@ VpadnAdRequest request = new VpadnAdRequest();
 request.setGender(VpadnAdRequest.Gender.FEMALE);
 request.setBirthday("1977-08-23");
 ```
-  系統會以適當的方法取得使用者的位置
+  系统会以适当的方法取得使用者的位置
 
 
 # VpadnAdListener
   ------------------------------
 
-您可以選擇在傳送給 `VpadnBanner.setAdListener` 的物件中執行 `com.adshow.ads.VpadnAdListener`，藉此追蹤請求失敗或「點閱」等廣告生命週期事件。
+您可以选择在传送给 `VpadnBanner.setAdListener` 的物件中执行 `com.adshow.ads.VpadnAdListener`，藉此追踪请求失败或「点阅」等广告生命週期事件。
 
 ```java
    public interface VpadnAdListener {
@@ -51,7 +51,7 @@ request.setBirthday("1977-08-23");
    }
 ```
 
-這個介面可由您的活動或任何其他物件執行：
+这个介面可由您的活动或任何其他物件执行：
 
 ```java
 import com.vpadn.ads.*;
@@ -60,67 +60,89 @@ public class VpadnBannerExample extends Activity implements VpadnAdListener {
 }
 ```
 
-然後傳給 `VpadnBanner`：
+然后传给 `VpadnBanner`：
 
 ```java
  vponBanner.setAdListener(this);
 ```
 
-  public void onVpadnReceiveAd(VpadnAd ad) 當 VpadnBanner.loadAd 成功時傳送。 public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error) 當 loadAd 失敗時傳送；失敗原因通常是網路連線失敗、應用程式設定錯誤或廣告空間不足。
+---
+```java
+  public void onVpadnReceiveAd(VpadnAd ad)
+```
+当 VpadnBanner.loadAd 成功时传送。
 
-  建議您將這些事件記錄下來以便偵錯：
+```java
+public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode error)
+```
+当 loadAd 失败时传送；失败原因通常是网路连线失败、应用程式设定错误或广告空间不足。
+
+建议您将这些事件记录下来以便侦错：
 
 ```java
  @Override public void onFailedToReceiveAd(VpadnAd ad, VpadnAdRequest.VpadnErrorCode errorCode) { Log.d(MY_LOG_TAG, "failed to receive ad (" + errorCode + ")"); }
 ```
 
-public void onVpadnPresentScreen(VpadnAd ad) 當廣告因獲得使用者點擊，在您的應用程式之前建立了 Activity 並呈現出全螢幕廣告使用者介面時呼叫。 public void onVpadnDismissScreen(VpadnAd ad) 當使用者關閉與 onVponPresentScreen 一同顯示的全螢幕 Activity，控制權也交還給應用程式時呼叫。 public void onVpadnLeaveApplication(VpadnAd ad) 當 Ad 點擊會啟動新的應用程式時呼叫。
+```java
+public void onVpadnPresentScreen(VpadnAd ad)
+```
+当广告因获得使用者点击，在您的应用程式之前建立了 Activity 并呈现出全萤幕广告使用者介面时呼叫。
+
+```java
+public void onVpadnDismissScreen(VpadnAd ad)
+```
+当使用者关闭与 onVponPresentScreen 一同显示的全萤幕 Activity，控制权也交还给应用程式时呼叫。
+
+```java
+public void onVpadnLeaveApplication(VpadnAd ad)
+```
+当 Ad 点击会启动新的应用程式时呼叫。
 
 
 
 
 # Crazy Ad
 ---
-會從banner自動展開成Crazy Ad，全螢幕富媒體廣告的Crazy Ad呈現約5~7秒會自動關閉。
-![海尼根廣告]
+会从 banner 自动展开成 Crazy Ad，全萤幕富媒体广告的 Crazy Ad 呈现约 5~7 秒会自动关闭。
+![海尼根广告]
 
 
-## 設定
+## 设定
 ---
-在後台註冊申請流程中可選擇是否播放Crazy Ad。<br>
-進入 http://cn.adon.vpon.com/ 註冊中國區License Key。<br>
-進入 http://tw.adon.vpon.com/ 註冊台灣區License Key。<br>
-如圖:
+在后台注册申请流程中可选择是否播放 Crazy Ad。<br>
+进入 http://cn.adon.vpon.com/ 注册中国区License Key。<br>
+进入 http://tw.adon.vpon.com/ 注册台湾区License Key。<br>
+如图:
 ![CrazyadSetting]
 
 
 # Proguard Configuration
 ---
-如果您的APP本身需要經過proguard混淆，請增加下面的設定：<br>
-- dontwarn c.\*\* <br>
-- dontwarn com.vpon.\*\* <br>
-- dontwarn vpadn.\*\* <br>
-- keep class c.\*\*{ \*; } <br>
-- keep class com.vpon.\*\* { \*; } <br>
-- keep class vpon.\*\* { \*; } <br>
-- keep class com.vpadn.\*\* { \*; } <br>
-- keep class vpadn.\*\* { \*; } <br>
+如果您的 App 本身需要经过 proguard 溷淆，请增加下面的设定：<br>
+-dontwarn c.\*\* <br>
+-dontwarn com.vpon.\*\* <br>
+-dontwarn vpadn.\*\* <br>
+-keep class c.\*\*{ \*; } <br>
+-keep class com.vpon.\*\* { \*; } <br>
+-keep class vpon.\*\* { \*; } <br>
+-keep class com.vpadn.\*\* { \*; } <br>
+-keep class vpadn.\*\* { \*; } <br>
 
 
 # Corona User
 ---
-如果您 App 使用 Corona 欲串接 Vpon 廣告，我們建議您用 web SDK 的方式串接，使用方法如下:  
+如果您 App 使用 Corona 欲串接 Vpon 广告，我们建议您用 web SDK 的方式串接，使用方法如下:  
 
-將 web SDK 裡的 html 寫進 local file 再讓 webview 去 load 這個 file (例如: webView:request( “localfile.html”, system.ResourceDirectory ))。  
+将 web SDK 裡的 html 写进 local file 再让 webview 去 load 这个 file (例如: webView:request( “localfile.html”, system.ResourceDirectory ))。  
 
-html內容可參考vpon wiki的web SDK操作手冊: [Web SDK]  
-更多Corona SDK文件可參考: [Corona Document]  
-
-
+HTML 内容可参考 Vpon wiki的web SDK 操作手册: [Web SDK]  
+更多 Corona SDK 文件可参考: [Corona Document]  
 
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
+
+
+[海尼根广告]:      {{site.baseurl}}/assets/img/Crazyad.png
 [CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
-[Web SDK]: {{site.baseurl}}/zh-tw/web/
+[Web SDK]: {{site.baseurl}}/zh-cn/web/
 [Corona Document]: http://docs.coronalabs.com/api/library/native/newWebView.html
