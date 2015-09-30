@@ -1392,5 +1392,8 @@ ul.nav-sidebar li:hover {
 #strange-btn{
   background-color: #00C39E;
   cursor: default;
-  
+
+}
+.download-icon{
+  margin: 0px;
 }
