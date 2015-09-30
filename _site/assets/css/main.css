@@ -162,25 +162,11 @@ a:after {
 	letter-spacing: 1px;
 }
 
-#f .dark-block h3 {
-	color: white;
-	font-size: 28px;
-	font-weight: 700;
-	letter-spacing: 1px;
-}
-
 #f i {
 	font-size: 8px;
 	color: #1a1a1a;
     padding: 3px;
 }
-
-#f .dark-block i {
-	font-size: 8px;
-	color: white;
-    padding: 3px;
-}
-
 
 #f p {
 	font-size: 20px;
@@ -223,7 +209,7 @@ a:after {
 }
 
 .download-icon{
-  width: 12%;
+  width: 10%;
   display: inline;
 }
 
