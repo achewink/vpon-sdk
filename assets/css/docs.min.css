@@ -211,6 +211,7 @@ body {
 .bs-header .container {
   position: relative
 }
+
 @media(min-width:768px) {
   .bs-header {
     padding-top: 60px;
@@ -1384,10 +1385,12 @@ ul.nav-sidebar li:hover {
   background-color: #FCFF94;
   }
 
-#vpon-logo{
-  height: 80%;
-}
-
 .jumbo-list-item{
   padding: 20px;
+}
+
+#strange-btn{
+  background-color: #00C39E;
+  cursor: default;
+  
 }
