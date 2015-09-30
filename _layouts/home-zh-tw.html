@@ -37,15 +37,15 @@
   <section id="about" name="about"></section>
   <div id="fff">
     <div class="container">
-      <ul>
-        <h3 class="centered" id="about-vpon-sdk">關於 VPON SDK</h3>
+      <div class="row">
+        <h3 class="centered" id="about-vpon-sdk">關於 Vpon SDK</h3>
         <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
         <!-- INTRO INFORMATIO-->
         <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <img src="{{site.baseurl}}/assets/img/publisher-img1.jpg" style="float: left" alt="" />
           </div>
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-1">
             <h3>
               <strong>優質品牌廣告資源</strong>
             </h3>
@@ -55,14 +55,14 @@
         </li>
 <hr>
         <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-1">
             <h3>
               <strong>公平合理的計費模式</strong>
             </h3><br>
             <p>同時採用CPM/CPC計價模式，透過應用程式的曝光量、點擊量、CTR、不重複使用人次等多項參數動態計算每日收益，更加公平合理，保證優質的應用程式能獲得好的廣告收益，又能兼顧品牌廣告主的投放訴求。
             </p>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-6">
             <img src="{{site.baseurl}}/assets/img/publisher-img2.png" style="float: right" alt="" />
           </div>
         </li>
@@ -71,7 +71,7 @@
           <div class="col-md-7">
             <img src="{{site.baseurl}}/assets/img/publisher-img3.png" style="float: right" alt="" />
           </div>
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-5">
             <h3>
               <strong>LBS 精準定向保證更高點擊率</strong>
             </h3>
@@ -82,14 +82,14 @@
         </li>
 <hr>
         <li class="jumbo-list-item row row-spaced" style="list-style-type: none">
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-1">
             <br><h3>
               <strong>富的資料統計功能</strong>
             </h3><br>
             <p>在滿足基本資料統計功能的基礎上，將提供更加豐富的深度資料探勘工具，幫助合作夥伴理解應用程式的使用者行為、習慣、分佈等資料。</p>
 
           </div>
-          <div class="col-md-7">
+          <div class="col-md-6">
             <img src="{{site.baseurl}}/assets/img/publisher-img4.png" style="float: right" alt="" />
           </div>
         </li>
@@ -100,50 +100,53 @@
           <a href="http://tw.pub.vpon.com/register.action" class="btn btn-lg btn-outline" role="button">Register Now</a>
         </p> </ul>
     </div>
+    </div>
+   </div><!-- /container -->
 
-    <!-- /container -->
-
-  </div>
-  <!-- /f -->
+  </div><!-- /f -->
   <!-- ========== CAROUSEL SECTION ========== -->
   <section id="examples" name="examples"></section>
-  <div id="headerwrap">
   <div id="ff">
     <div class="container">
-
       <div class="row centered">
         <h3>廣告範例</h3>
-        <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
-        <div class="col-lg-6 col-lg-offset-3">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- <button style="background-color: #00C39E" id="strange-btn"> -->
+        <!-- <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p> -->
+        <div class="col-lg-6 col-md-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active centered">
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
                 <img class="img-example" src="{{ site.baseurl }}/assets/img/c1.png" alt="">
               </div>
-              <div class="item centered">
+              <div class="item">
                 <img class="img-example" src="{{ site.baseurl }}/assets/img/c2.png" alt="">
               </div>
-              <div class="item centered">
+              <div class="item">
                 <img class="img-example" src="{{ site.baseurl }}/assets/img/c3.png" alt="">
               </div>
             </div>
             <br>
             <br>
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active slide-pt"></li>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            <ol class="carousel-indicators centered">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active slide-pt" style="color: black"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1" class="icon icon-circle"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2" class="icon icon-circle"></li>
             </ol>
-          </div>
+        </div>
         </div>
         <!-- col-lg-8 -->
       </div>
       <!-- row -->
     </div>
     <!-- container -->
-  </div>
-  </div>
+  </div><!-- ff -->
 
   <!-- Download Section -->
   <section id="download" name="download"></section>

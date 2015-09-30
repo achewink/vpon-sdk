@@ -202,21 +202,17 @@ a:after {
 			transition: all .3s ease;
 }
 
-
 .img-md{
   margin: 13px 5px 45px 0px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
 .download-icon{
   width: 10%;
   display: inline;
 }
-
 .slide-pt{
   color: #1a1a1a;
 }
-
 li{
   color:black;
 }
