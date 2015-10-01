@@ -1,0 +1,46 @@
+<header class="navbar navbar-static-top bs-docs-nav" role="banner">
+  <div class="container">
+    {% assign nav = site.left_nav[page.lang] %}
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{nav.path}}" class="navbar-brand">
+        <img src="{{site.baseurl}}/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" />
+      </a>
+      <!-- <a href="{{nav.path}}" class="navbar-brand">Vpon SDK (Alpha)</a> -->
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        {% for item in nav.items %}
+        <li{% if page.path==i tem.path %} class="active" {% endif %}>
+          <a href="{{ item.path }}">{{ item.title }}</a>
+          </li>
+          {% endfor %}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {% for item in site.right_nav_new %}
+        <li class="dropdown">
+          <a href="{{ item.url1 }}" class="{{ item.cls }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+        <!-- <li class="dropdown">
+          <a href="{{ item.url1 }}">{{ item.title }}</<a href=""></a>>
+        </li> -->
+        <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Language</a>
+              <ul class="dropdown-menu">
+                 <li><a class="en" href="">English</a></li>
+                 <li><a class="zh-tw" href="">繁體中文</a></li>
+                 <li><a class="zh-cn" href="">简体中文</a></li>
+                 <li><a class="jp" href="">日本語</a></li>
+              </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

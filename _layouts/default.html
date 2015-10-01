@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   {% include header.html %}
 <body>
   <a class="sr-only" href="#content">Skip to main content</a>
   <!-- Docs master nav -->
-  {% include nav-main.html %}
+  {% include nav-new.html %}
   <!-- Docs page layout -->
   <div class="bs-header" id="content">
     <div class="container">
@@ -30,7 +30,19 @@
     </div>
 
   </div>
-
+  <script>
+    (function() {
+      var cx = '011886738805883185466:nldjft5yhos';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+          '//cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+  <gcse:search></gcse:search>
   {% include footer.html %}
 </body>
 

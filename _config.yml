@@ -56,6 +56,28 @@ left_nav:
     path:           /vpon-sdk/jp
 
 
+# new right navigation
+right_nav_new:
+  - title: Android
+    cls: right-android
+    url1: /vpon-sdk/android/
+    url2: /vpon-sdk/zh-tw/android/
+    url3: /vpon-sdk/zh-cn/android/
+    url4: /vpon-sdk/jp/android/
+  - title: iOS
+    cls: right-ios
+    url1: /vpon-sdk/ios/
+    url2: /vpon-sdk/zh-tw/ios/
+    url3: /vpon-sdk/zh-cn/ios/
+    url4: /vpon-sdk/jp/ios/
+  - title: Web
+    cls: right-web
+    url1: /vpon-sdk/web/
+    url2: /vpon-sdk/zh-tw/web/
+    url3: /vpon-sdk/zh-cn/web/
+    url4: /vpon-sdk/jp/web/
+
+
 # right navigation
 right_nav:
   - title:          English
