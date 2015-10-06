@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 横幅广告 "
 lead:           "Android - Banner"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-cn/android/banner/
 lang:           "zh-cn"
@@ -159,7 +159,7 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
 # 结果
 ---
 现在只要执行这个应用程式，您应该就会在画面上方看到横幅广告：
-![gogo]({{site.baseurl}}/assets/img/A-sdk330-03.png)
+![gogo]({{site.imgurl}}/A-sdk330-03.png)
 
 # 其他诀窍
 > 请参阅[插页广告](../Interstitial)、[中介服务](../mediation)、[进阶设定](../advanced)中获取更多简介。

@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android SDK"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/integration-guide/
 lang:           "en"
@@ -55,10 +55,10 @@ Show Vpon banner on your Android App, you must complete three steps:
 ---
 1. Import Vpon SDK Jar file to your eclipse  project. (copy jar file to
 libs folder)  
-![]({{site.baseurl}}/assets/img//A-sdk330-01.png)
+![]({{site.imgurl}}//A-sdk330-01.png)
 
 2. Add com.vpadn.widget.VpadnActivity to your AndroidManifest.xml.
-![]({{site.baseurl}}/assets/img/A-sdk330-02.png)
+![]({{site.imgurl}}/A-sdk330-02.png)
 
 3. Add required permissons to your AndroidManifest.xml.  
 <br>
@@ -68,20 +68,20 @@ libs folder)
 ---
 1. Find `libs` in your Android project (Route：Project Name -&gt; app
 -&gt; libs)
-![]({{site.baseurl}}/assets/img/ProjectLibFolder.jpg)
+![]({{site.imgurl}}/ProjectLibFolder.jpg)
 
 
 2. Right-click on `libs` and follow with a left-click on `Reveal in Finder`
-![]({{site.baseurl}}/assets/img/DropJarFileToLibFolder.jpg)
+![]({{site.imgurl}}/DropJarFileToLibFolder.jpg)
 
 
 3. Move the JAR downloaded to `libs` on finder (You can also grab Vpon JAR into `libs` on IDE)  
-![]({{site.baseurl}}/assets/img/MainInterface.jpg)
+![]({{site.imgurl}}/MainInterface.jpg)
 
 
 
 4. Go back to your Android project and you will see that the Vpon JAR we just added shows up in [libs]. Make a right-click and choose `Add as library` to link reference. Please check the build.gradle at the same time to make sure there's a sentence " compile files('libs/vpon_SDK_version_name.jar') ". See the photo below.  
-![]({{site.baseurl}}/assets/img/ModifyBuildGradle.jpg)
+![]({{site.imgurl}}/ModifyBuildGradle.jpg)
 
 ## VpadnActivity
 ---

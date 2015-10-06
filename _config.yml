@@ -1,4 +1,4 @@
-  # Dependencies
+# Dependencies
 markdown:           redcarpet
 redcarpet:
   extensions:       ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
@@ -6,6 +6,11 @@ highlighter:        pygments
 
 #github settings
 baseurl:            /vpon-sdk
+assetsurl:          /vpon-sdk/assets
+jsurl:              /vpon-sdk/assets/js
+cssurl:             /vpon-sdk/assets/css
+imgurl:             /vpon-sdk/assets/img
+dnldurl:            /vpon-sdk/assets/download
 gem:
 
 # Permalinks
@@ -26,9 +31,9 @@ info:
   site_name:        Vpon-SDK
 
 meta:
-  description:      "Here presents the simplist way to show ad"
-  keywords:         "Default keywords for this site"
-  author:           "Finn"
+  description:      "Here presents the latest Vpon SDK documentation."
+  keywords:         ["Vpon", 'SDK']
+  author:           "Finn Yeh"
 
 # multiple language
 lang:          ["en", "zh-tw", "zh-cn", "jp"]

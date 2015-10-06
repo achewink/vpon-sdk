@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - Support"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/support/
 lang:           "en"

@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - AdMob"
 lead:           "Android メディエーション"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/mediation/admob/
 lang:            "jp"
@@ -295,18 +295,18 @@ AdViewの使用方法との類似点
 
   [こちら]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
   [0]: http://www.google.com.tw/ads/admob/
-  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP1.PNG
-  [2]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP2.png
-  [3]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP3.png
-  [4]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP4.png
-  [5]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP5.png
-  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP6.PNG
-  [7]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP7.png
-  [8]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP8.png
-  [9]:  {{site.baseurl}}/assets/img/AdMobLibJarFiles.jpg
-  [10]: {{site.baseurl}}/assets/img/GooglePlay_Properties.png
-  [11]: {{site.baseurl}}/assets/img/GooglePlay_Addlib.png
-  [12]: {{site.baseurl}}/assets/img/GooglePlay_Addlib2.png
+  [1]:  {{site.imgurl}}/AdMobScreenshotSiJP1.PNG
+  [2]:  {{site.imgurl}}/AdMobScreenshotSiJP2.png
+  [3]:  {{site.imgurl}}/AdMobScreenshotSiJP3.png
+  [4]:  {{site.imgurl}}/AdMobScreenshotSiJP4.png
+  [5]:  {{site.imgurl}}/AdMobScreenshotSiJP5.png
+  [6]:  {{site.imgurl}}/AdMobScreenshotSiJP6.PNG
+  [7]:  {{site.imgurl}}/AdMobScreenshotSiJP7.png
+  [8]:  {{site.imgurl}}/AdMobScreenshotSiJP8.png
+  [9]:  {{site.imgurl}}/AdMobLibJarFiles.jpg
+  [10]: {{site.imgurl}}/GooglePlay_Properties.png
+  [11]: {{site.imgurl}}/GooglePlay_Addlib.png
+  [12]: {{site.imgurl}}/GooglePlay_Addlib2.png
   [Download Sample Code]: {{site.baseurl}}/jp/android/download/#admob
   [Android SDK]: https://developer.android.com/sdk/index.html
   [instructions]: https://developer.android.com/google/play-services/setup.html

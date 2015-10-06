@@ -2,7 +2,7 @@
 layout:         "home1"
 title:          "Vpon SDK"
 lead:           "English version"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:      /
 lang:           "en"

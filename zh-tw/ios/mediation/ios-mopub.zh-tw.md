@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS 中介服務 - MoPub"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/mediation/mopub/
 lang: "zh-tw"
@@ -43,8 +43,8 @@ lang: "zh-tw"
 
 
 
-[mopub_001.png]: {{site.baseurl}}/assets/img/mopub_001.png
-[mopub_002.png]: {{site.baseurl}}/assets/img/mopub_002.png
-[mopub_003.png]: {{site.baseurl}}/assets/img/mopub_003.png
-[picture4]: {{site.baseurl}}/assets/img/Mopub_004-i.png
-[mopub_005.png]: {{site.baseurl}}/assets/img/mopub_005.png
+[mopub_001.png]: {{site.imgurl}}/mopub_001.png
+[mopub_002.png]: {{site.imgurl}}/mopub_002.png
+[mopub_003.png]: {{site.imgurl}}/mopub_003.png
+[picture4]: {{site.imgurl}}/Mopub_004-i.png
+[mopub_005.png]: {{site.imgurl}}/mopub_005.png

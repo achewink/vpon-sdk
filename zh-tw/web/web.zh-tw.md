@@ -1,8 +1,8 @@
 ---
 layout:         "default"
 title:          "中文web"
-lead:           "The sub title."
-description:    "The description for this page in the meta data in header."
+lead:           ""
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/web/
 lang:           "zh-tw"
@@ -255,11 +255,11 @@ Vpon Mobile Web SDK 可以讓各種規模的行動網站發佈商方便的顯示
 請將 debug 模式打開，重新連線網站，將 "Vpadn-" 開頭的訊息截取下來並且聯繫 [Vpon FAE]
 
 [Vpon FAE]: mailto:fae@vpon.com
-[UnitAdSetting_DFP1]: {{site.baseurl}}/assets/img/UnitAdSetting_DFP1.png
-[UnitAdSetting_DFP2]: {{site.baseurl}}/assets/img/UnitAdSetting_DFP2.png
-[新增指定目標_DFP]: {{site.baseurl}}/assets/img/新增指定目標.png
-[廣告素材類型_DFP]: {{site.baseurl}}/assets/img/廣告素材類型_DFP.png
-[素材設定_DFP]: {{site.baseurl}}/assets/img/素材設定_DFP.png
-[DFP_WEB_CALLBACK]: {{site.baseurl}}/assets/img/DFP_WEB_CALLBACK.png
-[Warning]: {{site.baseurl}}/assets/img/Warning.png
+[UnitAdSetting_DFP1]: {{site.imgurl}}/UnitAdSetting_DFP1.png
+[UnitAdSetting_DFP2]: {{site.imgurl}}/UnitAdSetting_DFP2.png
+[新增指定目標_DFP]: {{site.imgurl}}/新增指定目標.png
+[廣告素材類型_DFP]: {{site.imgurl}}/廣告素材類型_DFP.png
+[素材設定_DFP]: {{site.imgurl}}/素材設定_DFP.png
+[DFP_WEB_CALLBACK]: {{site.imgurl}}/DFP_WEB_CALLBACK.png
+[Warning]: {{site.imgurl}}/Warning.png
 [Here]: https://www.google.com/dfp/

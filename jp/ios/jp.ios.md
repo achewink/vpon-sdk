@@ -2,27 +2,27 @@
 layout:         "ios"
 title:          "iOS - スタートガイド"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /jp/ios/
 lang:            "jp"
 ---
-# A Quick Overview
-## Step1: SDK Download
+# クイック概要
+## Step1: ダウンロードSDK
 ---
 Please [download latest SDK][1] first. If you are not one of Vpon developer yet, please refer to [this guide][2] for registration. <br><br>
 
-## Step2: SDK Integration
+## Step2: SDKの統合
 ---
 Please follow the [Integration Guide][3] to finish Vpon SDK integration, including minimum requirement, authorities and other settings.<br><br>
 
-## Step3: Ad Integration
+## Step3: 広告の統合
 ---
-| [Banner Ad][4]  |[Interstitial Ad][5] |[Mediation][6]|
+| [バナー広告][4]  |[インタースティシャル広告][5] |[メディエーション][6]|
 | :------------:|:-----------:| :--------: |
 <br><br>
 
-## Tips
+## ヒント
 ---
 * All iOS-relevant information are listed left.
 * The right sidebar tells you where you are in current article.

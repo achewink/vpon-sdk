@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - インテグレーションガイド"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/integration-guide/
 lang:            "jp"
@@ -50,10 +50,10 @@ VPON広告の Android 版のSDKには、 少なくとも Android 2.1.X 以上の
 ## Eclipse
 ---
 1. Eclipse 内のアプリプロジェクト上でマウスの右ボタンをクリックし、[プロパティ]を選びます。
-![]({{site.baseurl}}/assets/img//A-sdk330-01.png)
+![]({{site.imgurl}}//A-sdk330-01.png)
 
 2. [Java Build Path] (Java 構築パス)と[Libraries] (ライブラリ)のタブを選択してから[Add External JARs...] (外部 JAR...を追 加)をクリックして、VPON 広告の JAR を追加します。
-![]({{site.baseurl}}/assets/img/A-sdk330-02.png)
+![]({{site.imgurl}}/A-sdk330-02.png)
 <br>
 
 
@@ -61,20 +61,20 @@ VPON広告の Android 版のSDKには、 少なくとも Android 2.1.X 以上の
 ---
 1. Find `libs` in your Android project (Route：Project Name -&gt; app
 -&gt; libs)
-![]({{site.baseurl}}/assets/img/ProjectLibFolder.jpg)
+![]({{site.imgurl}}/ProjectLibFolder.jpg)
 
 
 2. Right-click on `libs` and follow with a left-click on `Reveal in Finder`
-![]({{site.baseurl}}/assets/img/DropJarFileToLibFolder.jpg)
+![]({{site.imgurl}}/DropJarFileToLibFolder.jpg)
 
 
 3. Move the JAR downloaded to `libs` on finder (You can also grab Vpon JAR into `libs` on IDE)  
-![]({{site.baseurl}}/assets/img/MainInterface.jpg)
+![]({{site.imgurl}}/MainInterface.jpg)
 
 
 
 4. Go back to your Android project and you will see that the Vpon JAR we just added shows up in [libs]. Make a right-click and choose `Add as library` to link reference. Please check the build.gradle at the same time to make sure there's a sentence " compile files('libs/vpon_SDK_version_name.jar') ". See the photo below.  
-![]({{site.baseurl}}/assets/img/ModifyBuildGradle.jpg)
+![]({{site.imgurl}}/ModifyBuildGradle.jpg)
 
 ## VpadnActivity
 ---
@@ -134,6 +134,6 @@ VPON広告の Android 版のSDKには、 少なくとも Android 2.1.X 以上の
 ---
 [Go to download page]({{site.baseurl}}/android/download)
 
-# Other Tips
+# ヒント
 ---
 Please refer to [Banner Ad](../banner)、[Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.

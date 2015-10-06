@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - Advanced Setting"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/advanced/
 lang:            "en"
@@ -125,8 +125,8 @@ Example:
 ![CrazyadSetting]
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
+[海尼根廣告]:      {{site.imgurl}}/Crazyad.png
+[CrazyadSetting]: {{site.imgurl}}/CrazyadSetting.png
 
 
 # Corona User

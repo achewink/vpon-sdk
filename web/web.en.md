@@ -2,7 +2,7 @@
 layout:         "default"
 title:          "Web SDK"
 lead:           "fantastic HTML5 ads you should not miss"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       web/
 lang:           "en"
@@ -264,8 +264,8 @@ Open the debug mode and send all of  "Vpadn-" informations to [Vpon FAE]
 
 
 [Vpon FAE]: mailto:fae@vpon.com
-[MobileDPF_Eng]: {{site.baseurl}}/assets/img/MobileDPF_Eng.png
-[AppType.png]: {{site.baseurl}}/assets/img/AppType.png
-[Moblie_DFP_creative]: {{site.baseurl}}/assets/img/Moblie_DFP_creative.png
-[MobileDFP_creativeSetting]: {{site.baseurl}}/assets/img/MobileDFP_creativeSetting.png
-[DFP_WEB_CALLBACK]: {{site.baseurl}}/assets/img/DFP_WEB_CALLBACK.png
+[MobileDPF_Eng]: {{site.imgurl}}/MobileDPF_Eng.png
+[AppType.png]: {{site.imgurl}}/AppType.png
+[Moblie_DFP_creative]: {{site.imgurl}}/Moblie_DFP_creative.png
+[MobileDFP_creativeSetting]: {{site.imgurl}}/MobileDFP_creativeSetting.png
+[DFP_WEB_CALLBACK]: {{site.imgurl}}/DFP_WEB_CALLBACK.png

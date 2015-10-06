@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS - 橫幅廣告"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/banner/
 lang: "zh-tw"
@@ -184,6 +184,6 @@ iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建�
 
 
 [串接說明]: ../integration-guide/
-[IOS-Banner_result]: {{site.baseurl}}/assets/img/IOS-Banner_result.png
+[IOS-Banner_result]: {{site.imgurl}}/IOS-Banner_result.png
 [Go to download page]: ../download/
 [這篇]: {{site.baseurl}}/zh-tw/ios/latest-news/ios9ats/

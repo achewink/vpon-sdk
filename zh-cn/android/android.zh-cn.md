@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 开始使用"
 lead:           "快速上手 - 串接SDK与显示广告"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       zh-cn/android/
 lang:           "zh-cn"

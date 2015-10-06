@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - AdMob"
 lead:           "android mediation"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/mediation/admob/
 lang:           "en"
@@ -297,18 +297,18 @@ Once again, the easiest place to do this is somewhere in your app's Activity.
 
   [here]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
   []: http://www.google.com.tw/ads/admob/
-  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid1.jpg
-  [2]:  {{site.baseurl}}/assets/img/Admob2_eng.png
-  [3]:  {{site.baseurl}}/assets/img/Admob3_eng.png
-  [4]:  {{site.baseurl}}/assets/img/Admob4-Android_eng.png
-  [5]:  {{site.baseurl}}/assets/img/Admob5-Android_eng.png
-  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotEnglishAndroid6.jpg
-  [7]:  {{site.baseurl}}/assets/img/Admob7-Android_eng.png
-  [8]:  {{site.baseurl}}/assets/img/AdMobDefaultAdNetWork.jpg
-  [9]:  {{site.baseurl}}/assets/img/AdMobLibJarFiles.jpg
-  [10]: {{site.baseurl}}/assets/img/GooglePlay_Properties.png
-  [11]: {{site.baseurl}}/assets/img/GooglePlay_Addlib.png
-  [12]: {{site.baseurl}}/assets/img/GooglePlay_Addlib2.png
+  [1]:  {{site.imgurl}}/AdMobScreenshotEnglishAndroid1.jpg
+  [2]:  {{site.imgurl}}/Admob2_eng.png
+  [3]:  {{site.imgurl}}/Admob3_eng.png
+  [4]:  {{site.imgurl}}/Admob4-Android_eng.png
+  [5]:  {{site.imgurl}}/Admob5-Android_eng.png
+  [6]:  {{site.imgurl}}/AdMobScreenshotEnglishAndroid6.jpg
+  [7]:  {{site.imgurl}}/Admob7-Android_eng.png
+  [8]:  {{site.imgurl}}/AdMobDefaultAdNetWork.jpg
+  [9]:  {{site.imgurl}}/AdMobLibJarFiles.jpg
+  [10]: {{site.imgurl}}/GooglePlay_Properties.png
+  [11]: {{site.imgurl}}/GooglePlay_Addlib.png
+  [12]: {{site.imgurl}}/GooglePlay_Addlib2.png
   [Download Sample Code]: {{site.baseurl}}/android/download/#admob
   [Android SDK]: https://developer.android.com/sdk/index.html
   [Android instructions]: https://developer.android.com/google/play-services/setup.html

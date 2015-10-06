@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "註冊開發商"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       zh-tw/ios/registration/
 lang:           "zh-tw"
@@ -72,8 +72,8 @@ URL 與應用程式說明與選擇是否可播放 Crazy AD
 
   [註冊服務區為台灣]: http://tw.pub.vpon.com/register.action
   [註冊服務區為大陸]: http://cn.pub.vpon.com/register.action
-  [0]: {{site.baseurl}}/assets/img/SDK400建立應用程式.jpeg
-  [1]: {{site.baseurl}}/assets/img/SDK400新增版位.jpeg
-  [2]: {{site.baseurl}}/assets/img/trandationchinesefrontserver3.png
-  [3]: {{site.baseurl}}/assets/img/trandationchinesefrontserver4.png
+  [0]: {{site.imgurl}}/SDK400建立應用程式.jpeg
+  [1]: {{site.imgurl}}/SDK400新增版位.jpeg
+  [2]: {{site.imgurl}}/trandationchinesefrontserver3.png
+  [3]: {{site.imgurl}}/trandationchinesefrontserver4.png
   [5]: mailto:bd@vpon.com

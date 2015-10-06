@@ -16,8 +16,8 @@ Fundamental     | AdMob        |    DFP       |   MoPub     | Mogo
 
 [1]: http://m.vpon.com/sdk/VponSDK-iOS/Lib64bit/64bit_vpadn_4216_libAdOn_ebf2c28.a
 [2]: http://m.vpadn.com/sdk/VponAdapter_iOS_eff8d70_v1.0.1.a
-[3]: {{site.baseurl}}/assets/download/sample-code/BannerInterstitialSample_42x.zip
-[4]: {{site.baseurl}}/assets/download/sample-code/iosAdmobSampleCode.zip
+[3]: {{site.dnldurl}}download/sample-code/BannerInterstitialSample_42x.zip
+[4]: {{site.dnldurl}}download/sample-code/iosAdmobSampleCode.zip
 [5]: http://m.vpon.com/sdk/iosDFPsample.zip
 [6]: http://m.vpon.com/sdk/Mopub_iOS_Vpon_Adapter1.0.zip
 [7]: http://m.vpon.com/sdk/MOGO/MangoDemo.zip

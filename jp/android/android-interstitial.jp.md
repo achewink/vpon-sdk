@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - インタースティシャル広告"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/interstitial/
 lang:            "jp"
@@ -10,10 +10,10 @@ lang:            "jp"
 # インタースティシャル広告の概要
 ---
 インタースティシャル広告は、インタラクティブなマルチメディア HTML5 もしくは「ネットワークアプリケーション」で、アプリの画面遷移時に表示されます (例えばアプリ起動・動画のプレロール・ゲームのレベル読み込時など)。 「ネットワークアプリケーション」とは、ナビゲーションバーの代わりにクローズボタンのみが配置されたアプリ内の画面です。この広告タイプはよりリッチで魅力的であるため、通常より高価となり、インプレッション機会は限られたものとなります。 ￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼
-![]({{site.baseurl}}/assets/img/Interstitial.png)
+![]({{site.imgurl}}/Interstitial.png)
 
-> **Note**:
-> We suggest that the interstitial ads running in portrait mod for the best visual effects.
+> **ご注意:**
+> インタースティシャル広告は、ベストな視覚効果を提供するためにポートレートモードで掲載されることを推奨します。
 
 
 # Vponインタースティシャル広告

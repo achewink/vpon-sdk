@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS 中介服務 - DFP"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/mediation/dfp/
 lang: "zh-tw"
@@ -137,9 +137,9 @@ DFP 使用者必須指定「DFP 廣告單元編號」，而不是「AdMob 發佈
 [串接說明]: ../../integration-guide
 [1]: {{site.baseurl}}/zh-tw/ios/download/#dfp
 [Here]: https://www.google.com/dfp/
-[DFP 廣告空間]: {{site.baseurl}}/assets/img/DFP_廣告空間.png
-[新增指定目標]: {{site.baseurl}}/assets/img/新增指定目標.png
-[廣告素材類型]: {{site.baseurl}}/assets/img/廣告素材類型.png
-[Warning]: {{site.baseurl}}/assets/img/Warning.png
-[DFP Partner Traditional Chinese.png]: {{site.baseurl}}/assets/img/DFP_Partner_Traditional_Chinese.png
-[插頁尺寸]: {{site.baseurl}}/assets/img/插頁尺寸.png
+[DFP 廣告空間]: {{site.imgurl}}/DFP_廣告空間.png
+[新增指定目標]: {{site.imgurl}}/新增指定目標.png
+[廣告素材類型]: {{site.imgurl}}/廣告素材類型.png
+[Warning]: {{site.imgurl}}/Warning.png
+[DFP Partner Traditional Chinese.png]: {{site.imgurl}}/DFP_Partner_Traditional_Chinese.png
+[插頁尺寸]: {{site.imgurl}}/插頁尺寸.png

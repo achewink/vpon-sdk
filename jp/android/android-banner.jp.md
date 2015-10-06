@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - バナー広告"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/banner/
 lang:            "jp"
@@ -112,7 +112,7 @@ public class MainActivity extends Activity {
 
 # バナー広告のサイズ
 ---
-Vpon Banner supports three tablet-only banner sizes in addition to the 320x50 shown on phones:
+スマートフォン用の 320x50 以外に、タブレット向けの広告サイズもサポート しています。
 
       サイズ (幅 x 高さ)           | 説明    |  VponAdSize 定数値
   :------------------------: | :-------------:| :-----------------------------:
@@ -144,9 +144,9 @@ Vpon Banner supports three tablet-only banner sizes in addition to the 320x50 sh
 # 結果
 ---
 実行すると、ディスプレイ上部にバナーが表示されます。
-![gogo]({{site.baseurl}}/assets/img/A-sdk330-03.png)
+![gogo]({{site.imgurl}}/A-sdk330-03.png)
 
-# Other tips
+# ヒント
 ---
 > Please refer to [Interstitial Ads](../Interstitial)、[Mediation](../mediation)、[Advanced Setting](../advanced) for more information.
 

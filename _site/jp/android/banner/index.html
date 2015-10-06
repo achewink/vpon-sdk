@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="The description for this page in the meta data in header.">
+<meta name="description" content="">
 
 
 <meta name="keywords" content="Keywords for this page, in the meta data">
 
-<meta name="author" content="Finn">
+<meta name="author" content="Finn Yeh">
 <title>
   
   Android - バナー広告 &middot; Vpon-SDK (Alpha)
@@ -32,9 +32,6 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -67,9 +64,8 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/vpon-sdk/jp" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" />
+        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
-      <!-- <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a> -->
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -79,28 +75,42 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li class="dropdown">
-          <a href="/vpon-sdk/android/" class="right-android">Android</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/ios/" class="right-ios">iOS</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/web/" class="right-web">Web</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/web/" class="right-web">Web</a>
         </li>
         
-        <!-- <li class="dropdown">
-          <a href=""></<a href=""></a>>
-        </li> -->
         <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Language</a>
-              <ul class="dropdown-menu">
-                 <li><a class="en" href="">English</a></li>
-                 <li><a class="zh-tw" href="">繁體中文</a></li>
-                 <li><a class="zh-cn" href="">简体中文</a></li>
-                 <li><a class="jp" href="">日本語</a></li>
-              </ul>
+          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
+          <ul class="dropdown-menu">
+          <!-- language detection -->
+            
+              
+              
+              
+              
+            
+
+            <li><a class="en" href="/vpon-sdk/android/banner/">English</a></li>
+            <li><a class="zh-tw" href="/vpon-sdk/zh-tw/android/banner/">繁體中文</a></li>
+            <li><a class="zh-cn" href="/vpon-sdk/zh-cn/android/banner/">简体中文</a></li>
+            <li><a class="jp" href="/vpon-sdk/jp/android/banner/">日本語</a></li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -119,109 +129,47 @@
       <div class="col-sm-3 col-md-2" role="complementary" >
       <div class="bs-sidebar-left bs-sidenav">
         
-  <ul class="nav nav-sidebar">
-    <span id="sidebar-title1"></span>
-    <li><a id="getting-started"></a></li>
-    <li><a id="integration-guide"></a></li>
-    <span id="sidebar-title2"></span>
-    <li><a id="banner-id"></a></li>
-    <li><a id="interstitial-id"></a></li>
-    <li><a id="mediation"></a></li>
-    <li><a id="advanced"></a></li>
-    <span id="sidebar-title3"></span>
-    <li><a id="download"></a></li>
-    <li><a id="latest-news"></a></li>
-    <li><a id="support"></a></li>
-  </ul>
 
-  <script type="text/javascript">
-    // var usrlang = navigator.language || navigator.userLanguage;
-    var lang = $('html').attr("lang");
-    var userLang = lang.toLowerCase();
-    var baseUrl = '/vpon-sdk';
-    if (userLang=="en"){
-      var userLang = '';
-    } else {
-      var baseUrl = '/vpon-sdk/';
-    }
-    var urlGettingStarted = baseUrl + userLang + '/android/';
-    var urlIntegrationGuide = baseUrl + userLang + '/android/integration-guide';
-    var urlBanner = baseUrl + userLang + '/android/banner/';
-    var urlInterstitial = baseUrl + userLang + '/android/interstitial/';
-    var urlMediation = baseUrl + userLang + '/android/mediation/';
-    var urlAdvanced = baseUrl + userLang + '/android/advanced/';
-    var urlLatestNews = baseUrl + userLang + '/android/latest-news/';
-    var urlDownload = baseUrl + userLang + '/android/download/';
-    var urlSupport = baseUrl + userLang + '/android/support/';
-    // var  = "baseUrl + userLang + '/android/'";
 
-  $(document).ready(function(){
-    //show the text in right lang
-    if (userLang == "zh-tw") {
-      $("#sidebar-title1").text("Android 串接");
-      $('#getting-started').text("開始使用");
-      $('#integration-guide').text("串接說明");
-      $('#sidebar-title2').text('廣告型態選擇');
-      $('#banner-id').text("橫幅廣告");
-      $('#interstitial-id').text('插頁廣告');
-      $('#mediation').text("中介服務");
-      $('#advanced').text("進階設定");
-      $('#sidebar-title3').text('下載/其他輔助');
-      $('#latest-news').text("最新消息");
-      $('#download').text("下載 SDK");
-      $('#support').text("其他協助");
-    } else if (userLang == "zh-cn") {
-      $("#sidebar-title1").text("Android 串接");
-      $('#getting-started').text("开始使用");
-      $('#integration-guide').text("串接说明");
-      $('#sidebar-title2').text('广告型态选择');
-      $('#banner-id').text("横幅广告");
-      $('#interstitial-id').text('插页广告');
-      $('#mediation').text("中介服务");
-      $('#advanced').text("进阶设定");
-      $('#sidebar-title3').text('下载/其他辅助');
-      $('#latest-news').text("最新消息");
-      $('#download').text("下载 SDK");
-      $('#support').text("其他协助");
-    } else if (userLang == "jp"){
-      $("#sidebar-title1").text("Android 串接");
-      $('#getting-started').text("スタートガイド");
-      $('#integration-guide').text("インテグレーションガイド");
-      $('#sidebar-title2').text('広告パターンとを選択');
-      $('#banner-id').text("バナー広告");
-      $('#interstitial-id').text('インタースティシャル広告');
-      $('#mediation').text("メディエーション");
-      $('#advanced').text("詳細設定");
-      $('#sidebar-title3').text('ダウンロード/その他');
-      $('#latest-news').text("最新ニュース");
-      $('#download').text("ダウンロード");
-      $('#support').text("サポート");
-    } else {
-      $("#sidebar-title1").text("Android Integration");
-     $('#getting-started').text("Getting Started")
-     $('#integration-guide').text("Integration Guide");
-     $('#sidebar-title2').text('Ad Type Choices');
-     $('#banner-id').text("Banner Ad");
-     $('#interstitial-id').text('Interstitial Ad');
-     $('#mediation').text("Mediation");
-     $('#advanced').text("Advanced Setting");
-     $('#sidebar-title3').text('Download/Other');
-     $('#latest-news').text("Latest News");
-     $('#download').text("Download");
-     $('#support').text("Support"); }
-   //add right linking url to right title
-    $('#getting-started').attr({href:urlGettingStarted});
-    $('#integration-guide').attr({href:urlIntegrationGuide});
-    $('#banner-id').attr({href:urlBanner});
-    $('#interstitial-id').attr({href:urlInterstitial});
-    $('#mediation').attr({href:urlMediation});
-    $('#advanced').attr({href:urlAdvanced});
-    $('#latest-news').attr({href:urlLatestNews});
-    $('#download').attr({href:urlDownload});
-    $('#support').attr({href:urlSupport});
-    // $('#').attr({href:url});
-  });
-  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+<ul class= "nav nav-sidebar nav-left">
+  <span id= "sidebar-title1">Android 串接</span>
+  <li><a id= "getting-started" href="/vpon-sdk/jp/android">スタートガイド</a></li>
+  <li><a id= "integration-guide" href="/vpon-sdk/jp/android/integration-guide">インテグレーションガ</a></li>
+  <span id= "sidebar-title2">広告パターンとを選択</span>
+  <li><a id= "banner-id" href="/vpon-sdk/jp/android/banner">バナー広告</a></li>
+  <li><a id= "interstitial-id" href="/vpon-sdk/jp/android/interstitial">インタースティシャル広告</a></li>
+  <li><a id= "mediation" href="/vpon-sdk/jp/android/mediation">メディエーション</a></li>
+  <li><a id= "advanced" href="/vpon-sdk/jp/android/advanced">詳細設定</a></li>
+  <span id= "sidebar-title3">広告パターンとを選択</span>
+  <li><a id= "download" href="/vpon-sdk/jp/android/download">最新ニュース</a></li>
+  <li><a id= "latest-news" href="/vpon-sdk/jp/android/latest-news">ダウンロード</a></li>
+  <li><a id= "support" href="/vpon-sdk/jp/android/support">サポート</a></li>
+</ul>
 
       </div>
       </div>
@@ -335,7 +283,7 @@
 
 <hr>
 
-<p>Vpon Banner supports three tablet-only banner sizes in addition to the 320x50 shown on phones:</p>
+<p>スマートフォン用の 320x50 以外に、タブレット向けの広告サイズもサポート しています。</p>
 
 <table><thead>
 <tr>
@@ -392,7 +340,7 @@
 <p>実行すると、ディスプレイ上部にバナーが表示されます。
 <img src="/vpon-sdk/assets/img/A-sdk330-03.png" alt="gogo"></p>
 
-<h1 id="other-tips">Other tips</h1>
+<h1 id="ヒント">ヒント</h1>
 
 <hr>
 
@@ -422,12 +370,9 @@
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<!-- <script src="/dist/js/bootstrap.min.js"></script> -->
-<script src="/vpon-sdk/dist/js/bootstrap.js"></script>
+<!-- JavaScript ================================================== -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
 <script src="/vpon-sdk/assets/js/docs.min.js"></script>
 
 </body>

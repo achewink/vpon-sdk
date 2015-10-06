@@ -2,7 +2,7 @@
 layout:         "android-download"
 title:          "Android - 下載 SDK"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/download/
 lang:           "zh-tw"

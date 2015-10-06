@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - バナー広告"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/banner/
 lang:            "jp"
@@ -170,11 +170,11 @@ VPONアカウントで更新頻度を指定し、以下のサンプルコード�
 ---
 Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to [this link] for some modification.
 
-# Other Tips
+# ヒント
 ---
 Please refer to [Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.
 
 
-[IOS-Banner_result]: {{site.baseurl}}/assets/img/IOS-Banner_result.png
+[IOS-Banner_result]: {{site.imgurl}}/IOS-Banner_result.png
 [Go to download page]: ../download/
 [this link]: {{site.baseurl}}/jp/ios/latest-news/ios9ats/

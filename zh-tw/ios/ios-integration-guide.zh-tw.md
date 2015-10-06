@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS - 串接說明"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/integration-guide/
 lang: "zh-tw"
@@ -76,7 +76,7 @@ iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建�
 
 
 
-[IOS-add-lib&header_vpadn]: {{site.baseurl}}/assets/img/IOS-add-lib&header_vpadn.png
-[IOS-add-file_vpadn.png]: {{site.baseurl}}/assets/img/IOS-add-file_vpadn.png
-[IOS-add-frameworks_vpadn]: {{site.baseurl}}/assets/img/IOS-add-frameworks_vpadn.png
+[IOS-add-lib&header_vpadn]: {{site.imgurl}}/IOS-add-lib&header_vpadn.png
+[IOS-add-file_vpadn.png]: {{site.imgurl}}/IOS-add-file_vpadn.png
+[IOS-add-frameworks_vpadn]: {{site.imgurl}}/IOS-add-frameworks_vpadn.png
 [這篇]: {{site.baseurl}}/zh-tw/ios/latest-news/ios9ats/

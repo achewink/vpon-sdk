@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - AdMob"
 lead:           "iOS メディエーション"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/mediation/admob/
 lang:            "jp"
@@ -60,12 +60,12 @@ Google AdMob mediation は[こちら]をご覧ください。
 
 [こちら]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
 [0]: http://www.google.com.tw/ads/admob/
-[1]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP1.PNG
-[2]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP2.png
-[3]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP3.png
-[4]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP4.png
-[5]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP5.png
-[6]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP6.PNG
-[7]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP7.png
-[8]:  {{site.baseurl}}/assets/img/AdMobScreenshotSiJP8.png
+[1]:  {{site.imgurl}}/AdMobScreenshotSiJP1.PNG
+[2]:  {{site.imgurl}}/AdMobScreenshotSiJP2.png
+[3]:  {{site.imgurl}}/AdMobScreenshotSiJP3.png
+[4]:  {{site.imgurl}}/AdMobScreenshotSiJP4.png
+[5]:  {{site.imgurl}}/AdMobScreenshotSiJP5.png
+[6]:  {{site.imgurl}}/AdMobScreenshotSiJP6.PNG
+[7]:  {{site.imgurl}}/AdMobScreenshotSiJP7.png
+[8]:  {{site.imgurl}}/AdMobScreenshotSiJP8.png
 [Download Sample Code]: {{site.baseurl}}/ios/download/#admob

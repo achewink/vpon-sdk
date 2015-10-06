@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS - 串接說明"
 lead: "快速上手 - 串接SDK與顯示廣告"
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/
 lang: "zh-tw"

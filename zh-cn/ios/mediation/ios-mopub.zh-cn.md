@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS 中介服务 - MoPub"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-cn/ios/mediation/mopub/
 lang: "zh-cn"
@@ -24,7 +24,7 @@ lang: "zh-cn"
 ## Step4: 填入辨识用的标题名称
 方便您管理增加的Ad network
 
-[mopub_003.png]
+![mopub_003.png]
 
 
 ## Step5: 填入您的package name/class name
@@ -43,8 +43,8 @@ lang: "zh-cn"
 
 
 
-[mopub_001.png]: {{site.baseurl}}/assets/img/mopub_001.png
-[mopub_002.png]: {{site.baseurl}}/assets/img/mopub_002.png
-[mopub_003.png]: {{site.baseurl}}/assets/img/mopub_003.png
-[picture4]: {{site.baseurl}}/assets/img/Mopub_004-i.png
-[mopub_005.png]: {{site.baseurl}}/assets/img/mopub_005.png
+[mopub_001.png]: {{site.imgurl}}/mopub_001.png
+[mopub_002.png]: {{site.imgurl}}/mopub_002.png
+[mopub_003.png]: {{site.imgurl}}/mopub_003.png
+[picture4]: {{site.imgurl}}/Mopub_004-i.png
+[mopub_005.png]: {{site.imgurl}}/mopub_005.png

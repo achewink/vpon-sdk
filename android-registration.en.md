@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Vpon - Registration"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/registration/
 lang:           "en"
@@ -56,7 +56,7 @@ Enter "Position List" page: You will see your application status and your Vpon K
 
 Enter “Application List” page: You will see the application-related setting, your applications and approved state of application.<br><br>
 
-[VponSDK_400_NewApp]: {{site.baseurl}}/assets/img/VponSDK_400_NewApp.png
-[SDK_400_New_Banner_Position]: {{site.baseurl}}/assets/img/SDK_400_New_Banner_Position.png
-[SDK400_Banner_Position_List]: {{site.baseurl}}/assets/img/SDK400_Banner_Position_List.png
-[SDK400_App_List]: {{site.baseurl}}/assets/img/SDK400_App_List.png
+[VponSDK_400_NewApp]: {{site.imgurl}}/VponSDK_400_NewApp.png
+[SDK_400_New_Banner_Position]: {{site.imgurl}}/SDK_400_New_Banner_Position.png
+[SDK400_Banner_Position_List]: {{site.imgurl}}/SDK400_Banner_Position_List.png
+[SDK400_App_List]: {{site.imgurl}}/SDK400_App_List.png

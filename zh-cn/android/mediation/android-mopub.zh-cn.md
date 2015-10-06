@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android 中介服务 - MoPub"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-cn/android/mediation/mopub/
 lang:           "zh-cn"
@@ -41,8 +41,8 @@ Mopub后台设定请参考下列步骤:
 
 ![][4]
 
-  []: {{site.baseurl}}/assets/img/mopub_001.png "mopub_001.png"
-  [1]: {{site.baseurl}}/assets/img/mopub_002.png "mopub_002.png"
-  [2]: {{site.baseurl}}/assets/img/mopub_003.png "mopub_003.png"
-  [3]: {{site.baseurl}}/assets/img/mopub_004-a.png "mopub_004-a.png"
-  [4]: {{site.baseurl}}/assets/img/mopub_005.png "mopub_005.png"
+  []: {{site.imgurl}}/mopub_001.png "mopub_001.png"
+  [1]: {{site.imgurl}}/mopub_002.png "mopub_002.png"
+  [2]: {{site.imgurl}}/mopub_003.png "mopub_003.png"
+  [3]: {{site.imgurl}}/mopub_004-a.png "mopub_004-a.png"
+  [4]: {{site.imgurl}}/mopub_005.png "mopub_005.png"

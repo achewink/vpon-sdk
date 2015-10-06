@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - DFP"
 lead:           "Android メディエーション"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/mediation/dfp/
 lang:            "jp"
@@ -129,9 +129,9 @@ To create a line item:
 [integration guide]: ../../integration-guide/
 [1]: {{site.baseurl}}/jp/android/download/#dfp
 [Here]: https://www.google.com/dfp/
-[DFP 廣告空間]: {{site.baseurl}}/assets/img/ADUNIT_DFP.png
-[DFP_Partner_Japanese]: {{site.baseurl}}/assets/img/DFP_Partner_Japanese.png
-[新增指定目標]: {{site.baseurl}}/assets/img/AddTargeting_jp.png
-[廣告素材類型]: {{site.baseurl}}/assets/img/SDKMediation_jp.png
-[Warning]: {{site.baseurl}}/assets/img/DFP_EN2.png
-[插頁尺寸]: {{site.baseurl}}/assets/img/dfp_interstitial.png
+[DFP 廣告空間]: {{site.imgurl}}/ADUNIT_DFP.png
+[DFP_Partner_Japanese]: {{site.imgurl}}/DFP_Partner_Japanese.png
+[新增指定目標]: {{site.imgurl}}/AddTargeting_jp.png
+[廣告素材類型]: {{site.imgurl}}/SDKMediation_jp.png
+[Warning]: {{site.imgurl}}/DFP_EN2.png
+[插頁尺寸]: {{site.imgurl}}/dfp_interstitial.png

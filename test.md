@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Vpon SDK"
 lead:           "English version"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:      /123/
 lang:           "zh-tw"
@@ -21,13 +21,13 @@ lang:           "zh-tw"
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img class="img-example" src="{{ site.baseurl }}/assets/img/c1.png" alt="">
+              <img class="img-example" src="{{site.imgurl}}/c1.png" alt="">
             </div>
             <div class="item">
-              <img class="img-example centered" src="{{ site.baseurl }}/assets/img/c2.png" alt="">
+              <img class="img-example centered" src="{{site.imgurl}}/c2.png" alt="">
             </div>
             <div class="item">
-              <img class="img-example centered" src="{{ site.baseurl }}/assets/img/c3.png" alt="">
+              <img class="img-example centered" src="{{site.imgurl}}/c3.png" alt="">
             </div>
           </div>
           <br>

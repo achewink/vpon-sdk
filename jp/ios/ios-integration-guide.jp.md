@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - インテグレーションガイド"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/integration-guide/
 lang:            "jp"
@@ -89,13 +89,13 @@ SDK 4 lib ファイルは、Sample codeフォルダ内にあります。
 ---
 Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to [this link] for some modification.
 
-# Other Tips
+# ヒント
 ---
 Please refer to [Banner Ad](../banner)、[Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.
 
 
 
-[IOS-add-lib&header_vpadn]: {{site.baseurl}}/assets/img/IOS-add-lib&header_vpadn.png
-[IOS-add-file_vpadn.png]: {{site.baseurl}}/assets/img/IOS-add-file_vpadn.png
-[IOS-add-frameworks_vpadn]: {{site.baseurl}}/assets/img/IOS-add-frameworks_vpadn.png
+[IOS-add-lib&header_vpadn]: {{site.imgurl}}/IOS-add-lib&header_vpadn.png
+[IOS-add-file_vpadn.png]: {{site.imgurl}}/IOS-add-file_vpadn.png
+[IOS-add-frameworks_vpadn]: {{site.imgurl}}/IOS-add-frameworks_vpadn.png
 [this link]: {{site.baseurl}}/ios/latest-news/ios9ats/

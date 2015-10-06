@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Update to SDK 4.2.x "
 lead:           "sub-title"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:      latest-news/update-to-SDK4_2_x/
 lang:            "en"

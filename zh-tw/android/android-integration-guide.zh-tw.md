@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 串接說明"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       zh-tw/android/integration-guide/
 lang:           "zh-tw"
@@ -48,20 +48,20 @@ Vpon 廣告 Android 版的 SDK 需至少搭配 Android 2.1.X 或更新版本使�
 
 ## Android Studio
 1. 在 Android 中的應用程式專案找到 `libs` (途徑：`project_name` -> `app` -> `libs`)
-![]({{site.baseurl}}/assets/img/ProjectLibFolder.jpg)
+![]({{site.imgurl}}/ProjectLibFolder.jpg)
 
 
 2. 滑鼠右鍵點選 `libs` 後，左鍵點選 [Reveal in Finder]
-![]({{site.baseurl}}/assets/img/DropJarFileToLibFolder.jpg)
+![]({{site.imgurl}}/DropJarFileToLibFolder.jpg)
 
 
 3. 將下載下來的 JAR 檔複製到 `libs` 資料夾 (也可以直接拖移 Vpon JAR 至專案的 `libs`)
-![]({{site.baseurl}}/assets/img/MainInterface.jpg)
+![]({{site.imgurl}}/MainInterface.jpg)
 
 
 
 4. 回到 Android 專案，`libs` 會多出一個 Vpon 的 JAR 檔案，對它按下右鍵選則 [Add as library]。也請到 app 下的 build.gradle 確認，如範例顯示，將會有一行 compile files('libs/vpon_SDK_version_name.jar') 表示 JAR 被讀到了
-![]({{site.baseurl}}/assets/img/ModifyBuildGradle.jpg)
+![]({{site.imgurl}}/ModifyBuildGradle.jpg)
 
 
 # VpadnActivity

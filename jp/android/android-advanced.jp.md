@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 詳細設定"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/advanced/
 lang:            "jp"
@@ -127,7 +127,7 @@ html コンテンツは、vpon wiki の web SDK 操作マニュアル: [Web SDK 
 
 
 
-[海尼根廣告]: {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting_JP]: {{site.baseurl}}/assets/img/CrazyadSetting_JP.png
+[海尼根廣告]: {{site.imgurl}}/Crazyad.png
+[CrazyadSetting_JP]: {{site.imgurl}}/CrazyadSetting_JP.png
 [Web SDK をご覧ください]: {{site.baseurl}}/jp/web/
 [をご覧ください]: http://docs.coronalabs.com/api/library/native/newWebView.html

@@ -2,7 +2,7 @@
 layout: android
 title: "Android - 插頁廣告"
 lead: "Interstitia ad"
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/android/interstitial/
 lang: zh-tw
@@ -12,7 +12,7 @@ lang: zh-tw
 ---
 插頁式廣告是互動式多媒體 HTML5 或「網路應用程式」，在應用程式的正常轉換點顯示 (例如啟動、影片播放前或遊戲關卡載入時)。網路應用程式使用上就像在應用程式內瀏覽一樣，只有簡單的關閉按鈕，而沒有任何導覽列，因為導覽配置就包含在內容本身。這類廣告由於內容更豐富、更吸引人，因此製作起來更昂貴，而曝光機會卻有限。
 
-![]({{site.baseurl}}/assets/img/Interstitial.png)
+![]({{site.imgurl}}/Interstitial.png)
 
 # Vpon 插頁廣告
 ---

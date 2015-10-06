@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android 中介服务 - DFP"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-cn/android/mediation/dfp/
 lang:           "zh-cn"
@@ -138,9 +138,9 @@ DFP 使用者必须指定「DFP 广告单元编号」，而不是「AdMob 发佈
 [串接说明]: ../../integration-guide
 [1]: {{site.baseurl}}/zh-cn/android/download/#dfp
 [Here]: https://www.google.com/dfp/
-[DFP 广告空间]: {{site.baseurl}}/assets/img/UnitAdSetting_Sim.png
-[DFP Partner Simplified Chinese.png]: {{site.baseurl}}/assets/img/DFP_Partner_Simplified_Chinese.png
-[新增指定目标]: {{site.baseurl}}/assets/img/新增指定目标.png
-[广告素材类型]: {{site.baseurl}}/assets/img/广告素材类型.png
-[Warning]: {{site.baseurl}}/assets/img/Warning.png
-[插页尺寸]: {{site.baseurl}}/assets/img/插頁尺寸.png
+[DFP 广告空间]: {{site.imgurl}}/UnitAdSetting_Sim.png
+[DFP Partner Simplified Chinese.png]: {{site.imgurl}}/DFP_Partner_Simplified_Chinese.png
+[新增指定目标]: {{site.imgurl}}/新增指定目标.png
+[广告素材类型]: {{site.imgurl}}/广告素材类型.png
+[Warning]: {{site.imgurl}}/Warning.png
+[插页尺寸]: {{site.imgurl}}/插頁尺寸.png

@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="The description for this page in the meta data in header.">
+<meta name="description" content="">
 
 
 <meta name="keywords" content="Keywords for this page, in the meta data">
 
-<meta name="author" content="Finn">
+<meta name="author" content="Finn Yeh">
 <title>
   
   中文web &middot; Vpon-SDK (Alpha)
@@ -32,9 +32,6 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -66,9 +63,8 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/vpon-sdk/zh-cn" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" />
+        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
-      <!-- <a href="/vpon-sdk/zh-cn" class="navbar-brand">Vpon SDK (Alpha)</a> -->
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -78,28 +74,42 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li class="dropdown">
-          <a href="/vpon-sdk/android/" class="right-android">Android</a>
+          
+            
+          
+          <a href="/vpon-sdk/zh-cn/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/ios/" class="right-ios">iOS</a>
+          
+            
+          
+          <a href="/vpon-sdk/zh-cn/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/web/" class="right-web">Web</a>
+          
+            
+          
+          <a href="/vpon-sdk/zh-cn/web/" class="right-web">Web</a>
         </li>
         
-        <!-- <li class="dropdown">
-          <a href=""></<a href=""></a>>
-        </li> -->
         <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Language</a>
-              <ul class="dropdown-menu">
-                 <li><a class="en" href="">English</a></li>
-                 <li><a class="zh-tw" href="">繁體中文</a></li>
-                 <li><a class="zh-cn" href="">简体中文</a></li>
-                 <li><a class="jp" href="">日本語</a></li>
-              </ul>
+          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
+          <ul class="dropdown-menu">
+          <!-- language detection -->
+            
+              
+              
+              
+              
+            
+
+            <li><a class="en" href="/vpon-sdk/web/">English</a></li>
+            <li><a class="zh-tw" href="/vpon-sdk/zh-tw/web/">繁體中文</a></li>
+            <li><a class="zh-cn" href="/vpon-sdk/zh-cn/web/">简体中文</a></li>
+            <li><a class="jp" href="/vpon-sdk/jp/web/">日本語</a></li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -110,7 +120,7 @@
   <div class="bs-header" id="content">
     <div class="container">
       <h1>中文web</h1>
-      <p>The sub title.</p>
+      <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -459,21 +469,7 @@
         </div>
       </div>
     </div>
-
   </div>
-  <script>
-    (function() {
-      var cx = '011886738805883185466:nldjft5yhos';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-          '//cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
-  </script>
-  <gcse:search></gcse:search>
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
@@ -486,12 +482,9 @@
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<!-- <script src="/dist/js/bootstrap.min.js"></script> -->
-<script src="/vpon-sdk/dist/js/bootstrap.js"></script>
+<!-- JavaScript ================================================== -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
 <script src="/vpon-sdk/assets/js/docs.min.js"></script>
 
 </body>

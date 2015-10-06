@@ -2,7 +2,7 @@
 layout:         "ios-download"
 title:          "iOS - Download "
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/download/
 lang:            "en"

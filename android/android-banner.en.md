@@ -2,14 +2,14 @@
 layout:         "android"
 title:          "Android - Banner Ad"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/banner/
 lang:           "en"
 ---
 # Finished Integration Guide
 ---
-If you haven't finished the previous integration guide, please check all the [settings here]({{site.baseurl}}/android/integration-guide/). 
+If you haven't finished the previous integration guide, please check all the [settings here]({{site.baseurl}}/android/integration-guide/).
 
 # Coding for showing Banner
 ---
@@ -141,7 +141,7 @@ You need to use the following sample code to enable auto refresh banner.
 # Results
 ---
 Now run your demo app and you would see a banner at the top of the screen:
-![gogo]({{site.baseurl}}/assets/img/A-sdk330-03.png)
+![gogo]({{site.imgurl}}/A-sdk330-03.png)
 
 # Other tips
 > Please refer to [Interstitial Ads](../Interstitial)、[Mediation](../mediation)、[Advanced Setting](../advanced) for more information.

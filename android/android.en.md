@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - Getting Started"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/
 lang:           "en"
@@ -28,7 +28,7 @@ Please follow the [Integration Guide][3] to finish Vpon SDK integration, includi
 * The right sidebar tells you where you are in current article.
 * Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.
 
-Still have prolems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will render the best service for you.
+Still have problems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will render the best service for you.
 
 
 > **Note**: If you used the previous version of vpon SDK, please read this first: [How to update to the new version of SDK4.2.x]({{site.baseurl}}/android/latest-news/update-to-SDK4_2_x/)

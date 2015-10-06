@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "アプリ・サイト運営者の登録フロー "
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/registration/
 lang:            "jp"
@@ -68,7 +68,7 @@ http://tw.pub.vpon.com/ 台湾エリアのプロパティIDを登録
 アプリ・サイト一覧ページでは、登録されたアプリ・アプリの設定・審査ステータスをご確認いただけます。
 
 
-[SDK400新增版位_JP]:      {{site.baseurl}}/assets/img/SDK400新增版位_JP.png
-[VponSDK_400_NewApp_JP]: {{site.baseurl}}/assets/img/VponSDK_400_NewApp_JP.png
-[Trandationchinesefrontserver3 JP.png]: {{site.baseurl}}/assets/img/Trandationchinesefrontserver3_JP.png
-[Trandationchinesefrontserver4_JP.png]: {{site.baseurl}}/assets/img/Trandationchinesefrontserver4_JP.png
+[SDK400新增版位_JP]:      {{site.imgurl}}/SDK400新增版位_JP.png
+[VponSDK_400_NewApp_JP]: {{site.imgurl}}/VponSDK_400_NewApp_JP.png
+[Trandationchinesefrontserver3 JP.png]: {{site.imgurl}}/Trandationchinesefrontserver3_JP.png
+[Trandationchinesefrontserver4_JP.png]: {{site.imgurl}}/Trandationchinesefrontserver4_JP.png

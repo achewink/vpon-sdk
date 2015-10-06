@@ -9,9 +9,8 @@
         <span class="icon-bar"></span>
       </button>
       <a href="{{nav.path}}" class="navbar-brand">
-        <img src="{{site.baseurl}}/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" />
+        <img src="{{site.imgurl}}/vpon-logo.png" id="vpon-logo" />
       </a>
-      <!-- <a href="{{nav.path}}" class="navbar-brand">Vpon SDK (Alpha)</a> -->
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -25,20 +24,49 @@
       <ul class="nav navbar-nav navbar-right">
         {% for item in site.right_nav_new %}
         <li class="dropdown">
-          <a href="{{ item.url1 }}" class="{{ item.cls }}">{{ item.title }}</a>
+          {% if page.lang == "zh-tw" %}
+            {% capture links %}{{ item.url2 }}{% endcapture %}
+          {% elsif page.lang == "zh-cn" %}
+            {% capture links %}{{ item.url3 }}{% endcapture %}
+          {% elsif page.lang == "jp"%}
+            {% capture links %}{{ item.url4 }}{% endcapture %}
+          {% else %}
+            {% capture links %}{{ item.url1 }}{% endcapture %}
+          {% endif %}
+          <a href="{{ links }}" class="{{ item.cls }}">{{ item.title }}</a>
         </li>
         {% endfor %}
-        <!-- <li class="dropdown">
-          <a href="{{ item.url1 }}">{{ item.title }}</<a href=""></a>>
-        </li> -->
         <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Language</a>
-              <ul class="dropdown-menu">
-                 <li><a class="en" href="">English</a></li>
-                 <li><a class="zh-tw" href="">繁體中文</a></li>
-                 <li><a class="zh-cn" href="">简体中文</a></li>
-                 <li><a class="jp" href="">日本語</a></li>
-              </ul>
+          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
+          <ul class="dropdown-menu">
+          <!-- language detection -->
+            {% if page.lang == "zh-tw" %}
+              {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'zh-tw/', "" }}{% endcapture %}
+              {% capture link2 %}{{ site.baseurl }}{{page.url}}{% endcapture %}
+              {% capture link3 %}{{ site.baseurl }}{{page.url | replace: "zh-tw", 'zh-cn'}}{% endcapture %}
+              {% capture link4 %}{{ site.baseurl }}{{page.url | replace: "zh-tw", 'jp'}}{% endcapture %}
+            {% elsif page.lang == "zh-cn" %}
+              {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'zh-cn/', "" }}{% endcapture %}
+              {% capture link2 %}{{ site.baseurl }}{{page.url | replace: "zh-cn", 'zh-tw'}}{% endcapture %}
+              {% capture link3 %}{{ site.baseurl }}{{page.url}}{% endcapture %}
+              {% capture link4 %}{{ site.baseurl }}{{page.url | replace: "zh-cn", 'jp'}}{% endcapture %}
+            {% elsif page.lang == "jp" %}
+              {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'jp/', "" }}{% endcapture %}
+              {% capture link2 %}{{ site.baseurl }}{{page.url | replace: "jp", 'zh-tw'}}{% endcapture %}
+              {% capture link3 %}{{ site.baseurl }}{{page.url | replace: "jp", 'zh-cn'}}{% endcapture %}
+              {% capture link4 %}{{ site.baseurl }}{{page.url}}{% endcapture %}
+            {% else %}
+              {% capture link1 %}{{ site.baseurl }}{{ page.url}}{% endcapture %}
+              {% capture link2 %}{{ site.baseurl }}/zh-tw{{page.url}}{% endcapture %}
+              {% capture link3 %}{{ site.baseurl }}/zh-cn{{page.url}}{% endcapture %}
+              {% capture link4 %}{{ site.baseurl }}/jp{{page.url}}{% endcapture %}
+            {% endif %}
+
+            <li><a class="en" href="{{ link1 }}">English</a></li>
+            <li><a class="zh-tw" href="{{ link2 }}">繁體中文</a></li>
+            <li><a class="zh-cn" href="{{ link3 }}">简体中文</a></li>
+            <li><a class="jp" href="{{ link4 }}">日本語</a></li>
+          </ul>
         </li>
       </ul>
     </nav>

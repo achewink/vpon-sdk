@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - iOS 9 ATS"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/ios/latest-news/ios9ats/
 lang:            "jp"

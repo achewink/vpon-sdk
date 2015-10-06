@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android 中介服務 - MOGO"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/mediation/mogo/
 lang:           "zh-tw"
@@ -42,13 +42,13 @@ MOGO Mediation 請先註冊帳號: [進入]
 [Go to download]
 
 
-  [進入]: {{site.baseurl}}/assets/img/http://www.adsmogo.com/
-  [0]: {{site.baseurl}}/assets/img/MyMOGO.png
-  [1]: {{site.baseurl}}/assets/img/AddApp.png  
-  [2]: {{site.baseurl}}/assets/img/AppType.png "fig:AppType.png"
-  [3]: {{site.baseurl}}/assets/img/ChinaArea.png "fig:ChinaArea.png"
-  [4]: {{site.baseurl}}/assets/img/TWArea.png "fig:TWArea.png"
-  [5]: {{site.baseurl}}/assets/img/VponBannerID.png "fig:VponBannerID.png"
-  [6]: {{site.baseurl}}/assets/img/Vpon.png "fig:Vpon.png"
-  [7]: {{site.baseurl}}/assets/img/MOGOID.png "fig:MOGOID.png"
+  [進入]: {{site.imgurl}}/http://www.adsmogo.com/
+  [0]: {{site.imgurl}}/MyMOGO.png
+  [1]: {{site.imgurl}}/AddApp.png  
+  [2]: {{site.imgurl}}/AppType.png "fig:AppType.png"
+  [3]: {{site.imgurl}}/ChinaArea.png "fig:ChinaArea.png"
+  [4]: {{site.imgurl}}/TWArea.png "fig:TWArea.png"
+  [5]: {{site.imgurl}}/VponBannerID.png "fig:VponBannerID.png"
+  [6]: {{site.imgurl}}/Vpon.png "fig:Vpon.png"
+  [7]: {{site.imgurl}}/MOGOID.png "fig:MOGOID.png"
   [Go to download]: {{site.baseurl}}/zh-tw/android/download/#mogo

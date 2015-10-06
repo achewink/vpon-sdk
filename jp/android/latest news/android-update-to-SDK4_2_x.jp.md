@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - Update to SDK 4.2.x"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/latest-news/update-to-SDK4_2_x/
 lang:            "jp"

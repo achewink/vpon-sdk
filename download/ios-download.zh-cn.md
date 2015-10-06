@@ -2,7 +2,7 @@
 layout: "ios-download"
 title: "iOS - 下载 SDK"
 lead: ""
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-cn/ios/download/
 lang: "zh-cn"

@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "注册开发商"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       zh-cn/android/registration/
 lang:           "zh-cn"
@@ -72,8 +72,8 @@ URL 与应用程式说明与选择是否可播放 Crazy AD
 
   [注册服务区为台湾]: http://tw.pub.vpon.com/register.action
   [注册服务区为大陆]: http://cn.pub.vpon.com/register.action
-  [0]: {{site.baseurl}}/assets/img/SDK400建立應用程式.jpeg
-    [1]: {{site.baseurl}}/assets/img/SDK400新增版位.jpeg
-    [2]: {{site.baseurl}}/assets/img/trandationchinesefrontserver3.png
-    [3]: {{site.baseurl}}/assets/img/trandationchinesefrontserver4.png
+  [0]: {{site.imgurl}}/SDK400建立應用程式.jpeg
+    [1]: {{site.imgurl}}/SDK400新增版位.jpeg
+    [2]: {{site.imgurl}}/trandationchinesefrontserver3.png
+    [3]: {{site.imgurl}}/trandationchinesefrontserver4.png
     [5]: mailto:bd@vpon.com

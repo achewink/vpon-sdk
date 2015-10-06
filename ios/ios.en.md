@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - Getting Started "
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/
 lang:            "en"
@@ -29,7 +29,7 @@ Please follow the [Integration Guide][3] to finish Vpon SDK integration, includi
 * The right sidebar tells you where you are in current article.
 * Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.
 
-Still have prolems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will render the best service for you.
+Still have problems? Please send us,[Vpon FAE](mailto:fae@vpon.com). We will render the best service for you.
 
 
 > **Note**: Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to [this link](http://wiki.vpon.com/index.php?title=English_iOS_App_Transport_Security) for some modification.

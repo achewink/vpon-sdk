@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - Banner Ad"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/banner/
 lang:            "en"
@@ -175,6 +175,6 @@ Apple recently brought a new security feature, App Transport Security (ATS), to 
 Please refer to [Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.
 
 
-[IOS-Banner_result]: {{site.baseurl}}/assets/img/IOS-Banner_result.png
+[IOS-Banner_result]: {{site.imgurl}}/IOS-Banner_result.png
 [Go to download page]: ../download/
 [this link]: {{site.baseurl}}/zh-tw/ios/latest-news/ios9ats/

@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - Integration Guide"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/integration-guide/
 lang:            "en"
@@ -86,7 +86,7 @@ Please refer to [Banner Ad](../banner)、[Interstitial Ad](../Interstitial)、[M
 
 
 
-[IOS-add-lib&header_vpadn]: {{site.baseurl}}/assets/img/IOS-add-lib&header_vpadn.png
-[IOS-add-file_vpadn.png]: {{site.baseurl}}/assets/img/IOS-add-file_vpadn.png
-[IOS-add-frameworks_vpadn]: {{site.baseurl}}/assets/img/IOS-add-frameworks_vpadn.png
+[IOS-add-lib&header_vpadn]: {{site.imgurl}}/IOS-add-lib&header_vpadn.png
+[IOS-add-file_vpadn.png]: {{site.imgurl}}/IOS-add-file_vpadn.png
+[IOS-add-frameworks_vpadn]: {{site.imgurl}}/IOS-add-frameworks_vpadn.png
 [this link]: {{site.baseurl}}/ios/latest-news/ios9ats/

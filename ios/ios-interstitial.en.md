@@ -2,7 +2,7 @@
 layout:         "ios"
 title:          "iOS - Interstitial Ad"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/interstitial/
 lang:            "en"
@@ -11,10 +11,10 @@ lang:            "en"
 # Overview
 ---
 Interstitials, on the other hand, immediately present rich HTML5 experiences or "web apps" at natural app transition points such as launch, video pre-roll or game level load. Web apps are in-app browsing experiences with a simple close button rather than any navigation bar—the content provides its own internal navigation scheme. Interstitial ads are typically more expensive and subject to impression constraints.
-![]({{site.baseurl}}/assets/img/Interstitial.png)
+![]({{site.imgurl}}/Interstitial.png)
 
 > **Note**:
-> We suggest that the interstitial ads running in portrait mod for the best visual effects.
+> We suggest that the interstitial ads running in portrait mode for the best visual effects.
 
 
 # Vpon Interstitial Ad

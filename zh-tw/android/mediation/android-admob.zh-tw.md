@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - Admob 使用串接"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/mediation/admob/
 lang:           "zh-tw"
@@ -296,18 +296,18 @@ Mobile Ads SDK 需要在 AndroidManifest.xml 中宣告 com.google.android.gms.ad
 
   [這裡]: https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android
   []: http://www.google.com.tw/ads/admob/
-  [1]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid1.png
-  [2]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid2.png
-  [3]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid3.png
-  [4]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid4.png
-  [5]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid5.png
-  [6]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid6.png
-  [7]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid7.png
-  [8]:  {{site.baseurl}}/assets/img/AdMobScreenshotTradChineseAndroid8.png
-  [9]:  {{site.baseurl}}/assets/img/AdMobLibJarFiles.jpg
-  [10]: {{site.baseurl}}/assets/img/GooglePlay_Properties.png
-  [11]: {{site.baseurl}}/assets/img/GooglePlay_Addlib.png
-  [12]: {{site.baseurl}}/assets/img/GooglePlay_Addlib2.png
+  [1]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid1.png
+  [2]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid2.png
+  [3]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid3.png
+  [4]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid4.png
+  [5]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid5.png
+  [6]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid6.png
+  [7]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid7.png
+  [8]:  {{site.imgurl}}/AdMobScreenshotTradChineseAndroid8.png
+  [9]:  {{site.imgurl}}/AdMobLibJarFiles.jpg
+  [10]: {{site.imgurl}}/GooglePlay_Properties.png
+  [11]: {{site.imgurl}}/GooglePlay_Addlib.png
+  [12]: {{site.imgurl}}/GooglePlay_Addlib2.png
   [Download Sample Code]: {{site.baseurl}}/zh-tw/android/download/#admob
   [Android SDK]: https://developer.android.com/sdk/index.html
   [Android instructions]: https://developer.android.com/google/play-services/setup.html

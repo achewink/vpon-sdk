@@ -2,7 +2,7 @@
 layout: "ios"
 title: "iOS - 進階設定"
 lead: "幫助您取得更多廣告功能與資料收集"
-description: The description for this page in the meta data in header.
+description: 
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/advanced/
 lang: "zh-tw"
@@ -135,8 +135,8 @@ vpadnAd.delegate = self;
 ![CrazyadSetting]
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
+[海尼根廣告]:      {{site.imgurl}}/Crazyad.png
+[CrazyadSetting]: {{site.imgurl}}/CrazyadSetting.png
 
 
 # Corona User

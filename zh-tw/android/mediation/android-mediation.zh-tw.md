@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 中介服務"
 lead:           ""
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/mediation/
 lang:           "zh-tw"
@@ -23,10 +23,10 @@ Google AdMob    |  Google DFP |      MoPub   |   MOGO
 
 
 
-[admob]: {{site.baseurl}}/assets/img/admob-logo.png
-[dfp]:   {{site.baseurl}}/assets/img/dfp-logo.png
-[mopub]: {{site.baseurl}}/assets/img/mopub-logo.png
-[mogo]: {{site.baseurl}}/assets/img/mogo-logo.png
+[admob]: {{site.imgurl}}/admob-logo.png
+[dfp]:   {{site.imgurl}}/dfp-logo.png
+[mopub]: {{site.imgurl}}/mopub-logo.png
+[mogo]: {{site.imgurl}}/mogo-logo.png
 
 [1]: admob
 [2]: dfp

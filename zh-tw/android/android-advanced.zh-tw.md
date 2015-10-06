@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - 進階設定"
 lead:           "幫助您取得更多廣告功能與資料收集"
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/advanced/
 lang:            "zh-tw"
@@ -142,7 +142,7 @@ HTML 內容可參考 Vpon wiki的web SDK 操作手冊: [Web SDK]
 
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting.png
+[海尼根廣告]:      {{site.imgurl}}/Crazyad.png
+[CrazyadSetting]: {{site.imgurl}}/CrazyadSetting.png
 [Web SDK]: {{site.baseurl}}/zh-tw/web/
 [Corona Document]: http://docs.coronalabs.com/api/library/native/newWebView.html

@@ -2,7 +2,7 @@
 layout:         "android"
 title:          "Android - Advanced"
 lead:           "Optimizing your ads performance from advanced skills here."
-description:    "The description for this page in the meta data in header."
+description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       android/advanced/
 lang:           "en"
@@ -129,7 +129,7 @@ See more Corona SDK Document: [Corona Document]
 
 
 
-[海尼根廣告]:      {{site.baseurl}}/assets/img/Crazyad.png
-[CrazyadSetting]: {{site.baseurl}}/assets/img/CrazyadSetting_En.png
+[海尼根廣告]:      {{site.imgurl}}/Crazyad.png
+[CrazyadSetting]: {{site.imgurl}}/CrazyadSetting_En.png
 [Web SDK]: {{site.baseurl}}/web/
 [Corona Document]: http://docs.coronalabs.com/api/library/native/newWebView.html
