@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="The description for this page in the meta data in header.">
+<meta name="description" content="">
 
 
 <meta name="keywords" content="Keywords for this page, in the meta data">
 
-<meta name="author" content="Finn">
+<meta name="author" content="Finn Yeh">
 <title>
   
   日本語web &middot; Vpon-SDK (Alpha)
@@ -32,9 +32,6 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -66,9 +63,8 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/vpon-sdk/jp" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" alt="Vpon SDK (Alpha)" />
+        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
-      <!-- <a href="/vpon-sdk/jp" class="navbar-brand">Vpon SDK (Alpha)</a> -->
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -78,28 +74,42 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li class="dropdown">
-          <a href="/vpon-sdk/android/" class="right-android">Android</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/ios/" class="right-ios">iOS</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
-          <a href="/vpon-sdk/web/" class="right-web">Web</a>
+          
+            
+          
+          <a href="/vpon-sdk/jp/web/" class="right-web">Web</a>
         </li>
         
-        <!-- <li class="dropdown">
-          <a href=""></<a href=""></a>>
-        </li> -->
         <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Language</a>
-              <ul class="dropdown-menu">
-                 <li><a class="en" href="">English</a></li>
-                 <li><a class="zh-tw" href="">繁體中文</a></li>
-                 <li><a class="zh-cn" href="">简体中文</a></li>
-                 <li><a class="jp" href="">日本語</a></li>
-              </ul>
+          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
+          <ul class="dropdown-menu">
+          <!-- language detection -->
+            
+              
+              
+              
+              
+            
+
+            <li><a class="en" href="/vpon-sdk/web/">English</a></li>
+            <li><a class="zh-tw" href="/vpon-sdk/zh-tw/web/">繁體中文</a></li>
+            <li><a class="zh-cn" href="/vpon-sdk/zh-cn/web/">简体中文</a></li>
+            <li><a class="jp" href="/vpon-sdk/jp/web/">日本語</a></li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -110,7 +120,7 @@
   <div class="bs-header" id="content">
     <div class="container">
       <h1>日本語web</h1>
-      <p>The sub title.</p>
+      <p></p>
     </div>
   </div>
   <div class="container bs-docs-container">
@@ -193,11 +203,14 @@
 <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
 <blockquote>
-<p>Note:<br>
-* 同一のウェブページ上には最多で3カ所のプロパティを組み込み、各プロパティはそれぞれ異なるプロパティIDを使用してください。
-* JavaScript は、1つだけを、かつ</body>の前に置きます。
-* 保存完了後、ウェブページを再読み込みすると、 <vpon> タグの位置に「テスト広告」を受け取ることを確認できます。(オンラインにする場合、vpon_ad_test=&quot;0&quot;と設定し、テスト広告を受け取らない設定に変更してください。
-<br></p>
+<p><strong>Note:</strong><br></p>
+
+<ul>
+<li>同一のウェブページ上には最多で3カ所のプロパティを組み込み、各プロパティはそれぞれ異なるプロパティIDを使用してください。</li>
+<li>JavaScript は、1つだけを、かつ</body>の前に置きます。</li>
+<li>保存完了後、ウェブページを再読み込みすると、 &lt;vpon&gt;タグの位置に「テスト広告」を受け取ることを確認できます。(オンラインにする場合、vpon_ad_test=&quot;0&quot;と設定し、テスト広告を受け取らない設定に変更してください。
+<br></li>
+</ul>
 </blockquote>
 
 <h2 id="advanced-setup">Advanced Setup</h2>
@@ -310,21 +323,18 @@
 
 <h3 id="オーダーの手動による作成">オーダーの手動による作成</h3>
 
-<p>手動でオーダーを作成する方法は以下の通りです。
-1. DFP スタンダードのアカウントで、[オーダー] タブをクリックします。
-2. [新しいオーダー] をクリックします。
-3. 各欄にオーダー情報を入力します。</p>
+<p>手動でオーダーを作成する方法は以下の通りです。</p>
 
-<blockquote>
-<div class="highlight"><pre><code class="language-text" data-lang="text">オーダーの名前は、ネットワーク内で固有である必要があります。
-</code></pre></div>
 <ol>
+<li>DFP スタンダードのアカウントで、[オーダー] タブをクリックします。</li>
+<li>[新しいオーダー] をクリックします。</li>
+<li>各欄にオーダー情報を入力します。 <br>
+(オーダーの名前は、ネットワーク内で固有である必要があります)。</li>
 <li>広告申込情報の詳細を入力します。</li>
 <li>[在庫の確認] をクリックして、オーダーで十分なインプレッションを取得できることを確認します。十分なインプレッションを取得できないにもかかわらずオーダーを保存してしまうと、配信不足となり広告主との契約違反につながるおそれがあります。
 ![Warning]</li>
 <li> [保存]をクリックします。オーダーを作成したら、次にオーダーを承認する必要があります。承認を行わないと広告申込情報は配信可能となりません。オーダーを承認する方法については、こちらをご覧ください。</li>
 </ol>
-</blockquote>
 
 <h3 id="広告申込情報">広告申込情報</h3>
 
@@ -462,21 +472,7 @@
         </div>
       </div>
     </div>
-
   </div>
-  <script>
-    (function() {
-      var cx = '011886738805883185466:nldjft5yhos';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-          '//cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
-  </script>
-  <gcse:search></gcse:search>
   <!-- Footer
 ================================================== -->
 <footer class="bs-footer" role="contentinfo">
@@ -489,12 +485,9 @@
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<!-- <script src="/dist/js/bootstrap.min.js"></script> -->
-<script src="/vpon-sdk/dist/js/bootstrap.js"></script>
+<!-- JavaScript ================================================== -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
 <script src="/vpon-sdk/assets/js/docs.min.js"></script>
 
 </body>
