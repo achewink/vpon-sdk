@@ -14,7 +14,7 @@ Google AdMob mediation は[こちら]をご覧ください。
 # Google Ad Network Mediation
 -----
 
-1. Numbered list item.
+1. 番号付きのリストアイテム。
 ログイン - [AdMob account][0]
 ![1]  
 

@@ -9,8 +9,7 @@ lang:            "jp"
 ---
 # MoPub Settings
 ---
-To setup MoPub, you need to complete the following steps:
-
+MoPub をセットアップするには、以下のステップを完了させてください:
 
 ## Step1: Add your app
  Click "Network tab"
@@ -23,7 +22,7 @@ To setup MoPub, you need to complete the following steps:
 ## Step3: Custom Native Network
 ![][1]
 
-## Step4: Add title to manage your Ad network
+## Step4: 広告ネットワークを管理するには、タイトルを追加してください
 
 ![][2]
 

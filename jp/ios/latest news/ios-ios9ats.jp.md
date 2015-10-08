@@ -10,11 +10,10 @@ lang:            "jp"
 # iOS9 ATS
 ---
 ## Overview
-Apple recently brought a new security feature, App Transport Security (ATS), to iOS9, requiring only HTTPS requests are permitted on iOS9 and above. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please edit your "info.plist".
-
+アップルが最近、iOS9 に App Transport Security (ATS)という新しいセキュリティシステ ムを導入したことにより、 iOS9 及びこれ以降のバージョンでは、HTTPS リクエストのみ が有効となりました。最新の Xcode 7 を使用して、iOS9 プロジェクトを作成または移行し ている場合は、“info.plist"の修正を行ってください。
 
 ## info.plist
-To ensure ads continue to serve on iOS9 devices for developers transitioning to HTTPS, the recommended short term fix is to add an exception that allows HTTP requests to succeed and non-secure content to load successfully.
+HTTPS に移行しているデベロッパー向けに、 iOS9 デバイスに広告を確実に継続して表示 させたい場合、 HTTP リクエストが継続してセキュリティ無しのコンテンツをロードでき るよう、 短期的な修正方法として例外を追加することをお勧めいたします。
 
     <key>NSAppTransportSecurity</key>
     <dict>
@@ -24,7 +23,7 @@ To ensure ads continue to serve on iOS9 devices for developers transitioning to 
 
 
 ## 參考
-Links for reference ：
+参考リンク：
 
 - [Transport Security (ATS)]
 - [Ads Developer Blog]

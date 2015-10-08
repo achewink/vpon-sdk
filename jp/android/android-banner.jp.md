@@ -7,9 +7,11 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/banner/
 lang:            "jp"
 ---
-# Finished Integration Guide
+# 実装ガイドを終了いたします
 ---
-If you haven't finished the previous integration guide, please check all the [settings here]({{site.baseurl}}/android/integration-guide/).
+
+まだ以前の実装ガイドを終了していない場合は、[ここから全設定](../integration-guide)をご確認ください。
+
 
 # バナー広告を表示させるためのコーディング
 ---
@@ -148,7 +150,7 @@ public class MainActivity extends Activity {
 
 # ヒント
 ---
-> Please refer to [Interstitial Ads](../Interstitial)、[Mediation](../mediation)、[Advanced Setting](../advanced) for more information.
+より詳細な情報は[ンタースティシャル広告](../interstitial)、[メディエーション](../mediation)、[詳細設定](../advanced)をご確認 ください。
 
 
 [Go to download page]: {{site.baseurl}}/download/

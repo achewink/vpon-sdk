@@ -8,13 +8,13 @@ permalink:       jp/android/
 lang:            "jp"
 ---
 # クイック概要
-## Step1: ダウンロードSDK
+## Step1: SDK をダウンロード
 ---
-Please [download latest SDK][1] first. If you are not one of Vpon developer yet, please refer to [this guide][2] for registration. <br><br>
+まず始めに[最新の SDK をダウンロード][1]してください。まだ Vpon のデベロッパーでない場 合は、[このガイドを][2]参考にご登録ください。 <br><br>
 
 ## Step2: SDKの統合
 ---
-Please follow the [Integration Guide][3] to finish Vpon SDK integration, including minimum requirement, authorities and other settings.<br><br>
+最低必要条件、権限およびその他設定を含む、Vpon SDK の実装を完成させるには、[この 実装ガイド][3]に従ってください。<br><br>
 
 ## Step3: 広告の統合
 ---
@@ -24,12 +24,11 @@ Please follow the [Integration Guide][3] to finish Vpon SDK integration, includi
 
 ## ヒント
 ---
-* All Android-relevant information are listed left.
-* The right sidebar tells you where you are in current article.
-* Besides, please click the higher right corner language bar for your favored language and platforms if you are in need of theses.
+* Android 関連の全情報は、左にリスト化されています。
+* 右のサイドバーは、現在閲覧中の記事が全体のどの位置にあるかを示しています。
+* その他、必要な場合は、右上部にある言語バーからお好きな言語及びプラットフォームを 選択してください。
 
-Still have problems? Please send us, [Vpon FAE](mailto:fae@vpon.com). We will render the best service for you.
-
+その他ご質問がございましたら、弊社、 [Vpon FAE](mailto:fae@vpon.com) までお問い合わせください。最高のサ ービスをお届けいたします。
 
 > **Note**: 旧バージョンのSDKをご利用の場合、まず最新版のSDKにバージョンアップするための修正をご確認ください。[SDK4.2.x の最新バージョンへのアップデート方法]({{site.baseurl}}/jp/android/latest-news/update-to-SDK4_2_x/)
 

@@ -7,9 +7,9 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/mediation/dfp/
 lang:            "jp"
 ---
-This document provides instructions for using the Google Mobile Ads SDK to display banner ads. If you're not familiar setting banner and interstitial, review [integration guide] first for SDK and DFP.
+このドキュメントは、 Google Mobile Ads SDK を使用してバナー広告を表示するためのガ イドです。バナー広告やインタースティシャル広告の設定に慣れていない場合は、まず始 めに SDK および DFP の[実装ガイド]をご覧ください。
 
-If you are using AdMob or DFP, please import 2 JARs into your project. ([download][1])
+AdMob または DFP をご利用中の場合は、プロジェクトに JAR を 2 つインポートしてくだ さい。([download][1])
 
 1. Fundamental SDK
 2. Adapter SDK
@@ -126,7 +126,7 @@ To create a line item:
 ---
 [Android Download][1]
 
-[integration guide]: ../../integration-guide/
+[実装ガイド]: ../../integration-guide/
 [1]: {{site.baseurl}}/jp/android/download/#dfp
 [Here]: https://www.google.com/dfp/
 [DFP 廣告空間]: {{site.imgurl}}/ADUNIT_DFP.png

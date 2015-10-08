@@ -60,20 +60,20 @@ VPON広告の Android 版のSDKには、 少なくとも Android 2.1.X 以上の
 ## Android Studio
 ---
 1. Find `libs` in your Android project (Route：Project Name -&gt; app
--&gt; libs)
+-&gt; Android プロジェクトの「libs」を選んでください。(ルート:プロジェクト名 -&gt; app -&gt; libs)
 ![]({{site.imgurl}}/ProjectLibFolder.jpg)
 
 
-2. Right-click on `libs` and follow with a left-click on `Reveal in Finder`
+2. `libs` の所で右クリックをし、`Reveal in Finder` を選び左クリックしてください。
 ![]({{site.imgurl}}/DropJarFileToLibFolder.jpg)
 
 
-3. Move the JAR downloaded to `libs` on finder (You can also grab Vpon JAR into `libs` on IDE)  
+3. ダウンロードした JAR を Finder にある `libs` に移動させてください。(IDE で `libs` に Vpon JAR をドラッグして入れることも可能です)  
 ![]({{site.imgurl}}/MainInterface.jpg)
 
 
 
-4. Go back to your Android project and you will see that the Vpon JAR we just added shows up in [libs]. Make a right-click and choose `Add as library` to link reference. Please check the build.gradle at the same time to make sure there's a sentence " compile files('libs/vpon_SDK_version_name.jar') ". See the photo below.  
+4. Android プロジェクトに戻り、先ほど追加した Vpon JAR が `libs` に表示されていること を確認してください。参考リンク先をリンクさせるには、右クリックし、ライブラリとし て追加を選択してください。同時に、「コンパイルファイル ('libs/vpon_SDK_version_name.jar')」という文章があるか、 build.gradle を確認してくださ い。下の写真をご参考ください  
 ![]({{site.imgurl}}/ModifyBuildGradle.jpg)
 
 ## VpadnActivity
@@ -136,4 +136,5 @@ VPON広告の Android 版のSDKには、 少なくとも Android 2.1.X 以上の
 
 # ヒント
 ---
-Please refer to [Banner Ad](../banner)、[Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.
+
+より詳細な情報は、[バナー広告](../banner)、[ンタースティシャル広告](../interstitial)、[メディエーション](../mediation)をご確認 ください。

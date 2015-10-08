@@ -7,10 +7,14 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       jp/android/mediation/
 lang:            "jp"
 ---
+
+# 実装ガイドを終了いたします
+---
+まだ以前の実装ガイドを終了していない場合は、[ここから全設定](../integration-guide)をご確認ください。
+
 # 概要
 ---
 AdMob メディエーションは、AdMob ネットワーク、サードパーティの広告ネットワーク、自社広告キャンペーンなど、複数の配信元の広告をアプリに配信できる機能です。
-
 
 # メディエーション
 ---

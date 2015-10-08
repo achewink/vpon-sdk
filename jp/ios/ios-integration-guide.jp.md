@@ -87,15 +87,14 @@ SDK 4 lib ファイルは、Sample codeフォルダ内にあります。
 
 # App Transport Security
 ---
-Apple recently brought a new security feature, App Transport Security (ATS), to iOS9. If you are using the latest Xcode 7 to build or migrate to an iOS9 project, please refer to [this link] for some modification.
+アップルは最近、iOS9 に App Transport Security (ATS)という新しいセキュリティシステ ムを導入しました。最新の Xcode 7 を使用して、 iOS9 プロジェクトを作成または移行し ている場合は、[このリンク](latest-news/ios9ats))先を参考に修正を行ってください。
 
 # ヒント
 ---
-Please refer to [Banner Ad](../banner)、[Interstitial Ad](../Interstitial)、[Mediation](../mediation) for more information.
-
+より詳細な情報は、[バナー広告](../banner)、[ンタースティシャル広告](../interstitial)、[メディエーション](../mediation)をご確認 ください。
 
 
 [IOS-add-lib&header_vpadn]: {{site.imgurl}}/IOS-add-lib&header_vpadn.png
 [IOS-add-file_vpadn.png]: {{site.imgurl}}/IOS-add-file_vpadn.png
 [IOS-add-frameworks_vpadn]: {{site.imgurl}}/IOS-add-frameworks_vpadn.png
-[this link]: {{site.baseurl}}/ios/latest-news/ios9ats/
+[このリンク]: {{site.baseurl}}/ios/latest-news/ios9ats/
