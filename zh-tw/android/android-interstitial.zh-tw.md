@@ -2,11 +2,14 @@
 layout: android
 title: "Android - 插頁廣告"
 lead: "Interstitia ad"
-description: 
+description:
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/android/interstitial/
 lang: zh-tw
 ---
+## 完成串接指示
+---
+若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
 
 # 總覽
 ---
@@ -76,7 +79,7 @@ public class MainActivity extends Activity implements VpadnAdListener {
 接著，插頁式廣告會佔據整個畫面，直到使用者點擊關閉；這時控制權才會交還給應用程式。[進階設定]中 Vpadn AdListener 小節列出了多種實用的回呼方式，供您參考。
 
 # Download Sample Code
---- 
+---
 [Go to Download Page]
 
 # 注意事項
@@ -88,6 +91,6 @@ public class MainActivity extends Activity implements VpadnAdListener {
 
 
 
-
+[串接說明]: {{site.baseurl}}/zh-tw/android/integration-guide/
 [Go to Download Page]:{{site.baseurl}}/zh-tw/android/download
 [進階設定]: {{site.baseurl}}/zh-tw/android/advanced

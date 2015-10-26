@@ -2,12 +2,12 @@
 layout: "ios"
 title: "iOS - 横幅广告"
 lead: ""
-description: 
+description:
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-cn/ios/banner/
 lang: "zh-cn"
 ---
-# 完成串接指示
+## 完成串接指示
 ---
 若您尚未完成串接广告形式前的串接说明，请先前往[串接说明]完成相关设定
 

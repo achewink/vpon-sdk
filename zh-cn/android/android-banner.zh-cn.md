@@ -7,7 +7,7 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-cn/android/banner/
 lang:           "zh-cn"
 ---
-# 完成串接指示
+## 完成串接指示
 ---
 若您尚未完成串接广告形式前的串接说明，请先前往[串接说明]完成相关设定
 
@@ -164,5 +164,5 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
 # 其他诀窍
 > 请参阅[插页广告](../Interstitial)、[中介服务](../mediation)、[进阶设定](../advanced)中获取更多简介。
 
-[串接说明]: {{site.baseurl}}/zh-cn/android/integration-guide/
+[串接说明]: ../integration-guide/
 [Go to download page]: {{site.baseurl}}/zh-cn/download/

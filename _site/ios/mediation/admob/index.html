@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/android/" class="right-android">Android</a>
+          <a href="/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/ios/" class="right-ios">iOS</a>
+          <a href="/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/web/" class="right-web">Web</a>
+          <a href="/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/ios/mediation/admob/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/ios/mediation/admob/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/ios/mediation/admob/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/ios/mediation/admob/">日本語</a></li>
+          <li><a class="en" href="/ios/mediation/admob/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/ios/mediation/admob/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/ios/mediation/admob/">简体中文</a></li>
+          <li><a class="jp" href="/jp/ios/mediation/admob/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -154,17 +158,17 @@
 
   <ul class= "nav nav-sidebar nav-left">
     <span id= "sidebar-title1">iOS Integration</span>
-    <li><a id= "getting-started" href="/vpon-sdk/ios">Getting Started</a></li>
-    <li><a id= "integration-guide" href="/vpon-sdk/ios/integration-guide">Integration Guide</a></li>
+    <li><a id= "getting-started" href="/ios">Getting Started</a></li>
+    <li><a id= "integration-guide" href="/ios/integration-guide">Integration Guide</a></li>
     <span id= "sidebar-title2">Ad Type Choices</span>
-    <li><a id= "banner-id" href="/vpon-sdk/ios/banner">Banner Ad</a></li>
-    <li><a id= "interstitial-id" href="/vpon-sdk/ios/interstitial">interstitial Ad</a></li>
-    <li><a id= "mediation" href="/vpon-sdk/ios/mediation">Mediation</a></li>
-    <li><a id= "advanced" href="/vpon-sdk/ios/advanced">Advanced</a></li>
+    <li><a id= "banner-id" href="/ios/banner">Banner Ad</a></li>
+    <li><a id= "interstitial-id" href="/ios/interstitial">interstitial Ad</a></li>
+    <li><a id= "mediation" href="/ios/mediation">Mediation</a></li>
+    <li><a id= "advanced" href="/ios/advanced">Advanced</a></li>
     <span id= "sidebar-title3">Ad Type Choices</span>
-    <li><a id= "download" href="/vpon-sdk/ios/download">Download</a></li>
-    <li><a id= "latest-news" href="/vpon-sdk/ios/latest-news">Latest News</a></li>
-    <li><a id= "support" href="/vpon-sdk/ios/support">Support</a></li>
+    <li><a id= "download" href="/ios/download">Download</a></li>
+    <li><a id= "latest-news" href="/ios/latest-news">Latest News</a></li>
+    <li><a id= "support" href="/ios/support">Support</a></li>
   </ul>
 
       </div>
@@ -183,26 +187,26 @@
 <ol>
 <li><p>Log in Google AdMob.
 Please log in to your <a href="http://www.google.com.tw/ads/admob/">AdMob account</a>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotEnglishAndroid1.jpg" alt="1">  </p></li>
+<img src="/assets/img/AdMobScreenshotEnglishAndroid1.jpg" alt="1">  </p></li>
 <li><p><code>Monetise</code> -&gt; <code>+ Monetise new app</code><br>
-<img src="/vpon-sdk/assets/img/Admob2_eng.png" alt="">  </p></li>
+<img src="/assets/img/Admob2_eng.png" alt="">  </p></li>
 <li><p>Select an app: <br>
 (1) Put your app name.<br>
 (2) Select <code>platform</code>. <br>
 (3) Click <code>Add app</code>. <br>
-<img src="/vpon-sdk/assets/img/Admob3_eng.png" alt="">  </p></li>
+<img src="/assets/img/Admob3_eng.png" alt="">  </p></li>
 <li><p>Select ad format and name ad unit: <br>
 (1) Choose &quot;banner&quot; or &quot;interstitial&quot; ad type. <br>
 (2) Setting. <br>
 (3) Ad unit name (ex. Vpon_Banner).  <br>
 (4) Save it. <br>
-<img src="/vpon-sdk/assets/img/Admob4-Android_eng.png" alt="">  </p></li>
+<img src="/assets/img/Admob4-Android_eng.png" alt="">  </p></li>
 <li><p>Get an Ad unit ID, then click Done.
-<img src="/vpon-sdk/assets/img/Admob5-Android_eng.png" alt="">  </p></li>
+<img src="/assets/img/Admob5-Android_eng.png" alt="">  </p></li>
 <li><p>Edit mediation
-<img src="/vpon-sdk/assets/img/AdMobScreenshotEnglishAndroid6.jpg" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotEnglishAndroid6.jpg" alt="">  </p></li>
 <li><p>New ad network
-<img src="/vpon-sdk/assets/img/Admob7-Android_eng.png" alt="">  </p></li>
+<img src="/assets/img/Admob7-Android_eng.png" alt="">  </p></li>
 <li><p>Set Vpon into mediation list：    <br>
 (1) Find the VPON Network tag in Available ad netwroks <br>
 (2) Vpon Ad ID: put the Vpon’s Banner ID that you get from vpon’s back office.  <br>
@@ -211,13 +215,13 @@ Please log in to your <a href="http://www.google.com.tw/ads/admob/">AdMob accoun
 
 <p>(If the user of your app is from China, you need to fill with <code>cn</code> in this column; otherwise, you need to fill with <code>tw</code>.)</p>
 
-<p><img src="/vpon-sdk/assets/img/AdMobDefaultAdNetWork.jpg" alt="">  </p>
+<p><img src="/assets/img/AdMobDefaultAdNetWork.jpg" alt="">  </p>
 
 <h1 id="download-sample-code">Download Sample Code</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/ios/download/#admob">Download Sample Code</a></p>
+<p><a href="/ios/download/#admob">Download Sample Code</a></p>
 
       </div>
       <div class="col-md-3">
@@ -245,8 +249,8 @@ Please log in to your <a href="http://www.google.com.tw/ads/admob/">AdMob accoun
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

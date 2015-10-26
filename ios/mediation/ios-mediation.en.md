@@ -6,8 +6,12 @@ description:    ""
 keywords:       "Keywords for this page, in the meta data"
 permalink:       ios/mediation/
 lang:            "en"
-
 ---
+
+## Finished Integration Guide
+---
+If you haven't finished the previous integration guide, please check all the [settings here](../integration-guide/).
+
 # Overview
 ---
 AdMob Mediation is a feature that lets you serve ads to your apps from multiple sources, including the AdMob Network, Mopub Network, third-party ad networks and house ad campaigns.

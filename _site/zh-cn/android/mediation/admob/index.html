@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/zh-cn" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/zh-cn" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/zh-cn/android/" class="right-android">Android</a>
+          <a href="/zh-cn/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-cn/ios/" class="right-ios">iOS</a>
+          <a href="/zh-cn/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-cn/web/" class="right-web">Web</a>
+          <a href="/zh-cn/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/android/mediation/admob/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/android/mediation/admob/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/android/mediation/admob/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/android/mediation/admob/">日本語</a></li>
+          <li><a class="en" href="/android/mediation/admob/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/android/mediation/admob/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/android/mediation/admob/">简体中文</a></li>
+          <li><a class="jp" href="/jp/android/mediation/admob/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -152,17 +156,17 @@
 
 <ul class= "nav nav-sidebar nav-left">
   <span id= "sidebar-title1">Android 串接</span>
-  <li><a id= "getting-started" href="/vpon-sdk/zh-cn/android">开始使用</a></li>
-  <li><a id= "integration-guide" href="/vpon-sdk/zh-cn/android/integration-guide">串接说明</a></li>
+  <li><a id= "getting-started" href="/zh-cn/android">开始使用</a></li>
+  <li><a id= "integration-guide" href="/zh-cn/android/integration-guide">串接说明</a></li>
   <span id= "sidebar-title2">广告型态选择</span>
-  <li><a id= "banner-id" href="/vpon-sdk/zh-cn/android/banner">横幅广告</a></li>
-  <li><a id= "interstitial-id" href="/vpon-sdk/zh-cn/android/interstitial">插页广告</a></li>
-  <li><a id= "mediation" href="/vpon-sdk/zh-cn/android/mediation">中介服务</a></li>
-  <li><a id= "advanced" href="/vpon-sdk/zh-cn/android/advanced">进阶设定</a></li>
+  <li><a id= "banner-id" href="/zh-cn/android/banner">横幅广告</a></li>
+  <li><a id= "interstitial-id" href="/zh-cn/android/interstitial">插页广告</a></li>
+  <li><a id= "mediation" href="/zh-cn/android/mediation">中介服务</a></li>
+  <li><a id= "advanced" href="/zh-cn/android/advanced">进阶设定</a></li>
   <span id= "sidebar-title3">广告型态选择</span>
-  <li><a id= "download" href="/vpon-sdk/zh-cn/android/download">下载 SDK</a></li>
-  <li><a id= "latest-news" href="/vpon-sdk/zh-cn/android/latest-news">最新消息</a></li>
-  <li><a id= "support" href="/vpon-sdk/zh-cn/android/support">其他协助</a></li>
+  <li><a id= "download" href="/zh-cn/android/download">下载 SDK</a></li>
+  <li><a id= "latest-news" href="/zh-cn/android/latest-news">最新消息</a></li>
+  <li><a id= "support" href="/zh-cn/android/support">其他协助</a></li>
 </ul>
 
       </div>
@@ -180,26 +184,26 @@
 
 <ol>
 <li><p>请登入到 <a href="https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#android">这裡</a><br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid1.png" alt="1">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid1.png" alt="1">  </p></li>
 <li><p>盈利 -&gt; 透过新应用程式盈利<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid2.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid2.png" alt="">  </p></li>
 <li><p>选取应用程式:<br>
 (1) 填入 app name <br>
 (2) 选取平台 <br>
 (3) 点选 “新增应用程式&quot; <br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid3.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid3.png" alt="">  </p></li>
 <li><p>选取广告格式并对广告单元命名:<br>
 (1) 选择横幅广告或者插页广告 <br>
 (2) 设定  <br>
 (3) 广告单元名称(ex. Vpon_Banner) <br>
 (4) 储存<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid4.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid4.png" alt="">  </p></li>
 <li><p>得到一组广告单元编号，选取完成<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid5.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid5.png" alt="">  </p></li>
 <li><p>编辑中介服务<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid6.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid6.png" alt="">  </p></li>
 <li><p>新增广告连播网<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid7.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotTradChineseAndroid7.png" alt="">  </p></li>
 <li><p>设定Vpon进入您的聚合列表：<br>
 (1) 在可用的广告联播网中找到 Vpon<br>
 (2) Vpon Ad Id: 填入您在 Vpon 后台申请的版位ID<br>
@@ -207,12 +211,12 @@
 (例：如果您的 App 是欲给大陆平台使用者使用，则您需在此栏位中填入<code>cn</code>，若您 app 是给除了大陆平台以外地区使用者使用则填入<code>tw</code>)  </p></li>
 </ol>
 
-<p><img src="/vpon-sdk/assets/img/AdMobScreenshotTradChineseAndroid8.png" alt="">  </p>
+<p><img src="/assets/img/AdMobScreenshotTradChineseAndroid8.png" alt="">  </p>
 
 <h1 id="串接-vpon-进专案">串接 Vpon 进专案</h1>
 
 <p>您需将载入两个 Jar 档进入您专案中的 libs 资料夹，分别是：admob-adapter-****.jar 和 vpadn-sdk-***-***-***.jar.<br>
-<img src="/vpon-sdk/assets/img/AdMobLibJarFiles.jpg" alt="">  </p>
+<img src="/assets/img/AdMobLibJarFiles.jpg" alt="">  </p>
 
 <h1 id="需求条件">需求条件</h1>
 
@@ -246,16 +250,16 @@
 
 <p>a.在您的应用程式专案中按右键并选择 <code>properties</code>  </p>
 
-<p><img src="/vpon-sdk/assets/img/GooglePlay_Properties.png" alt="">  </p>
+<p><img src="/assets/img/GooglePlay_Properties.png" alt="">  </p>
 
 <p>b.选择 Android -&gt;
 <code>Add...</code> 寻找 google-play-services_lib 内容后按下 OK 新增 Google Play Services library.  </p>
 
-<p><img src="/vpon-sdk/assets/img/GooglePlay_Addlib.png" alt="">  </p>
+<p><img src="/assets/img/GooglePlay_Addlib.png" alt="">  </p>
 
 <p>如图示，您的专案已经 reference Google Play Services library.  </p>
 
-<p><img src="/vpon-sdk/assets/img/GooglePlay_Addlib2.png" alt="">  </p>
+<p><img src="/assets/img/GooglePlay_Addlib2.png" alt="">  </p>
 
 <h3 id="android-studio">Android Studio</h3>
 
@@ -460,7 +464,7 @@
 
 <hr>
 
-<p><a href="/vpon-sdk/zh-cn/android/download/#admob">Download Sample Code</a></p>
+<p><a href="/zh-cn/android/download/#admob">Download Sample Code</a></p>
 
       </div>
       <div class="col-md-3">
@@ -486,8 +490,8 @@
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

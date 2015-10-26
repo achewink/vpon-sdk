@@ -8,10 +8,13 @@ permalink:       /zh-tw/android/mediation/
 lang:           "zh-tw"
 ---
 
+## 完成串接指示
+---
+若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
+
 # 概要
 ---
 透過 AdMob 中介服務，您的應用程式就能放送眾多來源 (包括 AdMob 聯播網、MoPub 聯播網、第三方廣告聯播網和內部廣告活動) 的廣告。
-
 
 
 # 中介平台
@@ -22,6 +25,8 @@ Google AdMob    |  Google DFP |      MoPub   |   MOGO
 [![admob]][1]   | [![dfp]][2] | [![mopub]][3]| [![mogo]][4]
 
 
+
+[串接說明]: {{site.baseurl}}/zh-tw/android/integration-guide/
 
 [admob]: {{site.imgurl}}/admob-logo.png
 [dfp]:   {{site.imgurl}}/dfp-logo.png

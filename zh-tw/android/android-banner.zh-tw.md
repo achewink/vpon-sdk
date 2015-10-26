@@ -7,7 +7,7 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       /zh-tw/android/banner/
 lang:           "zh-tw"
 ---
-# 完成串接指示
+## 完成串接指示
 ---
 若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
 
@@ -148,7 +148,6 @@ device width x auto height | Smart Banner    |  VpadnAdSize.SMART\_BANNER
  adRequest.setEnableAutoRefresh(true);
  adShowBanner.loadAd(adRequest);
 ```
-
 
 
 # 下載 Sample code

@@ -8,9 +8,8 @@ permalink:       jp/android/interstitial/
 lang:            "jp"
 ---
 
-# 実装ガイドを終了いたします
+## 実装ガイドを終了いたします
 ---
-
 まだ以前の実装ガイドを終了していない場合は、[ここから全設定](../integration-guide)をご確認ください。
 
 # インタースティシャル広告の概要

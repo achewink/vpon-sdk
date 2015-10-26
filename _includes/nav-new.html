@@ -37,14 +37,18 @@
         </li>
         {% endfor %}
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             {% case page.lang %}
             {% when "zh-tw" %}
                {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'zh-tw/', "" }}{% endcapture %}
-               {% capture link2 %}{{ site.baseurl }}{{page.url}}{% endcapture %}
-               {% capture link3 %}{{ site.baseurl }}{{page.url | replace: "zh-tw", 'zh-cn'}}{% endcapture %}
-               {% capture link4 %}{{ site.baseurl }}{{page.url | replace: "zh-tw", 'jp'}}{% endcapture %}
+               {% capture link2 %}{{ site.baseurl }}{{ page.url}}{% endcapture %}
+               {% capture link3 %}{{ site.baseurl }}{{ page.url | replace: "zh-tw", 'zh-cn'}}{% endcapture %}
+               {% capture link4 %}{{ site.baseurl }}{{ page.url | replace: "zh-tw", 'jp'}}{% endcapture %}
             {% when "zh-cn" %}
                {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'zh-cn/', "" }}{% endcapture %}
                {% capture link2 %}{{ site.baseurl }}{{ page.url | replace: "zh-cn", 'zh-tw'}}{% endcapture %}
@@ -54,7 +58,7 @@
                {% capture link1 %}{{ site.baseurl }}{{ page.url | replace: 'jp/', "" }}{% endcapture %}
                {% capture link2 %}{{ site.baseurl }}{{ page.url | replace: "jp", 'zh-tw'}}{% endcapture %}
                {% capture link3 %}{{ site.baseurl }}{{ page.url | replace: "jp", 'zh-cn'}}{% endcapture %}
-               {% capture link4 %}{{ site.baseurl }}{{ page.url}}{% endcapture %}
+               {% capture link4 %}{{ site.baseurl }}{{ page.url }}{% endcapture %}
             {% else %}
                {% capture link1 %}{{ site.baseurl }}{{ page.url}}{% endcapture %}
                {% capture link2 %}{{ site.baseurl }}/zh-tw{{page.url}}{% endcapture %}

@@ -2,11 +2,15 @@
 layout:      "android"
 title:       "Android - 插页广告"
 lead:        "Interstitia ad"
-description: 
+description:
 keywords:    'Keywords for this page, in the meta data'
 permalink:    zh-cn/android/interstitial/
 lang:         "zh-cn"
 ---
+
+## 完成串接指示
+---
+若您尚未完成串接广告形式前的串接说明，请先前往[串接说明]完成相关设定
 
 # 总览
 ---
@@ -88,6 +92,6 @@ public class MainActivity extends Activity implements VpadnAdListener {
 
 
 
-
+[串接说明]: ../integration-guide
 [Go to Download Page]:{{site.baseurl}}/zh-cn/android/download
 [进阶设定]: {{site.baseurl}}/zh-cn/android/advanced

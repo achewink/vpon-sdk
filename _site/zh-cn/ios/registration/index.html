@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/zh-cn" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/zh-cn" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/zh-cn/android/" class="right-android">Android</a>
+          <a href="/zh-cn/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-cn/ios/" class="right-ios">iOS</a>
+          <a href="/zh-cn/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-cn/web/" class="right-web">Web</a>
+          <a href="/zh-cn/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/ios/registration/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/ios/registration/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/ios/registration/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/ios/registration/">日本語</a></li>
+          <li><a class="en" href="/ios/registration/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/ios/registration/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/ios/registration/">简体中文</a></li>
+          <li><a class="jp" href="/jp/ios/registration/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -155,17 +159,17 @@
 
   <ul class= "nav nav-sidebar nav-left">
     <span id= "sidebar-title1">iOS 串接</span>
-    <li><a id= "getting-started" href="/vpon-sdk/zh-cn/ios">开始使用</a></li>
-    <li><a id= "integration-guide" href="/vpon-sdk/zh-cn/ios/integration-guide">串接说明</a></li>
+    <li><a id= "getting-started" href="/zh-cn/ios">开始使用</a></li>
+    <li><a id= "integration-guide" href="/zh-cn/ios/integration-guide">串接说明</a></li>
     <span id= "sidebar-title2">广告型态选择</span>
-    <li><a id= "banner-id" href="/vpon-sdk/zh-cn/ios/banner">横幅广告</a></li>
-    <li><a id= "interstitial-id" href="/vpon-sdk/zh-cn/ios/interstitial">插页广告</a></li>
-    <li><a id= "mediation" href="/vpon-sdk/zh-cn/ios/mediation">中介服务</a></li>
-    <li><a id= "advanced" href="/vpon-sdk/zh-cn/ios/advanced">进阶设定</a></li>
+    <li><a id= "banner-id" href="/zh-cn/ios/banner">横幅广告</a></li>
+    <li><a id= "interstitial-id" href="/zh-cn/ios/interstitial">插页广告</a></li>
+    <li><a id= "mediation" href="/zh-cn/ios/mediation">中介服务</a></li>
+    <li><a id= "advanced" href="/zh-cn/ios/advanced">进阶设定</a></li>
     <span id= "sidebar-title3">广告型态选择</span>
-    <li><a id= "download" href="/vpon-sdk/zh-cn/ios/download">下载 SDK</a></li>
-    <li><a id= "latest-news" href="/vpon-sdk/zh-cn/ios/latest-news">最新消息</a></li>
-    <li><a id= "support" href="/vpon-sdk/zh-cn/ios/support">其他协助</a></li>
+    <li><a id= "download" href="/zh-cn/ios/download">下载 SDK</a></li>
+    <li><a id= "latest-news" href="/zh-cn/ios/latest-news">最新消息</a></li>
+    <li><a id= "support" href="/zh-cn/ios/support">其他协助</a></li>
   </ul>
 
       </div>
@@ -213,13 +217,13 @@ Key，可以帮助您横跨大中华区的行动广告市场。</p>
 
 <hr>
 
-<p><img src="/vpon-sdk/assets/img/SDK400%E5%BB%BA%E7%AB%8B%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F.jpeg" alt=""></p>
+<p><img src="/assets/img/SDK400%E5%BB%BA%E7%AB%8B%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F.jpeg" alt=""></p>
 
 <p>点选【建立软体】即可进行新增应用程式页面：输入您要串接广告的应用程式名称、应用程式所使用的平台、
 URL 与应用程式说明与选择是否可播放 Crazy AD
 。填完后按下【送出】键进行新增版位页面。</p>
 
-<p><img src="/vpon-sdk/assets/img/SDK400%E6%96%B0%E5%A2%9E%E7%89%88%E4%BD%8D.jpeg" alt=""></p>
+<p><img src="/assets/img/SDK400%E6%96%B0%E5%A2%9E%E7%89%88%E4%BD%8D.jpeg" alt=""></p>
 
 <p>进入新增版位页面：</p>
 
@@ -232,10 +236,10 @@ URL 与应用程式说明与选择是否可播放 Crazy AD
 按下【送出】键进入版位列表页面。</li>
 </ol>
 
-<p><img src="/vpon-sdk/assets/img/trandationchinesefrontserver3.png" alt="">
+<p><img src="/assets/img/trandationchinesefrontserver3.png" alt="">
 进入版位列表页面后，将会看见您的申请状态与您这个应用程式的 Vpon Key。按下左选单的【软体列表】进入软体列表页面。</p>
 
-<p><img src="/vpon-sdk/assets/img/trandationchinesefrontserver4.png" alt="">
+<p><img src="/assets/img/trandationchinesefrontserver4.png" alt="">
 进入软体列表页面，会看到您所建立的应用程式、应用程式的审核状态与相关设定</p>
 
       </div>
@@ -264,8 +268,8 @@ URL 与应用程式说明与选择是否可播放 Crazy AD
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

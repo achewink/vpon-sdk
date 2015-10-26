@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/jp" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/jp" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/jp/android/" class="right-android">Android</a>
+          <a href="/jp/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/jp/ios/" class="right-ios">iOS</a>
+          <a href="/jp/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/jp/web/" class="right-web">Web</a>
+          <a href="/jp/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/ios/mediation/admob/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/ios/mediation/admob/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/ios/mediation/admob/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/ios/mediation/admob/">日本語</a></li>
+          <li><a class="en" href="/ios/mediation/admob/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/ios/mediation/admob/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/ios/mediation/admob/">简体中文</a></li>
+          <li><a class="jp" href="/jp/ios/mediation/admob/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -155,17 +159,17 @@
 
   <ul class= "nav nav-sidebar nav-left">
     <span id= "sidebar-title1">iOS 串接</span>
-    <li><a id= "getting-started" href="/vpon-sdk/jp/ios">スタートガイド</a></li>
-    <li><a id= "integration-guide" href="/vpon-sdk/jp/ios/integration-guide">インテグレーションガ</a></li>
+    <li><a id= "getting-started" href="/jp/ios">スタートガイド</a></li>
+    <li><a id= "integration-guide" href="/jp/ios/integration-guide">インテグレーションガ</a></li>
     <span id= "sidebar-title2">広告パターンとを選択</span>
-    <li><a id= "banner-id" href="/vpon-sdk/jp/ios/banner">バナー広告</a></li>
-    <li><a id= "interstitial-id" href="/vpon-sdk/jp/ios/interstitial">インタースティシャル広告</a></li>
-    <li><a id= "mediation" href="/vpon-sdk/jp/ios/mediation">メディエーション</a></li>
-    <li><a id= "advanced" href="/vpon-sdk/jp/ios/advanced">詳細設定</a></li>
+    <li><a id= "banner-id" href="/jp/ios/banner">バナー広告</a></li>
+    <li><a id= "interstitial-id" href="/jp/ios/interstitial">インタースティシャル広告</a></li>
+    <li><a id= "mediation" href="/jp/ios/mediation">メディエーション</a></li>
+    <li><a id= "advanced" href="/jp/ios/advanced">詳細設定</a></li>
     <span id= "sidebar-title3">広告パターンとを選択</span>
-    <li><a id= "download" href="/vpon-sdk/jp/ios/download">最新ニュース</a></li>
-    <li><a id= "latest-news" href="/vpon-sdk/jp/ios/latest-news">ダウンロード</a></li>
-    <li><a id= "support" href="/vpon-sdk/jp/ios/support">サポート</a></li>
+    <li><a id= "download" href="/jp/ios/download">最新ニュース</a></li>
+    <li><a id= "latest-news" href="/jp/ios/latest-news">ダウンロード</a></li>
+    <li><a id= "support" href="/jp/ios/support">サポート</a></li>
   </ul>
 
       </div>
@@ -184,26 +188,26 @@
 <ol>
 <li><p>番号付きのリストアイテム。
 ログイン - <a href="http://www.google.com.tw/ads/admob/">AdMob account</a>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP1.PNG" alt="1">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP1.PNG" alt="1">  </p></li>
 <li><p><code>収益</code> -&gt;<code>新アプリケーションによる収益化</code>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP2.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP2.png" alt="">  </p></li>
 <li><p>アプリケーションの選択: <br>
 (1) app name の記入。<br>
 (2) プラットフォームの選択。<br>
 (3)「アプリケーションの追加」をクリック。 <br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP3.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP3.png" alt="">  </p></li>
 <li><p>広告フォームの選択と広告ユニットの命名: <br>
 (1) バナー広告またはインターステイシャル広告の選択。 <br>
 (2) 設定。 <br>
 (3) 広告ユニット名(例:Vpon_Banner)。 <br>
 (4) 保存<br>
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP4.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP4.png" alt="">  </p></li>
 <li><p>一組の広告ユニット番号を取得し、選択が完了。
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP5.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP5.png" alt="">  </p></li>
 <li><p>仲介サービスの編集
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP6.PNG" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP6.PNG" alt="">  </p></li>
 <li><p>広告放送ネットワークの追加
-<img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP7.png" alt="">  </p></li>
+<img src="/assets/img/AdMobScreenshotSiJP7.png" alt="">  </p></li>
 <li><p>Vponをメディエーションリストに設定する：    <br>
 (1) Vponネットワークタグを利用可能な広告ネットワークで検索  <br>
 (2) Vpon広告ID：Vponのバックオフィスから取得したVponバナーIDを入力  <br>
@@ -212,13 +216,13 @@
 
 <p>(あなたのアプリのユーザーが中国から利用している場合は、この列に<code>cn</code>と入力し、それ以外は<code>tw</code>と入力します)</p>
 
-<p><img src="/vpon-sdk/assets/img/AdMobScreenshotSiJP8.png" alt="">  </p>
+<p><img src="/assets/img/AdMobScreenshotSiJP8.png" alt="">  </p>
 
 <h1 id="サンプルコードのダウンロード">サンプルコードのダウンロード</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/ios/download/#admob">Download Sample Code</a></p>
+<p><a href="/ios/download/#admob">Download Sample Code</a></p>
 
       </div>
       <div class="col-md-3">
@@ -246,8 +250,8 @@
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

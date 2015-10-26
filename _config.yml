@@ -5,12 +5,12 @@ redcarpet:
 highlighter:        pygments
 
 #github settings
-baseurl:            /vpon-sdk
-assetsurl:          /vpon-sdk/assets
-jsurl:              /vpon-sdk/assets/js
-cssurl:             /vpon-sdk/assets/css
-imgurl:             /vpon-sdk/assets/img
-dnldurl:            /vpon-sdk/assets/download
+baseurl:
+assetsurl:          /assets
+jsurl:              /assets/js
+cssurl:             /assets/css
+imgurl:             /assets/img
+dnldurl:            /assets/download
 gem:
 
 # Permalinks
@@ -42,7 +42,7 @@ lang:          ["en", "zh-tw", "zh-cn", "jp"]
 left_nav:
   en:
     title:          "Vpon SDK"
-    path:           /vpon-sdk/
+    path:           /
     # items:
     #   - path:       /page1
     #     title:      "Another page"
@@ -50,64 +50,64 @@ left_nav:
     #     title:      "Yet another page"
   zh-tw:
     title:          "Vpon SDK"
-    path:           /vpon-sdk/zh-tw
+    path:           /zh-tw
 
   zh-cn:
     title:          "Vpon SDK"
-    path:           /vpon-sdk/zh-cn
+    path:           /zh-cn
 
   jp:
     title:          "Vpon SDK"
-    path:           /vpon-sdk/jp
+    path:           /jp
 
 
 # new right navigation
 right_nav_new:
   - title: Android
     cls: right-android
-    url1: /vpon-sdk/android/
-    url2: /vpon-sdk/zh-tw/android/
-    url3: /vpon-sdk/zh-cn/android/
-    url4: /vpon-sdk/jp/android/
+    url1: /android/
+    url2: /zh-tw/android/
+    url3: /zh-cn/android/
+    url4: /jp/android/
   - title: iOS
     cls: right-ios
-    url1: /vpon-sdk/ios/
-    url2: /vpon-sdk/zh-tw/ios/
-    url3: /vpon-sdk/zh-cn/ios/
-    url4: /vpon-sdk/jp/ios/
+    url1: /ios/
+    url2: /zh-tw/ios/
+    url3: /zh-cn/ios/
+    url4: /jp/ios/
   - title: Web
     cls: right-web
-    url1: /vpon-sdk/web/
-    url2: /vpon-sdk/zh-tw/web/
-    url3: /vpon-sdk/zh-cn/web/
-    url4: /vpon-sdk/jp/web/
+    url1: /web/
+    url2: /zh-tw/web/
+    url3: /zh-cn/web/
+    url4: /jp/web/
 
 
 # right navigation
-right_nav:
-  - title:          English
-    url:            /vpon-sdk/
-    url1:           /vpon-sdk/android/
-    url2:           /vpon-sdk/ios/
-    url3:           /vpon-sdk/web/
-
-  - title:          繁體中文
-    url:            /vpon-sdk/zh-tw/
-    url1:           /vpon-sdk/zh-tw/android/
-    url2:           /vpon-sdk/zh-tw/ios/
-    url3:           /vpon-sdk/zh-tw/web/
-
-  - title:          简体中文
-    url:            /vpon-sdk/zh-cn
-    url1:           /vpon-sdk/zh-cn/android/
-    url2:           /vpon-sdk/zh-cn/ios/
-    url3:           /vpon-sdk/zh-cn/web/
-
-  - title:          日本語
-    url:            /vpon-sdk/jp
-    url1:           /vpon-sdk/jp/android/
-    url2:           /vpon-sdk/jp/ios/
-    url3:           /vpon-sdk/jp/web/
+# right_nav:
+#   - title:          English
+#     url:            /
+#     url1:           /android/
+#     url2:           /ios/
+#     url3:           /web/
+#
+#   - title:          繁體中文
+#     url:            /zh-tw/
+#     url1:           /zh-tw/android/
+#     url2:           /zh-tw/ios/
+#     url3:           /zh-tw/web/
+#
+#   - title:          简体中文
+#     url:            /zh-cn
+#     url1:           /zh-cn/android/
+#     url2:           /zh-cn/ios/
+#     url3:           /zh-cn/web/
+#
+#   - title:          日本語
+#     url:            /jp
+#     url1:           /jp/android/
+#     url2:           /jp/ios/
+#     url3:           /jp/web/
 
 # analytics account information, remember to change this.
 analytics:

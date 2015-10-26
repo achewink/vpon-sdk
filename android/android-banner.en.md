@@ -7,9 +7,9 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       android/banner/
 lang:           "en"
 ---
-# Finished Integration Guide
+## Finished Integration Guide
 ---
-If you haven't finished the previous integration guide, please check all the [settings here]({{site.baseurl}}/android/integration-guide/).
+If you haven't finished the previous integration guide, please check all the [settings here](../integration-guide/).
 
 # Coding for showing Banner
 ---

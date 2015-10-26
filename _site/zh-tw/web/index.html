@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -59,8 +59,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/zh-tw" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/zh-tw" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -74,36 +74,40 @@
           
             
           
-          <a href="/vpon-sdk/zh-tw/android/" class="right-android">Android</a>
+          <a href="/zh-tw/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/ios/" class="right-ios">iOS</a>
+          <a href="/zh-tw/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/web/" class="right-web">Web</a>
+          <a href="/zh-tw/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/web/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/web/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/web/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/web/">日本語</a></li>
+          <li><a class="en" href="/web/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/web/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/web/">简体中文</a></li>
+          <li><a class="jp" href="/jp/web/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -306,8 +310,8 @@
 <li>產生廣告代碼 (選取Google發佈商廣告代碼)</li>
 </ol>
 
-<p><img src="/vpon-sdk/assets/img/UnitAdSetting_DFP1.png" alt="UnitAdSetting_DFP1">
-<img src="/vpon-sdk/assets/img/UnitAdSetting_DFP2.png" alt="UnitAdSetting_DFP2"></p>
+<p><img src="/assets/img/UnitAdSetting_DFP1.png" alt="UnitAdSetting_DFP1">
+<img src="/assets/img/UnitAdSetting_DFP2.png" alt="UnitAdSetting_DFP2"></p>
 
 <h2 id="設定委刊單、委刊項及廣告素材">設定委刊單、委刊項及廣告素材</h2>
 
@@ -323,7 +327,7 @@
 <li>在適當欄位中輸入您的委刊單資訊。不可與聯播網中其他的委刊單名稱重複。</li>
 <li>輸入委刊項資訊。</li>
 <li>按一下 <code>檢查廣告空間</code>，確認委刊單擁有足夠的曝光供應量。
-<img src="/vpon-sdk/assets/img/Warning.png" alt="Warning"></li>
+<img src="/assets/img/Warning.png" alt="Warning"></li>
 <li>按一下 <code>儲存</code>。建好委刊單之後，您必須先予以核准，委刊項才能放送。</li>
 </ol>
 
@@ -348,7 +352,7 @@
 <p>廣告單元會沿用您的聯播網名稱，代表您聯播網中所有的廣告單元。如果您為委刊項指定這個聯播網層級的廣告單元，委刊項將指定聯播網中的任何廣告單元。</p>
 
 <p>範例：
-<img src="/vpon-sdk/assets/img/%E6%96%B0%E5%A2%9E%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A8%99.png" alt="新增指定目標_DFP"></p>
+<img src="/assets/img/%E6%96%B0%E5%A2%9E%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A8%99.png" alt="新增指定目標_DFP"></p>
 
 <ol>
 <li>(選用程序) 輸入其他指定條件，指定特定目標對象。 如果您未將委刊項指定給任何廣告單元或刊登位置，系統會將委刊項設成在全聯播網隨機放送。這表示委刊項可在您網站上的任何廣告單元中放送</li>
@@ -366,7 +370,7 @@
 <h4 id="只加入一個廣告素材">只加入一個廣告素材</h4>
 
 <p>選取廣告素材類型: 選取『所有』中的『 第三方』
-<img src="/vpon-sdk/assets/img/%E5%BB%A3%E5%91%8A%E7%B4%A0%E6%9D%90%E9%A1%9E%E5%9E%8B_DFP.png" alt="廣告素材類型_DFP"></p>
+<img src="/assets/img/%E5%BB%A3%E5%91%8A%E7%B4%A0%E6%9D%90%E9%A1%9E%E5%9E%8B_DFP.png" alt="廣告素材類型_DFP"></p>
 
 <h4 id="基本廣告素材設定">基本廣告素材設定</h4>
 
@@ -382,7 +386,7 @@
 </blockquote>
 
 <p>範例：
-<img src="/vpon-sdk/assets/img/%E7%B4%A0%E6%9D%90%E8%A8%AD%E5%AE%9A_DFP.png" alt="素材設定_DFP"></p>
+<img src="/assets/img/%E7%B4%A0%E6%9D%90%E8%A8%AD%E5%AE%9A_DFP.png" alt="素材設定_DFP"></p>
 
 <h4 id="輪播型素材設定">輪播型素材設定</h4>
 
@@ -427,7 +431,7 @@
 </blockquote>
 
 <p>範例：
-<img src="/vpon-sdk/assets/img/DFP_WEB_CALLBACK.png" alt="DFP_WEB_CALLBACK"></p>
+<img src="/assets/img/DFP_WEB_CALLBACK.png" alt="DFP_WEB_CALLBACK"></p>
 
 <p>欲了解更多passback運行機制，請參考 <a href="https://support.google.com/dfp_sb/answer/1693146?hl=en">GAM tags</a></p>
 
@@ -479,8 +483,8 @@
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/jp" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/jp" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/jp/android/" class="right-android">Android</a>
+          <a href="/jp/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/jp/ios/" class="right-ios">iOS</a>
+          <a href="/jp/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/jp/web/" class="right-web">Web</a>
+          <a href="/jp/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/android/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/android/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/android/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/android/">日本語</a></li>
+          <li><a class="en" href="/android/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/android/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/android/">简体中文</a></li>
+          <li><a class="jp" href="/jp/android/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -152,17 +156,17 @@
 
 <ul class= "nav nav-sidebar nav-left">
   <span id= "sidebar-title1">Android 串接</span>
-  <li><a id= "getting-started" href="/vpon-sdk/jp/android">スタートガイド</a></li>
-  <li><a id= "integration-guide" href="/vpon-sdk/jp/android/integration-guide">インテグレーションガ</a></li>
+  <li><a id= "getting-started" href="/jp/android">スタートガイド</a></li>
+  <li><a id= "integration-guide" href="/jp/android/integration-guide">インテグレーションガ</a></li>
   <span id= "sidebar-title2">広告パターンとを選択</span>
-  <li><a id= "banner-id" href="/vpon-sdk/jp/android/banner">バナー広告</a></li>
-  <li><a id= "interstitial-id" href="/vpon-sdk/jp/android/interstitial">インタースティシャル広告</a></li>
-  <li><a id= "mediation" href="/vpon-sdk/jp/android/mediation">メディエーション</a></li>
-  <li><a id= "advanced" href="/vpon-sdk/jp/android/advanced">詳細設定</a></li>
+  <li><a id= "banner-id" href="/jp/android/banner">バナー広告</a></li>
+  <li><a id= "interstitial-id" href="/jp/android/interstitial">インタースティシャル広告</a></li>
+  <li><a id= "mediation" href="/jp/android/mediation">メディエーション</a></li>
+  <li><a id= "advanced" href="/jp/android/advanced">詳細設定</a></li>
   <span id= "sidebar-title3">広告パターンとを選択</span>
-  <li><a id= "download" href="/vpon-sdk/jp/android/download">最新ニュース</a></li>
-  <li><a id= "latest-news" href="/vpon-sdk/jp/android/latest-news">ダウンロード</a></li>
-  <li><a id= "support" href="/vpon-sdk/jp/android/support">サポート</a></li>
+  <li><a id= "download" href="/jp/android/download">最新ニュース</a></li>
+  <li><a id= "latest-news" href="/jp/android/latest-news">ダウンロード</a></li>
+  <li><a id= "support" href="/jp/android/support">サポート</a></li>
 </ul>
 
       </div>
@@ -174,13 +178,13 @@
 
 <hr>
 
-<p>まず始めに<a href="/vpon-sdk/jp/android/download/">最新の SDK をダウンロード</a>してください。まだ Vpon のデベロッパーでない場 合は、<a href="/vpon-sdk/jp//android/registration/">このガイドを</a>参考にご登録ください。 <br><br></p>
+<p>まず始めに<a href="/jp/android/download/">最新の SDK をダウンロード</a>してください。まだ Vpon のデベロッパーでない場 合は、<a href="/jp//android/registration/">このガイドを</a>参考にご登録ください。 <br><br></p>
 
 <h2 id="step2-sdkの統合">Step2: SDKの統合</h2>
 
 <hr>
 
-<p>最低必要条件、権限およびその他設定を含む、Vpon SDK の実装を完成させるには、<a href="/vpon-sdk/jp/android/integration-guide/">この 実装ガイド</a>に従ってください。<br><br></p>
+<p>最低必要条件、権限およびその他設定を含む、Vpon SDK の実装を完成させるには、<a href="/jp/android/integration-guide/">この 実装ガイド</a>に従ってください。<br><br></p>
 
 <h2 id="step3-広告の統合">Step3: 広告の統合</h2>
 
@@ -188,9 +192,9 @@
 
 <table><thead>
 <tr>
-<th style="text-align: center"><a href="/vpon-sdk/jp/android/banner/">バナー広告</a></th>
-<th style="text-align: center"><a href="/vpon-sdk/jp/android/interstitial/">インタースティシャル広告</a></th>
-<th style="text-align: center"><a href="/vpon-sdk/jp/android/mediation/">メディエーション</a></th>
+<th style="text-align: center"><a href="/jp/android/banner/">バナー広告</a></th>
+<th style="text-align: center"><a href="/jp/android/interstitial/">インタースティシャル広告</a></th>
+<th style="text-align: center"><a href="/jp/android/mediation/">メディエーション</a></th>
 </tr>
 </thead><tbody>
 </tbody></table>
@@ -210,7 +214,7 @@
 <p>その他ご質問がございましたら、弊社、 <a href="mailto:fae@vpon.com">Vpon FAE</a> までお問い合わせください。最高のサ ービスをお届けいたします。</p>
 
 <blockquote>
-<p><strong>Note</strong>: 旧バージョンのSDKをご利用の場合、まず最新版のSDKにバージョンアップするための修正をご確認ください。<a href="/vpon-sdk/jp/android/latest-news/update-to-SDK4_2_x/">SDK4.2.x の最新バージョンへのアップデート方法</a></p>
+<p><strong>Note</strong>: 旧バージョンのSDKをご利用の場合、まず最新版のSDKにバージョンアップするための修正をご確認ください。<a href="/jp/android/latest-news/update-to-SDK4_2_x/">SDK4.2.x の最新バージョンへのアップデート方法</a></p>
 </blockquote>
 
       </div>
@@ -237,8 +241,8 @@
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

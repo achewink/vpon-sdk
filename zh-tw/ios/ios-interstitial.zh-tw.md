@@ -2,11 +2,15 @@
 layout: "ios"
 title: "iOS - 插頁廣告"
 lead: ""
-description: 
+description:
 keywords: 'Keywords for this page, in the meta data'
 permalink: /zh-tw/ios/interstitial/
 lang: "zh-tw"
 ---
+## 完成串接指示
+---
+若您尚未完成串接廣告形式前的串接說明，請先前往[串接說明]完成相關設定
+
 # 總覽
 ---
 插頁式廣告是互動式多媒體 HTML5 或「網路應用程式」，在應用程式的正常轉換點顯示 (例如啟動、影片播放前或遊戲關卡載入時)。網路應用程式使用上就像在應用程式內瀏覽一樣，只有簡單的關閉按鈕，而沒有任何導覽列，因為導覽配置就包含在內容本身。這類廣告由於內容更豐富、更吸引人，因此製作起來更昂貴，而曝光機會卻有限。
@@ -44,4 +48,5 @@ Interstitial Ad 的內容更加豐富精彩，因為它是需要更多不同實�
 若想進一步瞭解 protocol 相關詳情，請參閱[進階設定]。
 
 
+[串接說明]: ../integration-guide/
 [進階設定]: ../advanced/

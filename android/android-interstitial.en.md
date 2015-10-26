@@ -7,6 +7,11 @@ keywords:       "Keywords for this page, in the meta data"
 permalink:       android/interstitial/
 lang:           "en"
 ---
+
+## Finished Integration Guide
+---
+If you haven't finished the previous integration guide, please check all the [settings here](../integration-guide/).
+
 # Overview
 ---
 Interstitials, on the other hand, immediately present rich HTML5 experiences or "web apps" at natural app transition points such as launch, video pre-roll or game level load. Web apps are in-app browsing experiences with a simple close button rather than any navigation bar—the content provides its own internal navigation scheme. Interstitial ads are typically more expensive and subject to impression constraints.

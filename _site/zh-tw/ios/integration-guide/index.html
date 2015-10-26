@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/zh-tw" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/zh-tw" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/zh-tw/android/" class="right-android">Android</a>
+          <a href="/zh-tw/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/ios/" class="right-ios">iOS</a>
+          <a href="/zh-tw/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/web/" class="right-web">Web</a>
+          <a href="/zh-tw/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/ios/integration-guide/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/ios/integration-guide/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/ios/integration-guide/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/ios/integration-guide/">日本語</a></li>
+          <li><a class="en" href="/ios/integration-guide/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/ios/integration-guide/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/ios/integration-guide/">简体中文</a></li>
+          <li><a class="jp" href="/jp/ios/integration-guide/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -155,17 +159,17 @@
 
   <ul class= "nav nav-sidebar nav-left">
     <span id= "sidebar-title1">iOS 串接</span>
-    <li><a id= "getting-started" href="/vpon-sdk/zh-tw/ios">開始使用</a></li>
-    <li><a id= "integration-guide" href="/vpon-sdk/zh-tw/ios/integration-guide">串接說明</a></li>
+    <li><a id= "getting-started" href="/zh-tw/ios">開始使用</a></li>
+    <li><a id= "integration-guide" href="/zh-tw/ios/integration-guide">串接說明</a></li>
     <span id= "sidebar-title2">廣告型態選擇</span>
-    <li><a id= "banner-id" href="/vpon-sdk/zh-tw/ios/banner">橫幅廣告</a></li>
-    <li><a id= "interstitial-id" href="/vpon-sdk/zh-tw/ios/interstitial">插頁廣告</a></li>
-    <li><a id= "mediation" href="/vpon-sdk/zh-tw/ios/mediation">中介服務</a></li>
-    <li><a id= "advanced" href="/vpon-sdk/zh-tw/ios/advanced">進階設定</a></li>
+    <li><a id= "banner-id" href="/zh-tw/ios/banner">橫幅廣告</a></li>
+    <li><a id= "interstitial-id" href="/zh-tw/ios/interstitial">插頁廣告</a></li>
+    <li><a id= "mediation" href="/zh-tw/ios/mediation">中介服務</a></li>
+    <li><a id= "advanced" href="/zh-tw/ios/advanced">進階設定</a></li>
     <span id= "sidebar-title3">廣告型態選擇</span>
-    <li><a id= "download" href="/vpon-sdk/zh-tw/ios/download">下載 SDK</a></li>
-    <li><a id= "latest-news" href="/vpon-sdk/zh-tw/ios/latest-news">最新消息</a></li>
-    <li><a id= "support" href="/vpon-sdk/zh-tw/ios/support">其他協助</a></li>
+    <li><a id= "download" href="/zh-tw/ios/download">下載 SDK</a></li>
+    <li><a id= "latest-news" href="/zh-tw/ios/latest-news">最新消息</a></li>
+    <li><a id= "support" href="/zh-tw/ios/support">其他協助</a></li>
   </ul>
 
       </div>
@@ -213,9 +217,9 @@ China平台為: <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a><br
 
 <ol>
 <li>解壓縮後的 SDK 包含一個 lib 檔、及兩個標頭檔。 對 Xcode 中的專案按一下滑鼠右鍵，然後選取 <a href="%E5%9C%A8%20%22Vpadn_BannerInter_x5%22%20%E4%B8%AD%E6%96%B0%E5%A2%9E%E6%AA%94%E6%A1%88">Add Files to &quot;Vpadn_BannerInter_x5&quot;...</a>。
-<img src="/vpon-sdk/assets/img/IOS-add-file_vpadn.png" alt="IOS-add-file_vpadn.png"></li>
+<img src="/assets/img/IOS-add-file_vpadn.png" alt="IOS-add-file_vpadn.png"></li>
 <li>接著在 SDK 中選取 <code>libAdOn.a</code>, <code>VpadnBanner.h</code> 與 <code>VpadnInterstitial.h</code>
-<img src="/vpon-sdk/assets/img/IOS-add-lib&amp;header_vpadn.png" alt="IOS-add-lib&amp;header_vpadn"></li>
+<img src="/assets/img/IOS-add-lib&amp;header_vpadn.png" alt="IOS-add-lib&amp;header_vpadn"></li>
 <li>SDK lib 會參照 iOS 的 frameworks： <br  >
 <code>AdSupport</code>, <br>
 <code>AssetsLibrary</code>, <br>
@@ -240,13 +244,13 @@ China平台為: <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a><br
 </ol>
 
 <p>若要加入這些 Framework，請對 Vpadn_BannerInter_x5 這個專案名稱按兩下滑鼠，開啟 <code>Build Phases</code> 分頁下的 <code>Link Binary With Libraries</code> 下拉式選單，然後用畫面上出現的 <code>+</code> 按鈕加入 iOS SDK 中的架構。
-<img src="/vpon-sdk/assets/img/IOS-add-frameworks_vpadn.png" alt="IOS-add-frameworks_vpadn"></p>
+<img src="/assets/img/IOS-add-frameworks_vpadn.png" alt="IOS-add-frameworks_vpadn"></p>
 
 <h1 id="app-transport-security">App Transport Security</h1>
 
 <hr>
 
-<p>iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 專案，請參考<a href="/vpon-sdk/zh-tw/ios/latest-news/ios9ats/">這篇</a>來修改部份設定</p>
+<p>iOS9 多了安全條款 App Transport Security (ATS)，若您使用 Xcode 7 建立 iOS9 專案，請參考<a href="/zh-tw/ios/latest-news/ios9ats/">這篇</a>來修改部份設定</p>
 
 <h1 id="其他訣竅">其他訣竅</h1>
 
@@ -278,8 +282,8 @@ China平台為: <a href="http://cn.pub.vpon.com/">http://cn.pub.vpon.com/</a><br
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

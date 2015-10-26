@@ -18,11 +18,11 @@
   
 </title>
 <!-- Bootstrap core CSS -->
-<link href="/vpon-sdk/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Google Noto Sans Font -->
 <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <!-- Documentation extras -->
-<link href="/vpon-sdk/assets/css/docs.min.css" rel="stylesheet">
+<link href="/assets/css/docs.min.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -60,8 +60,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/vpon-sdk/zh-tw" class="navbar-brand">
-        <img src="/vpon-sdk/assets/img/vpon-logo.png" id="vpon-logo" />
+      <a href="/zh-tw" class="navbar-brand">
+        <img src="/assets/img/vpon-logo.png" id="vpon-logo" />
       </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -75,36 +75,40 @@
           
             
           
-          <a href="/vpon-sdk/zh-tw/android/" class="right-android">Android</a>
+          <a href="/zh-tw/android/" class="right-android">Android</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/ios/" class="right-ios">iOS</a>
+          <a href="/zh-tw/ios/" class="right-ios">iOS</a>
         </li>
         
         <li class="dropdown">
           
             
           
-          <a href="/vpon-sdk/zh-tw/web/" class="right-web">Web</a>
+          <a href="/zh-tw/web/" class="right-web">Web</a>
         </li>
         
         <li class="dropdown">
-          <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a>
-          <ul class="dropdown-menu">
+          <!-- <a class="dropdown-toggle language-menu" data-toggle="dropdown">Language</a> -->
+          <button class="btn btn-default dropdown-toggle language-menu .dropdown-menu-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu language-dropdown">
             
                
                
                
                
             
-          <li><a class="en" href="/vpon-sdk/ios/mediation/mogo/">English</a></li>
-          <li><a class="zh-tw" href="/vpon-sdk/zh-tw/ios/mediation/mogo/">繁體中文</a></li>
-          <li><a class="zh-cn" href="/vpon-sdk/zh-cn/ios/mediation/mogo/">简体中文</a></li>
-          <li><a class="jp" href="/vpon-sdk/jp/ios/mediation/mogo/">日本語</a></li>
+          <li><a class="en" href="/ios/mediation/mogo/">English</a></li>
+          <li><a class="zh-tw" href="/zh-tw/ios/mediation/mogo/">繁體中文</a></li>
+          <li><a class="zh-cn" href="/zh-cn/ios/mediation/mogo/">简体中文</a></li>
+          <li><a class="jp" href="/jp/ios/mediation/mogo/">日本語</a></li>
           </ul>
         </li>
       </ul>
@@ -155,17 +159,17 @@
 
   <ul class= "nav nav-sidebar nav-left">
     <span id= "sidebar-title1">iOS 串接</span>
-    <li><a id= "getting-started" href="/vpon-sdk/zh-tw/ios">開始使用</a></li>
-    <li><a id= "integration-guide" href="/vpon-sdk/zh-tw/ios/integration-guide">串接說明</a></li>
+    <li><a id= "getting-started" href="/zh-tw/ios">開始使用</a></li>
+    <li><a id= "integration-guide" href="/zh-tw/ios/integration-guide">串接說明</a></li>
     <span id= "sidebar-title2">廣告型態選擇</span>
-    <li><a id= "banner-id" href="/vpon-sdk/zh-tw/ios/banner">橫幅廣告</a></li>
-    <li><a id= "interstitial-id" href="/vpon-sdk/zh-tw/ios/interstitial">插頁廣告</a></li>
-    <li><a id= "mediation" href="/vpon-sdk/zh-tw/ios/mediation">中介服務</a></li>
-    <li><a id= "advanced" href="/vpon-sdk/zh-tw/ios/advanced">進階設定</a></li>
+    <li><a id= "banner-id" href="/zh-tw/ios/banner">橫幅廣告</a></li>
+    <li><a id= "interstitial-id" href="/zh-tw/ios/interstitial">插頁廣告</a></li>
+    <li><a id= "mediation" href="/zh-tw/ios/mediation">中介服務</a></li>
+    <li><a id= "advanced" href="/zh-tw/ios/advanced">進階設定</a></li>
     <span id= "sidebar-title3">廣告型態選擇</span>
-    <li><a id= "download" href="/vpon-sdk/zh-tw/ios/download">下載 SDK</a></li>
-    <li><a id= "latest-news" href="/vpon-sdk/zh-tw/ios/latest-news">最新消息</a></li>
-    <li><a id= "support" href="/vpon-sdk/zh-tw/ios/support">其他協助</a></li>
+    <li><a id= "download" href="/zh-tw/ios/download">下載 SDK</a></li>
+    <li><a id= "latest-news" href="/zh-tw/ios/latest-news">最新消息</a></li>
+    <li><a id= "support" href="/zh-tw/ios/support">其他協助</a></li>
   </ul>
 
       </div>
@@ -175,13 +179,13 @@
 
 <hr>
 
-<p>MOGO Mediation 請先註冊帳號: <a href="/vpon-sdk/assets/img/http://www.adsmogo.com/">進入</a>  </p>
+<p>MOGO Mediation 請先註冊帳號: <a href="/assets/img/http://www.adsmogo.com/">進入</a>  </p>
 
 <h1 id="進入我的芒果">進入我的芒果</h1>
 
 <p>點選 visit AdsMOGO&#39;s Chinese Website -&gt; 進入芒果  </p>
 
-<p><img src="/vpon-sdk/assets/img/MyMOGO.png" alt=""></p>
+<p><img src="/assets/img/MyMOGO.png" alt=""></p>
 
 <h1 id="申請mogo-id">申請MOGO ID</h1>
 
@@ -191,28 +195,28 @@
 <li>App 管理下添加App<br></li>
 </ol>
 
-<p><img src="/vpon-sdk/assets/img/AddApp.png" alt=""> 2. 添加APP信息：1. App名稱。2. 選擇平台。3. App類型  </p>
+<p><img src="/assets/img/AddApp.png" alt=""> 2. 添加APP信息：1. App名稱。2. 選擇平台。3. App類型  </p>
 
-<p><img src="/vpon-sdk/assets/img/AppType.png" alt="" title="fig:AppType.png"> 3. 開啓“地域優化”：<font size="4" color="red">1. 中文廣告平台
+<p><img src="/assets/img/AppType.png" alt="" title="fig:AppType.png"> 3. 開啓“地域優化”：<font size="4" color="red">1. 中文廣告平台
 適用大陸地區。2. 英文廣告平台 適用台灣地區。</font>  </p>
 
-<p><img src="/vpon-sdk/assets/img/ChinaArea.png" alt="" title="fig:ChinaArea.png"><br>
-<img src="/vpon-sdk/assets/img/TWArea.png" alt="" title="fig:TWArea.png"><br>
+<p><img src="/assets/img/ChinaArea.png" alt="" title="fig:ChinaArea.png"><br>
+<img src="/assets/img/TWArea.png" alt="" title="fig:TWArea.png"><br>
 4. 點選Vpon輸入由Vpon後台申請的Banner ID  </p>
 
-<p><img src="/vpon-sdk/assets/img/VponBannerID.png" alt="" title="fig:VponBannerID.png"><br>
+<p><img src="/assets/img/VponBannerID.png" alt="" title="fig:VponBannerID.png"><br>
 5. 調整投放量  </p>
 
-<p><img src="/vpon-sdk/assets/img/Vpon.png" alt="" title="fig:Vpon.png"><br>
+<p><img src="/assets/img/Vpon.png" alt="" title="fig:Vpon.png"><br>
 6. 將芒果ID填入串接code裏  </p>
 
-<p><img src="/vpon-sdk/assets/img/MOGOID.png" alt="" title="fig:MOGOID.png"></p>
+<p><img src="/assets/img/MOGOID.png" alt="" title="fig:MOGOID.png"></p>
 
 <h1 id="download-sample-code">Download Sample Code</h1>
 
 <hr>
 
-<p><a href="/vpon-sdk/zh-tw/ios/download/#mogo">Go to download</a></p>
+<p><a href="/zh-tw/ios/download/#mogo">Go to download</a></p>
 
       </div>
       <div class="col-md-3">
@@ -240,8 +244,8 @@
 
 <!-- JavaScript ================================================== -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/vpon-sdk/dist/js/bootstrap.min.js"></script>
-<script src="/vpon-sdk/assets/js/docs.min.js"></script>
+<script src="/dist/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
 
 </body>
 

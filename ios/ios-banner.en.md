@@ -8,7 +8,7 @@ permalink:       ios/banner/
 lang:            "en"
 
 ---
-# Finished Integration Guide
+## Finished Integration Guide
 ---
 If you haven't finished the previous integration guide, please check all the [settings here]({{site.baseurl}}/ios/integration-guide/).
 
